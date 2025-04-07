@@ -123,7 +123,10 @@
     "done": "終了した",
     "no_description_available": "説明はありません",
     "quiz_mode": "クイズモード",
-    "quick_rate_all_kinks": "一連の質問であなたの欠点を素早く評価します"
+    "quick_rate_all_kinks": "一連の質問であなたの欠点を素早く評価します",
+    "new": "新しい",
+    "share": "共有する",
+    "screenshot_short": "写真"
   },
   "roles": {
     "sub": "従順な",

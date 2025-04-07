@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useMediaQuery } from '@vueuse/core'
 import { useKinkListState } from '../../../composables/useKinkList'
 import { useScreenshot } from '../../../composables/useScreenshot'
 import ConfirmModal from '../../kinklist/modals/ConfirmModal.vue'
@@ -25,6 +26,9 @@ const {
   screenshotLoading, 
   downloadScreenshot,
 } = useScreenshot()
+
+// Check if screen is mobile
+const isMobile = useMediaQuery('(max-width: 768px)')
 
 // Title editing state
 const isEditingTitle = ref(false)
@@ -185,14 +189,16 @@ async function handleTakeScreenshot() {
 
 <template>
   <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-3 mb-3">
-    <div class="flex flex-col md:flex-row md:justify-between gap-3">
-      <!-- List Title -->
-      <div class="flex items-center gap-2">
-        <div v-if="isEditingTitle" class="flex items-center gap-2">
+    <!-- Mobile Layout -->
+    <template v-if="isMobile">
+      <!-- List Selector or Title Editing -->
+      <div class="flex items-center gap-2 mb-3">
+        <!-- Show input when editing, otherwise show select -->
+        <template v-if="isEditingTitle">
           <UInput
             v-model="editedTitle"
             size="sm"
-            class="min-w-[200px]"
+            class="flex-1"
             :placeholder="t('app.list_name')"
             @keyup.enter="saveEditedTitle"
             @keyup.esc="cancelEditingTitle"
@@ -214,104 +220,231 @@ async function handleTakeScreenshot() {
             square
             @click="cancelEditingTitle"
           />
-        </div>
-        <div v-else class="flex items-center gap-2 group cursor-pointer" @click="startEditingTitle">
-          <h2 class="text-lg font-semibold">{{ activeList?.name }}</h2>
-          <UIcon 
-            name="i-lucide-pencil" 
-            class="w-4 h-4 text-gray-400"
+        </template>
+        <template v-else>
+          <USelect
+            v-model="safeActiveListId"
+            :items="kinkLists.map(list => ({ 
+              value: list.id, 
+              label: list.name,
+              role: list.role,
+              created: list.created 
+            }))"
+            :placeholder="t('app.select_list')"
+            class="flex-1"
+            size="sm"
+          >
+            <template #default="{ modelValue }">
+              <div v-if="modelValue && activeList" class="flex items-center gap-2">
+                <span class="truncate">{{ activeList.name }}</span>
+                <UBadge v-if="activeList?.role" size="xs" color="primary">
+                  {{ t(`roles.${activeList.role}`) }}
+                </UBadge>
+              </div>
+              <span v-else>{{ t('app.select_list') }}</span>
+            </template>
+            
+            <template #item-label="{ item }">
+              <div class="flex flex-col py-1">
+                <div class="flex items-center gap-2">
+                  <span class="font-medium">{{ item.label }}</span>
+                  <UBadge size="xs" color="primary">
+                    {{ t(`roles.${item.role}`) }}
+                  </UBadge>
+                </div>
+                <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                  {{ new Date(item.created).toLocaleDateString() }}
+                </div>
+              </div>
+            </template>
+          </USelect>
+          
+          <!-- Edit Button -->
+          <UButton
+            icon="i-lucide-pencil"
+            color="neutral"
+            variant="ghost"
+            size="xs"
+            square
+            @click="startEditingTitle"
+            aria-label="Edit list name"
           />
-        </div>
-        <UBadge v-if="activeList?.role" size="xs" color="primary">
-          {{ t(`roles.${activeList.role}`) }}
-        </UBadge>
+          
+          <!-- Delete Button -->
+          <UButton
+            icon="i-lucide-trash"
+            color="error"
+            variant="ghost"
+            size="xs"
+            square
+            @click="handleDeleteList"
+            aria-label="Delete list"
+          />
+        </template>
       </div>
       
-      <!-- List Controls -->
-      <div class="flex flex-wrap gap-2">
-
-                <!-- Action Buttons -->
-                <UButton
+      <!-- Action Buttons - Horizontal on Mobile -->
+      <div class="flex gap-2">
+        <!-- Create New List Button -->
+        <UButton
           icon="i-lucide-plus"
           color="primary"
           size="sm"
-          class="whitespace-nowrap"
+          class="flex-1"
           @click="openCreateListModal"
         >
-          {{ t('app.create_list') }}
+          {{ t('app.new') }}
         </UButton>
         
-        <!-- List Selector -->
-        <USelect
-          v-model="safeActiveListId"
-          :items="kinkLists.map(list => ({ 
-            value: list.id, 
-            label: list.name,
-            role: list.role,
-            created: list.created 
-          }))"
-          :placeholder="t('app.select_list')"
-          class="flex-grow sm:w-56 sm:flex-grow-0"
-          size="sm"
-        >
-          <template #default="{ modelValue }">
-            <div v-if="modelValue && activeList" class="flex items-center gap-2">
-              <span class="truncate">{{ activeList.name }}</span>
-              <UBadge v-if="activeList?.role" size="xs" color="primary">
-                {{ t(`roles.${activeList.role}`) }}
-              </UBadge>
-              <span class="text-xs text-gray-500 ml-auto">{{ new Date(activeList.created).toLocaleDateString() }}</span>
-            </div>
-            <span v-else>{{ t('app.select_list') }}</span>
-          </template>
-          
-          <!-- Custom rendering of list items -->
-          <template #item-label="{ item }">
-            <div class="flex flex-col py-1">
-              <div class="flex items-center gap-2">
-                <span class="font-medium">{{ item.label }}</span>
-                <UBadge size="xs" color="primary">
-                  {{ t(`roles.${item.role}`) }}
-                </UBadge>
-              </div>
-              <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                {{ new Date(item.created).toLocaleDateString() }}
-              </div>
-            </div>
-          </template>
-        </USelect>
-        
-
-        <UButton
-          icon="i-lucide-trash"
-          color="error"
-          variant="outline"
-          size="sm"
-          square
-          @click="handleDeleteList"
-        />
-        
+        <!-- Share List Button -->
         <UButton
           icon="i-lucide-share"
           color="info"
           size="sm"
-          class="whitespace-nowrap"
+          class="flex-1"
           @click="openShareModal"
         >
-          {{ t('app.share_list') }}
+          {{ t('app.share') }}
         </UButton>
         
+        <!-- Screenshot Button -->
         <UButton
           icon="i-lucide-camera"
           color="neutral"
           size="sm"
-          class="whitespace-nowrap"
+          class="flex-1"
           :loading="screenshotLoading"
           @click="handleTakeScreenshot"
         >
-          {{ t('app.screenshot') }}
+          {{ t('app.screenshot_short') }}
         </UButton>
       </div>
-    </div>
+    </template>
+    
+    <!-- Desktop Layout - Horizontal -->
+    <template v-else>
+      <div class="flex items-center">
+        <!-- Title Section with Edit functionality -->
+        <div class="flex items-center gap-2 mr-auto">
+          <div v-if="isEditingTitle" class="flex items-center gap-2">
+            <UInput
+              v-model="editedTitle"
+              size="sm"
+              class="min-w-[150px]"
+              :placeholder="t('app.list_name')"
+              @keyup.enter="saveEditedTitle"
+              @keyup.esc="cancelEditingTitle"
+              autofocus
+            />
+            <UButton
+              icon="i-lucide-check"
+              color="success"
+              variant="ghost"
+              size="xs"
+              square
+              @click="saveEditedTitle"
+            />
+            <UButton
+              icon="i-lucide-x"
+              color="error"
+              variant="ghost"
+              size="xs"
+              square
+              @click="cancelEditingTitle"
+            />
+          </div>
+          <div v-else-if="activeList" class="flex items-center gap-2 cursor-pointer" @click="startEditingTitle">
+            <h2 class="text-lg font-semibold">{{ activeList.name }}</h2>
+            <UIcon 
+              name="i-lucide-pencil" 
+              class="w-4 h-4 text-gray-400"
+            />
+          </div>
+          <UBadge v-if="activeList?.role" size="xs" color="primary">
+            {{ t(`roles.${activeList.role}`) }}
+          </UBadge>
+        </div>
+        
+        <!-- Right aligned items: List Selector + Action Buttons -->
+        <div class="flex items-center gap-2">
+          <!-- List Selector -->
+          <USelect
+            v-model="safeActiveListId"
+            :items="kinkLists.map(list => ({ 
+              value: list.id, 
+              label: list.name,
+              role: list.role,
+              created: list.created 
+            }))"
+            :placeholder="t('app.select_list')"
+            class="w-56"
+            size="sm"
+          >
+            <template #default="{ modelValue }">
+              <div v-if="modelValue && activeList" class="flex items-center gap-2">
+                <span class="truncate">{{ activeList.name }}</span>
+                <UBadge v-if="activeList?.role" size="xs" color="primary">
+                  {{ t(`roles.${activeList.role}`) }}
+                </UBadge>
+              </div>
+              <span v-else>{{ t('app.select_list') }}</span>
+            </template>
+            
+            <template #item-label="{ item }">
+              <div class="flex flex-col py-1">
+                <div class="flex items-center gap-2">
+                  <span class="font-medium">{{ item.label }}</span>
+                  <UBadge size="xs" color="primary">
+                    {{ t(`roles.${item.role}`) }}
+                  </UBadge>
+                </div>
+                <div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                  {{ new Date(item.created).toLocaleDateString() }}
+                </div>
+              </div>
+            </template>
+          </USelect>
+          
+          <!-- Action Buttons -->
+          <UButton
+            icon="i-lucide-plus"
+            color="primary"
+            size="sm"
+            @click="openCreateListModal"
+          >
+            {{ t('app.create_list') }}
+          </UButton>
+          
+          <UButton
+            icon="i-lucide-share"
+            color="info"
+            size="sm"
+            @click="openShareModal"
+          >
+            {{ t('app.share_list') }}
+          </UButton>
+          
+          <UButton
+            icon="i-lucide-camera"
+            color="neutral"
+            size="sm"
+            :loading="screenshotLoading"
+            @click="handleTakeScreenshot"
+          >
+            {{ t('app.screenshot') }}
+          </UButton>
+          
+          <UButton
+            icon="i-lucide-trash"
+            color="error"
+            variant="ghost"
+            size="sm"
+            square
+            @click="handleDeleteList"
+            aria-label="Delete list"
+          />
+        </div>
+      </div>
+    </template>
   </div>
 </template> 

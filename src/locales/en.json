@@ -123,7 +123,10 @@
     "done": "Finished",
     "no_description_available": "No description available",
     "quiz_mode": "Quiz Mode",
-    "quick_rate_all_kinks": "Quickly assess all your kinks in a series of questions"
+    "quick_rate_all_kinks": "Quickly assess all your kinks in a series of questions",
+    "new": "New",
+    "share": "To share",
+    "screenshot_short": "Photo"
   },
   "roles": {
     "sub": "Submissive",

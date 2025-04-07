@@ -123,7 +123,10 @@
     "done": "Finalizado",
     "no_description_available": "No hay descripción disponible",
     "quiz_mode": "Modo de prueba",
-    "quick_rate_all_kinks": "Evalúa rápidamente todos tus problemas con una serie de preguntas"
+    "quick_rate_all_kinks": "Evalúa rápidamente todos tus problemas con una serie de preguntas",
+    "new": "Nuevo",
+    "share": "Para compartir",
+    "screenshot_short": "Foto"
   },
   "roles": {
     "sub": "Sumiso",

@@ -123,7 +123,10 @@
     "done": "완성된",
     "no_description_available": "설명이 없습니다",
     "quiz_mode": "퀴즈 모드",
-    "quick_rate_all_kinks": "일련의 질문을 통해 모든 문제점을 빠르게 평가하세요"
+    "quick_rate_all_kinks": "일련의 질문을 통해 모든 문제점을 빠르게 평가하세요",
+    "new": "새로운",
+    "share": "공유하기",
+    "screenshot_short": "사진"
   },
   "roles": {
     "sub": "복종적인",

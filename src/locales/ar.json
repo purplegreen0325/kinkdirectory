@@ -123,7 +123,10 @@
     "done": "انتهى",
     "no_description_available": "لا يوجد وصف متاح",
     "quiz_mode": "وضع الاختبار",
-    "quick_rate_all_kinks": "قم بتقييم جميع نقاط ضعفك بسرعة من خلال سلسلة من الأسئلة"
+    "quick_rate_all_kinks": "قم بتقييم جميع نقاط ضعفك بسرعة من خلال سلسلة من الأسئلة",
+    "new": "جديد",
+    "share": "للمشاركة",
+    "screenshot_short": "صورة"
   },
   "roles": {
     "sub": "مطيع",

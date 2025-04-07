@@ -123,7 +123,10 @@
     "done": "完成的",
     "no_description_available": "没有可用的描述",
     "quiz_mode": "测验模式",
-    "quick_rate_all_kinks": "通过一系列问题快速评估你的所有问题"
+    "quick_rate_all_kinks": "通过一系列问题快速评估你的所有问题",
+    "new": "新的",
+    "share": "分享",
+    "screenshot_short": "照片"
   },
   "roles": {
     "sub": "顺从",

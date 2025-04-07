@@ -123,7 +123,10 @@
     "done": "Fertig",
     "no_description_available": "Keine Beschreibung verfügbar",
     "quiz_mode": "Quiz-Modus",
-    "quick_rate_all_kinks": "Bewerten Sie schnell alle Ihre Macken in einer Reihe von Fragen"
+    "quick_rate_all_kinks": "Bewerten Sie schnell alle Ihre Macken in einer Reihe von Fragen",
+    "new": "Neu",
+    "share": "Teilen",
+    "screenshot_short": "Foto"
   },
   "roles": {
     "sub": "Unterwürfig",
