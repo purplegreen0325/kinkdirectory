@@ -13,7 +13,7 @@ function handleTitleClick() {
 <template>
   <div>
     <!-- Header with title and theme toggles -->
-    <div class="flex items-center justify-between flex-wrap gap-2">
+    <div class="flex items-center justify-center sm:justify-between flex-wrap gap-2">
       <h1 
         class="flex items-center text-xl font-bold cursor-pointer transition-all hover:opacity-90" 
         @click="handleTitleClick"

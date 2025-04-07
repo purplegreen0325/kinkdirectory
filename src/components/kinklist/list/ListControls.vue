@@ -366,7 +366,7 @@ async function handleTakeScreenshot() {
         </div>
         
         <!-- Right aligned items: List Selector + Action Buttons -->
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 flex-wrap justify-end">
           <!-- List Selector -->
           <USelect
             v-model="safeActiveListId"
