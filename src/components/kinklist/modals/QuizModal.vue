@@ -50,7 +50,7 @@ const textColorClasses = {
 }
 
 // Include "Not Entered" (0) value along with ratings 1-5
-const allValues = [0, 1, 2, 3, 4, 5] as const
+const allValues = [1, 2, 3, 4, 5, 0] as const
 
 // Get the current kink and position
 const currentKink = computed(() => {
