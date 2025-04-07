@@ -1,0 +1,739 @@
+{
+  "title": "Kink Directory",
+  "language": {
+    "switch": "Cambiar a {0}",
+    "en": "Inglés",
+    "nl": "Holandés",
+    "es": "Español",
+    "fr": "Francés",
+    "de": "Alemán",
+    "pt": "portugués",
+    "it": "italiano",
+    "ru": "ruso",
+    "zh": "Chino",
+    "ja": "japonés",
+    "ko": "coreano",
+    "ar": "árabe",
+    "hi": "hindi",
+    "auto": "Auto (Sistema)"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "auto": "Sistema"
+  },
+  "welcome": "Bienvenido a Kink Directory",
+  "app": {
+    "list_name_placeholder": "Introduzca un nombre para su lista",
+    "create_list": "Crear nueva lista",
+    "import_list": "Lista de importación",
+    "export_list": "Lista de exportación",
+    "share_list": "Lista de compartir",
+    "share_link": "Enlace para compartir",
+    "view_only": "Sólo ver",
+    "share_info_text": "Comparte tu lista con otros enviando este enlace único. Cualquier persona con este enlace puede ver su lista en modo de solo lectura.",
+    "share_privacy_note": "Sólo las personas con este enlace exacto tendrán acceso a tu lista. No es necesario iniciar sesión para ver las listas compartidas.",
+    "copy_success": "Enlace copiado al portapapeles",
+    "copied": "¡Copiado!",
+    "copy_and_close": "Copiar y cerrar",
+    "close": "Cerca",
+    "screenshot": "Tomar una captura de pantalla",
+    "screenshot_options": "Opciones de captura de pantalla",
+    "screenshot_downloaded": "Captura de pantalla guardada exitosamente",
+    "screenshot_error": "Error al tomar captura de pantalla",
+    "taking_screenshot": "Toma una captura de pantalla...",
+    "download": "Descargar",
+    "upload_to_imgur": "Subir a Imgur",
+    "imgur_link": "Enlace de Imgur",
+    "imgur_link_copied": "Enlace de Imgur copiado al portapapeles",
+    "imgur_upload_success": "Carga exitosa",
+    "imgur_upload_success_description": "Imagen cargada exitosamente en Imgur",
+    "imgur_upload_error": "Error en la carga",
+    "shorten_url": "Acortar enlace",
+    "url_shortened": "Enlace acortado",
+    "shortened_link": "Enlace corto",
+    "url_shortened_success": "Enlace acortado exitosamente",
+    "url_shortened_error": "Error al acortar el enlace",
+    "show_original": "Mostrar original",
+    "show_shortened": "Mostrar acortado",
+    "select_list": "Seleccionar lista",
+    "delete_list": "Eliminar lista",
+    "no_lists": "No se encontraron listas. Crea uno nuevo para comenzar.",
+    "select_a_list": "Seleccione una lista para verla o editarla",
+    "welcome_title": "Bienvenido al Directorio Kink",
+    "welcome_description": "Crea listas de perversiones personalizadas para explorar tus preferencias y límites. Compártalos con tus socios o mantenlos privados: tú tienes el control.",
+    "welcome_privacy": "Todos los datos se almacenan únicamente en su navegador: nada se envía a un servidor, lo que garantiza una privacidad total.",
+    "welcome_sharing": "Genere enlaces compartibles para enviar a sus socios cuando desee que vean sus preferencias.",
+    "welcome_customization": "Elija la perspectiva de su rol y personalice su lista con preferencias detalladas para cada elemento.",
+    "welcome_desktop_placeholder": "Imagen de muestra de escritorio",
+    "welcome_mobile_placeholder": "Vista móvil",
+    "your_lists": "Tus listas",
+    "create_list_prompt": "Agregar una nueva lista con preferencias personalizadas",
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "days_ago": "Hace {count} días",
+    "recent": "Reciente",
+    "motivational_text": "Explora tus deseos y límites con confianza y apertura.",
+    "selections": "trozos escogidos",
+    "as_dom": "Como dominante",
+    "as_sub": "Como sumisa",
+    "you": "Tú",
+    "you_dom": "Contigo",
+    "you_sub": "Contigo",
+    "your_dom": "Tu dominante",
+    "your_sub": "Tu sumisa",
+    "for_dom": "En tu dominante",
+    "for_sub": "A tu sumiso",
+    "general": "General",
+    "general_questions": "Preguntas generales",
+    "create_new_list": "Crear nueva lista",
+    "list_name": "Nombre de la lista",
+    "role": "Role",
+    "cancel": "Cancelar",
+    "create": "Para hacer",
+    "confirm": "Para confirmar",
+    "legend": "Leyenda",
+    "copy_link": "Copiar enlace",
+    "confirm_delete": "¿Estás seguro que deseas eliminar esta lista?",
+    "create_list_description": "Crea una lista personalizada para explorar tus preferencias",
+    "create_list_intro": "Los datos de su lista solo se almacenan en su navegador y nunca se envían a un servidor. La única forma en que se comparten sus datos es a través de los enlaces que usted elija compartir con otros.",
+    "role_explanation": "Su preferencia de rol determina cómo se presentan los elementos de la lista y cómo se interpretan las opciones.",
+    "role_sub_explanation": "Sumiso (sub): prefieres recibir instrucciones, ceder el control y recibir acción. Marcas los elementos en función de lo que disfrutas experimentar de una pareja dominante.",
+    "role_dom_explanation": "Dominante (dom): prefieres tomar el control, dar instrucciones y realizar actividades. Marcas los elementos en función de lo que disfrutas hacer con una pareja sumisa.",
+    "role_both_explanation": "Versátil (cambio): disfrutas aspectos tanto del rol sumiso como del dominante, dependiendo del contexto. Marcas preferencias desde ambas perspectivas: lo que te gusta dar y lo que te gusta recibir.",
+    "share_list_description": "Comparte tu lista de perversiones con otros a través de una URL única",
+    "view_only_mode": "Estás viendo una lista compartida en modo de solo lectura.",
+    "exit_view_mode": "Abrir el modo de edición",
+    "delete_confirm_title": "Eliminar lista",
+    "delete_confirm_message": "¿Estás seguro que deseas eliminar esta lista? Esta acción no se puede deshacer.",
+    "list_deleted": "Lista eliminada exitosamente",
+    "list_imported": "Lista importada exitosamente",
+    "imported_from_shared": "La lista se importa a través de un enlace compartido",
+    "import_confirm_title": "Lista de importación",
+    "import_confirm_message": "¿Quieres importar esta lista compartida a tu colección?",
+    "role_specific_items": "Elementos específicos del rol",
+    "role_specific_questions": "Preguntas específicas del rol",
+    "list_updated": "Lista actualizada exitosamente"
+  },
+  "roles": {
+    "sub": "Sumiso",
+    "dom": "Dominante",
+    "both": "Ambos"
+  },
+  "choices": {
+    "not_entered": "No rellenado",
+    "favorite": "Favorito",
+    "like": "Lindo",
+    "indifferent": "Indiferente",
+    "maybe": "Tal vez",
+    "limit": "Límite"
+  },
+  "categories": {
+    "bodies": "Cuerpos",
+    "clothing": "Ropa",
+    "restrictive": "Restrictivo",
+    "general": "General",
+    "ass_play": "Juego anal",
+    "toys": "Juguetes",
+    "domination": "Dominio",
+    "no_consent": "Sin consentimiento",
+    "taboo": "Tabú",
+    "surrealism": "Surrealismo",
+    "fluids": "Líquidos",
+    "degradation": "Humillación",
+    "touch_stimulation": "Tacto y estimulación",
+    "misc_fetish": "Varios fetiches",
+    "pain": "Dolor",
+    "medium": "Medio",
+    "time_scale": "Escala de tiempo"
+  },
+  "subcategories": {
+    "general": "General"
+  },
+  "bodies": {
+    "skinny": {
+      "label": "Inclinarse",
+      "tooltip": "Interesado en personajes que sean delgados, flacos o esbeltos."
+    },
+    "chubby": {
+      "label": "Regordete",
+      "tooltip": "Me interesan personajes más redondos, corpulentos y regordetes."
+    },
+    "small_breasts": {
+      "label": "Pechos pequeños",
+      "tooltip": "Interés por unos pechos excepcionalmente pequeños, a veces hasta el punto de que casi parecen ausentes."
+    },
+    "large_breasts": {
+      "label": "Pechos grandes",
+      "tooltip": "Interesado en pechos que sean excepcionalmente grandes."
+    },
+    "small_cocks": {
+      "label": "Penes pequeños",
+      "tooltip": "Interesado en penes más pequeños que el promedio."
+    },
+    "large_cocks": {
+      "label": "Pollas grandes",
+      "tooltip": "Interesado en penes más grandes que el promedio."
+    },
+    "small_butts": {
+      "label": "Nalgas pequeñas",
+      "tooltip": "Interesado en glúteos especialmente pequeños."
+    },
+    "big_butts": {
+      "label": "Nalgas grandes",
+      "tooltip": "Interesado en glúteos especialmente grandes."
+    }
+  },
+  "clothing": {
+    "clothed_sex": {
+      "label": "Sexo con la ropa puesta",
+      "tooltip": "Participar en una RP en la que usted y/o su pareja no se desnuden durante la interacción sexual."
+    },
+    "lingerie": {
+      "label": "Lencería",
+      "tooltip": "Interés en el uso de lencería en el contexto sexual de un juego de rol, o interés en personajes que la usen."
+    },
+    "stockings": {
+      "label": "Medias",
+      "tooltip": "Interés en el uso de medias en el contexto sexual de un juego de rol, o interés en personajes que las usen."
+    },
+    "heels": {
+      "label": "Tacones",
+      "tooltip": "Interés en el uso de tacones altos en el contexto sexual de un juego de rol, o interés en personajes que los usen."
+    },
+    "leather": {
+      "label": "Aprender",
+      "tooltip": "Interesado en el uso de ropa de cuero en el contexto sexual de un juego de rol, o interesado en personajes que la usen."
+    },
+    "latex": {
+      "label": "Látex",
+      "tooltip": "El uso de materiales de látex y/o caucho usados como vestimenta."
+    },
+    "uniform_costume": {
+      "label": "Uniforme / disfraz",
+      "tooltip": "Interés en el uso de uniformes o disfraces en el contexto sexual de un juego de rol, o interés en personajes que los usen."
+    },
+    "cross_dressing": {
+      "label": "Travestismo",
+      "tooltip": "Participar en un juego de rol en el que uno o más personajes se visten con la ropa del género opuesto."
+    }
+  },
+  "general": {
+    "romance_affection": {
+      "label": "Romance / Afecto",
+      "tooltip": "Mostrar o expresar amor o afecto fuerte, pasión, tanto durante el acto sexual como durante escenas normales."
+    },
+    "handjob_fingering": {
+      "label": "Masturbación manual / Dedos",
+      "tooltip": "Estimulación sexual a través del contacto físico directo de las manos o los dedos con los genitales."
+    },
+    "blowjob": {
+      "label": "Tubería",
+      "tooltip": "Estimulación sexual a través del contacto físico directo de la boca o la lengua con los genitales masculinos."
+    },
+    "deep_throat": {
+      "label": "Garganta profunda",
+      "tooltip": "Penetrar la boca de otro personaje hasta la profundidad donde el pene o el objeto insertado entra en la parte posterior de la cavidad oral y/o garganta, a veces provocando un reflejo nauseoso, o recibiendo tales actos."
+    },
+    "swallowing": {
+      "label": "Tragar",
+      "tooltip": "El consumo oral de semen, directa o indirectamente del pene."
+    },
+    "facials": {
+      "label": "tratamientos faciales",
+      "tooltip": "El acto de correrse/eyacular directamente sobre la cara de alguien."
+    },
+    "cunnilingus": {
+      "label": "Soplar",
+      "tooltip": "Estimulación sexual a través del contacto físico directo de la boca o la lengua con los genitales femeninos."
+    },
+    "face_sitting": {
+      "label": "Sentado en la cara",
+      "tooltip": "Una práctica sexual en la que alguien se sienta con sus nalgas o genitales sobre la cara de otro personaje, asfixiando a la persona, a veces hasta el punto de la asfixia; A menudo se hace como una forma de forzar la gratificación oral."
+    },
+    "edging": {
+      "label": "Cenefa",
+      "tooltip": "Quedarse al borde del clímax sin llegar al orgasmo."
+    },
+    "teasing": {
+      "label": "Plagas",
+      "tooltip": "Se refiere a escenas prolongadas de juegos previos antes de la relación sexual explícita, que pueden ser físicos y/o verbales, generalmente para excitar a la pareja hasta el punto de frustración o desesperación sexual."
+    },
+    "ruined": {
+      "label": "Arruinado",
+      "tooltip": "El acto de permitir que una persona tenga un orgasmo, pero detener la estimulación justo antes del clímax, lo que resulta en un orgasmo incompleto o insatisfactorio. Esto puede ocurrir tanto con parejas masculinas como femeninas."
+    }
+  },
+  "ass_play": {
+    "anal_toys": {
+      "label": "Juguetes anales",
+      "tooltip": "Se refiere a la penetración anal con juguetes sexuales, incluidos, entre otros, consoladores, vibradores, huevos anales, cuentas anales, etc."
+    },
+    "anal_sex_pegging": {
+      "label": "Sexo anal/pegging",
+      "tooltip": "Ser penetrado por una pareja, con un pene o con un strap-on."
+    },
+    "rimming": {
+      "label": "Rimming",
+      "tooltip": "Proporcionar estimulación oral al ano de una pareja lamiendo y/o penetrando el ano del receptor con la lengua."
+    },
+    "double_penetration": {
+      "label": "Doble penetración",
+      "tooltip": "Penetrar o recibir el ano de un solo personaje con dos objetos incluyendo pero no limitado a, el pene, juguetes sexuales, puño, etc."
+    },
+    "anal_fisting": {
+      "label": "Puño anal",
+      "tooltip": "Introducir la(s) mano(s) y/o brazo(s) en el ano de la pareja, o recibir tales actos."
+    }
+  },
+  "restrictive": {
+    "gag": {
+      "label": "Mordaza",
+      "tooltip": "Colocar y asegurar un objeto en la boca de otro personaje para obligarlo a respirar por la nariz, además de crear la incapacidad de hablar o recibir tales acciones."
+    },
+    "collar": {
+      "label": "Cuello",
+      "tooltip": "Llevando un collar alrededor del cuello."
+    },
+    "leash": {
+      "label": "Cinturón",
+      "tooltip": "Ser llevado con correa."
+    },
+    "chastity": {
+      "label": "Castidad",
+      "tooltip": "Abstinencia sexual, voluntaria o forzada; Esto puede implicar simplemente que alguien se abstenga de la actividad sexual o que use un dispositivo que la impida."
+    },
+    "bondage_light": {
+      "label": "Esclavitud (ligera)",
+      "tooltip": "El uso de esclavitud leve o moderada, ya sea en la posición en la que coloca al personaje atado, el tiempo durante el cual el personaje estará atado, el nivel de incomodidad causado por la esclavitud o el grado de inmovilización que ocurrirá como resultado de la esclavitud."
+    },
+    "bondage_heavy": {
+      "label": "Esclavitud (pesada)",
+      "tooltip": "El uso de esclavitud que es extremo ya sea en la posición en la que coloca al personaje atado, el período de tiempo durante el cual el personaje estará atado, el nivel de incomodidad causado por la esclavitud o el grado de inmovilización que ocurrirá como resultado de la esclavitud."
+    },
+    "encasement": {
+      "label": "Confinamiento",
+      "tooltip": "Todo el cuerpo está envuelto como una momia en un traje de látex, un saco de dormir u otro equipo fetichista para la gratificación sexual."
+    },
+    "cag": {
+      "label": "Castidad/jaulas",
+      "tooltip": "Un dispositivo que impide el acceso a los genitales."
+    },
+    "dom_only_for_sub": {
+      "label": "Estúpido solo para sub",
+      "tooltip": "Ejemplo: El dominante sólo puede responder por su sumiso, no por sí mismo."
+    },
+    "sub_self_only": {
+      "label": "Suscríbete solo tú mismo",
+      "tooltip": "Ejemplo: La sumisa sólo puede responder por sí misma, no por su dominante."
+    },
+    "dom_answer_for_both": {
+      "label": "Dom responde por ambos",
+      "tooltip": "Ejemplo: El dominante responde tanto por sí mismo como por su sumiso."
+    },
+    "sub_only_for_dom": {
+      "label": "Sub solo para estupidos",
+      "tooltip": "Ejemplo: La sumisa sólo puede responder por su dominante, no por sí misma."
+    }
+  },
+  "toys": {
+    "dildos": {
+      "label": "consoladores",
+      "tooltip": "Un objeto con forma de pene erecto utilizado para la estimulación sexual."
+    },
+    "plugs": {
+      "label": "Tapones",
+      "tooltip": "Un juguete sexual diseñado para insertarse en el recto."
+    },
+    "vibrators": {
+      "label": "Vibradores",
+      "tooltip": "Un dispositivo vibrador utilizado para la estimulación sexual."
+    },
+    "sounding": {
+      "label": "Sondeo",
+      "tooltip": "La inserción de varillas metálicas en la uretra de un hombre o una mujer, o la recepción de tales actos; Técnicamente implica varillas que resuenan y/o vibran en respuesta a alguna forma de estimulación, pero no necesariamente significa eso."
+    }
+  },
+  "domination": {
+    "general_dom_sub": {
+      "label": "General Dom / General Sub",
+      "tooltip": "Nombre colectivo para actividades dominantes/sumisas."
+    },
+    "domestic_servitude": {
+      "label": "Servicio doméstico",
+      "tooltip": "Ser atendido por un mayordomo, camarera, chofer, mucama o ama de llaves, o servir en tal capacidad."
+    },
+    "slavery": {
+      "label": "Esclavitud",
+      "tooltip": "Servir como esclavo a las órdenes del dominante, o recibir tal servicio, sin elección."
+    },
+    "pet_play": {
+      "label": "Juego de mascotas",
+      "tooltip": "El juego de mascotas es un rol en el que el foco está en que el sumiso adopte un estado mental alternativo, a menudo el de un perro, un gato o un caballo."
+    },
+    "dd_lg_md_lb": {
+      "label": "DD/lg, MD/lb",
+      "tooltip": "Papá o mamá Dom/niña o niño pequeño. El papá/mamá es la mitad más dominante de la relación, el pequeño es el más sumiso."
+    },
+    "discipline": {
+      "label": "Disciplina",
+      "tooltip": "El uso de refuerzos (recompensas y/o castigos) para entrenar a un sumiso a obedecer las diversas órdenes de un amo."
+    },
+    "begging": {
+      "label": "Mendigar",
+      "tooltip": "El acto autodegradante de mendigar, como forma de sumisión, que se incorpora a una RP."
+    },
+    "forced_orgasm": {
+      "label": "Orgasmo forzado",
+      "tooltip": "Un orgasmo forzado es un juego sexual BDSM o pervertido consensuado en el que una persona consiente ser forzada a tener un orgasmo de una manera que escapa a su control."
+    },
+    "orgasm_control": {
+      "label": "Control del orgasmo",
+      "tooltip": "Se refiere al control que tiene el dominante sobre cuándo el sumiso alcanza el orgasmo, ya sea por medios físicos o por orden; Generalmente implica dominio y/o burlas y acoso excesivos; El orgasmo se puede negar por completo."
+    },
+    "orgasm_denial": {
+      "label": "Abstinencia del orgasmo",
+      "tooltip": "Se refiere al dominante negándole al sumiso un orgasmo."
+    },
+    "power_exchange": {
+      "label": "Intercambio de poder",
+      "tooltip": "Una relación que tiene como núcleo el servicio."
+    }
+  },
+  "no_consent": {
+    "dubious_consent": {
+      "label": "Consentimiento cuestionable",
+      "tooltip": "Situaciones en las que se cuestiona el consentimiento de la pareja, aunque no se trate de una violación directa."
+    },
+    "non_con_rape": {
+      "label": "No estafa/violación",
+      "tooltip": "Tomar o ser tomado contra la propia voluntad, a menudo por la fuerza."
+    },
+    "blackmail_coercion": {
+      "label": "Chantaje / coerción",
+      "tooltip": "Se refiere al uso de coerción y/o chantaje en el contexto de la historia de un RP, a menudo en forma de un medio semiconsensual para obtener sexo de una pareja."
+    },
+    "kidnapping": {
+      "label": "Secuestro",
+      "tooltip": "Secuestrar a un personaje de un juego de rol con fines de abuso, a menudo sexual, o ser secuestrado por tales motivos; A menudo implica prisión indefinida."
+    },
+    "drugs": {
+      "label": "Drogas",
+      "tooltip": "El uso de drogas ilegales en el contexto de un juego de rol, generalmente para desorientar o incapacitar mentalmente a un personaje, o para aumentar las sensaciones sexuales."
+    },
+    "alcohol": {
+      "label": "Alcohol",
+      "tooltip": "El uso de alcohol en el contexto de un juego de rol, generalmente para desorientar o incapacitar mentalmente a un personaje, o para aumentar las sensaciones sexuales."
+    },
+    "sleep_play": {
+      "label": "Juego de dormir",
+      "tooltip": "Participar en actos sexuales con una pareja inconsciente o dormida."
+    }
+  },
+  "taboo": {
+    "incest": {
+      "label": "Incesto",
+      "tooltip": "Participa en un RP donde al menos dos personajes estén relacionados."
+    },
+    "age_gap": {
+      "label": "Diferencia de edad",
+      "tooltip": "Se refiere a escenas donde hay una diferencia significativa en las edades de los personajes."
+    },
+    "interracial": {
+      "label": "Interracial",
+      "tooltip": "Escenas basadas en interacciones interraciales sin basarse en estereotipos raciales."
+    },
+    "raceplay": {
+      "label": "Juego de carreras",
+      "tooltip": "Escenas basadas en estereotipos raciales o racismo, incluidas escenas ambientadas en entornos racistas."
+    },
+    "bestiality": {
+      "label": "Bestialidad",
+      "tooltip": "Se refiere a un personaje sensible que realiza un acto sexual con un animal no sensible, o que interpreta a un animal no sensible en un juego de rol y es abordado por un personaje sensible."
+    },
+    "necrophilia": {
+      "label": "Necrofilia",
+      "tooltip": "El acto de tener relaciones sexuales con un personaje muerto, o de otra manera inconsciente o inanimado, que alguna vez estuvo vivo o, teóricamente, recibir tales actos."
+    },
+    "cheating": {
+      "label": "Infiel",
+      "tooltip": "Cuando uno o ambos socios son infieles a sus parejas."
+    },
+    "exhibitionism": {
+      "label": "Exhibicionismo",
+      "tooltip": "Participar en un juego de rol cuyo entorno sea de naturaleza pública; Generalmente se utiliza en combinación con exhibicionismo y/o humillación."
+    },
+    "voyeurism": {
+      "label": "Voyeurismo",
+      "tooltip": "Se refiere a obtener estimulación sexual ya sea mediante el acto de observar, generalmente en secreto, a una persona (o personas) revelándose o haciendo algo más explícito, o el acto de revelarse y/o hacer algo más explícito con la intención de ser observado."
+    }
+  },
+  "surrealism": {
+    "futanari_futa": {
+      "label": "Futanari/Futa",
+      "tooltip": "Personajes que tienen un cuerpo generalmente femenino, pero tienen genitales tanto femeninos como masculinos (aunque los testículos no siempre están presentes)."
+    },
+    "furry": {
+      "label": "Peludo",
+      "tooltip": "Personajes animales antropomorfos."
+    },
+    "vore": {
+      "label": "Surco",
+      "tooltip": "El acto de consumir físicamente a otro personaje."
+    },
+    "transformation": {
+      "label": "Transformación",
+      "tooltip": "El acto de hacer que las características físicas de un participante en un RP, posiblemente incluido él mismo, cambien de manera dramática a través de medios mágicos o químicos; Puede referirse a varios tipos diferentes de transformaciones e indica recibir placer sexual del acto de transformación en sí."
+    },
+    "tentacles": {
+      "label": "Tentáculos",
+      "tooltip": "Participar en un juego de rol en el que tentáculos conscientes o apéndices similares a tentáculos penetrarán a un personaje; A menudo implica múltiples penetraciones."
+    },
+    "monster_or_alien": {
+      "label": "Monstruo o extraterrestre",
+      "tooltip": "Diferentes tipos de monstruos, extraterrestres y personajes estéticamente desafiantes."
+    },
+    "ghost": {
+      "label": "Espíritu",
+      "tooltip": "Anteriormente vivo, pero actualmente no en posesión de un cuerpo."
+    }
+  },
+  "fluids": {
+    "blood": {
+      "label": "Sangre",
+      "tooltip": "Relativo a la toma de sangre o la obtención de sangre en cualquier forma en un contexto sexual, o la realización de actos que provoquen sangre."
+    },
+    "watersports": {
+      "label": "Deportes acuáticos",
+      "tooltip": "Se refiere al acto de ingerir orina, o la expulsión de orina, en cualquier forma, en el contexto sexual de una RP."
+    },
+    "scat": {
+      "label": "Largarse",
+      "tooltip": "Se refiere a la ingestión de heces o la expulsión de heces en cualquier forma en el contexto sexual de una RP."
+    },
+    "lactation": {
+      "label": "Lactancia",
+      "tooltip": "Producir leche de los propios pechos, o tener relaciones sexuales con un personaje que produce leche de los propios pechos, generalmente en respuesta a una estimulación sexual, y cualquier juego que resulte de ello."
+    },
+    "diapers": {
+      "label": "Pañales",
+      "tooltip": "Una situación en la que al menos un personaje llevará pañal; Generalmente implica que el pañal se ensuciará con orina y/o heces, generalmente en combinación con juegos de edad o infantilismo, pero a veces en combinación con humillación."
+    },
+    "cum_play": {
+      "label": "Juego de esperma",
+      "tooltip": "Cualquier número de situaciones que involucran juego con semen."
+    },
+    "saliva_spit": {
+      "label": "Saliva/escupitajo",
+      "tooltip": "Juego sexual con saliva o escupitajo."
+    }
+  },
+  "degradation": {
+    "glory_hole": {
+      "label": "Agujero de gloria",
+      "tooltip": "Servir o ser servido por un compañero con una barrera física entre los participantes."
+    },
+    "name_calling": {
+      "label": "Maldición",
+      "tooltip": "Participar en un juego de rol en el que un personaje será abusado verbalmente, en un intento de obtener una respuesta de gratificación sexual a partir de las emociones correlacionadas con la humillación, o simplemente como una forma de dominio o castigo psicológico."
+    },
+    "humiliation": {
+      "label": "Humillación",
+      "tooltip": "Participar en un juego de rol en el que un personaje se sentirá avergonzado, generalmente de manera extrema y/o frecuente, en un intento de obtener una respuesta de gratificación sexual a partir de las emociones que se correlacionan con la humillación, o simplemente como una forma de dominio o castigo psicológico; Generalmente una forma más intensa de degradación."
+    }
+  },
+  "touch_stimulation": {
+    "cock_pussy_worship": {
+      "label": "Adoración del pene/vagina",
+      "tooltip": "Reconocimiento excesivo de los genitales de su pareja, ya sea verbal y/o físicamente, o recibir dichos actos; Generalmente implica estimulación oral."
+    },
+    "ass_worship": {
+      "label": "Adoración de traseros",
+      "tooltip": "Reconocimiento excesivo de los glúteos de su pareja, ya sea verbal y/o físicamente, o recibir dichos actos; Generalmente implica estimulación oral."
+    },
+    "foot_play": {
+      "label": "Juego de pies",
+      "tooltip": "El uso de los pies en el contexto sexual de un RP, incluyendo, entre otros, la adoración de los pies, la recepción de gratificación sexual a partir de la vista o el olor de los pies y/o el frotamiento de los pies, a veces hasta el punto del orgasmo."
+    },
+    "tickling": {
+      "label": "Cosquillas",
+      "tooltip": "El acto de hacer cosquillas y/o recibir cosquillas en un contexto sexual de una RP; o recibir estimulación sexual de ella."
+    },
+    "sensation_play": {
+      "label": "Juego de sensaciones",
+      "tooltip": "El juego sensacional describe una amplia gama de actividades, tanto convencionales como pervertidas, que utilizan los sentidos del cuerpo como una forma de excitar y estimular a una pareja. Aunque el juego de sensaciones suele estar relacionado con las sensaciones de la piel, no tiene por qué ser tan limitado. La vista, el gusto y el oído también pueden incorporarse al juego de sensaciones."
+    },
+    "electro_stimulation": {
+      "label": "electroestimulación",
+      "tooltip": "El uso de juguetes sexuales que transportan corriente eléctrica; A veces doloroso."
+    }
+  },
+  "misc_fetish": {
+    "fisting": {
+      "label": "Puño",
+      "tooltip": "Colocar su(s) mano(s) y/o brazo(s) en una vagina, o recibir tales actos."
+    },
+    "gangbang": {
+      "label": "Gangbang",
+      "tooltip": "Cuando varias parejas, generalmente tres o más, tienen relaciones sexuales con una sola pareja dispuesta."
+    },
+    "breath_play": {
+      "label": "Juego de respiración",
+      "tooltip": "Una situación en la que al menos un personaje tendrá control físico sobre los hábitos respiratorios de otro personaje, a menudo mediante estrangulamiento intermitente y/o penetración en la garganta."
+    },
+    "impregnation": {
+      "label": "Fertilización",
+      "tooltip": "Impregnando un personaje."
+    },
+    "pregnancy": {
+      "label": "Embarazo",
+      "tooltip": "Fetichizar a un personaje embarazado."
+    },
+    "feminization": {
+      "label": "Feminización",
+      "tooltip": "La feminización es un tipo de juego de roles en el que se imponen rasgos tradicionalmente femeninos a una pareja masculina sumisa. También puede implicar una asunción de comportamiento y modales femeninos tradicionales."
+    },
+    "cuckold_cuckquean": {
+      "label": "Cornudo / Cuckquean",
+      "tooltip": "Se refiere al acto de un personaje que, dentro de los confines del mundo del RP, está designado para estar en una relación, teniendo interacción sexual con un personaje distinto del que está designado para estar en una relación, en el contexto del RP."
+    },
+    "shaving": {
+      "label": "Afeitar",
+      "tooltip": "La eliminación del vello corporal en un contexto sexual."
+    }
+  },
+  "pain": {
+    "light_pain": {
+      "label": "Dolor leve",
+      "tooltip": "Se refiere a añadir dolor físico leve a través de actos que son directamente sexuales."
+    },
+    "heavy_pain": {
+      "label": "Dolor severo",
+      "tooltip": "Se refiere a añadir dolor físico severo a través de actos que son directamente sexuales; Generalmente penetraciones bruscas o excesivas. Probablemente esto dejará una marca."
+    },
+    "nipple_clamps": {
+      "label": "pinzas para pezones",
+      "tooltip": "Dispositivo de presión que se aplica a los pezones para causar dolor que da placer."
+    },
+    "clothes_pins": {
+      "label": "pinzas para la ropa",
+      "tooltip": "Pellizque la piel entre las horquillas de una pinza de ropa."
+    },
+    "caning": {
+      "label": "Palos",
+      "tooltip": "El caning es una técnica utilizada en BDSM en la que el dominante golpea repetidamente al sumiso con un bastón largo y flexible, generalmente en las nalgas."
+    },
+    "flogging": {
+      "label": "Azotar",
+      "tooltip": "El uso de juguetes, generalmente asociado con BDSM y dominación/sumisión, utilizado contra un sumiso o pasivo, especialmente refiriéndose al juego de contacto con látigos de cualquier tipo, fustas, paletas o látigos."
+    },
+    "gagging_choking": {
+      "label": "Atragantamiento / Estrangulamiento",
+      "tooltip": "Provocar náuseas o atragantarse, ya sea por objetos insertados en la boca o por manos u objetos alrededor del cuello."
+    },
+    "beating": {
+      "label": "Golpear",
+      "tooltip": "Ser golpeado con los puños u otros objetos."
+    },
+    "spanking": {
+      "label": "azotaina",
+      "tooltip": "Golpear las nalgas de otro personaje, o ser el receptor de tales acciones; A menudo como una forma de juego previo erótico o como castigo en un entorno BDSM."
+    },
+    "cock_pussy_slapping": {
+      "label": "Azotes en el pene/vagina",
+      "tooltip": "Golpear los genitales de su pareja o recibir dichos golpes."
+    },
+    "cock_pussy_torture": {
+      "label": "Tortura de pene/vagina",
+      "tooltip": "Participar en un juego de rol en el que los genitales de al menos un personaje recibirán atención negativa, con la intención de causar dolor físico."
+    },
+    "hot_wax": {
+      "label": "Caliente era",
+      "tooltip": "El uso de cera, generalmente cera de vela caliente, como forma de estimulación sexual y/o tortura, o la recepción de tales actos."
+    },
+    "scratching": {
+      "label": "Rascarse",
+      "tooltip": "Un personaje arañando a otro con sus uñas o garras, a veces dejando marcas; A veces, pero no necesariamente doloroso."
+    },
+    "biting": {
+      "label": "Morder",
+      "tooltip": "El acto de morder o ser mordido; A veces doloroso, a veces juguetón."
+    },
+    "cutting": {
+      "label": "Corte",
+      "tooltip": "Cortar a una pareja para causarle dolor en un contexto sexual."
+    },
+    "snuff": {
+      "label": "Rapé",
+      "tooltip": "Matar a un personaje como parte del sexo."
+    }
+  },
+  "medium": {
+    "skype": {
+      "label": "Skype",
+      "tooltip": "Usando Skype como plataforma para juegos de rol."
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "tooltip": "Usando WhatsApp como plataforma para juegos de rol."
+    },
+    "kik": {
+      "label": "Kik",
+      "tooltip": "Usando Kik como plataforma para juegos de rol."
+    },
+    "reddit": {
+      "label": "Reddit",
+      "tooltip": "Usando Reddit como plataforma para juegos de rol."
+    },
+    "email": {
+      "label": "Correo electrónico",
+      "tooltip": "Utilizando el correo electrónico como plataforma para juegos de rol."
+    },
+    "discord": {
+      "label": "Discordia",
+      "tooltip": "Usando Discord como plataforma para juegos de rol."
+    },
+    "other_medium": {
+      "label": "De lo contrario",
+      "tooltip": "Usando otra plataforma para juegos de rol."
+    }
+  },
+  "time_scale": {
+    "short_term_scenes": {
+      "label": "Escenas de corta duración",
+      "tooltip": "Escenas de juego de rol que duran un corto período de tiempo, generalmente una sola sesión."
+    },
+    "medium_term_scenes": {
+      "label": "Escenas de mediano plazo",
+      "tooltip": "Escenas de juego de rol que duran un período de tiempo moderado, generalmente unas pocas sesiones."
+    },
+    "long_term_scenes": {
+      "label": "Escenas de larga duración",
+      "tooltip": "Escenas de juego de rol que duran un período prolongado de tiempo, normalmente muchas sesiones o una campaña en curso."
+    },
+    "quick_replies": {
+      "label": "Respuestas rápidas",
+      "tooltip": "Respuestas que llegan entre 0-10 minutos."
+    },
+    "fast_replies": {
+      "label": "Respuestas rápidas",
+      "tooltip": "Las respuestas llegarán en un plazo de 10 a 30 minutos."
+    },
+    "normal_replies": {
+      "label": "Respuestas normales",
+      "tooltip": "Respuestas que llegan entre 30 minutos y 2 horas."
+    },
+    "slow_replies": {
+      "label": "Respuestas lentas",
+      "tooltip": "Las respuestas llegarán en un plazo de 2 a 8 horas."
+    },
+    "glacial_replies": {
+      "label": "Respuestas muy lentas",
+      "tooltip": "Las respuestas llegarán en un plazo de 8 a 24 horas."
+    },
+    "occasional_replies": {
+      "label": "Respuestas incidentales",
+      "tooltip": "Respuestas que llegan después de 24 horas o más."
+    }
+  }
+}

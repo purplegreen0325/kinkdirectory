@@ -1,0 +1,739 @@
+{
+  "title": "Kink Directory",
+  "language": {
+    "switch": "Schakel naar {0}",
+    "en": "Engels",
+    "nl": "Nederlands",
+    "es": "Spaans",
+    "fr": "Frans",
+    "de": "Duits",
+    "it": "Italiaans",
+    "pt": "Portugees",
+    "ru": "Russisch",
+    "zh": "Chinees",
+    "ja": "Japans",
+    "ko": "Koreaans",
+    "ar": "Arabisch",
+    "hi": "Hindi",
+    "auto": "Automatisch (Systeem)"
+  },
+  "theme": {
+    "light": "Licht",
+    "dark": "Donker",
+    "auto": "Systeem"
+  },
+  "welcome": "Welkom bij de Kink Directory",
+  "app": {
+    "list_name_placeholder": "Voer een naam in voor je lijst",
+    "create_list": "Nieuwe lijst maken",
+    "import_list": "Lijst importeren",
+    "export_list": "Lijst exporteren",
+    "share_list": "Lijst delen",
+    "share_link": "Deelbare link",
+    "view_only": "Alleen bekijken",
+    "share_info_text": "Deel je lijst met anderen door deze unieke link te versturen. Iedereen met deze link kan je lijst bekijken in alleen-lezen modus.",
+    "share_privacy_note": "Alleen mensen met deze exacte link hebben toegang tot je lijst. Er is geen login nodig om gedeelde lijsten te bekijken.",
+    "copy_success": "Link gekopieerd naar klembord",
+    "copied": "Gekopieerd!",
+    "copy_and_close": "Kopiëren & Sluiten",
+    "close": "Sluiten",
+    "screenshot": "Screenshot maken",
+    "screenshot_options": "Screenshot opties",
+    "screenshot_downloaded": "Screenshot succesvol opgeslagen",
+    "screenshot_error": "Fout bij het maken van screenshot",
+    "taking_screenshot": "Screenshot maken...",
+    "download": "Downloaden",
+    "upload_to_imgur": "Uploaden naar Imgur",
+    "imgur_link": "Imgur Link",
+    "imgur_link_copied": "Imgur link gekopieerd naar klembord",
+    "imgur_upload_success": "Upload succesvol",
+    "imgur_upload_success_description": "Afbeelding succesvol geüpload naar Imgur",
+    "imgur_upload_error": "Upload mislukt",
+    "shorten_url": "Link verkorten",
+    "url_shortened": "Link verkort",
+    "shortened_link": "Verkorte link",
+    "url_shortened_success": "Link succesvol verkort",
+    "url_shortened_error": "Fout bij het verkorten van link",
+    "show_original": "Toon origineel",
+    "show_shortened": "Toon verkort",
+    "select_list": "Lijst selecteren",
+    "delete_list": "Lijst verwijderen",
+    "no_lists": "Geen lijsten gevonden. Maak een nieuwe om te beginnen.",
+    "select_a_list": "Selecteer een lijst om te bekijken of te bewerken",
+    "welcome_title": "Welkom bij Kink Directory",
+    "welcome_description": "Maak gepersonaliseerde kink-lijsten om je voorkeuren en grenzen te verkennen. Deel ze met partners of houd ze privé - jij hebt de controle.",
+    "welcome_privacy": "Alle gegevens worden alleen in je browser opgeslagen - niets wordt naar een server verzonden, wat volledige privacy garandeert.",
+    "welcome_sharing": "Genereer deelbare links om naar partners te sturen wanneer je wilt dat ze je voorkeuren zien.",
+    "welcome_customization": "Kies je rolperspectief en pas je lijst aan met gedetailleerde voorkeuren voor elk item.",
+    "welcome_desktop_placeholder": "Desktop voorbeeldafbeelding",
+    "welcome_mobile_placeholder": "Mobiele weergave",
+    "your_lists": "Jouw Lijsten",
+    "create_list_prompt": "Voeg een nieuwe lijst toe met aangepaste voorkeuren",
+    "today": "Vandaag",
+    "yesterday": "Gisteren",
+    "days_ago": "{count} dagen geleden",
+    "recent": "Recent",
+    "motivational_text": "Verken je verlangens en grenzen met vertrouwen en openheid",
+    "selections": "selecties",
+    "as_dom": "Als dominant",
+    "as_sub": "Als onderdanige",
+    "you": "Jij",
+    "you_dom": "Bij jou",
+    "you_sub": "Bij jou",
+    "your_dom": "Jouw dominant",
+    "your_sub": "Jouw onderdanige",
+    "for_dom": "Bij jouw dominant",
+    "for_sub": "Bij jouw onderdanige",
+    "general": "Algemeen",
+    "general_questions": "Algemene vragen",
+    "create_new_list": "Nieuwe lijst maken",
+    "list_name": "Lijstnaam",
+    "role": "Rol",
+    "cancel": "Annuleren",
+    "create": "Maken",
+    "confirm": "Bevestigen",
+    "legend": "Legenda",
+    "copy_link": "Link kopiëren",
+    "confirm_delete": "Weet je zeker dat je deze lijst wilt verwijderen?",
+    "create_list_description": "Maak een gepersonaliseerde lijst om je voorkeuren te verkennen",
+    "create_list_intro": "Je lijstgegevens worden alleen in je browser opgeslagen en nooit naar een server verzonden. De enige manier waarop je gegevens worden gedeeld, is via links die je zelf kiest om te delen met anderen.",
+    "role_explanation": "Je rolvoorkeur bepaalt hoe lijstitems worden gepresenteerd en hoe keuzes worden geïnterpreteerd.",
+    "role_sub_explanation": "Onderdanig (sub): Je geeft de voorkeur aan het ontvangen van aanwijzingen, het opgeven van controle en het ontvangen van activiteiten. Je markeert items op basis van wat je prettig vindt om te ervaren van een dominante partner.",
+    "role_dom_explanation": "Dominant (dom): Je geeft de voorkeur aan het nemen van controle, het geven van aanwijzingen en het uitvoeren van activiteiten. Je markeert items op basis van wat je prettig vindt om te doen met een onderdanige partner.",
+    "role_both_explanation": "Veelzijdig (switch): Je geniet van aspecten van zowel onderdanige als dominante rollen, afhankelijk van de context. Je markeert voorkeuren vanuit beide perspectieven - wat je graag geeft én ontvangt.",
+    "share_list_description": "Deel je kink-lijst met anderen via een unieke URL",
+    "view_only_mode": "Je bekijkt een gedeelde lijst in alleen-lezen modus.",
+    "exit_view_mode": "Bewerkmodus openen",
+    "delete_confirm_title": "Lijst verwijderen",
+    "delete_confirm_message": "Weet je zeker dat je deze lijst wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+    "list_deleted": "Lijst succesvol verwijderd",
+    "list_imported": "Lijst succesvol geïmporteerd",
+    "imported_from_shared": "Lijst is geïmporteerd via een gedeelde link",
+    "import_confirm_title": "Lijst importeren",
+    "import_confirm_message": "Wil je deze gedeelde lijst importeren naar je collectie?",
+    "role_specific_items": "Rol-specifieke items",
+    "role_specific_questions": "Rol-specifieke vragen",
+    "list_updated": "Lijst succesvol bijgewerkt"
+  },
+  "roles": {
+    "sub": "Onderdanig",
+    "dom": "Dominant",
+    "both": "Beide"
+  },
+  "choices": {
+    "not_entered": "Niet ingevuld",
+    "favorite": "Favoriet",
+    "like": "Leuk",
+    "indifferent": "Onverschillig",
+    "maybe": "Misschien",
+    "limit": "Limiet"
+  },
+  "categories": {
+    "bodies": "Lichamen",
+    "clothing": "Kleding",
+    "restrictive": "Beperkend",
+    "general": "Algemeen",
+    "ass_play": "Anaal Spel",
+    "toys": "Speeltjes",
+    "domination": "Dominantie",
+    "no_consent": "Geen Toestemming",
+    "taboo": "Taboe",
+    "surrealism": "Surrealisme",
+    "fluids": "Vloeistoffen",
+    "degradation": "Vernedering",
+    "touch_stimulation": "Aanraking & Stimulatie",
+    "misc_fetish": "Diverse Fetishes",
+    "pain": "Pijn",
+    "medium": "Medium",
+    "time_scale": "Tijdschaal"
+  },
+  "subcategories": {
+    "general": "Algemeen"
+  },
+  "bodies": {
+    "skinny": {
+      "label": "Mager",
+      "tooltip": "Interesse in personages die tenger, dun of slank zijn."
+    },
+    "chubby": {
+      "label": "Mollig",
+      "tooltip": "Interesse in personages die ronder, volledig van vorm en mollig zijn."
+    },
+    "small_breasts": {
+      "label": "Kleine borsten",
+      "tooltip": "Interesse in borsten die bijzonder klein zijn, soms tot het punt dat ze bijna afwezig lijken."
+    },
+    "large_breasts": {
+      "label": "Grote borsten",
+      "tooltip": "Interesse in borsten die bijzonder groot zijn."
+    },
+    "small_cocks": {
+      "label": "Kleine piemels",
+      "tooltip": "Interesse in piemels die kleiner zijn dan gemiddeld."
+    },
+    "large_cocks": {
+      "label": "Grote piemels",
+      "tooltip": "Interesse in piemels die groter zijn dan gemiddeld."
+    },
+    "small_butts": {
+      "label": "Kleine billen",
+      "tooltip": "Interesse in billen die bijzonder klein zijn."
+    },
+    "big_butts": {
+      "label": "Grote billen",
+      "tooltip": "Interesse in billen die bijzonder groot zijn."
+    }
+  },
+  "clothing": {
+    "clothed_sex": {
+      "label": "Seks met kleding aan",
+      "tooltip": "Deelnemen aan een RP waarbij jij en/of je partner niet uitgekleed zijn tijdens seksuele interactie."
+    },
+    "lingerie": {
+      "label": "Lingerie",
+      "tooltip": "Interesse in het gebruik van lingerie in de seksuele context van een RP, of interesse in personages die dit dragen."
+    },
+    "stockings": {
+      "label": "Kousen",
+      "tooltip": "Interesse in het gebruik van kousen in de seksuele context van een RP, of interesse in personages die deze dragen."
+    },
+    "heels": {
+      "label": "Hakken",
+      "tooltip": "Interesse in het gebruik van schoenen met hoge hakken in de seksuele context van een RP, of interesse in personages die deze dragen."
+    },
+    "leather": {
+      "label": "Leer",
+      "tooltip": "Interesse in het gebruik van leren kleding in de seksuele context van een RP, of interesse in personages die dit dragen."
+    },
+    "latex": {
+      "label": "Latex",
+      "tooltip": "Het gebruik van latex en/of rubber materiaal gedragen als kleding."
+    },
+    "uniform_costume": {
+      "label": "Uniform / kostuum",
+      "tooltip": "Interesse in het gebruik van uniformen of kostuums in de seksuele context van een RP, of interesse in personages die deze dragen."
+    },
+    "cross_dressing": {
+      "label": "Cross-dressing",
+      "tooltip": "Deelnemen aan een RP waarbij een of meer personages zich kleden in de kleding van het tegenovergestelde geslacht."
+    }
+  },
+  "general": {
+    "romance_affection": {
+      "label": "Romantiek / Affectie",
+      "tooltip": "Het tonen of uiten van liefde of sterke genegenheid, passie, zowel tijdens het vrijen als tijdens normale scènes."
+    },
+    "handjob_fingering": {
+      "label": "Handjob / Vingeren",
+      "tooltip": "Seksuele stimulatie door direct, fysiek contact van de handen of vingers met de geslachtsdelen."
+    },
+    "blowjob": {
+      "label": "Pijpen",
+      "tooltip": "Seksuele stimulatie door direct, fysiek contact van de mond of tong met mannelijke geslachtsdelen."
+    },
+    "deep_throat": {
+      "label": "Deep throat",
+      "tooltip": "Het penetreren van de mond van een ander personage tot de diepte waarop de penis of het ingebrachte voorwerp de achterkant van de mondholte en/of keel binnendringt, soms met een kokhalsreflex tot gevolg, of het ontvangen van dergelijke handelingen."
+    },
+    "swallowing": {
+      "label": "Doorslikken",
+      "tooltip": "Het oraal consumeren van sperma, direct of indirect van een penis."
+    },
+    "facials": {
+      "label": "Facials",
+      "tooltip": "Het klaarkomen/spuiten (ejaculeren) direct op iemands gezicht."
+    },
+    "cunnilingus": {
+      "label": "Beffen",
+      "tooltip": "Seksuele stimulatie door direct, fysiek contact van de mond of tong met vrouwelijke geslachtsdelen."
+    },
+    "face_sitting": {
+      "label": "Face-sitting",
+      "tooltip": "Een seksuele praktijk waarbij iemand met zijn billen of geslachtsdelen op het gezicht van een ander personage zit, waardoor de persoon verstikt raakt, soms tot het punt van verstikking; vaak gedaan als vorm van het afdwingen van orale bevrediging."
+    },
+    "edging": {
+      "label": "Edging",
+      "tooltip": "Op de rand van een climax blijven zonder orgasme."
+    },
+    "teasing": {
+      "label": "Plagen",
+      "tooltip": "Verwijst naar uitgebreide scènes van voorspel voorafgaand aan expliciete, seksuele gemeenschap, die fysiek en/of verbaal kunnen zijn, meestal om de partner op te winden tot het punt van seksuele frustratie of wanhoop."
+    },
+    "ruined": {
+      "label": "Ruined",
+      "tooltip": "De handeling waarbij iemand een orgasme mag krijgen, maar de stimulatie net voor het hoogtepunt wordt gestopt, wat resulteert in een onvolledig of onbevredigend orgasme. Dit kan voorkomen bij zowel mannelijke als vrouwelijke partners."
+    }
+  },
+  "ass_play": {
+    "anal_toys": {
+      "label": "Anaal speelgoed",
+      "tooltip": "Verwijst naar anale penetratie met seksspeeltjes, waaronder maar niet beperkt tot dildo's, vibrators, anale eieren, anale kralen, enz."
+    },
+    "anal_sex_pegging": {
+      "label": "Anale seks/pegging",
+      "tooltip": "Gepenetreerd worden door een partner, met een penis of strap-on."
+    },
+    "rimming": {
+      "label": "Rimming",
+      "tooltip": "Het geven van orale stimulatie aan de anus van een partner, door middel van likken en/of het penetreren van de anus van de ontvanger met de tong."
+    },
+    "double_penetration": {
+      "label": "Dubbele penetratie",
+      "tooltip": "Het penetreren van de anus van een enkel personage met twee objecten, waaronder maar niet beperkt tot de penis, seksspeeltjes, vuist enz., of het ontvangen hiervan."
+    },
+    "anal_fisting": {
+      "label": "Anaal fisten",
+      "tooltip": "Het inbrengen van de hand(en) en/of arm(en) in de anus van de partner, of het ontvangen van dergelijke handelingen."
+    }
+  },
+  "restrictive": {
+    "gag": {
+      "label": "Gag",
+      "tooltip": "Het plaatsen en vastzetten van een voorwerp in de mond van een ander personage om hem of haar te dwingen door de neus te ademen, evenals het creëren van het onvermogen om te spreken, of het ontvangen van dergelijke handelingen."
+    },
+    "collar": {
+      "label": "Halsband",
+      "tooltip": "Het dragen van een halsband om de nek."
+    },
+    "leash": {
+      "label": "Riem",
+      "tooltip": "Aan een riem rondgeleid worden."
+    },
+    "chastity": {
+      "label": "Kuisheid",
+      "tooltip": "Seksuele onthouding, vrijwillig of gedwongen; dit kan inhouden dat iemand zich simpelweg onthoudt van seksuele activiteit, of het dragen van een apparaat dat dit verhindert."
+    },
+    "bondage_light": {
+      "label": "Bondage (Licht)",
+      "tooltip": "Het gebruik van bondage die mild of gematigd is in ofwel de positie waarin het het gebonden personage plaatst, de duur waarvoor het personage in bondage zal zijn, het niveau van ongemak veroorzaakt door de bondage of de mate van immobilisatie die zal plaatsvinden als gevolg van de bondage."
+    },
+    "bondage_heavy": {
+      "label": "Bondage (Zwaar)",
+      "tooltip": "Het gebruik van bondage die extreem is in ofwel de positie waarin het het gebonden personage plaatst, de duur waarvoor het personage in bondage zal zijn, het niveau van ongemak veroorzaakt door de bondage of de mate van immobilisatie die zal plaatsvinden als gevolg van de bondage."
+    },
+    "encasement": {
+      "label": "Opsluiting",
+      "tooltip": "Het hele lichaam wordt ingepakt als een mummie in een latex pak, slaapzak of andere fetisj-uitrusting voor seksuele bevrediging."
+    },
+    "cag": {
+      "label": "Kuisheid/kooien",
+      "tooltip": "Een apparaat dat toegang tot de geslachtsdelen voorkomt."
+    },
+    "dom_only_for_sub": {
+      "label": "Dom alleen voor sub",
+      "tooltip": "Voorbeeld: Dominant kan alleen antwoorden voor hun onderdanige, niet voor zichzelf."
+    },
+    "sub_self_only": {
+      "label": "Sub alleen zelf",
+      "tooltip": "Voorbeeld: Onderdanige kan alleen voor zichzelf antwoorden, niet voor hun dominant."
+    },
+    "dom_answer_for_both": {
+      "label": "Dom antwoordt voor beiden",
+      "tooltip": "Voorbeeld: Dominant antwoordt voor zowel zichzelf als hun onderdanige."
+    },
+    "sub_only_for_dom": {
+      "label": "Sub alleen voor dom",
+      "tooltip": "Voorbeeld: Onderdanige kan alleen antwoorden voor hun dominant, niet voor zichzelf."
+    }
+  },
+  "toys": {
+    "dildos": {
+      "label": "Dildo's",
+      "tooltip": "Een voorwerp in de vorm van een erecte penis gebruikt voor seksuele stimulatie."
+    },
+    "plugs": {
+      "label": "Plugs",
+      "tooltip": "Een seksspeeltje dat ontworpen is om in het rectum te worden ingebracht."
+    },
+    "vibrators": {
+      "label": "Vibrators",
+      "tooltip": "Een vibrerend apparaat gebruikt voor seksuele stimulatie."
+    },
+    "sounding": {
+      "label": "Sounding",
+      "tooltip": "Het inbrengen van metalen staafjes in de urinebuis van een man of vrouw, of het ontvangen van dergelijke handelingen; impliceert technisch gezien staafjes die resoneren en/of vibreren als reactie op een vorm van stimulatie, maar betekent niet noodzakelijkerwijs zo."
+    }
+  },
+  "domination": {
+    "general_dom_sub": {
+      "label": "Algemeen Dom / Algemeen Sub",
+      "tooltip": "Verzamelnaam voor Dominante/Onderdanige Activiteiten."
+    },
+    "domestic_servitude": {
+      "label": "Huishoudelijke dienstbaarheid",
+      "tooltip": "Bediend worden door een butler, serveerster, chauffeur, dienstmeisje of huishoudster, of als zodanig dienen."
+    },
+    "slavery": {
+      "label": "Slavernij",
+      "tooltip": "Dienen als slaaf op bevel van de dominant, of dergelijke dienst ontvangen, zonder keuze."
+    },
+    "pet_play": {
+      "label": "Huisdier spel",
+      "tooltip": "Huisdierenspel is een rol waarbij de focus ligt op de onderdanige die een andere geestestoestand aanneemt, vaak die van een hond, kat of paard."
+    },
+    "dd_lg_md_lb": {
+      "label": "DD/lg, MD/lb",
+      "tooltip": "Daddy of Mommy Dom/ Little Girl of Boy. De daddy/mommy is de meer dominante helft van de relatie, de little is de meer onderdanige."
+    },
+    "discipline": {
+      "label": "Discipline",
+      "tooltip": "Het gebruik van versterking (beloningen en/of straffen) om een onderdanige te trainen de verschillende commando's van een meester te gehoorzamen."
+    },
+    "begging": {
+      "label": "Smeken",
+      "tooltip": "De zelfverlagende daad van smeken, als een vorm van onderwerping, die in een RP wordt opgenomen."
+    },
+    "forced_orgasm": {
+      "label": "Gedwongen orgasme",
+      "tooltip": "Een gedwongen orgasme is consensueel BDSM of kinky seksueel spel waarbij een persoon instemt om gedwongen te worden tot een orgasme op een manier die buiten hun controle ligt."
+    },
+    "orgasm_control": {
+      "label": "Orgasme controle",
+      "tooltip": "Verwijst naar de dominant die controle heeft over wanneer de onderdanige een orgasme bereikt, hetzij door fysieke middelen of door commando; impliceert meestal dominantie en/of excessief plagen en edging; orgasme kan volledig worden ontzegd."
+    },
+    "orgasm_denial": {
+      "label": "Orgasme onthouding",
+      "tooltip": "Verwijst naar de dominant die de onderdanige een orgasme ontzegt."
+    },
+    "power_exchange": {
+      "label": "Machtsuitwisseling",
+      "tooltip": "Een relatie met dienstverlening als kern."
+    }
+  },
+  "no_consent": {
+    "dubious_consent": {
+      "label": "Twijfelachtige toestemming",
+      "tooltip": "Situaties waarin de toestemming van een partner in twijfel wordt getrokken, hoewel het geen regelrechte verkrachting is."
+    },
+    "non_con_rape": {
+      "label": "Non-con / verkrachting",
+      "tooltip": "Nemen/genomen worden tegen iemands wil, vaak door geweld."
+    },
+    "blackmail_coercion": {
+      "label": "Chantage / dwang",
+      "tooltip": "Verwijst naar het gebruik van dwang en/of chantage in de context van het verhaal van een RP, vaak in de vorm van een semi-consensueel middel om seks te krijgen van een partner."
+    },
+    "kidnapping": {
+      "label": "Ontvoering",
+      "tooltip": "Het ontvoeren van een personage in een RP met het doel om te misbruiken, vaak seksueel, of ontvoerd worden om dergelijke redenen; impliceert vaak onbepaalde gevangenschap."
+    },
+    "drugs": {
+      "label": "Drugs",
+      "tooltip": "Het gebruik van illegale drugs in de context van een RP, meestal om een personage te desoriënteren of anderszins mentaal buiten werking te stellen, of om de sensaties van seks te verhogen."
+    },
+    "alcohol": {
+      "label": "Alcohol",
+      "tooltip": "Het gebruik van alcohol in de context van een RP, meestal om een personage te desoriënteren of anderszins mentaal buiten werking te stellen, of om de sensaties van seks te verhogen."
+    },
+    "sleep_play": {
+      "label": "Slaap spel",
+      "tooltip": "Het aangaan van seksuele handelingen met een bewusteloze/slapende partner."
+    }
+  },
+  "taboo": {
+    "incest": {
+      "label": "Incest",
+      "tooltip": "Deelnemen aan een RP waarin ten minste twee personages aan elkaar verwant zijn."
+    },
+    "age_gap": {
+      "label": "Leeftijdsverschil",
+      "tooltip": "Verwijst naar scènes waarin er een significant verschil is in de leeftijden van personages."
+    },
+    "interracial": {
+      "label": "Interraciaal",
+      "tooltip": "Scènes gebaseerd op interraciale interacties zonder te vertrouwen op raciale stereotypen."
+    },
+    "raceplay": {
+      "label": "Rasspel",
+      "tooltip": "Scènes gebaseerd op raciale stereotypen of racisme, inclusief scènes die zich afspelen in racistische settings."
+    },
+    "bestiality": {
+      "label": "Bestialiteit",
+      "tooltip": "Verwijst naar een bewust personage dat een seksuele handeling uitvoert met een niet-bewust dier, of een niet-bewust dier spelen in een RP en benaderd worden door een bewust personage."
+    },
+    "necrophilia": {
+      "label": "Necrofilie",
+      "tooltip": "De handeling van het hebben van seks met een dood, of anderszins bewusteloos of levenloos, personage dat ooit levend was, of, theoretisch, het ontvangen van dergelijke handelingen."
+    },
+    "cheating": {
+      "label": "Vreemdgaan",
+      "tooltip": "Waarbij een of beide partners ontrouw zijn aan hun partners."
+    },
+    "exhibitionism": {
+      "label": "Exhibitionisme",
+      "tooltip": "Deelnemen aan een RP waarin de setting van publieke aard is; meestal gebruikt in combinatie met exhibitionisme en/of vernedering."
+    },
+    "voyeurism": {
+      "label": "Voyeurisme",
+      "tooltip": "Verwijst naar het verkrijgen van seksuele stimulatie van ofwel de handeling van het kijken, meestal in het geheim, naar een persoon (of mensen) die zichzelf onthult of iets anders expliciet doet, of de daad van het onthullen van zichzelf en/of iets anders expliciet doen met de bedoeling om bekeken te worden."
+    }
+  },
+  "surrealism": {
+    "futanari_futa": {
+      "label": "Futanari/Futa",
+      "tooltip": "Personages die een over het algemeen vrouwelijk lichaam hebben, maar zowel vrouwelijke als mannelijke geslachtsdelen hebben (hoewel testikels niet altijd aanwezig zijn)."
+    },
+    "furry": {
+      "label": "Furry",
+      "tooltip": "Antropomorfe dierlijke personages."
+    },
+    "vore": {
+      "label": "Vore",
+      "tooltip": "Het fysiek consumeren van een ander personage."
+    },
+    "transformation": {
+      "label": "Transformatie",
+      "tooltip": "De handeling van het veroorzaken dat de fysieke kenmerken van een deelnemer aan een RP, mogelijk inclusief zichzelf, door magische of chemische middelen, op een dramatische manier veranderen; kan verwijzen naar een groot aantal verschillende soorten transformaties, en duidt op het ontvangen van seksueel plezier uit de daad van transformatie zelf."
+    },
+    "tentacles": {
+      "label": "Tentakels",
+      "tooltip": "Deelnemen aan een RP waarin zelfbewuste tentakels of tentakelachtige aanhangsels een personage zullen penetreren; impliceert vaak meerdere penetraties."
+    },
+    "monster_or_alien": {
+      "label": "Monster of Alien",
+      "tooltip": "Verschillende soorten monsters, buitenaardse wezens en esthetisch uitdagende personages."
+    },
+    "ghost": {
+      "label": "Geest",
+      "tooltip": "Vroeger levend, momenteel niet in bezit van een lichaam."
+    }
+  },
+  "fluids": {
+    "blood": {
+      "label": "Bloed",
+      "tooltip": "Heeft betrekking op het opnemen van bloed of het verkrijgen van bloed in welke vorm dan ook in een seksuele context, of het uitvoeren van handelingen die bloed zullen trekken."
+    },
+    "watersports": {
+      "label": "Watersport",
+      "tooltip": "Heeft betrekking op het opnemen van urine, of het uitstoten van urine, in welke vorm dan ook, in de seksuele context van een RP."
+    },
+    "scat": {
+      "label": "Scat",
+      "tooltip": "Heeft betrekking op het opnemen van ontlasting of het uitstoten van ontlasting in welke vorm dan ook in de seksuele context van een RP."
+    },
+    "lactation": {
+      "label": "Lactatie",
+      "tooltip": "Het produceren van melk uit iemands borsten, of het hebben van seks met een personage dat melk produceert uit zijn borsten, meestal als reactie op seksuele stimulatie, en elk spel dat daaruit voortvloeit."
+    },
+    "diapers": {
+      "label": "Luiers",
+      "tooltip": "Een situatie waarin ten minste één personage een luier zal dragen; impliceert meestal dat de luier bevuild zal worden met urine en/of ontlasting, meestal in combinatie met leeftijdsspel of infantilisme, maar soms in combinatie met vernedering."
+    },
+    "cum_play": {
+      "label": "Sperma spel",
+      "tooltip": "Elk aantal situaties gericht op het spelen met sperma."
+    },
+    "saliva_spit": {
+      "label": "Speeksel/Spuug",
+      "tooltip": "Seksueel spel met speeksel of spuug."
+    }
+  },
+  "degradation": {
+    "glory_hole": {
+      "label": "Glory hole",
+      "tooltip": "Een partner bedienen of bediend worden door een partner met een fysieke barrière tussen de deelnemers."
+    },
+    "name_calling": {
+      "label": "Schelden",
+      "tooltip": "Deelnemen aan een RP waarin een personage uitgescholden zal worden, in een poging om ofwel een reactie van seksuele bevrediging op te wekken uit de emoties die correleren met vernedering, of louter als een vorm van psychologische dominantie of straf."
+    },
+    "humiliation": {
+      "label": "Vernedering",
+      "tooltip": "Deelnemen aan een RP waarin een personage in verlegenheid zal worden gebracht, meestal extreem en/of frequent, in een poging om ofwel een reactie van seksuele bevrediging op te wekken uit de emoties die correleren met vernedering, of louter als een vorm van psychologische dominantie of straf; meestal een intensere vorm van degradatie."
+    }
+  },
+  "touch_stimulation": {
+    "cock_pussy_worship": {
+      "label": "Piemel/Vagina verering",
+      "tooltip": "Overdadige erkenning van de geslachtsdelen van je partner, hetzij verbaal en/of fysiek, of het ontvangen van dergelijke handelingen; impliceert meestal orale stimulatie."
+    },
+    "ass_worship": {
+      "label": "Billen verering",
+      "tooltip": "Overdadige erkenning van de billen van je partner, hetzij verbaal en/of fysiek, of het ontvangen van dergelijke handelingen; impliceert meestal orale stimulatie."
+    },
+    "foot_play": {
+      "label": "Voetspel",
+      "tooltip": "Het gebruik van voeten in de seksuele context van een RP, waaronder maar niet beperkt tot het vereren van voeten, het ontvangen van seksuele bevrediging van het zicht of de geur van voeten en/of het humpen van voeten, soms tot het punt van orgasme."
+    },
+    "tickling": {
+      "label": "Kietelen",
+      "tooltip": "Het kietelen en/of gekieteld worden in een seksuele context van een RP; of, het ontvangen van seksuele stimulatie hiervan."
+    },
+    "sensation_play": {
+      "label": "Sensatiespel",
+      "tooltip": "Sensatiespel beschrijft een breed scala aan activiteiten, zowel vanille als kinky, die de zintuigen van het lichaam gebruiken als een manier om een partner op te winden en te stimuleren. Hoewel sensatiespel vaak gerelateerd is aan huidgevoelens, hoeft het niet zo beperkt te zijn. Zicht, smaak en gehoor kunnen ook worden opgenomen in sensatiespel."
+    },
+    "electro_stimulation": {
+      "label": "Elektro stimulatie",
+      "tooltip": "Het gebruik van seksspeeltjes die een elektrische stroom dragen; soms pijnlijk."
+    }
+  },
+  "misc_fetish": {
+    "fisting": {
+      "label": "Fisting",
+      "tooltip": "Het plaatsen van je hand(en) en/of arm(en) in een vagina, of het ontvangen van dergelijke handelingen."
+    },
+    "gangbang": {
+      "label": "Gangbang",
+      "tooltip": "Wanneer meerdere partners, meestal 3 of meer, seksuele gemeenschap hebben met een enkele bereidwillige partner."
+    },
+    "breath_play": {
+      "label": "Ademspel",
+      "tooltip": "Een situatie waarin ten minste één personage fysieke controle zal hebben over de ademhalingsgewoonten van een ander personage, vaak door ofwel intermitterend wurgen en/of door de penetratie van de keel."
+    },
+    "impregnation": {
+      "label": "Bevruchting",
+      "tooltip": "Het zwanger maken van een personage."
+    },
+    "pregnancy": {
+      "label": "Zwangerschap",
+      "tooltip": "Het fetisjeren van een zwanger personage."
+    },
+    "feminization": {
+      "label": "Feminisatie",
+      "tooltip": "Feminisatie is een soort rollenspel waarbij traditioneel vrouwelijke eigenschappen worden opgelegd aan een onderdanige mannelijke partner. Het kan ook een aanname van traditioneel vrouwelijk gedrag en manieren inhouden."
+    },
+    "cuckold_cuckquean": {
+      "label": "Cuckold / Cuckquean",
+      "tooltip": "Verwijst naar de handeling van een personage dat, binnen de grenzen van de RP-wereld is aangewezen om in een relatie te zijn, seksuele interactie zal hebben met een ander personage dan degene die is voorbestemd om in een relatie te zijn, in de context van de RP."
+    },
+    "shaving": {
+      "label": "Scheren",
+      "tooltip": "Het verwijderen van lichaamshaar in een seksuele context."
+    }
+  },
+  "pain": {
+    "light_pain": {
+      "label": "Lichte pijn",
+      "tooltip": "Verwijst naar het toevoegen van lichte fysieke pijn door handelingen die direct seksueel zijn."
+    },
+    "heavy_pain": {
+      "label": "Zware pijn",
+      "tooltip": "Verwijst naar het toevoegen van zware fysieke pijn door handelingen die direct seksueel zijn; meestal ruwe of buitensporige penetraties. Dit laat waarschijnlijk een teken achter."
+    },
+    "nipple_clamps": {
+      "label": "Tepelklemmen",
+      "tooltip": "Druktoestel dat op tepels wordt aangebracht om pijn te veroorzaken die plezier geeft."
+    },
+    "clothes_pins": {
+      "label": "Wasknijpers",
+      "tooltip": "Huid knijpen tussen de vorken van een wasknijper."
+    },
+    "caning": {
+      "label": "Stokken",
+      "tooltip": "Stokslaan is een techniek die in BDSM wordt gebruikt waarbij de dominant de onderdanige herhaaldelijk slaat met een lange, flexibele stok, meestal op de billen."
+    },
+    "flogging": {
+      "label": "Geselen",
+      "tooltip": "Het gebruik van speeltjes, meestal geassocieerd met BDSM en dominantie/onderwerping, die worden ingezet tegen een onderdanige of bottom, met name verwijzend naar contactspel met zweepjes van welk type dan ook, rijzweepjes, peddels of zwepen."
+    },
+    "gagging_choking": {
+      "label": "Kokhalzen / Verstikken",
+      "tooltip": "Tot kokhalzen of verstikken gebracht worden, hetzij door voorwerpen die in de mond zijn ingebracht of handen/voorwerpen rond de nek."
+    },
+    "beating": {
+      "label": "Slaan",
+      "tooltip": "Geslagen worden met vuisten of andere voorwerpen."
+    },
+    "spanking": {
+      "label": "Billenkoek",
+      "tooltip": "Het slaan op de billen van een ander personage, of de ontvanger zijn van zulke handelingen; vaak als een vorm van erotisch voorspel of als straf in een BDSM-setting."
+    },
+    "cock_pussy_slapping": {
+      "label": "Piemel/Vagina slaan",
+      "tooltip": "Het slaan op de geslachtsdelen van je partner, of dergelijke klappen ontvangen."
+    },
+    "cock_pussy_torture": {
+      "label": "Piemel/Vagina marteling",
+      "tooltip": "Deelnemen aan een RP waarin de geslachtsdelen van ten minste één personage negatieve aandacht zullen krijgen, met de bedoeling om fysieke pijn te veroorzaken."
+    },
+    "hot_wax": {
+      "label": "Heet Was",
+      "tooltip": "Het gebruik van was, meestal hete kaarsenwas, als een vorm van seksuele stimulatie en/of marteling, of het ontvangen van dergelijke handelingen."
+    },
+    "scratching": {
+      "label": "Krabben",
+      "tooltip": "Eén personage dat een ander krabt met zijn nagels of klauwen, soms met achterlating van sporen; soms maar niet noodzakelijk pijnlijk."
+    },
+    "biting": {
+      "label": "Bijten",
+      "tooltip": "De handeling van bijten of gebeten worden; soms pijnlijk, soms speels."
+    },
+    "cutting": {
+      "label": "Snijden",
+      "tooltip": "Het snijden van een partner om pijn te veroorzaken in een seksuele context."
+    },
+    "snuff": {
+      "label": "Snuff",
+      "tooltip": "Het vermoorden van een personage als onderdeel van seks."
+    }
+  },
+  "medium": {
+    "skype": {
+      "label": "Skype",
+      "tooltip": "Skype gebruiken als platform voor rollenspel."
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "tooltip": "WhatsApp gebruiken als platform voor rollenspel."
+    },
+    "kik": {
+      "label": "Kik",
+      "tooltip": "Kik gebruiken als platform voor rollenspel."
+    },
+    "reddit": {
+      "label": "Reddit",
+      "tooltip": "Reddit gebruiken als platform voor rollenspel."
+    },
+    "email": {
+      "label": "E-Mail",
+      "tooltip": "E-mail gebruiken als platform voor rollenspel."
+    },
+    "discord": {
+      "label": "Discord",
+      "tooltip": "Discord gebruiken als platform voor rollenspel."
+    },
+    "other_medium": {
+      "label": "Anders",
+      "tooltip": "Een ander platform gebruiken voor rollenspel."
+    }
+  },
+  "time_scale": {
+    "short_term_scenes": {
+      "label": "Korte-termijn Scènes",
+      "tooltip": "Rollenspel scènes die een korte periode duren, meestal een enkele sessie."
+    },
+    "medium_term_scenes": {
+      "label": "Middellange-termijn Scènes",
+      "tooltip": "Rollenspel scènes die een gematigde periode duren, meestal een paar sessies."
+    },
+    "long_term_scenes": {
+      "label": "Lange-termijn Scènes",
+      "tooltip": "Rollenspel scènes die een langere periode duren, meestal vele sessies of een doorlopende campagne."
+    },
+    "quick_replies": {
+      "label": "Snelle Antwoorden",
+      "tooltip": "Antwoorden die binnen 0-10 minuten komen."
+    },
+    "fast_replies": {
+      "label": "Vlotte Antwoorden",
+      "tooltip": "Antwoorden die binnen 10-30 minuten komen."
+    },
+    "normal_replies": {
+      "label": "Normale Antwoorden",
+      "tooltip": "Antwoorden die binnen 30 minuten tot 2 uur komen."
+    },
+    "slow_replies": {
+      "label": "Trage Antwoorden",
+      "tooltip": "Antwoorden die binnen 2-8 uur komen."
+    },
+    "glacial_replies": {
+      "label": "Zeer Trage Antwoorden",
+      "tooltip": "Antwoorden die binnen 8-24 uur komen."
+    },
+    "occasional_replies": {
+      "label": "Incidentele Antwoorden",
+      "tooltip": "Antwoorden die na 24+ uur komen."
+    }
+  }
+}

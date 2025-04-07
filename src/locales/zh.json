@@ -1,0 +1,739 @@
+{
+  "title": "Kink Directory",
+  "language": {
+    "switch": "切换到{0}",
+    "en": "英语",
+    "nl": "荷兰语",
+    "es": "西班牙语",
+    "fr": "法语",
+    "de": "德语",
+    "pt": "葡萄牙语",
+    "it": "意大利语",
+    "ru": "俄语",
+    "zh": "中国人",
+    "ja": "日本人",
+    "ko": "韩国人",
+    "ar": "阿拉伯",
+    "hi": "印地语",
+    "auto": "自动（系统）"
+  },
+  "theme": {
+    "light": "浅色",
+    "dark": "深色",
+    "auto": "系统"
+  },
+  "welcome": "欢迎使用Kink Directory",
+  "app": {
+    "list_name_placeholder": "输入列表名称",
+    "create_list": "创建新列表",
+    "import_list": "导入列表",
+    "export_list": "导出列表",
+    "share_list": "分享列表",
+    "share_link": "可共享的链接",
+    "view_only": "仅查看",
+    "share_info_text": "通过发送此唯一链接与他人分享您的列表。任何拥有此链接的人都可以以只读模式查看您的列表。",
+    "share_privacy_note": "只有拥有此精确链接的人才能访问您的列表。无需登录即可查看共享列表。",
+    "copy_success": "链接已复制到剪贴板",
+    "copied": "已复制！",
+    "copy_and_close": "复制并关闭",
+    "close": "关闭",
+    "screenshot": "截屏",
+    "screenshot_options": "屏幕截图选项",
+    "screenshot_downloaded": "屏幕截图已成功保存",
+    "screenshot_error": "截屏时出错",
+    "taking_screenshot": "截屏...",
+    "download": "下载",
+    "upload_to_imgur": "上传至 Imgur",
+    "imgur_link": "Imgur 链接",
+    "imgur_link_copied": "Imgur 链接已复制到剪贴板",
+    "imgur_upload_success": "上传成功",
+    "imgur_upload_success_description": "图片已成功上传至 Imgur",
+    "imgur_upload_error": "上传失败",
+    "shorten_url": "缩短链接",
+    "url_shortened": "链接缩短",
+    "shortened_link": "短链接",
+    "url_shortened_success": "链接已成功缩短",
+    "url_shortened_error": "缩短链接时出错",
+    "show_original": "显示原文",
+    "show_shortened": "显示缩短",
+    "select_list": "选择列表",
+    "delete_list": "删除列表",
+    "no_lists": "未找到列表。创建一个新的来开始。",
+    "select_a_list": "选择要查看或编辑的列表",
+    "welcome_title": "欢迎来到 Kink 目录",
+    "welcome_description": "创建个性化的怪癖列表来探索您的偏好和界限。与合作伙伴分享或保持私密 - 由您控制。",
+    "welcome_privacy": "所有数据仅存储在您的浏览器中 - 不会有任何数据发送到服务器，从而确保完全的隐私。",
+    "welcome_sharing": "当您希望合作伙伴了解您的偏好时，生成可共享的链接发送给合作伙伴。",
+    "welcome_customization": "选择您的角色视角，并根据每个项目的详细偏好定制您的列表。",
+    "welcome_desktop_placeholder": "桌面示例图像",
+    "welcome_mobile_placeholder": "移动视图",
+    "your_lists": "你的清单",
+    "create_list_prompt": "添加具有自定义偏好设置的新列表",
+    "today": "今天",
+    "yesterday": "昨天",
+    "days_ago": "{count}天前",
+    "recent": "最近的",
+    "motivational_text": "自信而开放地探索你的欲望和界限",
+    "selections": "选择",
+    "as_dom": "作为主导",
+    "as_sub": "作为一个顺从者",
+    "you": "你",
+    "you_dom": "与你",
+    "you_sub": "与你",
+    "your_dom": "你的主导",
+    "your_sub": "你的顺从",
+    "for_dom": "在你的主导地位",
+    "for_sub": "在你的顺从",
+    "general": "一般的",
+    "general_questions": "一般问题",
+    "create_new_list": "创建新列表",
+    "list_name": "列表名称",
+    "role": "角色",
+    "cancel": "取消",
+    "create": "制作",
+    "confirm": "确认",
+    "legend": "传奇",
+    "copy_link": "复制链接",
+    "confirm_delete": "您确实要删除此列表吗？",
+    "create_list_description": "创建个性化列表来探索您的偏好",
+    "create_list_intro": "您的列表数据仅存储在您的浏览器中，永远不会发送到服务器。共享数据的唯一方式是通过您选择与他人共享的链接。",
+    "role_explanation": "您的角色偏好决定了列表项的呈现方式和选择的解释方式。",
+    "role_sub_explanation": "顺从（sub）：您更喜欢接受指示、放弃控制并接受行动。您可以根据自己喜欢从主导伴侣那里获得的体验来标记项目。",
+    "role_dom_explanation": "支配（dom）：您更喜欢掌控、发出指令并开展活动。您可以根据自己喜欢与顺从的伴侣一起做的事情来标记项目。",
+    "role_both_explanation": "多才多艺（转换）：根据具体情况，您既喜欢扮演服从角色，也喜欢扮演支配角色。您可以从两个角度标记偏好——您喜欢给予什么以及您喜欢接受什么。",
+    "share_list_description": "通过独特的 URL 与他人分享你的怪癖列表",
+    "view_only_mode": "您正在以只读模式查看共享列表。",
+    "exit_view_mode": "打开编辑模式",
+    "delete_confirm_title": "删除列表",
+    "delete_confirm_message": "您确实要删除此列表吗？此操作无法撤消。",
+    "list_deleted": "列表已成功删除",
+    "list_imported": "列表已成功导入",
+    "imported_from_shared": "列表通过共享链接导入",
+    "import_confirm_title": "导入列表",
+    "import_confirm_message": "您想将此共享列表导入到您的收藏夹吗？",
+    "role_specific_items": "角色特定物品",
+    "role_specific_questions": "特定角色的问题",
+    "list_updated": "列表更新成功"
+  },
+  "roles": {
+    "sub": "顺从",
+    "dom": "主导的",
+    "both": "两个都"
+  },
+  "choices": {
+    "not_entered": "未填写",
+    "favorite": "最喜欢的",
+    "like": "好的",
+    "indifferent": "冷漠",
+    "maybe": "或许",
+    "limit": "限制"
+  },
+  "categories": {
+    "bodies": "机构",
+    "clothing": "衣服",
+    "restrictive": "限制性",
+    "general": "一般的",
+    "ass_play": "肛交",
+    "toys": "玩具",
+    "domination": "统治地位",
+    "no_consent": "不同意",
+    "taboo": "忌讳",
+    "surrealism": "超现实主义",
+    "fluids": "液体",
+    "degradation": "屈辱",
+    "touch_stimulation": "触摸和刺激",
+    "misc_fetish": "各种恋物癖",
+    "pain": "疼痛",
+    "medium": "中等的",
+    "time_scale": "时间尺度"
+  },
+  "subcategories": {
+    "general": "一般的"
+  },
+  "bodies": {
+    "skinny": {
+      "label": "倾斜",
+      "tooltip": "对苗条、瘦弱或纤细的角色感兴趣。"
+    },
+    "chubby": {
+      "label": "胖乎乎的",
+      "tooltip": "对身材圆润、丰满和丰满的角色感兴趣。"
+    },
+    "small_breasts": {
+      "label": "乳房较小",
+      "tooltip": "对特别小的乳房感兴趣，有时甚至小到几乎不存在。"
+    },
+    "large_breasts": {
+      "label": "大乳房",
+      "tooltip": "对异常大的乳房感兴趣。"
+    },
+    "small_cocks": {
+      "label": "小鸡鸡",
+      "tooltip": "对比平均水平较小的阴茎感兴趣。"
+    },
+    "large_cocks": {
+      "label": "大鸡巴",
+      "tooltip": "对比一般阴茎更大的阴茎感兴趣。"
+    },
+    "small_butts": {
+      "label": "小屁股",
+      "tooltip": "对特别小的臀部感兴趣。"
+    },
+    "big_butts": {
+      "label": "大屁股",
+      "tooltip": "对特别大的臀部感兴趣。"
+    }
+  },
+  "clothing": {
+    "clothed_sex": {
+      "label": "穿着衣服做爱",
+      "tooltip": "参加角色扮演活动时，您和/或您的伴侣在性交过程中不会脱衣服。"
+    },
+    "lingerie": {
+      "label": "内衣",
+      "tooltip": "对角色扮演游戏中性爱场景中使用内衣感兴趣，或者对角色穿着内衣感兴趣。"
+    },
+    "stockings": {
+      "label": "长筒袜",
+      "tooltip": "对角色扮演游戏中性爱场景中使用长筒袜的兴趣，或对角色穿着长筒袜的兴趣。"
+    },
+    "heels": {
+      "label": "高跟鞋",
+      "tooltip": "对角色扮演游戏中性爱场景中使用高跟鞋的兴趣，或对角色穿着高跟鞋的兴趣。"
+    },
+    "leather": {
+      "label": "学习",
+      "tooltip": "对在角色扮演的性爱背景中使用皮革服装感兴趣，或者对角色穿着皮革服装感兴趣。"
+    },
+    "latex": {
+      "label": "乳胶",
+      "tooltip": "使用乳胶和/或橡胶材料作为衣服穿着。"
+    },
+    "uniform_costume": {
+      "label": "制服/服装",
+      "tooltip": "对角色扮演游戏中性爱场景中使用制服或服装感兴趣，或对角色穿着它们感兴趣。"
+    },
+    "cross_dressing": {
+      "label": "异装癖",
+      "tooltip": "参与角色扮演游戏，其中一个或多个角色穿着异性服装。"
+    }
+  },
+  "general": {
+    "romance_affection": {
+      "label": "浪漫 / 感情",
+      "tooltip": "无论是在做爱过程中还是在正常场景中，展示或表达爱或强烈的感情、激情。"
+    },
+    "handjob_fingering": {
+      "label": "手淫 / 指法",
+      "tooltip": "通过手或手指与生殖器的直接身体接触来产生性刺激。"
+    },
+    "blowjob": {
+      "label": "管道",
+      "tooltip": "通过口腔或舌头与男性生殖器的直接身体接触来进行性刺激。"
+    },
+    "deep_throat": {
+      "label": "深喉咙",
+      "tooltip": "阴茎或插入物体插入另一个角色的嘴，深度达到口腔后部和/或喉咙，有时会引起呕吐反射，或接受此类行为。"
+    },
+    "swallowing": {
+      "label": "吞",
+      "tooltip": "直接或间接地通过口腔摄入阴茎中的精液。"
+    },
+    "facials": {
+      "label": "面部护理",
+      "tooltip": "将精液直接喷射到某人的脸上的行为。"
+    },
+    "cunnilingus": {
+      "label": "吹",
+      "tooltip": "通过口腔或舌头与女性生殖器的直接身体接触来进行性刺激。"
+    },
+    "face_sitting": {
+      "label": "颜面骑乘",
+      "tooltip": "一种性行为，其中某人坐着，用臀部或生殖器抵住另一个人的脸，使该人感到窒息，有时甚至达到窒息的程度；通常采取强制口头满足的形式。"
+    },
+    "edging": {
+      "label": "边缘",
+      "tooltip": "停留在高潮边缘却没有达到性高潮。"
+    },
+    "teasing": {
+      "label": "瘟疫",
+      "tooltip": "指在明确的性交之前进行的长时间前戏，可以是身体上的和/或口头上的，通常是为了使伴侣兴奋到性挫折或绝望的程度。"
+    },
+    "ruined": {
+      "label": "毁了",
+      "tooltip": "使人达到性高潮，但在高潮前停止刺激，导致性高潮不完整或不令人满意的行为。这种情况可能发生在男性和女性伴侣身上。"
+    }
+  },
+  "ass_play": {
+    "anal_toys": {
+      "label": "肛门玩具",
+      "tooltip": "指使用性玩具进行肛门插入，包括但不限于假阳具、振动器、肛门蛋、肛门珠等。"
+    },
+    "anal_sex_pegging": {
+      "label": "肛交/捆绑",
+      "tooltip": "被伴侣用阴茎或穿戴式假阳具插入。"
+    },
+    "rimming": {
+      "label": "舔肛",
+      "tooltip": "通过用舌头舔和/或穿透接受者的肛门来对伴侣的肛门进行口腔刺激。"
+    },
+    "double_penetration": {
+      "label": "双重渗透",
+      "tooltip": "使用两个物体（包括但不限于阴茎、性玩具、拳头等）穿透或接收单个角色的肛门。"
+    },
+    "anal_fisting": {
+      "label": "肛门拳交",
+      "tooltip": "将自己的手和/或手臂插入伴侣的肛门，或接受此类行为。"
+    }
+  },
+  "restrictive": {
+    "gag": {
+      "label": "插科打诨",
+      "tooltip": "将物体放置并固定在另一个角色的嘴里，强迫他或她通过鼻子呼吸，以及造成无法说话或接受此类动作。"
+    },
+    "collar": {
+      "label": "衣领",
+      "tooltip": "脖子上戴着项圈。"
+    },
+    "leash": {
+      "label": "腰带",
+      "tooltip": "被皮带牵着走。"
+    },
+    "chastity": {
+      "label": "贞洁",
+      "tooltip": "自愿或被迫的性禁欲；这可能涉及某人简单地禁欲，或佩戴阻止性行为的装置。"
+    },
+    "bondage_light": {
+      "label": "束缚（轻度）",
+      "tooltip": "在束缚角色的姿势、角色被束缚的时间长度、束缚造成的不适程度或束缚导致的无法移动的程度方面，束缚的使用是轻度还是中度的。"
+    },
+    "bondage_heavy": {
+      "label": "束缚（重度）",
+      "tooltip": "使用极端的束缚，无论是将角色束缚在何种位置，角色被束缚的时间长度，束缚造成的不适程度，还是束缚导致的无法移动的程度。"
+    },
+    "encasement": {
+      "label": "禁闭",
+      "tooltip": "整个身体像木乃伊一样被包裹在乳胶服、睡袋或其他恋物癖装备中，以满足性满足。"
+    },
+    "cag": {
+      "label": "贞操/笼子",
+      "tooltip": "防止接触生殖器的装置。"
+    },
+    "dom_only_for_sub": {
+      "label": "愚蠢只为子",
+      "tooltip": "例如：支配者只能为服从者做出回应，而不能为自己做出回应。"
+    },
+    "sub_self_only": {
+      "label": "只订阅你自己",
+      "tooltip": "例如：顺从者只能为自己负责，而不能为他们的支配者负责。"
+    },
+    "dom_answer_for_both": {
+      "label": "Dom 回答了这两个问题",
+      "tooltip": "例如：支配者为自己和服从者做出回应。"
+    },
+    "sub_only_for_dom": {
+      "label": "仅限愚蠢者",
+      "tooltip": "例如：顺从者只能代表其支配者做出回应，而不能代表自己做出回应。"
+    }
+  },
+  "toys": {
+    "dildos": {
+      "label": "假阳具",
+      "tooltip": "用于性刺激的勃起阴茎形状的物体。"
+    },
+    "plugs": {
+      "label": "插头",
+      "tooltip": "一种设计用于插入直肠的性玩具。"
+    },
+    "vibrators": {
+      "label": "振动器",
+      "tooltip": "用于性刺激的振动装置。"
+    },
+    "sounding": {
+      "label": "探测",
+      "tooltip": "将金属棒插入男性或女性的尿道，或接受此类行为；从技术上讲，这意味着杆状细胞会响应某种形式的刺激而产生共振和/或振动，但并不一定如此。"
+    }
+  },
+  "domination": {
+    "general_dom_sub": {
+      "label": "主将/副将",
+      "tooltip": "支配/服从活动的统称。"
+    },
+    "domestic_servitude": {
+      "label": "家政服务",
+      "tooltip": "由管家、女服务员、司机、女仆或管家服务，或以此身份提供服务。"
+    },
+    "slavery": {
+      "label": "奴隶制",
+      "tooltip": "毫无选择地，作为奴隶听从统治者的命令，或者接受统治者的服务。"
+    },
+    "pet_play": {
+      "label": "宠物游戏",
+      "tooltip": "宠物游戏是一种注重让顺从者呈现另一种精神状态的角色，通常是狗、猫或马。"
+    },
+    "dd_lg_md_lb": {
+      "label": "DD/大，MD/磅",
+      "tooltip": "爸爸或妈妈主导/小女孩或小男孩。在这种关系中，爸爸/妈妈占主导地位，而小孩则比较顺从。"
+    },
+    "discipline": {
+      "label": "纪律",
+      "tooltip": "使用强化（奖励和/或惩罚）来训练顺从者服从主人的各种命令。"
+    },
+    "begging": {
+      "label": "乞讨",
+      "tooltip": "乞讨这种自卑的行为，作为一种屈服的形式，被纳入到角色扮演 (RP) 中。"
+    },
+    "forced_orgasm": {
+      "label": "强迫性高潮",
+      "tooltip": "强迫性高潮是一种双方同意的 BDSM 或变态性游戏，其中一个人同意以超出其控制范围的方式被强迫达到性高潮。"
+    },
+    "orgasm_control": {
+      "label": "高潮控制",
+      "tooltip": "指支配者通过身体手段或命令来控制服从者何时达到高潮；通常涉及支配和/或过度的戏弄和边缘化；性高潮可以被完全否定。"
+    },
+    "orgasm_denial": {
+      "label": "禁欲",
+      "tooltip": "指支配者拒绝让服从者达到性高潮。"
+    },
+    "power_exchange": {
+      "label": "电力交换",
+      "tooltip": "以服务为核心的关系。"
+    }
+  },
+  "no_consent": {
+    "dubious_consent": {
+      "label": "可疑的同意",
+      "tooltip": "尽管这并不属于彻底的强奸，但伴侣的同意受到质疑的情况。"
+    },
+    "non_con_rape": {
+      "label": "非犯罪/强奸",
+      "tooltip": "违背某人意愿地拿走/被拿走，通常采用武力。"
+    },
+    "blackmail_coercion": {
+      "label": "勒索/胁迫",
+      "tooltip": "指在角色扮演者的故事中使用胁迫和/或勒索手段，通常采用半自愿的方式从伴侣那里获得性行为。"
+    },
+    "kidnapping": {
+      "label": "绑架",
+      "tooltip": "在角色扮演游戏中绑架角色进行虐待（通常是性虐待），或因此类原因被绑架；通常意味着无限期监禁。"
+    },
+    "drugs": {
+      "label": "药物",
+      "tooltip": "在角色扮演 (RP) 中使用非法药物，通常是为了使角色迷失方向或精神丧失能力，或增强性感觉。"
+    },
+    "alcohol": {
+      "label": "酒精",
+      "tooltip": "在角色扮演游戏中使用酒精，通常是为了使角色迷失方向或精神丧失能力，或增强性感觉。"
+    },
+    "sleep_play": {
+      "label": "睡眠游戏",
+      "tooltip": "与昏迷/睡着的伴侣发生性行为。"
+    }
+  },
+  "taboo": {
+    "incest": {
+      "label": "乱伦",
+      "tooltip": "参与至少有两个角色相关的角色扮演游戏。"
+    },
+    "age_gap": {
+      "label": "年龄差异",
+      "tooltip": "指角色年龄差异较大的场景。"
+    },
+    "interracial": {
+      "label": "跨种族",
+      "tooltip": "基于跨种族互动的场景，不依赖于种族刻板印象。"
+    },
+    "raceplay": {
+      "label": "竞赛游戏",
+      "tooltip": "基于种族刻板印象或种族主义的场景，包括以种族主义为背景的场景。"
+    },
+    "bestiality": {
+      "label": "兽交",
+      "tooltip": "指有感知能力的角色对无感知能力的动物实施性行为，或在角色扮演游戏中扮演无感知能力的动物并被有感知能力的角色接近。"
+    },
+    "necrophilia": {
+      "label": "恋尸癖",
+      "tooltip": "与死去的、失去意识或无生命的、曾经活着的角色发生性关系的行为，或理论上接受此类行为。"
+    },
+    "cheating": {
+      "label": "作弊",
+      "tooltip": "一方或双方对其伴侣不忠诚。"
+    },
+    "exhibitionism": {
+      "label": "露阴癖",
+      "tooltip": "参加公开场合的 RP；通常与露阴癖和/或羞辱结合使用。"
+    },
+    "voyeurism": {
+      "label": "偷窥癖",
+      "tooltip": "指通过观看（通常是秘密观看）一个人（或多个人）暴露自己或做出其他露骨的行为，或者为了被观看而暴露自己和/或做出其他露骨的行为来获得性刺激。"
+    }
+  },
+  "surrealism": {
+    "futanari_futa": {
+      "label": "双性人/扶他",
+      "tooltip": "角色通常具有女性身体，但同时具有女性和男性生殖器（尽管睾丸并不总是存在）。"
+    },
+    "furry": {
+      "label": "毛茸茸的",
+      "tooltip": "拟人化的动物角色。"
+    },
+    "vore": {
+      "label": "畦",
+      "tooltip": "物理上吞噬另一个角色的行为。"
+    },
+    "transformation": {
+      "label": "转型",
+      "tooltip": "通过魔法或化学手段使角色扮演 (RP) 参与者的身体特征（可能包括他们自己）发生巨大变化的行为；可以指多种不同类型的转变，并表示从转变行为本身中获得性快感。"
+    },
+    "tentacles": {
+      "label": "触手",
+      "tooltip": "参与角色扮演游戏，其中具有自我意识的触手或类似触手的附属物将穿透角色；通常涉及多次渗透。"
+    },
+    "monster_or_alien": {
+      "label": "怪物或外星人",
+      "tooltip": "不同类型的怪物、外星人和具有审美挑战性的角色。"
+    },
+    "ghost": {
+      "label": "精神",
+      "tooltip": "曾活着，但目前已无尸体。"
+    }
+  },
+  "fluids": {
+    "blood": {
+      "label": "血",
+      "tooltip": "涉及在性行为中以任何形式抽血或获取血液，或进行会吸血的行为。"
+    },
+    "watersports": {
+      "label": "水上运动",
+      "tooltip": "指在角色扮演的性爱场景中，以任何形式吸入尿液或排出尿液的行为。"
+    },
+    "scat": {
+      "label": "粪便",
+      "tooltip": "指在RP的性背景下摄入粪便或以任何形式排出粪便。"
+    },
+    "lactation": {
+      "label": "哺乳",
+      "tooltip": "通过乳房分泌乳汁，或与通过乳房分泌乳汁的角色发生性关系（通常是对性刺激的反应）以及由此产生的任何游戏。"
+    },
+    "diapers": {
+      "label": "尿布",
+      "tooltip": "至少有一个角色会穿着尿布的情况；通常暗示尿布会被尿液和/或粪便弄脏，通常与年龄扮演或幼稚行为相结合，但有时也与羞辱相结合。"
+    },
+    "cum_play": {
+      "label": "精子游戏",
+      "tooltip": "任何涉及精液游戏的情况。"
+    },
+    "saliva_spit": {
+      "label": "唾液/吐痰",
+      "tooltip": "利用唾液或唾液进行性游戏。"
+    }
+  },
+  "degradation": {
+    "glory_hole": {
+      "label": "荣耀洞",
+      "tooltip": "由伴侣提供服务或接受服务，但双方之间必须存在物理障碍。"
+    },
+    "name_calling": {
+      "label": "诅咒",
+      "tooltip": "在角色扮演游戏中，对角色进行言语侮辱，试图从与羞辱相关的情绪中引发性满足的反应，或仅仅作为一种心理支配或惩罚的形式。"
+    },
+    "humiliation": {
+      "label": "屈辱",
+      "tooltip": "在角色扮演游戏中，角色会感到尴尬，通常是极度尴尬和/或频繁尴尬，试图从与羞辱相关的情绪中引发性满足的反应，或仅仅作为一种心理支配或惩罚的形式；通常是一种更为剧烈的退化形式。"
+    }
+  },
+  "touch_stimulation": {
+    "cock_pussy_worship": {
+      "label": "阴茎/阴道崇拜",
+      "tooltip": "过度通过言语和/或身体方式认可伴侣的生殖器，或接受此类行为；通常涉及口腔刺激。"
+    },
+    "ass_worship": {
+      "label": "臀部崇拜",
+      "tooltip": "过度认可伴侣的臀部，无论是口头上还是身体上，或接受此类行为；通常涉及口腔刺激。"
+    },
+    "foot_play": {
+      "label": "足球比赛",
+      "tooltip": "在角色扮演的性爱场景中使用双脚，包括但不限于双脚崇拜、通过看到或闻到双脚而获得性满足、和/或双脚摩擦，有时甚至达到性高潮。"
+    },
+    "tickling": {
+      "label": "搔痒",
+      "tooltip": "在角色扮演 (RP) 的性背景下进行挠痒痒和/或被挠痒痒的行为；或者从中接受性刺激。"
+    },
+    "sensation_play": {
+      "label": "感觉游戏",
+      "tooltip": "感觉游戏描述了各种各样的活动，既有普通的，也有奇异的，利用身体的感觉来唤起和刺激伴侣。尽管感觉游戏常常与皮肤感觉相关，但它并不一定局限于此。视觉、味觉和听觉也可以融入感觉游戏中。"
+    },
+    "electro_stimulation": {
+      "label": "电刺激",
+      "tooltip": "使用带有电流的性玩具；有时会很痛苦。"
+    }
+  },
+  "misc_fetish": {
+    "fisting": {
+      "label": "拳交",
+      "tooltip": "将手和/或手臂放入阴道，或接受此类行为。"
+    },
+    "gangbang": {
+      "label": "群交",
+      "tooltip": "当多个伴侣（通常是 3 个或更多）与一个愿意的伴侣发生性交时。"
+    },
+    "breath_play": {
+      "label": "呼吸游戏",
+      "tooltip": "至少一个角色可以通过间歇性勒颈和/或刺穿喉咙的方式，对另一个角色的呼吸习惯进行物理控制。"
+    },
+    "impregnation": {
+      "label": "受精",
+      "tooltip": "使角色受孕。"
+    },
+    "pregnancy": {
+      "label": "怀孕",
+      "tooltip": "对怀孕的角色有迷恋。"
+    },
+    "feminization": {
+      "label": "女性化",
+      "tooltip": "女性化是一种角色扮演，其中传统的女性特征被强加给顺从的男性伴侣。它还可能涉及对传统女性行为和礼仪的假设。"
+    },
+    "cuckold_cuckquean": {
+      "label": "Cuckold / Cuckquean",
+      "tooltip": "指在角色扮演世界范围内被指定处于恋爱关系中的角色，与角色扮演环境中被指定处于恋爱关系中的角色以外的角色发生性互动的行为。"
+    },
+    "shaving": {
+      "label": "刮胡子",
+      "tooltip": "在性生活中去除体毛。"
+    }
+  },
+  "pain": {
+    "light_pain": {
+      "label": "轻微疼痛",
+      "tooltip": "指通过直接的性行为来增加轻微的身体疼痛。"
+    },
+    "heavy_pain": {
+      "label": "剧烈疼痛",
+      "tooltip": "指通过直接的性行为而增加剧烈的肉体痛苦；通常是粗糙或过度的穿透。这或许会留下痕迹。"
+    },
+    "nipple_clamps": {
+      "label": "乳头夹",
+      "tooltip": "将压力装置施加于乳头以产生带来快感的疼痛。"
+    },
+    "clothes_pins": {
+      "label": "衣夹",
+      "tooltip": "用衣夹的叉子夹住皮肤。"
+    },
+    "caning": {
+      "label": "棍棒",
+      "tooltip": "藤条刑是 BDSM 中使用的一种技术，其中支配者用一根长而柔韧的藤条反复击打顺从者，通常是击打臀部。"
+    },
+    "flogging": {
+      "label": "祸害",
+      "tooltip": "使用玩具，通常与 BDSM 和支配/服从相关，用于对抗服从者或受方，尤其指使用任何类型的鞭子、马鞭、桨或鞭子的接触游戏。"
+    },
+    "gagging_choking": {
+      "label": "作呕/窒息",
+      "tooltip": "通过将物体塞入嘴中或将手/物体绕在脖子上而导致作呕或窒息。"
+    },
+    "beating": {
+      "label": "击中",
+      "tooltip": "被拳头或其他物体击打。"
+    },
+    "spanking": {
+      "label": "打屁股",
+      "tooltip": "击打其他角色的臀部，或成为此类行为的接受者；通常作为一种情色前戏或 BDSM 环境中的惩罚。"
+    },
+    "cock_pussy_slapping": {
+      "label": "打屁股",
+      "tooltip": "击打伴侣的生殖器或接受此类打击。"
+    },
+    "cock_pussy_torture": {
+      "label": "阴茎/阴道折磨",
+      "tooltip": "参与角色扮演游戏时，至少一个角色的生殖器会受到负面关注，意图造成身体疼痛。"
+    },
+    "hot_wax": {
+      "label": "热风",
+      "tooltip": "使用蜡（通常是热蜡烛）作为性刺激和/或折磨的一种形式，或接受此类行为。"
+    },
+    "scratching": {
+      "label": "搔痒",
+      "tooltip": "一个角色用指甲或爪子抓挠另一个角色，有时会留下痕迹；有时但不一定痛苦。"
+    },
+    "biting": {
+      "label": "咬",
+      "tooltip": "咬或被咬的行为；有时痛苦，有时有趣。"
+    },
+    "cutting": {
+      "label": "切割",
+      "tooltip": "在性生活中通过割伤伴侣来造成痛苦。"
+    },
+    "snuff": {
+      "label": "鼻烟",
+      "tooltip": "杀死一个角色作为性行为的一部分。"
+    }
+  },
+  "medium": {
+    "skype": {
+      "label": "Skype",
+      "tooltip": "使用 Skype 作为角色扮演的平台。"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "tooltip": "使用 WhatsApp 作为角色扮演的平台。"
+    },
+    "kik": {
+      "label": "Kik",
+      "tooltip": "使用 Kik 作为角色扮演的平台。"
+    },
+    "reddit": {
+      "label": "Reddit",
+      "tooltip": "使用 Reddit 作为角色扮演的平台。"
+    },
+    "email": {
+      "label": "电子邮件",
+      "tooltip": "使用电子邮件作为角色扮演的平台。"
+    },
+    "discord": {
+      "label": "不和谐",
+      "tooltip": "使用 Discord 作为角色扮演的平台。"
+    },
+    "other_medium": {
+      "label": "否则",
+      "tooltip": "使用另一个平台进行角色扮演。"
+    }
+  },
+  "time_scale": {
+    "short_term_scenes": {
+      "label": "短期场景",
+      "tooltip": "角色扮演场景持续时间较短，通常为一次会话。"
+    },
+    "medium_term_scenes": {
+      "label": "中期场景",
+      "tooltip": "角色扮演场景持续适当的时间，通常为几个场次。"
+    },
+    "long_term_scenes": {
+      "label": "长期场景",
+      "tooltip": "角色扮演场景会持续很长一段时间，通常是多个会议或正在进行的活动。"
+    },
+    "quick_replies": {
+      "label": "快速解答",
+      "tooltip": "0-10 分钟内给出的答案。"
+    },
+    "fast_replies": {
+      "label": "快速解答",
+      "tooltip": "答案将在 10 至 30 分钟内给出。"
+    },
+    "normal_replies": {
+      "label": "正常答案",
+      "tooltip": "30 分钟至 2 小时内即可得到答案。"
+    },
+    "slow_replies": {
+      "label": "缓慢的回答",
+      "tooltip": "2-8 小时内将给出答复。"
+    },
+    "glacial_replies": {
+      "label": "答案很慢",
+      "tooltip": "答复将在 8-24 小时内给出。"
+    },
+    "occasional_replies": {
+      "label": "偶然的答案",
+      "tooltip": "24 小时后才会给出答案。"
+    }
+  }
+}
