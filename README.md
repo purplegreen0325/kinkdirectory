@@ -55,6 +55,20 @@ Your privacy is our top priority:
 
 Simply click "Create new list" to begin exploring your preferences! 🎉
 
+## 📱 Screenshots
+
+### Create a New List
+![Creating a new list](./assets/new.png)
+
+### Customizing Your List
+![Customizing a list](./assets/list.png)
+
+### Quiz Mode
+![Quiz mode for quick rating](./assets/quiz.png)
+
+### Mobile Experience
+![Mobile-friendly interface](./assets/mobile.png)
+
 ## 🔮 Upcoming Features
 
 We're constantly working to improve Kink Directory. Here are some features we're planning to implement:
