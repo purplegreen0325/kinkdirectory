@@ -16,6 +16,7 @@ Kink Directory helps you create personalized kink lists to explore your preferen
 - 👤 **Role customization** - Choose your role perspective and customize your list with detailed preferences for each item
 - 🎨 **User-friendly interface** - Simple, clean design with intuitive controls
 - 🌐 **Multi-language support** - Available in multiple languages to serve a global audience
+- 📝 **Quiz mode** - Quickly rate all kinks by going through them one by one in a guided interface
 
 ## 🌍 Supported Languages
 
@@ -58,6 +59,5 @@ Simply click "Create new list" to begin exploring your preferences! 🎉
 
 We're constantly working to improve Kink Directory. Here are some features we're planning to implement:
 
-- 📝 **Quiz mode** - Go through all questions in a modal interface for a streamlined experience
 - 📸 **Enhanced screenshots** - Better screenshot functionality with more options
 - 🔍 **More kinks** - Expanding our list of kinks and preferences for a more comprehensive experience

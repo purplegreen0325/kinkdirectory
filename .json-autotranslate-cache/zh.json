@@ -113,7 +113,17 @@
     "import_confirm_message": "您想将此共享列表导入到您的收藏夹吗？",
     "role_specific_items": "角色特定物品",
     "role_specific_questions": "特定角色的问题",
-    "list_updated": "列表更新成功"
+    "list_updated": "列表更新成功",
+    "quiz": "测验",
+    "quiz_intro": "此测验模式可帮助您通过逐一检查所有怪癖来快速填写您的怪癖偏好。针对每个问题做出选择，或者按“跳过”继续。",
+    "quiz_completed": "测验已完成",
+    "quiz_completed_message": "恭喜！您已完成怪癖测验。现在，您已经有了一份完整的偏好列表。",
+    "start_quiz": "开始测验",
+    "skip": "跳过",
+    "done": "完成的",
+    "no_description_available": "没有可用的描述",
+    "quiz_mode": "测验模式",
+    "quick_rate_all_kinks": "通过一系列问题快速评估你的所有问题"
   },
   "roles": {
     "sub": "顺从",

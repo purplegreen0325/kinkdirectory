@@ -113,7 +113,17 @@
     "import_confirm_message": "Vuoi importare questo elenco condiviso nella tua raccolta?",
     "role_specific_items": "Elementi specifici del ruolo",
     "role_specific_questions": "Domande specifiche sul ruolo",
-    "list_updated": "Elenco aggiornato con successo"
+    "list_updated": "Elenco aggiornato con successo",
+    "quiz": "Quiz",
+    "quiz_intro": "Questa modalità quiz ti aiuta a definire rapidamente le tue preferenze in fatto di kink, esaminandoli tutti uno per uno. Effettua la tua scelta per ogni nodo oppure premi \"Salta\" per continuare.",
+    "quiz_completed": "Quiz completato",
+    "quiz_completed_message": "Congratulazioni! Hai completato il quiz sulle perversioni. Ora hai un elenco completo delle tue preferenze.",
+    "start_quiz": "Inizia il quiz",
+    "skip": "Saltare",
+    "done": "Finito",
+    "no_description_available": "Nessuna descrizione disponibile",
+    "quiz_mode": "Modalità quiz",
+    "quick_rate_all_kinks": "Valuta rapidamente tutti i tuoi problemi con una serie di domande"
   },
   "roles": {
     "sub": "Sottomesso",

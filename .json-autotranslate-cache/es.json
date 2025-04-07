@@ -113,7 +113,17 @@
     "import_confirm_message": "¿Quieres importar esta lista compartida a tu colección?",
     "role_specific_items": "Elementos específicos del rol",
     "role_specific_questions": "Preguntas específicas del rol",
-    "list_updated": "Lista actualizada exitosamente"
+    "list_updated": "Lista actualizada exitosamente",
+    "quiz": "Prueba",
+    "quiz_intro": "Este modo de prueba te ayuda a completar rápidamente tus preferencias perversas al revisar todas las perversiones una por una. Haz tu elección para cada torcedura o presiona “Omitir” para continuar.",
+    "quiz_completed": "Cuestionario completado",
+    "quiz_completed_message": "¡Felicidades! Has completado el test sobre perversiones. Ahora tienes una lista totalmente completa de tus preferencias.",
+    "start_quiz": "Iniciar cuestionario",
+    "skip": "Saltar",
+    "done": "Finalizado",
+    "no_description_available": "No hay descripción disponible",
+    "quiz_mode": "Modo de prueba",
+    "quick_rate_all_kinks": "Evalúa rápidamente todos tus problemas con una serie de preguntas"
   },
   "roles": {
     "sub": "Sumiso",

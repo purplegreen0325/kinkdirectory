@@ -113,7 +113,17 @@
     "import_confirm_message": "この共有リストをコレクションにインポートしますか?",
     "role_specific_items": "役割固有のアイテム",
     "role_specific_questions": "役割別の質問",
-    "list_updated": "リストが正常に更新されました"
+    "list_updated": "リストが正常に更新されました",
+    "quiz": "クイズ",
+    "quiz_intro": "このクイズ モードでは、すべての性的嗜好を 1 つずつ確認することで、自分の性的嗜好を素早く記入できます。各キンクについて選択するか、「スキップ」を押して続行します。",
+    "quiz_completed": "クイズ完了",
+    "quiz_completed_message": "おめでとう！キンククイズを完了しました。これで、好みのリストが完全に完成しました。",
+    "start_quiz": "クイズを始める",
+    "skip": "スキップ",
+    "done": "終了した",
+    "no_description_available": "説明はありません",
+    "quiz_mode": "クイズモード",
+    "quick_rate_all_kinks": "一連の質問であなたの欠点を素早く評価します"
   },
   "roles": {
     "sub": "従順な",

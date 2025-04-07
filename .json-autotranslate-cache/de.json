@@ -113,7 +113,17 @@
     "import_confirm_message": "Möchten Sie diese freigegebene Liste in Ihre Sammlung importieren?",
     "role_specific_items": "Rollenspezifische Elemente",
     "role_specific_questions": "Rollenspezifische Fragen",
-    "list_updated": "Liste erfolgreich aktualisiert"
+    "list_updated": "Liste erfolgreich aktualisiert",
+    "quiz": "Quiz",
+    "quiz_intro": "Dieser Quizmodus hilft Ihnen dabei, Ihre Kink-Vorlieben schnell anzugeben, indem Sie alle Kinks einzeln durchgehen. Treffen Sie für jeden Knick Ihre Auswahl oder drücken Sie „Überspringen“, um fortzufahren.",
+    "quiz_completed": "Quiz abgeschlossen",
+    "quiz_completed_message": "Glückwunsch! Sie haben das Kink-Quiz abgeschlossen. Sie verfügen nun über eine vollständig ausgefüllte Liste Ihrer Präferenzen.",
+    "start_quiz": "Quiz starten",
+    "skip": "Überspringen",
+    "done": "Fertig",
+    "no_description_available": "Keine Beschreibung verfügbar",
+    "quiz_mode": "Quiz-Modus",
+    "quick_rate_all_kinks": "Bewerten Sie schnell alle Ihre Macken in einer Reihe von Fragen"
   },
   "roles": {
     "sub": "Unterwürfig",

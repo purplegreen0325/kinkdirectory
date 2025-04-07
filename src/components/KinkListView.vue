@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useKinkListState } from '../composables/useKinkList'
+import { computed } from 'vue'
 
 // Import the new modular components
 import AppHeader from './kinklist/header/AppHeader.vue'
@@ -8,10 +9,17 @@ import ListControls from './kinklist/list/ListControls.vue'
 import ViewOnlyBanner from './kinklist/view/ViewOnlyBanner.vue'
 import ListContent from './kinklist/list/ListContent.vue'
 import KinkLegend from './kinklist/kink/KinkLegend.vue'
+import QuizCard from './kinklist/kink/QuizCard.vue'
 import AppFooter from './kinklist/footer/AppFooter.vue'
 
 // Only need the basic state variables here
 const { activeList, isViewMode } = useKinkListState()
+
+// Check if the current list has any selections (kinks already rated)
+const hasSelections = computed(() => {
+  if (!activeList.value) return false
+  return Object.keys(activeList.value.selections).length > 0
+})
 </script>
 
 <template>
@@ -41,8 +49,24 @@ const { activeList, isViewMode } = useKinkListState()
           
           <!-- List content in a card-like container -->
           <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-3">
-            <!-- Legend inside the card, at the top -->
-            <KinkLegend v-if="activeList" />
+            <!-- Legend and quiz section -->
+            <div v-if="activeList" class="mb-3">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-wrap gap-2">
+                <!-- Legend inside the card, at the top -->
+                <KinkLegend class="flex-1" />
+                
+                <!-- Quiz button with matching styling to legend -->
+                <QuizCard 
+                  v-if="!isViewMode && hasSelections" 
+                  :compact="true" 
+                  class="flex-none"
+                />
+              </div>
+            </div>
+            
+            <!-- Full quiz card when no selections yet -->
+            <QuizCard v-if="!isViewMode && !hasSelections && activeList" :compact="false" class="mb-3" />
+            
             <div class="overflow-x-auto">
               <ListContent />
             </div>

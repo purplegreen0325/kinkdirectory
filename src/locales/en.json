@@ -113,7 +113,17 @@
     "import_confirm_title": "Import list",
     "import_confirm_message": "Do you want to import this shared list to your collection?",
     "role_specific_items": "Role-specific items",
-    "role_specific_questions": "Role-specific questions"
+    "role_specific_questions": "Role-specific questions",
+    "quiz": "Quiz",
+    "quiz_intro": "This quiz mode helps you quickly fill in your kink preferences by going through all the kinks one by one. Make your choice for each kink or press 'Skip' to continue.",
+    "quiz_completed": "Quiz Completed",
+    "quiz_completed_message": "Congratulations! You have completed the kink quiz. You now have a fully completed list of your preferences.",
+    "start_quiz": "Start Quiz",
+    "skip": "Skip",
+    "done": "Finished",
+    "no_description_available": "No description available",
+    "quiz_mode": "Quiz Mode",
+    "quick_rate_all_kinks": "Quickly assess all your kinks in a series of questions"
   },
   "roles": {
     "sub": "Submissive",

@@ -113,7 +113,17 @@
     "import_confirm_message": "Wil je deze gedeelde lijst importeren naar je collectie?",
     "role_specific_items": "Rol-specifieke items",
     "role_specific_questions": "Rol-specifieke vragen",
-    "list_updated": "Lijst succesvol bijgewerkt"
+    "list_updated": "Lijst succesvol bijgewerkt",
+    "quiz": "Quiz",
+    "quiz_intro": "Deze quiz modus helpt je snel je kink-voorkeuren in te vullen door alle kinks één voor één te doorlopen. Maak je keuze voor elke kink of druk op 'Overslaan' om verder te gaan.",
+    "quiz_completed": "Quiz Voltooid",
+    "quiz_completed_message": "Gefeliciteerd! Je hebt de kink-quiz voltooid. Je hebt nu een volledig ingevulde lijst met je voorkeuren.",
+    "start_quiz": "Start Quiz",
+    "skip": "Overslaan",
+    "done": "Klaar",
+    "no_description_available": "Geen beschrijving beschikbaar",
+    "quiz_mode": "Quiz Modus",
+    "quick_rate_all_kinks": "Beoordeel snel al je kinks in een reeks vragen"
   },
   "roles": {
     "sub": "Onderdanig",

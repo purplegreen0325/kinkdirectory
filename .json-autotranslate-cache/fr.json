@@ -113,7 +113,17 @@
     "import_confirm_message": "Voulez-vous importer cette liste partagée dans votre collection ?",
     "role_specific_items": "Éléments spécifiques au rôle",
     "role_specific_questions": "Questions spécifiques au rôle",
-    "list_updated": "Liste mise à jour avec succès"
+    "list_updated": "Liste mise à jour avec succès",
+    "quiz": "Questionnaire",
+    "quiz_intro": "Ce mode quiz vous aide à remplir rapidement vos préférences en matière de perversité en parcourant toutes les perversités une par une. Faites votre choix pour chaque kink ou appuyez sur « Ignorer » pour continuer.",
+    "quiz_completed": "Quiz terminé",
+    "quiz_completed_message": "Félicitations! Vous avez terminé le quiz kink. Vous disposez désormais d'une liste complète de vos préférences.",
+    "start_quiz": "Démarrer le quiz",
+    "skip": "Sauter",
+    "done": "Fini",
+    "no_description_available": "Aucune description disponible",
+    "quiz_mode": "Mode Quiz",
+    "quick_rate_all_kinks": "Évaluez rapidement tous vos défauts dans une série de questions"
   },
   "roles": {
     "sub": "Soumis",

@@ -2,6 +2,7 @@ import { createGlobalState, useStorage } from '@vueuse/core'
 import { nanoid } from 'nanoid'
 import { computed, ref } from 'vue'
 import type { KinkChoice, KinkList, KinkCategory, KinkDefinition, UserRole } from '../types'
+import kinkData from '../data/kinks.json'
 
 export const useKinkListState = createGlobalState(() => {
   const kinkLists = useStorage<KinkList[]>('kinklist-lists', [])
@@ -263,6 +264,34 @@ export const useKinkListState = createGlobalState(() => {
     }
   }
 
+  // Get all visible kinks for quiz mode in a flat structure
+  function getVisibleKinksForQuiz(): Array<{categoryId: string, kink: KinkDefinition, positions: string[]}> {
+    if (!activeList.value) return []
+    
+    const allKinks: Array<{categoryId: string, kink: KinkDefinition, positions: string[]}> = []
+    
+    // Get categories with type assertion to ensure TypeScript knows the structure
+    const categories = (kinkData.categories as KinkCategory[])
+    
+    // Loop through all categories and kinks to find visible ones
+    for (const category of categories) {
+      for (const kink of category.kinks) {
+        if (isKinkVisibleForRole(kink, activeList.value.role)) {
+          const positions = getKinkPositions(kink, activeList.value.role)
+          if (positions.length > 0) {
+            allKinks.push({
+              categoryId: category.id,
+              kink,
+              positions
+            })
+          }
+        }
+      }
+    }
+    
+    return allKinks
+  }
+
   return {
     kinkLists,
     activeListId,
@@ -282,6 +311,7 @@ export const useKinkListState = createGlobalState(() => {
     importViewedList,
     exitViewMode,
     openKinkModal,
-    closeKinkModal
+    closeKinkModal,
+    getVisibleKinksForQuiz
   }
 }) 
