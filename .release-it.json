@@ -7,7 +7,8 @@
   },
   "github": {
     "release": true,
-    "releaseName": "Release v${version}"
+    "releaseName": "Release v${version}",
+    "releaseNotes": "## What's New\n\n### 🚀 New Features\n- Data migration system for preserving user list data when format changes\n- Backward compatibility with old list formats during import\n- Improved error handling with user-friendly notifications\n- Dutch translations for all error messages\n- Automatic URL cleanup after handling errors\n\n### 🧰 Technical Improvements\n- Storage format migration from `categoryId_kinkId_position` to more efficient `kinkKey%position`\n- More efficient data structure for storing selections\n- Better URL sharing with optimized data format\n- Enhanced usability with clearer error feedback\n\n### 🐛 Bug Fixes\n- Legacy list import handling\n- Selection data preservation during format changes\n- Error handling for unsupported list formats\n- URL parameter handling for better user experience"
   },
   "npm": {
     "publish": false
