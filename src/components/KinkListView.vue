@@ -63,7 +63,7 @@ const quizCardRef = useTemplateRef('quizCardRef')
                   v-if="!isViewMode && hasSelections"
                   ref="quizCardRef"
                   :compact="true"
-                  class="flex-none"
+                  class="flex-none md:h-[42px] md:flex md:items-center"
                 />
               </div>
             </div>

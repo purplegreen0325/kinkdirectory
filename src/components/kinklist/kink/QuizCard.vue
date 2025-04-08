@@ -56,7 +56,7 @@ defineExpose({
   <!-- Styled quiz button matching legend styling -->
   <div
     v-else
-    class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center justify-center"
+    class="h-full bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center justify-center"
     @click="openQuizModal"
   >
     <div class="flex items-center gap-1">
