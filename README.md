@@ -74,3 +74,4 @@ Simply click "Create new list" to begin exploring your preferences! 🎉
 We're constantly working to improve Kink Directory. Here are some features we're planning to implement:
 
 - 🔍 **More kinks** - Expanding our list of kinks and preferences for a more comprehensive experience
+- 🔄 **Compare lists** - Ability to compare your preferences with a partner to quickly identify common interests and boundaries
