@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
+import SettingsButton from '../ui/SettingsButton.vue'
 
 const { t } = useI18n()
 const { isViewMode, exitViewMode, activeListId } = useKinkListState()
@@ -23,6 +24,7 @@ function handleTitleClick() {
       </h1>
 
       <div class="flex items-center gap-2 flex-wrap">
+        <SettingsButton />
         <LanguageSwitcher />
         <DarkModeToggle />
       </div>

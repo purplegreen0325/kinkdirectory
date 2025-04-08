@@ -33,6 +33,7 @@ alwaysApply: false
     UI and Styling
     - NuxtUI + Tailwind V4 components and styling.
     - Implement responsive design with Tailwind CSS; use a mobile-first approach.
+    - Composables/components from NuxtUI are auto imported
   
     Performance Optimization
     - Leverage VueUse functions where applicable to enhance reactivity and performance.

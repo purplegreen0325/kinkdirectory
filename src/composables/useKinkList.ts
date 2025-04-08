@@ -275,7 +275,7 @@ export const useKinkListState = createGlobalState(() => {
         const firstByte = atob(padded).charCodeAt(0)
         isBinary = firstByte === CURRENT_VERSION
       }
-      catch (e) {
+      catch {
         // If we can't decode it as binary, it's definitely not binary
         isBinary = false
       }

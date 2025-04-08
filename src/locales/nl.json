@@ -129,7 +129,15 @@
     "quick_rate_all_kinks": "Beoordeel snel al je kinks in een reeks vragen",
     "import_error": "Importeren mislukt",
     "import_error_old_format": "Deze lijst gebruikt een verouderd formaat dat niet meer wordt ondersteund. Probeer een nieuwere lijst te importeren.",
-    "back": "Terug"
+    "back": "Terug",
+    "settings": "Instellingen",
+    "settings_intro": "Pas je KinkList ervaring aan door deze instellingen aan te passen.",
+    "display_settings": "Weergave-instellingen",
+    "kink_order": "Volgorde Kink Waardering",
+    "reverse_kink_order": "Waarderingsvolgorde omkeren",
+    "reverse_kink_order_desc": "Wijzigt de volgorde van waarderingsopties van \"Favoriet → Limiet\" naar \"Limiet → Favoriet\"",
+    "reverse_kink_order_desc_short": "Wijzigt de weergavevolgorde van waarderingen",
+    "current_order": "Huidige Volgorde:"
   },
   "roles": {
     "sub": "Onderdanig",

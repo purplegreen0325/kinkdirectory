@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { KinkChoice as KinkChoiceType } from '../../../types'
 import { useKinkListState } from '../../../composables/useKinkList'
+import { useSettings } from '../../../composables/useSettings'
 import KinkChoiceDrawer from './KinkChoiceDrawer.vue'
 
 const props = defineProps<{
@@ -11,6 +12,7 @@ const props = defineProps<{
 }>()
 
 const { isViewMode } = useKinkListState()
+const { kinkChoiceOrder } = useSettings()
 
 // Active color classes (selected)
 const activeColorClasses = {
@@ -32,9 +34,6 @@ const subtleColorClasses = {
   5: 'border-red-200 dark:border-red-700 bg-red-100/30 dark:bg-red-900/20',
 }
 
-// Include "Not Entered" (0) value along with ratings 1-5
-const allValues = [0, 1, 2, 3, 4, 5] as const
-
 // Handle click for desktop version
 function handleClick(rating: KinkChoiceType) {
   if (!isViewMode.value && props.onClick) {
@@ -46,7 +45,20 @@ function handleClick(rating: KinkChoiceType) {
 <template>
   <!-- Desktop version - circles in a row -->
   <div class="hidden lg:flex space-x-1">
-    <template v-for="rating in allValues" :key="rating">
+    <!-- Always show "Not Entered" (0) first -->
+    <button
+      type="button"
+      class="w-4 h-4 rounded-full border focus:outline-none relative"
+      :class="[
+        value === 0 ? activeColorClasses[0] : subtleColorClasses[0],
+        !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
+      ]"
+      data-rating="0"
+      @click.stop="handleClick(0)"
+    />
+
+    <!-- Show other ratings in order based on settings -->
+    <template v-for="rating in kinkChoiceOrder" :key="rating">
       <button
         type="button"
         class="w-4 h-4 rounded-full border focus:outline-none relative"

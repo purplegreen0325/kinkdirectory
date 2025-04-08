@@ -3,6 +3,7 @@ import type { KinkChoice as KinkChoiceType, KinkDefinition } from '../../../type
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
+import { useSettings } from '../../../composables/useSettings'
 
 defineProps<{
   listId: string
@@ -16,6 +17,7 @@ const {
   setKinkChoice,
   getKinkChoice,
 } = useKinkListState()
+const { kinkChoiceOrder } = useSettings()
 
 // Quiz state variables
 const allKinks = ref<Array<{ categoryId: string, kink: KinkDefinition, positions: string[] }>>([])
@@ -46,8 +48,11 @@ const textColorClasses = {
   5: 'text-red-500 dark:text-red-400',
 }
 
-// Include "Not Entered" (0) value along with ratings 1-5
-const allValues = [1, 2, 3, 4, 5, 0] as const
+// Combined values with 0 at the end for the quiz modal
+const quizValues = computed(() => {
+  const reversedOrder = [...kinkChoiceOrder.value].reverse()
+  return [...reversedOrder, 0] as KinkChoiceType[]
+})
 
 // Get the current kink and position
 const currentKink = computed(() => {
@@ -314,7 +319,7 @@ function getKinkLabel(): string {
 
           <!-- Rating options -->
           <div class="flex flex-col space-y-1 flex-grow">
-            <div v-for="rating in allValues" :key="rating" class="w-full">
+            <div v-for="rating in quizValues" :key="rating" class="w-full">
               <button
                 class="w-full py-2 px-4 text-left rounded-md flex items-center justify-between transition-colors duration-150 hover:bg-gray-100 dark:hover:bg-gray-800"
                 :class="[

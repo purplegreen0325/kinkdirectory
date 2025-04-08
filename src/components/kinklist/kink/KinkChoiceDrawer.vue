@@ -2,6 +2,7 @@
 import type { KinkChoice as KinkChoiceType } from '../../../types'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useSettings } from '../../../composables/useSettings'
 
 const props = defineProps<{
   value: KinkChoiceType
@@ -12,6 +13,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
+const { kinkChoiceOrder } = useSettings()
 
 // Active color classes (selected)
 const activeColorClasses = {
@@ -33,8 +35,12 @@ const textColorClasses = {
   5: 'text-red-500 dark:text-red-400',
 }
 
-// Include "Not Entered" (0) value along with ratings 1-5
-const allValues = [1, 2, 3, 4, 5, 0] as const
+// Combined values with 0 first for the drawer
+const drawerValues = computed(() => {
+  const reversedOrder = [...kinkChoiceOrder.value].reverse()
+  reversedOrder.push(0)
+  return reversedOrder as KinkChoiceType[]
+})
 
 // Get selected value label
 const selectedValueLabel = computed(() => {
@@ -108,7 +114,7 @@ const drawerTitle = computed(() => {
       <template #body>
         <div class="flex flex-col space-y-2">
           <button
-            v-for="rating in allValues"
+            v-for="rating in drawerValues"
             :key="rating"
             class="py-3 px-4 text-left rounded-md flex items-center justify-between"
             :class="[
