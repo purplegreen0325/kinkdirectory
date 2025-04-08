@@ -77,8 +77,9 @@ We're constantly working to improve Kink Directory. Here are some features we're
 - 🔍 **More kinks** - Expanding our list of kinks and preferences for a more comprehensive experience
 - 🔄 **Compare lists** - Ability to compare your preferences with a partner to quickly identify common interests and boundaries
 - 🏷️ **Category filtering** - Toggle kinks based on categories (e.g., IRL practicality, intensity levels, or activity types)
-- 🛈 **Better tooltips based on mode** - Enhanced contextual tooltips that adapt to your selected role and preferences
+- 🛈 **Better tooltips based on mode** - Enhanced contextual tooltips that adapt to your selected role and preferences (Still need to improve this more)
 - 🤔 **Curious/Interested option** - A new option to say if ur interest or curious, instead of leaving blank
+- 📊 **Progress tracking** - Visual indicators showing how much of your list you've completed and preferences breakdown
 
 ## 📱 Screenshots
 
@@ -93,4 +94,3 @@ We're constantly working to improve Kink Directory. Here are some features we're
 
 ### Mobile Experience
 ![Mobile-friendly interface](./assets/mobile.png)
-
