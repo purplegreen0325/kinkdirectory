@@ -130,7 +130,7 @@
     "import_error": "Import failed",
     "import_error_old_format": "This list uses an outdated format that is no longer supported. Try importing a newer list.",
     "back": "Back",
-    "settings": "Institutions",
+    "settings": "Settings",
     "settings_intro": "Customize your KinkList experience by adjusting these settings.",
     "display_settings": "Display settings",
     "kink_order": "Order Kink Rating",
@@ -343,6 +343,38 @@
       "label": "Chastity/cages",
       "tooltip": "A device that prevents access to genitals."
     },
+    "blindfold": {
+      "label": "Blindfold",
+      "tooltip": "Covering the eyes to obstruct vision, which can heighten other senses and increase feelings of vulnerability."
+    },
+    "breast_bondage": {
+      "label": "Breast bondage",
+      "tooltip": "Specific bondage techniques that involve tying up the breasts, which can increase sensitivity and be visually stimulating."
+    },
+    "rope_simple": {
+      "label": "Rope Bondage (Simple)",
+      "tooltip": "Basic rope bondage techniques for restraining limbs or restricting movement."
+    },
+    "rope_shibari": {
+      "label": "Rope bondage (Shibari)",
+      "tooltip": "Complex, aesthetic Japanese rope binding art that combines both functional limitations and artistic expression."
+    },
+    "spreader_bars": {
+      "label": "Spreader bars",
+      "tooltip": "Bars used to keep limbs apart, facilitating access and increasing vulnerability."
+    },
+    "suspension": {
+      "label": "Suspension",
+      "tooltip": "Bondage techniques where the body is partially or completely lifted off the ground, creating a unique sensation of weightlessness and complete surrender."
+    },
+    "mummification": {
+      "label": "Mummification",
+      "tooltip": "Completely wrapping the body in materials such as plastic wrap, tape, or latex, resulting in near-complete immobilization."
+    },
+    "sensory_deprivation": {
+      "label": "Sensory deprivation",
+      "tooltip": "Limiting or eliminating sensory input, such as sight, hearing, or touch, to enhance other senses and deepen focus."
+    },
     "dom_only_for_sub": {
       "label": "Dom-only for sub",
       "tooltip": "Example: Dominant can only answer for their submissive, not for themselves."
@@ -418,6 +450,14 @@
     "orgasm_denial": {
       "label": "Orgasm denial",
       "tooltip": "Refers to the dominant denying the submissive orgasm."
+    },
+    "multiple_orgasms": {
+      "label": "Multiple orgasms",
+      "tooltip": "Forcing or experiencing multiple orgasms in succession, sometimes to the point of overstimulation or exhaustion."
+    },
+    "orgasm_training": {
+      "label": "Orgasm training",
+      "tooltip": "Training a submissive to come on command, or to come only with the dominant's permission."
     },
     "power_exchange": {
       "label": "Power exchange",
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "Saliva/Spit",
       "tooltip": "Sexual play involving saliva or Spit."
+    },
+    "creampie": {
+      "label": "Creampie",
+      "tooltip": "To ejaculate into a partner and allow the semen to leak or flow out."
+    },
+    "cum_on_body": {
+      "label": "Cum on body",
+      "tooltip": "Ejaculating on a partner's body as a form of sexual play."
+    },
+    "cum_on_face": {
+      "label": "Cum on face",
+      "tooltip": "The act of ejaculating on a partner's face, sometimes as a form of dominance or humiliation."
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "Electro stimulation",
       "tooltip": "The use of sex toys that carry an electrical current; sometimes painful."
+    },
+    "ice_play": {
+      "label": "Ice game",
+      "tooltip": "The use of ice on the body for temperature contrasts and sensory stimulation."
+    },
+    "temperature_play": {
+      "label": "Temperature game",
+      "tooltip": "The use of different temperatures (hot and cold) on the body for sensory stimulation and contrast."
+    },
+    "feather_play": {
+      "label": "Feather game",
+      "tooltip": "The use of feathers for light, soft touches that can tickle or provide a sensual sensation."
+    },
+    "pinwheel": {
+      "label": "Pinwheel",
+      "tooltip": "A sharp, wheel-like instrument (Wartenberg wheel) that rolls over the skin, causing a stinging sensation without breaking the skin."
     }
   },
   "misc_fetish": {

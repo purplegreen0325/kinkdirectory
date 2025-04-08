@@ -358,6 +358,38 @@
     "sub_only_for_dom": {
       "label": "Sub apenas para estúpidos",
       "tooltip": "Exemplo: O submisso só pode responder pelo seu dominante, não por si mesmo."
+    },
+    "blindfold": {
+      "label": "Venda nos olhos",
+      "tooltip": "Cobrir os olhos para obstruir a visão, o que pode aguçar outros sentidos e aumentar sentimentos de vulnerabilidade."
+    },
+    "breast_bondage": {
+      "label": "Bondage de seios",
+      "tooltip": "Técnicas específicas de bondage que envolvem amarrar os seios, o que pode aumentar a sensibilidade e ser visualmente estimulante."
+    },
+    "rope_simple": {
+      "label": "Bondage de corda (simples)",
+      "tooltip": "Técnicas básicas de amarração com corda para restringir membros ou movimentos."
+    },
+    "rope_shibari": {
+      "label": "Amarração com corda (Shibari)",
+      "tooltip": "Arte japonesa complexa e estética de encadernação de corda que combina limitações funcionais e expressão artística."
+    },
+    "spreader_bars": {
+      "label": "Barras espalhadoras",
+      "tooltip": "Barras usadas para manter os membros separados, facilitando o acesso e aumentando a vulnerabilidade."
+    },
+    "suspension": {
+      "label": "Suspensão",
+      "tooltip": "Técnicas de bondage em que o corpo é parcial ou completamente levantado do chão, criando uma sensação única de leveza e entrega completa."
+    },
+    "mummification": {
+      "label": "Mumificação",
+      "tooltip": "Envolver completamente o corpo em materiais como filme plástico, fita ou látex, resultando em imobilização quase completa."
+    },
+    "sensory_deprivation": {
+      "label": "Privação sensorial",
+      "tooltip": "Limitar ou eliminar informações sensoriais, como visão, audição ou tato, para aprimorar outros sentidos e aprofundar o foco."
     }
   },
   "toys": {
@@ -422,6 +454,14 @@
     "power_exchange": {
       "label": "Troca de energia",
       "tooltip": "Um relacionamento que tem o serviço como essência."
+    },
+    "multiple_orgasms": {
+      "label": "Orgasmos múltiplos",
+      "tooltip": "Forçar ou experimentar orgasmos múltiplos em sucessão, às vezes até o ponto de superestimulação ou exaustão."
+    },
+    "orgasm_training": {
+      "label": "Treinamento de orgasmo",
+      "tooltip": "Treinar um submisso para gozar quando ordenado, ou gozar somente com a permissão do dominante."
     }
   },
   "no_consent": {
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "Saliva/cuspe",
       "tooltip": "Brincadeira sexual com saliva ou cuspe."
+    },
+    "creampie": {
+      "label": "Creme",
+      "tooltip": "Ejacular em um parceiro e permitir que o sêmen vaze ou flua para fora."
+    },
+    "cum_on_body": {
+      "label": "Gozada no corpo",
+      "tooltip": "Ejacular no corpo do parceiro como forma de brincadeira sexual."
+    },
+    "cum_on_face": {
+      "label": "Gozada na cara",
+      "tooltip": "O ato de ejacular no rosto do parceiro, às vezes como uma forma de dominação ou humilhação."
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "Eletroestimulação",
       "tooltip": "O uso de brinquedos sexuais que transportam corrente elétrica; às vezes doloroso."
+    },
+    "ice_play": {
+      "label": "Jogo de gelo",
+      "tooltip": "O uso de gelo no corpo para contrastes de temperatura e estimulação sensorial."
+    },
+    "temperature_play": {
+      "label": "Jogo de temperatura",
+      "tooltip": "O uso de diferentes temperaturas (quente e fria) no corpo para estimulação sensorial e contraste."
+    },
+    "feather_play": {
+      "label": "Jogo de penas",
+      "tooltip": "O uso de penas para toques leves e suaves que podem provocar cócegas ou proporcionar uma sensação sensual."
+    },
+    "pinwheel": {
+      "label": "Cata-vento",
+      "tooltip": "Um instrumento afiado, semelhante a uma roda (roda de Wartenberg), que rola sobre a pele, causando uma sensação de ardência sem romper a pele."
     }
   },
   "misc_fetish": {

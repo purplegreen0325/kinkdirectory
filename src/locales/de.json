@@ -358,6 +358,38 @@
     "sub_only_for_dom": {
       "label": "Sub nur für Dumme",
       "tooltip": "Beispiel: Unterwürfige können nur für ihren Dominanten reagieren, nicht für sich selbst."
+    },
+    "blindfold": {
+      "label": "Augenbinde",
+      "tooltip": "Das Abdecken der Augen, um die Sicht einzuschränken, kann andere Sinne schärfen und das Gefühl der Verletzlichkeit verstärken."
+    },
+    "breast_bondage": {
+      "label": "Brustbondage",
+      "tooltip": "Spezielle Bondage-Techniken, bei denen die Brüste festgebunden werden, können die Sensibilität steigern und optisch stimulierend wirken."
+    },
+    "rope_simple": {
+      "label": "Seilbondage (einfach)",
+      "tooltip": "Grundlegende Seilbondage-Techniken zum Fesseln von Gliedmaßen oder zur Bewegungseinschränkung."
+    },
+    "rope_shibari": {
+      "label": "Seilbondage (Shibari)",
+      "tooltip": "Komplexe, ästhetische japanische Seilbindekunst, die sowohl funktionale Einschränkungen als auch künstlerischen Ausdruck vereint."
+    },
+    "spreader_bars": {
+      "label": "Spreizstangen",
+      "tooltip": "Gitterstäbe dienen dazu, Gliedmaßen auseinanderzuhalten, den Zugang zu erleichtern und die Verletzlichkeit zu erhöhen."
+    },
+    "suspension": {
+      "label": "Suspension",
+      "tooltip": "Bondage-Techniken, bei denen der Körper teilweise oder vollständig vom Boden abgehoben wird, wodurch ein einzigartiges Gefühl der Schwerelosigkeit und völligen Hingabe entsteht."
+    },
+    "mummification": {
+      "label": "Mumifizierung",
+      "tooltip": "Vollständiges Einwickeln des Körpers in Materialien wie Plastikfolie, Klebeband oder Latex, was zu einer nahezu vollständigen Ruhigstellung führt."
+    },
+    "sensory_deprivation": {
+      "label": "Sensorische Deprivation",
+      "tooltip": "Begrenzung oder Eliminierung von Sinneseindrücken wie Sehen, Hören oder Tasten, um andere Sinne zu schärfen und die Konzentration zu vertiefen."
     }
   },
   "toys": {
@@ -422,6 +454,14 @@
     "power_exchange": {
       "label": "Stromaustausch",
       "tooltip": "Eine Beziehung, in deren Mittelpunkt der Service steht."
+    },
+    "multiple_orgasms": {
+      "label": "Mehrere Orgasmen",
+      "tooltip": "Erzwingen oder Erleben mehrerer Orgasmen hintereinander, manchmal bis zur Überstimulation oder Erschöpfung."
+    },
+    "orgasm_training": {
+      "label": "Orgasmustraining",
+      "tooltip": "Einem Unterwürfigen beibringen, auf Befehl zu kommen oder nur mit der Erlaubnis des Dominanten."
     }
   },
   "no_consent": {
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "Speichel",
       "tooltip": "Sexuelle Spiele mit Speichel oder Spucke."
+    },
+    "creampie": {
+      "label": "Creampie",
+      "tooltip": "In den Partner ejakulieren und das Sperma austreten oder herausfließen lassen."
+    },
+    "cum_on_body": {
+      "label": "Sperma auf den Körper",
+      "tooltip": "Auf den Körper des Partners ejakulieren als Form des sexuellen Spiels."
+    },
+    "cum_on_face": {
+      "label": "Sperma im Gesicht",
+      "tooltip": "Der Akt des Ejakulierens auf das Gesicht des Partners, manchmal als Form der Dominanz oder Demütigung."
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "Elektrostimulation",
       "tooltip": "Die Verwendung von Sexspielzeug, das elektrischen Strom leitet; manchmal schmerzhaft."
+    },
+    "ice_play": {
+      "label": "Eisspiel",
+      "tooltip": "Die Verwendung von Eis auf dem Körper zur Erzeugung von Temperaturkontrasten und sensorischer Stimulation."
+    },
+    "temperature_play": {
+      "label": "Temperaturspiel",
+      "tooltip": "Die Anwendung unterschiedlicher Temperaturen (heiß und kalt) auf den Körper zur sensorischen Stimulation und zum Kontrast."
+    },
+    "feather_play": {
+      "label": "Federspiel",
+      "tooltip": "Die Verwendung von Federn für leichte, sanfte Berührungen, die kitzeln oder ein sinnliches Gefühl vermitteln können."
+    },
+    "pinwheel": {
+      "label": "Windrad",
+      "tooltip": "Ein scharfes, radähnliches Instrument (Wartenberg-Rad), das über die Haut rollt und ein stechendes Gefühl verursacht, ohne die Haut zu verletzen."
     }
   },
   "misc_fetish": {

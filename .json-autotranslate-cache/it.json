@@ -358,6 +358,38 @@
     "sub_only_for_dom": {
       "label": "Sottoscrivi solo per stupidi",
       "tooltip": "Esempio: il sottomesso può rispondere solo per il dominante, non per se stesso."
+    },
+    "blindfold": {
+      "label": "Benda",
+      "tooltip": "Coprire gli occhi per ostruire la vista, può acuire gli altri sensi e aumentare la sensazione di vulnerabilità."
+    },
+    "breast_bondage": {
+      "label": "Bondage del seno",
+      "tooltip": "Tecniche specifiche di bondage che prevedono la legatura dei seni, il che può aumentare la sensibilità ed essere visivamente stimolante."
+    },
+    "rope_simple": {
+      "label": "Bondage con corda (semplice)",
+      "tooltip": "Tecniche di base di bondage con corde per immobilizzare gli arti o limitare i movimenti."
+    },
+    "rope_shibari": {
+      "label": "Legami con la corda (Shibari)",
+      "tooltip": "Complessa ed estetica arte giapponese della legatura delle corde, che coniuga limiti funzionali ed espressione artistica."
+    },
+    "spreader_bars": {
+      "label": "Barre divaricatrici",
+      "tooltip": "Sbarre utilizzate per tenere separati gli arti, facilitando l'accesso e aumentando la vulnerabilità."
+    },
+    "suspension": {
+      "label": "Sospensione",
+      "tooltip": "Tecniche di bondage in cui il corpo viene sollevato parzialmente o completamente da terra, creando una sensazione unica di assenza di gravità e di completa resa."
+    },
+    "mummification": {
+      "label": "Mummificazione",
+      "tooltip": "Avvolgere completamente il corpo in materiali come pellicola trasparente, nastro adesivo o lattice, ottenendo così un'immobilizzazione pressoché totale."
+    },
+    "sensory_deprivation": {
+      "label": "Deprivazione sensoriale",
+      "tooltip": "Limitare o eliminare gli input sensoriali, come la vista, l'udito o il tatto, per potenziare gli altri sensi e aumentare la concentrazione."
     }
   },
   "toys": {
@@ -422,6 +454,14 @@
     "power_exchange": {
       "label": "Scambio di energia",
       "tooltip": "Un rapporto che ha come fulcro il servizio."
+    },
+    "multiple_orgasms": {
+      "label": "Orgasmi multipli",
+      "tooltip": "Forzare o provare orgasmi multipli in successione, a volte fino al punto di sovrastimolazione o sfinimento."
+    },
+    "orgasm_training": {
+      "label": "Allenamento all'orgasmo",
+      "tooltip": "Addestrare un sottomesso a venire a comando o solo con il permesso del dominante."
     }
   },
   "no_consent": {
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "Saliva/sputo",
       "tooltip": "Gioco sessuale con saliva o sputo."
+    },
+    "creampie": {
+      "label": "Crema",
+      "tooltip": "Eiaculare nel partner e lasciare che lo sperma fuoriesca o fuoriesca."
+    },
+    "cum_on_body": {
+      "label": "Sperma sul corpo",
+      "tooltip": "Eiaculare sul corpo del partner come forma di gioco sessuale."
+    },
+    "cum_on_face": {
+      "label": "Sperma sul viso",
+      "tooltip": "L'atto di eiaculare sul viso del partner, talvolta come forma di dominio o umiliazione."
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "Elettrostimolazione",
       "tooltip": "L'uso di giocattoli sessuali che trasportano corrente elettrica; a volte doloroso."
+    },
+    "ice_play": {
+      "label": "Gioco di ghiaccio",
+      "tooltip": "Utilizzo del ghiaccio sul corpo per contrasti di temperatura e stimolazione sensoriale."
+    },
+    "temperature_play": {
+      "label": "Gioco della temperatura",
+      "tooltip": "L'uso di diverse temperature (caldo e freddo) sul corpo per la stimolazione sensoriale e il contrasto."
+    },
+    "feather_play": {
+      "label": "Gioco di piume",
+      "tooltip": "L'uso delle piume per tocchi leggeri e morbidi che possono solleticare o fornire una sensazione sensuale."
+    },
+    "pinwheel": {
+      "label": "Girandola",
+      "tooltip": "Uno strumento affilato, a forma di ruota (ruota di Wartenberg), che rotola sulla pelle, provocando una sensazione di bruciore senza romperla."
     }
   },
   "misc_fetish": {

@@ -358,6 +358,38 @@
     "sub_only_for_dom": {
       "label": "仅限愚蠢者",
       "tooltip": "例如：顺从者只能代表其支配者做出回应，而不能代表自己做出回应。"
+    },
+    "blindfold": {
+      "label": "蒙眼",
+      "tooltip": "遮住眼睛阻碍视线，这会增强其他感官并增加脆弱感。"
+    },
+    "breast_bondage": {
+      "label": "乳房束缚",
+      "tooltip": "特定的束缚技术包括绑住乳房，这可以增加敏感度并带来视觉刺激。"
+    },
+    "rope_simple": {
+      "label": "绳索束缚（简单）",
+      "tooltip": "束缚四肢或限制运动的基本绳索捆绑技术。"
+    },
+    "rope_shibari": {
+      "label": "绳索束缚",
+      "tooltip": "复杂而美观的日本绳捆艺术，融合了功能限制和艺术表现力。"
+    },
+    "spreader_bars": {
+      "label": "吊架",
+      "tooltip": "用来将肢体分开的栅栏，方便进入但同时也增加了脆弱性。"
+    },
+    "suspension": {
+      "label": "暂停",
+      "tooltip": "束缚技术将身体部分或全部抬离地面，产生一种独特的失重和完全屈服的感觉。"
+    },
+    "mummification": {
+      "label": "木乃伊化",
+      "tooltip": "用保鲜膜、胶带或乳胶等材料将身体完全包裹，导致几乎完全无法动弹。"
+    },
+    "sensory_deprivation": {
+      "label": "感觉剥夺",
+      "tooltip": "限制或消除感官输入，例如视觉、听觉或触觉，以增强其他感官并加深注意力。"
     }
   },
   "toys": {
@@ -422,6 +454,14 @@
     "power_exchange": {
       "label": "电力交换",
       "tooltip": "以服务为核心的关系。"
+    },
+    "multiple_orgasms": {
+      "label": "多次性高潮",
+      "tooltip": "强迫或经历连续多次性高潮，有时达到过度刺激或疲惫的程度。"
+    },
+    "orgasm_training": {
+      "label": "性高潮训练",
+      "tooltip": "训练顺从者听从命令，或只在支配者的允许下达到高潮。"
     }
   },
   "no_consent": {
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "唾液/吐痰",
       "tooltip": "利用唾液或唾液进行性游戏。"
+    },
+    "creampie": {
+      "label": "中出",
+      "tooltip": "射精到伴侣体内并让精液泄漏或流出。"
+    },
+    "cum_on_body": {
+      "label": "射在身上",
+      "tooltip": "将射精到伴侣的身体上作为一种性玩法。"
+    },
+    "cum_on_face": {
+      "label": "射在脸上",
+      "tooltip": "将精液射在伴侣脸上的行为，有时是一种支配或羞辱的形式。"
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "电刺激",
       "tooltip": "使用带有电流的性玩具；有时会很痛苦。"
+    },
+    "ice_play": {
+      "label": "冰上游戏",
+      "tooltip": "使用冰块敷于身体以产生温度对比和感官刺激。"
+    },
+    "temperature_play": {
+      "label": "温度游戏",
+      "tooltip": "利用不同的温度（热和冷）对身体进行感官刺激和对比。"
+    },
+    "feather_play": {
+      "label": "羽毛游戏",
+      "tooltip": "使用羽毛来产生轻柔的触感，可以起到搔痒或提供感官感受的作用。"
+    },
+    "pinwheel": {
+      "label": "风车",
+      "tooltip": "一种尖锐的、轮状的仪器（瓦滕伯格轮），在皮肤上滚动，引起刺痛感，但不刺破皮肤。"
     }
   },
   "misc_fetish": {

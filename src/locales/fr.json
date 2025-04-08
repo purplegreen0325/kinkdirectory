@@ -358,6 +358,38 @@
     "sub_only_for_dom": {
       "label": "Sous-titres uniquement pour les stupides",
       "tooltip": "Exemple : Le soumis ne peut répondre que pour son dominant, pas pour lui-même."
+    },
+    "blindfold": {
+      "label": "Bandeau",
+      "tooltip": "Couvrir les yeux pour obstruer la vision, ce qui peut accentuer d’autres sens et accroître le sentiment de vulnérabilité."
+    },
+    "breast_bondage": {
+      "label": "Bondage des seins",
+      "tooltip": "Techniques de bondage spécifiques qui consistent à attacher les seins, ce qui peut augmenter la sensibilité et être visuellement stimulant."
+    },
+    "rope_simple": {
+      "label": "Bondage à la corde (simple)",
+      "tooltip": "Techniques de base de bondage à la corde pour restreindre les membres ou restreindre les mouvements."
+    },
+    "rope_shibari": {
+      "label": "Bondage à la corde (Shibari)",
+      "tooltip": "Art japonais complexe et esthétique de la reliure en corde qui combine à la fois des limitations fonctionnelles et une expression artistique."
+    },
+    "spreader_bars": {
+      "label": "Barres d'écartement",
+      "tooltip": "Barres utilisées pour maintenir les membres écartés, facilitant l'accès et augmentant la vulnérabilité."
+    },
+    "suspension": {
+      "label": "Suspension",
+      "tooltip": "Techniques de bondage où le corps est partiellement ou complètement soulevé du sol, créant une sensation unique d'apesanteur et d'abandon complet."
+    },
+    "mummification": {
+      "label": "Momification",
+      "tooltip": "Envelopper complètement le corps dans des matériaux tels que du film plastique, du ruban adhésif ou du latex, ce qui entraîne une immobilisation quasi complète."
+    },
+    "sensory_deprivation": {
+      "label": "Privation sensorielle",
+      "tooltip": "Limiter ou éliminer les informations sensorielles, telles que la vue, l’ouïe ou le toucher, pour améliorer d’autres sens et approfondir la concentration."
     }
   },
   "toys": {
@@ -422,6 +454,14 @@
     "power_exchange": {
       "label": "Échange d'énergie",
       "tooltip": "Une relation avec le service à sa base."
+    },
+    "multiple_orgasms": {
+      "label": "Orgasmes multiples",
+      "tooltip": "Forcer ou vivre plusieurs orgasmes successifs, parfois jusqu'à la surstimulation ou l'épuisement."
+    },
+    "orgasm_training": {
+      "label": "Entraînement à l'orgasme",
+      "tooltip": "Entraîner un soumis à venir sur commande, ou à venir uniquement avec la permission du dominant."
     }
   },
   "no_consent": {
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "Salive/crachat",
       "tooltip": "Jeu sexuel avec de la salive ou de la salive."
+    },
+    "creampie": {
+      "label": "tarte à la crème",
+      "tooltip": "Éjaculer sur un partenaire et laisser le sperme couler ou s'écouler."
+    },
+    "cum_on_body": {
+      "label": "Éjaculation sur le corps",
+      "tooltip": "Éjaculer sur le corps d'un partenaire comme forme de jeu sexuel."
+    },
+    "cum_on_face": {
+      "label": "Éjaculation sur le visage",
+      "tooltip": "L'acte d'éjaculer sur le visage d'un partenaire, parfois comme une forme de domination ou d'humiliation."
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "Électrostimulation",
       "tooltip": "L’utilisation de jouets sexuels transportant un courant électrique ; parfois douloureux."
+    },
+    "ice_play": {
+      "label": "Jeu de glace",
+      "tooltip": "L'utilisation de la glace sur le corps pour les contrastes de température et la stimulation sensorielle."
+    },
+    "temperature_play": {
+      "label": "Jeu de température",
+      "tooltip": "L'utilisation de différentes températures (chaud et froid) sur le corps pour la stimulation sensorielle et le contraste."
+    },
+    "feather_play": {
+      "label": "Jeu de plumes",
+      "tooltip": "L'utilisation de plumes pour des touches légères et douces qui peuvent chatouiller ou procurer une sensation sensuelle."
+    },
+    "pinwheel": {
+      "label": "Moulinet",
+      "tooltip": "Un instrument pointu en forme de roue (roue de Wartenberg) qui roule sur la peau, provoquant une sensation de picotement sans la briser."
     }
   },
   "misc_fetish": {

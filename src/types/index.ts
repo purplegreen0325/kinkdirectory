@@ -24,6 +24,7 @@ export interface KinkDefinition {
   id: string
   key: number
   format: KinkFormat
+  addedAt?: number
   // For role_specific kinks, defines allowed combinations of roles and perspectives
   // Example:
   // [{ role: 'dom', perspective: 'self' }, { role: 'dom', perspective: 'partner' }]

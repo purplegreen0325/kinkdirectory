@@ -567,6 +567,166 @@ export const kinkList: KinkCategory[] = [
         key: 38,
       },
 
+      {
+        id: 'blindfold',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 130,
+      },
+
+      {
+        id: 'breast_bondage',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 131,
+      },
+
+      {
+        id: 'rope_simple',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 132,
+      },
+
+      {
+        id: 'rope_shibari',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 133,
+      },
+
+      {
+        id: 'spreader_bars',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 134,
+      },
+
+      {
+        id: 'suspension',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 135,
+      },
+
+      {
+        id: 'mummification',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 136,
+      },
+
+      {
+        id: 'sensory_deprivation',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 137,
+      },
+
     ],
   },
 
@@ -813,6 +973,46 @@ export const kinkList: KinkCategory[] = [
 
         ],
         key: 51,
+      },
+
+      {
+        id: 'multiple_orgasms',
+        format: 'role_specific',
+        addedAt: 1744129147,
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 141,
+      },
+
+      {
+        id: 'orgasm_training',
+        format: 'role_specific',
+        addedAt: 1744129147,
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 142,
       },
 
     ],
@@ -1205,6 +1405,66 @@ export const kinkList: KinkCategory[] = [
         key: 81,
       },
 
+      {
+        id: 'creampie',
+        format: 'role_specific',
+        addedAt: 1744129147,
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 138,
+      },
+
+      {
+        id: 'cum_on_body',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 139,
+      },
+
+      {
+        id: 'cum_on_face',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 140,
+      },
+
     ],
   },
 
@@ -1388,6 +1648,86 @@ export const kinkList: KinkCategory[] = [
 
         ],
         key: 90,
+      },
+
+      {
+        id: 'ice_play',
+        format: 'role_specific',
+        addedAt: 1744129147,
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 143,
+      },
+
+      {
+        id: 'temperature_play',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 144,
+      },
+
+      {
+        id: 'feather_play',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 145,
+      },
+
+      {
+        id: 'pinwheel',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 146,
       },
 
     ],

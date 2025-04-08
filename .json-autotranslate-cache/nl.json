@@ -343,6 +343,38 @@
       "label": "Kuisheid/kooien",
       "tooltip": "Een apparaat dat toegang tot de geslachtsdelen voorkomt."
     },
+    "blindfold": {
+      "label": "Blinddoek",
+      "tooltip": "Het bedekken van de ogen om zicht te belemmeren, wat andere zintuigen kan versterken en het gevoel van kwetsbaarheid kan vergroten."
+    },
+    "breast_bondage": {
+      "label": "Borst bondage",
+      "tooltip": "Specifieke bondage technieken waarbij de borsten worden vastgebonden, wat de gevoeligheid kan verhogen en visueel stimulerend kan zijn."
+    },
+    "rope_simple": {
+      "label": "Touwbondage (Eenvoudig)",
+      "tooltip": "Basistechnieken van touwbondage voor het vastbinden van ledematen of het beperken van beweging."
+    },
+    "rope_shibari": {
+      "label": "Touwbondage (Shibari)",
+      "tooltip": "Complexe, esthetische Japanse touwbindkunst die zowel functionele beperkingen als artistieke expressie combineert."
+    },
+    "spreader_bars": {
+      "label": "Spreidstangen",
+      "tooltip": "Stangen die worden gebruikt om ledematen uit elkaar te houden, waardoor toegang wordt vergemakkelijkt en kwetsbaarheid wordt verhoogd."
+    },
+    "suspension": {
+      "label": "Suspensie",
+      "tooltip": "Bondagetechnieken waarbij het lichaam gedeeltelijk of volledig van de grond wordt geheven, wat een unieke sensatie van gewichtloosheid en volledige overgave creëert."
+    },
+    "mummification": {
+      "label": "Mummificatie",
+      "tooltip": "Het volledig inwikkelen van het lichaam in materialen zoals plasticfolie, tape, of latex, wat leidt tot bijna volledige immobilisatie."
+    },
+    "sensory_deprivation": {
+      "label": "Zintuiglijke deprivatie",
+      "tooltip": "Het beperken of wegnemen van zintuiglijke prikkels, zoals zicht, gehoor of tast, om andere zintuigen te versterken en de focus te verdiepen."
+    },
     "dom_only_for_sub": {
       "label": "Dom alleen voor sub",
       "tooltip": "Voorbeeld: Dominant kan alleen antwoorden voor hun onderdanige, niet voor zichzelf."
@@ -418,6 +450,14 @@
     "orgasm_denial": {
       "label": "Orgasme onthouding",
       "tooltip": "Verwijst naar de dominant die de onderdanige een orgasme ontzegt."
+    },
+    "multiple_orgasms": {
+      "label": "Meerdere orgasmes",
+      "tooltip": "Het forceren of ondergaan van meerdere orgasmes achter elkaar, soms tot het punt van overstimulatie of uitputting."
+    },
+    "orgasm_training": {
+      "label": "Orgasme training",
+      "tooltip": "Het trainen van een onderdanige om op commando te komen, of alleen te komen met toestemming van de dominant."
     },
     "power_exchange": {
       "label": "Machtsuitwisseling",
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "Speeksel/Spuug",
       "tooltip": "Seksueel spel met speeksel of spuug."
+    },
+    "creampie": {
+      "label": "Creampie",
+      "tooltip": "Ejaculeren in een partner en laten uitlopen of uitvloeien van het sperma."
+    },
+    "cum_on_body": {
+      "label": "Cum op lichaam",
+      "tooltip": "Het ejaculeren op het lichaam van een partner als vorm van seksueel spel."
+    },
+    "cum_on_face": {
+      "label": "Cum op gezicht",
+      "tooltip": "Het ejaculeren op het gezicht van een partner, soms als vorm van dominantie of vernedering."
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "Elektro stimulatie",
       "tooltip": "Het gebruik van seksspeeltjes die een elektrische stroom dragen; soms pijnlijk."
+    },
+    "ice_play": {
+      "label": "IJsspel",
+      "tooltip": "Het gebruik van ijs op het lichaam voor temperatuurcontrasten en zintuiglijke stimulatie."
+    },
+    "temperature_play": {
+      "label": "Temperatuurspel",
+      "tooltip": "Het gebruik van verschillende temperaturen (heet en koud) op het lichaam voor zintuiglijke stimulatie en contrast."
+    },
+    "feather_play": {
+      "label": "Veren spel",
+      "tooltip": "Het gebruik van veren voor lichte, zachte aanrakingen die kunnen kietelen of een sensuele sensatie kunnen geven."
+    },
+    "pinwheel": {
+      "label": "Pinwheel",
+      "tooltip": "Een scherp, wielachtig instrument (Wartenberg wiel) dat over de huid rolt en een prikkende sensatie veroorzaakt zonder de huid te doorbreken."
     }
   },
   "misc_fetish": {

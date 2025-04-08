@@ -358,6 +358,38 @@
     "sub_only_for_dom": {
       "label": "Sub solo para estupidos",
       "tooltip": "Ejemplo: La sumisa sólo puede responder por su dominante, no por sí misma."
+    },
+    "blindfold": {
+      "label": "Venda",
+      "tooltip": "Cubrirse los ojos para obstruir la visión, lo que puede agudizar otros sentidos y aumentar los sentimientos de vulnerabilidad."
+    },
+    "breast_bondage": {
+      "label": "esclavitud de pecho",
+      "tooltip": "Técnicas específicas de bondage que implican atar los pechos, lo que puede aumentar la sensibilidad y ser visualmente estimulante."
+    },
+    "rope_simple": {
+      "label": "Ataduras con cuerdas (simples)",
+      "tooltip": "Técnicas básicas de esclavitud con cuerdas para restringir extremidades o movimientos."
+    },
+    "rope_shibari": {
+      "label": "Ataduras con cuerdas (Shibari)",
+      "tooltip": "Arte japonés de encuadernación con cuerdas, complejo y estético, que combina tanto limitaciones funcionales como expresión artística."
+    },
+    "spreader_bars": {
+      "label": "Barras separadoras",
+      "tooltip": "Barras utilizadas para mantener las extremidades separadas, facilitando el acceso y aumentando la vulnerabilidad."
+    },
+    "suspension": {
+      "label": "Suspensión",
+      "tooltip": "Técnicas de bondage donde el cuerpo se eleva parcial o totalmente del suelo, creando una sensación única de ingravidez y entrega total."
+    },
+    "mummification": {
+      "label": "Momificación",
+      "tooltip": "Envolver completamente el cuerpo con materiales como film plástico, cinta adhesiva o látex, dando como resultado una inmovilización casi completa."
+    },
+    "sensory_deprivation": {
+      "label": "privación sensorial",
+      "tooltip": "Limitar o eliminar la información sensorial, como la vista, el oído o el tacto, para mejorar otros sentidos y profundizar el enfoque."
     }
   },
   "toys": {
@@ -422,6 +454,14 @@
     "power_exchange": {
       "label": "Intercambio de poder",
       "tooltip": "Una relación que tiene como núcleo el servicio."
+    },
+    "multiple_orgasms": {
+      "label": "orgasmos múltiples",
+      "tooltip": "Forzar o experimentar orgasmos múltiples en sucesión, a veces hasta el punto de sobreestimulación o agotamiento."
+    },
+    "orgasm_training": {
+      "label": "Entrenamiento del orgasmo",
+      "tooltip": "Entrenar a un sumiso para que venga cuando se le ordene, o para que venga sólo con el permiso del dominante."
     }
   },
   "no_consent": {
@@ -550,6 +590,18 @@
     "saliva_spit": {
       "label": "Saliva/escupitajo",
       "tooltip": "Juego sexual con saliva o escupitajo."
+    },
+    "creampie": {
+      "label": "Cremita",
+      "tooltip": "Eyacular dentro de una pareja y permitir que el semen se escape o fluya."
+    },
+    "cum_on_body": {
+      "label": "Semen en el cuerpo",
+      "tooltip": "Eyacular sobre el cuerpo de una pareja como forma de juego sexual."
+    },
+    "cum_on_face": {
+      "label": "Semen en la cara",
+      "tooltip": "El acto de eyacular en la cara de una pareja, a veces como una forma de dominio o humillación."
     }
   },
   "degradation": {
@@ -590,6 +642,22 @@
     "electro_stimulation": {
       "label": "electroestimulación",
       "tooltip": "El uso de juguetes sexuales que transportan corriente eléctrica; A veces doloroso."
+    },
+    "ice_play": {
+      "label": "Juego de hielo",
+      "tooltip": "El uso de hielo sobre el cuerpo para contrastes de temperatura y estimulación sensorial."
+    },
+    "temperature_play": {
+      "label": "Juego de temperatura",
+      "tooltip": "El uso de diferentes temperaturas (caliente y frío) en el cuerpo para la estimulación sensorial y el contraste."
+    },
+    "feather_play": {
+      "label": "Juego de plumas",
+      "tooltip": "El uso de plumas para realizar toques ligeros y suaves que puedan hacer cosquillas o proporcionar una sensación sensual."
+    },
+    "pinwheel": {
+      "label": "Molinillo",
+      "tooltip": "Un instrumento afilado, parecido a una rueda (rueda de Wartenberg), que rueda sobre la piel, causando una sensación de escozor sin romper la piel."
     }
   },
   "misc_fetish": {
