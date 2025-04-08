@@ -67,6 +67,14 @@ The Kink Directory offers powerful filtering tools to help you navigate your pre
 
 These filtering options make it easy to manage large lists and focus on specific aspects of your preferences.
 
+## 🔮 Upcoming Features
+
+We're constantly working to improve Kink Directory. Here are some features we're planning to implement:
+
+- 🔍 **More kinks** - Expanding our list of kinks and preferences for a more comprehensive experience
+- 🔄 **Compare lists** - Ability to compare your preferences with a partner to quickly identify common interests and boundaries
+- 🏷️ **Category filtering** - Toggle kinks based on categories (e.g., IRL practicality, intensity levels, or activity types)
+
 ## 📱 Screenshots
 
 ### Create a New List
@@ -81,10 +89,3 @@ These filtering options make it easy to manage large lists and focus on specific
 ### Mobile Experience
 ![Mobile-friendly interface](./assets/mobile.png)
 
-## 🔮 Upcoming Features
-
-We're constantly working to improve Kink Directory. Here are some features we're planning to implement:
-
-- 🔍 **More kinks** - Expanding our list of kinks and preferences for a more comprehensive experience
-- 🔄 **Compare lists** - Ability to compare your preferences with a partner to quickly identify common interests and boundaries
-- 🏷️ **Category filtering** - Toggle kinks based on categories (e.g., IRL practicality, intensity levels, or activity types)
