@@ -33,6 +33,7 @@ async function handleImportViewedList() {
           color: 'success',
           duration: 3000,
         })
+        exitViewMode()
       }
     }
   }
