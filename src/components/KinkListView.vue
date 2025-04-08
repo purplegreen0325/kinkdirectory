@@ -59,12 +59,12 @@ const quizCardRef = useTemplateRef('quizCardRef')
           <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-3">
             <!-- Legend and quiz section -->
             <div v-if="activeList" class="mb-3">
-              <div class="flex flex-col md:flex-row md:items-stretch md:justify-between flex-wrap gap-2">
+              <div class="flex flex-col md:flex-row md:items-stretch  md:justify-between flex-wrap gap-2">
                 <!-- Legend inside the card, at the top -->
                 <KinkLegend class="flex-1" :open-quiz-modal="() => quizCardRef?.openQuizModal?.()" />
 
                 <!-- Controls group with Quiz and Filter buttons -->
-                <div class="flex items-center gap-2 md:self-stretch">
+                <div class="flex items-center gap-2 justify-end md:self-stretch">
                   <!-- New kinks button styled like QuizCard and FilterDropdown -->
                   <button
                     v-if="recentlyAddedKinks > 0"
