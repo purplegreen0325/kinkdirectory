@@ -173,6 +173,13 @@ function nextQuestion() {
   if (!currentKink.value)
     return
 
+  // Save current position to history before moving on
+  quizHistory.value.push({
+    kinkIndex: currentIndex.value,
+    positionIndex: currentPositionIndex.value,
+    value: currentValue.value,
+  })
+
   // Check if there are more positions for the current kink
   if (currentPositionIndex.value < currentKink.value.positions.length - 1) {
     // Move to the next position for the current kink
