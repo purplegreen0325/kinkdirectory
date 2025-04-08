@@ -1,11 +1,27 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
+import { kinkList } from '../../../data/kinks'
 import CreateListForm from '../modals/CreateListForm.vue'
 
 const { t } = useI18n()
 const { kinkLists, activeListId } = useKinkListState()
 const overlay = useOverlay()
+
+// Calculate how many kinks were added in the last 2 days
+const twoDaysAgo = Math.floor(Date.now() / 1000) - (2 * 24 * 60 * 60)
+const recentlyAddedKinksCount = computed(() => {
+  let count = 0
+  kinkList.forEach((category) => {
+    category.kinks.forEach((kink) => {
+      if (kink.addedAt && kink.addedAt > twoDaysAgo) {
+        count++
+      }
+    })
+  })
+  return count
+})
 
 function handleListSelection(id: string) {
   activeListId.value = id
@@ -76,9 +92,16 @@ function formatDate(dateString: string | number) {
           <!-- Left content: Text and button -->
           <div class="space-y-6">
             <div class="space-y-4">
-              <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-                {{ t('app.welcome_title') }}
-              </h2>
+              <div class="flex items-center gap-2">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+                  {{ t('app.welcome_title') }}
+                </h2>
+                <!-- New kinks badge - improved styling -->
+                <span v-if="recentlyAddedKinksCount > 0" class="inline-flex items-center rounded-full text-xs font-medium bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 px-2 py-0.5">
+                  <UIcon name="i-lucide-star" class="mr-1 text-[0.65rem]" />
+                  {{ recentlyAddedKinksCount }} {{ t('app.new') }}
+                </span>
+              </div>
               <p class="text-gray-600 dark:text-gray-300">
                 {{ t('app.welcome_description') }}
               </p>
@@ -146,12 +169,19 @@ function formatDate(dateString: string | number) {
 
     <!-- Lists exist state with enhanced styling -->
     <div v-else class="py-8 px-4 max-w-3xl mx-auto">
-      <!-- Header with decoration -->
-      <div class="mb-8 text-center relative">
-        <div class="absolute left-0 right-0 top-1/2 border-t border-gray-200 dark:border-gray-700 -z-10" />
-        <h2 class="inline-block bg-gray-50 dark:bg-gray-900 px-4 text-xl font-bold z-10">
-          <span class="text-primary-500">{{ t('app.your_lists') }}</span>
-        </h2>
+      <!-- Header - simplified clean styling -->
+      <div class="mb-8 text-center">
+        <div class="inline-flex items-center gap-2 justify-center">
+          <h2 class="text-xl font-bold text-primary-500">
+            {{ t('app.your_lists') }}
+          </h2>
+          
+          <!-- New kinks badge - improved styling -->
+          <span v-if="recentlyAddedKinksCount > 0" class="inline-flex items-center rounded-full text-xs font-medium bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 px-2 py-0.5">
+            <UIcon name="i-lucide-star" class="mr-1 text-[0.65rem]" />
+            {{ recentlyAddedKinksCount }} {{ t('app.new') }}
+          </span>
+        </div>
       </div>
 
       <!-- List Grid - Using fixed widths and flex to prevent stretching -->
