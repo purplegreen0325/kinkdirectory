@@ -142,6 +142,7 @@
     "quiz_new_kinks_count": "Quiz {count} new selections",
     "filter": "Filter",
     "filter_options": "Filter options",
+    "filter_by_choice": "Filter by choice",
     "only_new_items": "New items only",
     "only_unfilled_items": "Only uncompleted items",
     "showing_only_new_items": "Only new items are displayed",
@@ -150,6 +151,8 @@
     "no_unfilled_items_found": "No unfilled items found with current filters",
     "no_results_with_filters": "No items match all active filters",
     "clear_filters": "Clear Filters",
+    "clear": "Clear",
+    "clear_all_filters": "Clear All Filters",
     "and": "and"
   },
   "roles": {

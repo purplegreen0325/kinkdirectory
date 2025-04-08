@@ -29,15 +29,28 @@ const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
 
         <!-- Legend Items -->
         <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <!-- Always show "Not Entered" (0) first -->
           <div
-            v-for="choice in choices"
+            :key="0"
+            class="flex items-center gap-1 group transition-all duration-200"
+          >
+            <div
+              class="w-3 h-3 rounded-full flex items-center justify-center transition-transform duration-200 group-hover:scale-110 bg-gray-300 dark:bg-gray-600 border border-gray-400 dark:border-gray-500"
+            />
+            <span class="text-xs text-gray-700 dark:text-gray-300">
+              {{ t('choices.not_entered') }}
+            </span>
+          </div>
+          
+          <!-- Then show other choices in order from settings -->
+          <div
+            v-for="choice in kinkChoiceOrder"
             :key="choice"
             class="flex items-center gap-1 group transition-all duration-200"
           >
             <div
               class="w-3 h-3 rounded-full flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
               :class="{
-                'bg-gray-300 dark:bg-gray-600 border border-gray-400 dark:border-gray-500': choice === 0,
                 'bg-blue-500 border border-blue-600': choice === 1,
                 'bg-green-500 border border-green-600': choice === 2,
                 'bg-yellow-500 border border-yellow-600': choice === 3,
@@ -46,7 +59,7 @@ const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
               }"
             />
             <span class="text-xs text-gray-700 dark:text-gray-300">
-              {{ t(`choices.${choice === 0 ? 'not_entered' : choice === 1 ? 'favorite' : choice === 2 ? 'like' : choice === 3 ? 'indifferent' : choice === 4 ? 'maybe' : 'limit'}`) }}
+              {{ t(`choices.${choice === 1 ? 'favorite' : choice === 2 ? 'like' : choice === 3 ? 'indifferent' : choice === 4 ? 'maybe' : 'limit'}`) }}
             </span>
           </div>
         </div>

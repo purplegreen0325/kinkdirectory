@@ -6,7 +6,16 @@ import { kinkList } from '../../../data/kinks'
 import KinkSection from '../../kinklist/kink/KinkSection.vue'
 
 const { t } = useI18n()
-const { activeList, isKinkVisibleForRole, kinkModalState, closeKinkModal, shouldShowKink, filters } = useKinkListState()
+const { 
+  activeList, 
+  isKinkVisibleForRole, 
+  kinkModalState, 
+  closeKinkModal, 
+  shouldShowKink, 
+  filters, 
+  hasActiveFilters,
+  clearAllFilters 
+} = useKinkListState()
 
 // Filter categories to only show those with visible kinks
 const visibleCategories = computed(() => {
@@ -30,10 +39,13 @@ const visibleCategories = computed(() => {
     <!-- List content for screenshot -->
     <div id="kink-list-content" class="max-w-full overflow-x-hidden p-0">
       <!-- Empty state when filters return no results -->
-      <div v-if="visibleCategories.length === 0 && (filters.showOnlyNew || filters.showOnlyUnfilled)" class="text-center py-8">
+      <div v-if="visibleCategories.length === 0 && hasActiveFilters" class="text-center py-8">
         <UIcon name="i-lucide-filter-x" class="text-4xl text-gray-400 dark:text-gray-600 mx-auto mb-2" />
         <p class="text-gray-500 dark:text-gray-400">
-          <template v-if="filters.showOnlyNew && filters.showOnlyUnfilled">
+          <template v-if="(filters.showOnlyNew || filters.showOnlyUnfilled) && filters.choiceFilters.length > 0">
+            {{ t('app.no_results_with_filters') }}
+          </template>
+          <template v-else-if="filters.showOnlyNew && filters.showOnlyUnfilled">
             {{ t('app.no_results_with_filters') }}
           </template>
           <template v-else-if="filters.showOnlyNew">
@@ -42,12 +54,12 @@ const visibleCategories = computed(() => {
           <template v-else-if="filters.showOnlyUnfilled">
             {{ t('app.no_unfilled_items_found') }}
           </template>
+          <template v-else-if="filters.choiceFilters.length > 0">
+            {{ t('app.no_results_with_filters') }}
+          </template>
         </p>
-        <UButton size="sm" color="neutral" class="mt-4" @click="() => { 
-          filters.showOnlyNew = false; 
-          filters.showOnlyUnfilled = false; 
-        }">
-          {{ t('app.clear_filters') }}
+        <UButton size="sm" color="neutral" class="mt-4" @click="clearAllFilters">
+          {{ t('app.clear_all_filters') }}
         </UButton>
       </div>
 
