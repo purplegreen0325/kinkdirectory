@@ -1,27 +1,18 @@
 <script setup lang="ts">
 import type { KinkChoice as KinkChoiceType } from '../../../types'
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { kinkList } from '../../../data/kinks'
+import { useKinkListState } from '../../../composables/useKinkList'
+
+defineProps<{
+  openQuizModal: () => void
+}>()
 
 const { t } = useI18n()
 
 // Include all choices including "Not Entered" (0)
 const choices: KinkChoiceType[] = [0, 1, 2, 3, 4, 5]
 
-// Calculate how many kinks were added in the last 2 days
-const twoDaysAgo = Math.floor(Date.now() / 1000) - (2 * 24 * 60 * 60) // 2 days in seconds
-const recentlyAddedKinks = computed(() => {
-  let count = 0
-  kinkList.forEach((category) => {
-    category.kinks.forEach((kink) => {
-      if (kink.addedAt && kink.addedAt > twoDaysAgo) {
-        count++
-      }
-    })
-  })
-  return count
-})
+const { recentlyAddedKinks, newKinksAvailable } = useKinkListState()
 </script>
 
 <template>
@@ -60,7 +51,7 @@ const recentlyAddedKinks = computed(() => {
       </div>
 
       <!-- Newly Added Kinks Counter -->
-      <div v-if="recentlyAddedKinks > 0" class="text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 px-2 py-1 rounded-full flex items-center gap-1">
+      <div v-if="recentlyAddedKinks > 0" class="text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 px-2 py-1 rounded-full flex items-center gap-1" :class="{ 'cursor-pointer hover:bg-primary-200 dark:hover:bg-primary-800 transition-all duration-200': newKinksAvailable }" @click="newKinksAvailable ? openQuizModal() : null">
         <UIcon name="i-lucide-star" class="text-xs" />
         {{ recentlyAddedKinks }} new kinks added!
       </div>

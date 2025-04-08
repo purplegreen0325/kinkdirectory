@@ -1,27 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
-import { kinkList } from '../../../data/kinks'
 import CreateListForm from '../modals/CreateListForm.vue'
 
 const { t } = useI18n()
-const { kinkLists, activeListId } = useKinkListState()
+const { kinkLists, activeListId, recentlyAddedKinks: recentlyAddedKinksCount } = useKinkListState()
 const overlay = useOverlay()
-
-// Calculate how many kinks were added in the last 2 days
-const twoDaysAgo = Math.floor(Date.now() / 1000) - (2 * 24 * 60 * 60)
-const recentlyAddedKinksCount = computed(() => {
-  let count = 0
-  kinkList.forEach((category) => {
-    category.kinks.forEach((kink) => {
-      if (kink.addedAt && kink.addedAt > twoDaysAgo) {
-        count++
-      }
-    })
-  })
-  return count
-})
 
 function handleListSelection(id: string) {
   activeListId.value = id

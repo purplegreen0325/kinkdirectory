@@ -16,6 +16,8 @@ const {
   getVisibleKinksForQuiz,
   setKinkChoice,
   getKinkChoice,
+  newUnfilledPositionsCount,
+  newKinksAvailable,
 } = useKinkListState()
 const { kinkChoiceOrder } = useSettings()
 
@@ -32,31 +34,6 @@ const quizHistory = ref<Array<{ kinkIndex: number, positionIndex: number, value:
 
 // Check for new kinks (added in the last 2 days)
 const twoDaysAgo = Math.floor(Date.now() / 1000) - (2 * 24 * 60 * 60)
-
-// Count of new unfilled positions (not just kinks)
-const newUnfilledPositionsCount = computed(() => {
-  const allAvailableKinks = getVisibleKinksForQuiz()
-
-  // Count all unfilled positions in new kinks
-  let totalUnfilled = 0
-
-  allAvailableKinks.forEach((item) => {
-    // Only count positions for new kinks
-    if (item.kink.addedAt && item.kink.addedAt > twoDaysAgo) {
-      // Count each unfilled position
-      item.positions.forEach((position) => {
-        const value = getKinkChoice(item.kink, position)
-        if (value === 0) {
-          totalUnfilled++
-        }
-      })
-    }
-  })
-
-  return totalUnfilled
-})
-
-const newKinksAvailable = computed(() => newUnfilledPositionsCount.value > 0)
 
 // Active color classes (selected)
 const activeColorClasses = {

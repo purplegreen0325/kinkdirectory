@@ -24,6 +24,10 @@ async function openQuizModal() {
   })
   await quizModal.open()
 }
+
+defineExpose({
+  openQuizModal,
+})
 </script>
 
 <template>

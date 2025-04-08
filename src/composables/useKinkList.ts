@@ -51,6 +51,44 @@ export const useKinkListState = createGlobalState(() => {
     return kinkLists.value.find(list => list.id === activeListId.value) || null
   })
 
+  const twoDaysAgo = Math.floor(Date.now() / 1000) - (2 * 24 * 60 * 60) // 2 days in seconds
+  const recentlyAddedKinks = computed(() => {
+    let count = 0
+    kinkList.forEach((category) => {
+      category.kinks.forEach((kink) => {
+        if (kink.addedAt && kink.addedAt > twoDaysAgo) {
+          count++
+        }
+      })
+    })
+    return count
+  })
+
+  // Count of new unfilled positions (not just kinks)
+  const newUnfilledPositionsCount = computed(() => {
+    const allAvailableKinks = getVisibleKinksForQuiz()
+
+    // Count all unfilled positions in new kinks
+    let totalUnfilled = 0
+
+    allAvailableKinks.forEach((item) => {
+      // Only count positions for new kinks
+      if (item.kink.addedAt && item.kink.addedAt > twoDaysAgo) {
+        // Count each unfilled position
+        item.positions.forEach((position) => {
+          const value = getKinkChoice(item.kink, position)
+          if (value === 0) {
+            totalUnfilled++
+          }
+        })
+      }
+    })
+
+    return totalUnfilled
+  })
+
+  const newKinksAvailable = computed(() => newUnfilledPositionsCount.value > 0)
+
   // Function to determine if a kink should be visible based on user role
   function isKinkVisibleForRole(kink: KinkDefinition, userRole: UserRole): boolean {
     // General format kinks are always visible
@@ -525,6 +563,7 @@ export const useKinkListState = createGlobalState(() => {
     getKinkPositions,
     createList,
     deleteList,
+    recentlyAddedKinks,
     updateList,
     setKinkChoice,
     getKinkChoice,
@@ -534,6 +573,8 @@ export const useKinkListState = createGlobalState(() => {
     importViewedList,
     exitViewMode,
     openKinkModal,
+    newUnfilledPositionsCount,
+    newKinksAvailable,
     closeKinkModal,
     getVisibleKinksForQuiz,
   }

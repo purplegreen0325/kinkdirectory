@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, useTemplateRef } from 'vue'
 import { useKinkListState } from '../composables/useKinkList'
 
 import AppFooter from './kinklist/footer/AppFooter.vue'
@@ -21,6 +21,8 @@ const hasSelections = computed(() => {
     return false
   return Object.keys(activeList.value.selections).length > 0
 })
+
+const quizCardRef = useTemplateRef('quizCardRef')
 </script>
 
 <template>
@@ -54,11 +56,12 @@ const hasSelections = computed(() => {
             <div v-if="activeList" class="mb-3">
               <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-wrap gap-2">
                 <!-- Legend inside the card, at the top -->
-                <KinkLegend class="flex-1" />
+                <KinkLegend class="flex-1" :open-quiz-modal="() => quizCardRef?.openQuizModal?.()" />
 
                 <!-- Quiz button with matching styling to legend -->
                 <QuizCard
                   v-if="!isViewMode && hasSelections"
+                  ref="quizCardRef"
                   :compact="true"
                   class="flex-none"
                 />
@@ -66,7 +69,7 @@ const hasSelections = computed(() => {
             </div>
 
             <!-- Full quiz card when no selections yet -->
-            <QuizCard v-if="!isViewMode && !hasSelections && activeList" :compact="false" class="mb-3" />
+            <QuizCard v-if="!isViewMode && !hasSelections && activeList" ref="quizCardRef" :compact="false" class="mb-3" />
 
             <div class="overflow-x-auto">
               <ListContent />
