@@ -9,6 +9,7 @@ import {
   migrateStoredLists,
   migrateUrlEncodedList,
   POSITION_MAP,
+  POSITION_NAMES,
 } from './useKinkListMigration'
 
 // Role numeric mapping (single source of truth)
@@ -198,73 +199,209 @@ export const useKinkListState = createGlobalState(() => {
     if (!list)
       return ''
 
-    // Format as kinkKey,positionNumber,choice
-    const selections = Object.entries(list.selections)
-      .filter(([_, choice]) => choice !== 0) // Only include non-zero values
-      .map(([key, choice]) => {
-        // Current format is kinkKey%position
-        const [kinkKey, position] = key.split('%')
+    // Only include non-zero values
+    const nonZeroSelections = Object.entries(list.selections)
+      .filter(([_, choice]) => choice !== 0)
 
-        // Get position number
-        const posNum = POSITION_MAP[position] !== undefined ? POSITION_MAP[position] : 0
-        return `${kinkKey},${posNum},${choice}`
-      })
-      .join(';')
+    // For new format (v1+), use a compact binary encoding
+    // Each kink selection requires 2 bytes:
+    // - 10 bits for kink key (0-1023)
+    // - 3 bits for position (0-7)
+    // - 3 bits for choice (0-7)
 
-    // Create a minimal data structure
-    const compressedData = {
-      v: CURRENT_VERSION, // Current version of the data format
-      r: ROLE_MAP[list.role],
-      s: selections,
-    }
+    // Create a binary buffer for the data
+    // Format:
+    // - 1 byte for version (v1)
+    // - 1 byte for role (0-2)
+    // - 2 bytes for selection count
+    // - N*2 bytes for selections (2 bytes per selection)
+    const selectionCount = nonZeroSelections.length
+    const bufferSize = 4 + (selectionCount * 2) // 4 bytes header + 2 bytes per selection
+    const buffer = new Uint8Array(bufferSize)
 
-    // Base64 encode to make it URL safe
-    const encoded = btoa(JSON.stringify(compressedData))
+    // Write header
+    buffer[0] = CURRENT_VERSION // Version
+    buffer[1] = ROLE_MAP[list.role] // Role
+    buffer[2] = (selectionCount >> 8) & 0xFF // Selection count high byte
+    buffer[3] = selectionCount & 0xFF // Selection count low byte
 
-    return `${window.location.origin}${window.location.pathname}?list=${encoded}`
+    // Write selections
+    let offset = 4
+    nonZeroSelections.forEach(([key, choice]) => {
+      // Parse the key format kinkKey%position
+      const [kinkKeyStr, position] = key.split('%')
+      const kinkKey = Number.parseInt(kinkKeyStr)
+      const posNum = POSITION_MAP[position] || 0
+
+      // Pack into 2 bytes:
+      // - First 10 bits: kink key (0-1023)
+      // - Next 3 bits: position (0-7)
+      // - Last 3 bits: choice (0-7)
+      const value = (kinkKey << 6) | (posNum << 3) | choice
+
+      // Write as 2 bytes (big-endian)
+      buffer[offset++] = (value >> 8) & 0xFF // High byte
+      buffer[offset++] = value & 0xFF // Low byte
+    })
+
+    // Convert to a URL-safe string
+    // First convert to base64
+    const binaryString = Array.from(buffer).map(b => String.fromCharCode(b)).join('')
+    const base64 = btoa(binaryString)
+
+    // Make URL-safe by replacing + with - and / with _
+    const urlSafe = base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
+
+    return `${window.location.origin}${window.location.pathname}?list=${urlSafe}`
   }
 
   function decodeListFromUrl(encoded: string): KinkList | null {
     try {
-      const decoded = JSON.parse(atob(encoded))
+      // First check if this is a binary format (v1+) or JSON format (legacy)
+      const isBinary = !encoded.includes('{') && !encoded.includes('=')
 
-      // Handle both old and new formats
-      // Old format had {name, role, selections}
-      // New format has {v, r, s} (version, role, selections)
+      if (isBinary) {
+        console.log('Detected binary format')
+        // Convert from URL-safe base64 back to binary
+        const base64 = encoded.replace(/-/g, '+').replace(/_/g, '/')
 
-      // Determine role
-      let role: UserRole
-      if (decoded.r !== undefined) {
-        // New format - numeric role
-        role = ROLE_NAMES[decoded.r] as UserRole || 'both'
-      }
-      else if (decoded.role) {
-        // Old format - string role
-        role = decoded.role as UserRole
+        // Add padding if needed
+        let padded = base64
+        const padding = 4 - (base64.length % 4)
+        if (padding < 4) {
+          padded += '='.repeat(padding)
+        }
+
+        // Decode base64 to binary
+        const binaryString = atob(padded)
+        const buffer = new Uint8Array(binaryString.length)
+        for (let i = 0; i < binaryString.length; i++) {
+          buffer[i] = binaryString.charCodeAt(i)
+        }
+
+        // Read header
+        const roleNum = buffer[1]
+        const selectionCount = (buffer[2] << 8) | buffer[3]
+
+        // Create list object
+        const list: KinkList = {
+          id: nanoid(8),
+          name: 'Shared List',
+          role: ROLE_NAMES[roleNum] as UserRole || 'both',
+          created: Date.now(),
+          selections: {},
+        }
+
+        // Read selections
+        let offset = 4
+        for (let i = 0; i < selectionCount; i++) {
+          const highByte = buffer[offset++]
+          const lowByte = buffer[offset++]
+          const value = (highByte << 8) | lowByte
+
+          // Unpack:
+          // - First 10 bits: kink key (0-1023)
+          // - Next 3 bits: position (0-7)
+          // - Last 3 bits: choice (0-7)
+          const kinkKey = (value >> 6) & 0x3FF
+          const posNum = (value >> 3) & 0x7
+          const choice = value & 0x7
+
+          // Convert position number to name
+          const position = POSITION_NAMES[posNum] || 'general'
+
+          // Store in selections
+          const key = `${kinkKey}%${position}`
+          list.selections[key] = choice as KinkChoice
+        }
+
+        return list
       }
       else {
-        // Default
-        role = 'both'
+        console.log('Detected JSON format')
+        // Legacy JSON format
+        let decoded
+        try {
+          decoded = JSON.parse(atob(encoded))
+          console.log('Decoded JSON:', decoded)
+        }
+        catch (e) {
+          console.error('Failed to parse JSON from URL', e)
+          return null
+        }
+
+        // Detect format type
+        const formatType = detectListFormat(decoded)
+
+        // Determine role based on format type
+        let role: UserRole = 'both'
+        let name = 'Shared List'
+
+        if (formatType === 'new') {
+          // New format - numeric role
+          role = ROLE_NAMES[decoded.r] as UserRole || 'both'
+          // Use the name if provided in newer format
+          name = decoded.n || 'Shared List'
+        }
+        else if (formatType === 'old') {
+          // Old format - string role
+          role = decoded.role as UserRole || 'both'
+          name = decoded.name || 'Shared List'
+        }
+
+        // Create list with appropriate properties
+        const list: KinkList = {
+          id: nanoid(8),
+          name,
+          role,
+          created: Date.now(),
+          selections: {},
+        }
+
+        // Process selections based on format type
+        if (formatType === 'new') {
+          // For new format, simply convert the data
+          decoded.s.split(';').forEach((item: string) => {
+            try {
+              const [kinkKey, posNum, choiceStr] = item.split(',')
+              const choice = Number(choiceStr) as KinkChoice
+
+              // Get position name from position number
+              const positionNumber = Number(posNum)
+              const position = POSITION_NAMES[positionNumber] || 'general'
+
+              // Store as kinkKey%position
+              const key = `${kinkKey}%${position}`
+              list.selections[key] = choice
+            }
+            catch (err) {
+              console.error('Error parsing item:', item, err)
+            }
+          })
+        }
+        else {
+          // For old formats, use the migration function
+          list.selections = migrateUrlEncodedList(decoded, kinkMappings)
+        }
+
+        return list
       }
-
-      // Create list with appropriate role
-      const list: KinkList = {
-        id: nanoid(8),
-        name: decoded.name || 'Shared List',
-        role,
-        created: Date.now(),
-        selections: {},
-      }
-
-      // Use the migration function to handle both old and new formats
-      list.selections = migrateUrlEncodedList(decoded, kinkMappings)
-
-      return list
     }
     catch (e) {
       console.error('Failed to decode list from URL', e)
       return null
     }
+  }
+
+  // Helper function to detect the format of list data
+  function detectListFormat(data: any): 'new' | 'old' {
+    // New format has v (version) and s (selections as comma-separated string)
+    if (data.v === CURRENT_VERSION && data.s && !data.s.includes('=')) {
+      return 'new'
+    }
+
+    // Any other format is considered old and needs migration
+    return 'old'
   }
 
   function viewListFromUrl(encoded: string): KinkList | null {

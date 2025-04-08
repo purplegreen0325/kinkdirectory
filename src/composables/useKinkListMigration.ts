@@ -112,111 +112,81 @@ export function migrateStoredLists(kinkLists: KinkList[]): boolean {
 export function migrateUrlEncodedList(decoded: any, kinkMappings: Record<string, number>): Record<string, KinkChoice> {
   const selections: Record<string, KinkChoice> = {}
 
-  // Handle both old and new format URL data
+  // Handle old format URL data
   let selectionData = ''
-  let isOldFormat = false
 
-  // Check if we have the new format with .s property
-  if (decoded.s) {
-    console.log('[Migrate] New style format detected with .s property')
+  // Check if we have the old format (v1) with .s property but using =
+  if (decoded.s && typeof decoded.s === 'string') {
+    console.log('[Migrate] Old format detected with .s property using key=value')
     selectionData = decoded.s
-
-    // Check if this is potentially using the old value format (key=value)
-    const samplePart = selectionData.split(';')[0] || ''
-    isOldFormat = samplePart.includes('=') || decoded.v === 0 || !decoded.v
   }
   // Check if we have the very old format with .selections property as a string
   else if (decoded.selections && typeof decoded.selections === 'string') {
     console.log('[Migrate] Very old format detected with .selections as string')
     selectionData = decoded.selections
-    isOldFormat = true
   }
   // No valid format found
   else {
-    console.log('[Migrate] No valid list format found in URL')
+    console.log('[Migrate] No valid list format found in URL for migration')
     return selections
   }
 
-  if (isOldFormat) {
-    console.log('[Migrate] Old value format detected (key=value)')
-    // Old format conversion logic
-    // Format could be either:
-    // 1. category_kink_position=choice;category_kink_position=choice...
-    // 2. category_kink_position=choice,category_kink_position=choice...
+  // Old format conversion logic
+  // Format could be either:
+  // 1. category_kink_position=choice;category_kink_position=choice...
+  // 2. category_kink_position=choice,category_kink_position=choice...
 
-    // Split by either semicolon or comma, depending on format
-    const separator = selectionData.includes(';') ? ';' : ','
-    const oldSelections = selectionData.split(separator)
+  // Split by either semicolon or comma, depending on format
+  const separator = selectionData.includes(';') ? ';' : ','
+  const oldSelections = selectionData.split(separator)
 
-    oldSelections.forEach((item: string) => {
-      try {
-        const [key, choiceStr] = item.split('=')
-        if (!key || !choiceStr) {
-          console.warn(`Invalid item format: ${item}`)
-          return
-        }
+  oldSelections.forEach((item: string) => {
+    try {
+      const [key, choiceStr] = item.split('=')
+      if (!key || !choiceStr) {
+        console.warn(`Invalid item format: ${item}`)
+        return
+      }
 
-        const choice = Number(choiceStr) as KinkChoice
+      const choice = Number(choiceStr) as KinkChoice
 
-        // Define all possible positions to recognize at the end of the key
-        const allPositions = ['general', 'as_dom', 'as_sub', 'for_dom', 'for_sub']
+      // Define all possible positions to recognize at the end of the key
+      const allPositions = ['general', 'as_dom', 'as_sub', 'for_dom', 'for_sub']
 
-        // Find which position this key ends with
-        let position = ''
-        let categoryAndKinkId = key
+      // Find which position this key ends with
+      let position = ''
+      let categoryAndKinkId = key
 
-        for (const pos of allPositions) {
-          if (key.endsWith(`_${pos}`)) {
-            position = pos
-            // Remove the position part from the end
-            categoryAndKinkId = key.slice(0, key.length - pos.length - 1) // -1 for the underscore
-            break
-          }
-        }
-
-        if (!position) {
-          console.warn(`Could not extract position from key in URL: ${key}`)
-          return
-        }
-
-        // Look up the numeric key
-        const numericKey = kinkMappings[categoryAndKinkId]
-
-        if (numericKey !== undefined) {
-          // Create new format key
-          const newKey = `${numericKey}%${position}`
-          selections[newKey] = choice
-        }
-        else {
-          console.warn(`Could not find mapping for URL item: ${categoryAndKinkId}`)
+      for (const pos of allPositions) {
+        if (key.endsWith(`_${pos}`)) {
+          position = pos
+          // Remove the position part from the end
+          categoryAndKinkId = key.slice(0, key.length - pos.length - 1) // -1 for the underscore
+          break
         }
       }
-      catch (err) {
-        console.error('Error parsing old format item:', item, err)
-      }
-    })
-  }
-  else {
-    console.log('[Migrate] New value format detected (key,pos,choice)')
-    // Current format - kinkKey,posNum,choice
-    selectionData.split(';').forEach((item: string) => {
-      try {
-        const [kinkKey, posNum, choiceStr] = item.split(',')
-        const choice = Number(choiceStr) as KinkChoice
 
-        // Get position name from position number
-        const positionNumber = Number(posNum)
-        const position = POSITION_NAMES[positionNumber] || 'general'
+      if (!position) {
+        console.warn(`Could not extract position from key in URL: ${key}`)
+        return
+      }
 
-        // Store as kinkKey%position
-        const key = `${kinkKey}%${position}`
-        selections[key] = choice
+      // Look up the numeric key
+      const numericKey = kinkMappings[categoryAndKinkId]
+
+      if (numericKey !== undefined) {
+        // Create new format key
+        const newKey = `${numericKey}%${position}`
+        selections[newKey] = choice
       }
-      catch (err) {
-        console.error('Error parsing item:', item, err)
+      else {
+        console.warn(`Could not find mapping for URL item: ${categoryAndKinkId}`)
       }
-    })
-  }
+    }
+    catch (err) {
+      console.error('Error parsing old format item:', item, err)
+    }
+  })
 
   return selections
 }
