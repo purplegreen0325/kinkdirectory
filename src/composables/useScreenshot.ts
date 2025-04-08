@@ -2,11 +2,13 @@ import html2canvas from 'html2canvas-pro'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from './useKinkList'
+import { useSettings } from './useSettings'
 
 export function useScreenshot() {
   const { t } = useI18n()
   const toast = useToast()
   const { activeList } = useKinkListState()
+  const { settings } = useSettings()
   const screenshotLoading = ref(false)
   const screenshotDataUrl = ref('')
 
@@ -37,7 +39,7 @@ export function useScreenshot() {
 
       // Define the rating colors
       const ratingColors = {
-        0: { bg: '#D1D5DB', border: '#9CA3AF' }, // Gray-300
+        0: { bg: '#9CA3AF', border: '#6B7280' }, // Darker gray for better contrast (Gray-400/500)
         1: { bg: '#3B82F6', border: '#2563EB' }, // Blue-500
         2: { bg: '#10B981', border: '#059669' }, // Green-500
         3: { bg: '#FBBF24', border: '#D97706' }, // Yellow-500
@@ -112,6 +114,23 @@ export function useScreenshot() {
         circle.style.borderRadius = '50%'
         circle.style.backgroundColor = ratingColors[rating as keyof typeof ratingColors].bg
         circle.style.border = `1px solid ${ratingColors[rating as keyof typeof ratingColors].border}`
+        circle.style.display = 'flex'
+        circle.style.alignItems = 'center'
+        circle.style.justifyContent = 'center'
+
+        // Add number inside circle if setting is enabled
+        if (settings.value.showNumbersInChoices) {
+          const number = document.createElement('span')
+          number.textContent = rating.toString()
+          number.style.fontSize = '7px'
+          number.style.fontWeight = 'bold'
+          number.style.color = 'white' // Always white for all ratings in screenshots
+          number.style.lineHeight = '1'
+          number.style.display = 'flex'
+          number.style.alignItems = 'center'
+          number.style.justifyContent = 'center'
+          circle.appendChild(number)
+        }
 
         // Create the label
         const textLabel = document.createElement('span')
@@ -295,12 +314,31 @@ export function useScreenshot() {
             // Function to create a rating circle
             const createRatingCircle = (rating: number) => {
               const circle = document.createElement('div')
-              circle.style.display = 'inline-block'
+              circle.style.display = 'inline-flex'
               circle.style.width = '14px'
               circle.style.height = '14px'
               circle.style.borderRadius = '50%'
               circle.style.backgroundColor = ratingColors[rating as keyof typeof ratingColors].bg
               circle.style.border = `1.5px solid ${ratingColors[rating as keyof typeof ratingColors].border}`
+
+              // Add numbers inside if setting is enabled
+              if (settings.value.showNumbersInChoices) {
+                circle.style.display = 'flex'
+                circle.style.alignItems = 'center'
+                circle.style.justifyContent = 'center'
+
+                const number = document.createElement('span')
+                number.textContent = rating.toString()
+                number.style.fontSize = '7px'
+                number.style.fontWeight = 'bold'
+                number.style.color = 'white' // Always white for all ratings in screenshots
+                number.style.lineHeight = '1'
+                number.style.display = 'flex'
+                number.style.alignItems = 'center'
+                number.style.justifyContent = 'center'
+                circle.appendChild(number)
+              }
+
               return circle
             }
 

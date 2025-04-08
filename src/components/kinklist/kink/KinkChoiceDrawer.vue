@@ -13,7 +13,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-const { kinkChoiceOrder } = useSettings()
+const { kinkChoiceOrder, settings } = useSettings()
 
 // Active color classes (selected)
 const activeColorClasses = {
@@ -45,7 +45,7 @@ const drawerValues = computed(() => {
 // Get selected value label
 const selectedValueLabel = computed(() => {
   if (props.value === 0)
-    return '⊘'
+    return settings.value.showNumbersInChoices ? '0' : '⊘'
   return props.value.toString()
 })
 
@@ -98,17 +98,27 @@ const drawerTitle = computed(() => {
         title: 'break-words pr-4',
       }"
     >
+      <!-- Main square button at the top of the drawer -->
       <button
         type="button"
         class="w-6 h-6 rounded border flex items-center justify-center text-xs font-bold focus:outline-none mx-auto"
         :class="[
           value === 0 ? 'border-gray-300 dark:border-gray-600' : activeColorClasses[value],
           !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
-          textColorClasses[value],
+          !settings.showNumbersInChoices && textColorClasses[value],
         ]"
         :data-rating="value"
       >
-        {{ selectedValueLabel }}
+        <span
+          v-if="settings.showNumbersInChoices"
+          class="text-xs font-bold"
+          :class="value === 0 ? 'text-gray-600 dark:text-gray-300' : 'text-white'"
+        >
+          {{ value }}
+        </span>
+        <span v-else>
+          {{ selectedValueLabel }}
+        </span>
       </button>
 
       <template #body>
@@ -125,13 +135,15 @@ const drawerTitle = computed(() => {
           >
             <div class="flex items-center flex-1 min-w-0 mr-2">
               <span
-                class="w-5 h-5 rounded-full inline-block mr-3 flex-shrink-0"
+                class="w-5 h-5 rounded-full inline-flex items-center justify-center mr-3 flex-shrink-0"
                 :class="rating === 0 ? 'border-2 border-gray-300 dark:border-gray-600' : activeColorClasses[rating]"
                 :data-rating="rating"
-              />
+              >
+                <span v-if="settings.showNumbersInChoices" class="text-xs font-bold text-white" :class="{ 'dark:text-gray-900': rating === 0 }">{{ rating }}</span>
+              </span>
               <span class="text-sm break-words">{{ getRatingDescription(rating) }}</span>
             </div>
-            <span class="text-lg font-bold flex-shrink-0">{{ rating === 0 ? '⊘' : rating }}</span>
+            <span class="text-lg font-bold flex-shrink-0">{{ settings.showNumbersInChoices && rating === 0 ? '0' : rating === 0 ? '⊘' : rating }}</span>
           </button>
         </div>
       </template>

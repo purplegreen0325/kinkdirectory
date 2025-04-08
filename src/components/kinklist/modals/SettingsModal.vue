@@ -31,43 +31,89 @@ function handleCancel() {
             {{ t('app.display_settings', 'Display Settings') }}
           </h3>
 
-          <!-- Kink Order Option in a single card -->
-          <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-            <!-- Main Setting -->
-            <div class="p-3 bg-gray-50 dark:bg-gray-800">
-              <USwitch
-                v-model="settings.reverseKinkOrder"
-                :label="t('app.reverse_kink_order', 'Reverse Rating Order')"
-                :description="t('app.reverse_kink_order_desc_short', 'Changes display order of ratings')"
-                color="primary"
-              />
+          <!-- Display settings cards -->
+          <div class="space-y-3">
+            <!-- Kink Order Option in a single card -->
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+              <!-- Main Setting -->
+              <div class="p-3 bg-gray-50 dark:bg-gray-800">
+                <USwitch
+                  v-model="settings.reverseKinkOrder"
+                  :label="t('app.reverse_kink_order', 'Reverse Rating Order')"
+                  :description="t('app.reverse_kink_order_desc_short', 'Changes display order of ratings')"
+                  color="primary"
+                />
+              </div>
+
+              <!-- Visual Example - directly below in same card but different background -->
+              <div class="p-2 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                  {{ t('app.current_order', 'Current Order:') }}
+                </p>
+                <div class="flex items-center space-x-2 p-1">
+                  <!-- Not entered (0) circle -->
+                  <div class="flex-shrink-0 w-4 h-4 rounded-full border border-gray-300 dark:border-gray-600" />
+
+                  <template v-if="settings.reverseKinkOrder">
+                    <!-- 1,2,3,4,5 -->
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-blue-500 dark:border-blue-400 bg-blue-500 dark:bg-blue-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400" />
+                  </template>
+                  <template v-else>
+                    <!-- 5,4,3,2,1 -->
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400" />
+                    <div class="flex-shrink-0 w-4 h-4 rounded-full border-blue-500 dark:border-blue-400 bg-blue-500 dark:bg-blue-400" />
+                  </template>
+                </div>
+              </div>
             </div>
 
-            <!-- Visual Example - directly below in same card but different background -->
-            <div class="p-2 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-              <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">
-                {{ t('app.current_order', 'Current Order:') }}
-              </p>
-              <div class="flex items-center space-x-2 p-1">
-                <!-- Not entered (0) circle -->
-                <div class="flex-shrink-0 w-4 h-4 rounded-full border border-gray-300 dark:border-gray-600" />
+            <!-- Show Numbers in Choices Option -->
+            <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+              <!-- Main Setting -->
+              <div class="p-3 bg-gray-50 dark:bg-gray-800">
+                <USwitch
+                  v-model="settings.showNumbersInChoices"
+                  :label="t('app.show_numbers_in_choices', 'Show Numbers in Choices')"
+                  :description="t('app.show_numbers_in_choices_desc', 'Displays rating numbers inside choice boxes')"
+                  color="primary"
+                />
+              </div>
 
-                <template v-if="settings.reverseKinkOrder">
-                  <!-- 1,2,3,4,5 -->
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-blue-500 dark:border-blue-400 bg-blue-500 dark:bg-blue-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400" />
-                </template>
-                <template v-else>
-                  <!-- 5,4,3,2,1 -->
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400" />
-                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-blue-500 dark:border-blue-400 bg-blue-500 dark:bg-blue-400" />
-                </template>
+              <!-- Visual Example -->
+              <div class="p-2 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                  {{ t('app.example', 'Example:') }}
+                </p>
+                <div class="flex items-center space-x-2 p-1">
+                  <!-- Not entered (0) circle -->
+                  <div class="flex-shrink-0 w-4 h-4 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center">
+                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-gray-700 dark:text-gray-300">0</span>
+                  </div>
+
+                  <!-- Rating circles with numbers -->
+                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-blue-500 dark:border-blue-400 bg-blue-500 dark:bg-blue-400 flex items-center justify-center">
+                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">1</span>
+                  </div>
+                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400 flex items-center justify-center">
+                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">2</span>
+                  </div>
+                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400 flex items-center justify-center">
+                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">3</span>
+                  </div>
+                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400 flex items-center justify-center">
+                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">4</span>
+                  </div>
+                  <div class="flex-shrink-0 w-4 h-4 rounded-full border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400 flex items-center justify-center">
+                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">5</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ const props = defineProps<{
 }>()
 
 const { isViewMode } = useKinkListState()
-const { kinkChoiceOrder } = useSettings()
+const { kinkChoiceOrder, settings } = useSettings()
 
 // Active color classes (selected)
 const activeColorClasses = {
@@ -48,27 +48,47 @@ function handleClick(rating: KinkChoiceType) {
     <!-- Always show "Not Entered" (0) first -->
     <button
       type="button"
-      class="w-4 h-4 rounded-full border focus:outline-none relative"
+      class="w-4 h-4 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
       :class="[
         value === 0 ? activeColorClasses[0] : subtleColorClasses[0],
         !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
       ]"
       data-rating="0"
       @click.stop="handleClick(0)"
-    />
+    >
+      <span
+        v-if="settings.showNumbersInChoices"
+        class="text-[8px] font-bold"
+        :class="value === 0
+          ? 'text-white dark:text-gray-900'
+          : 'text-gray-700 dark:text-gray-300'"
+      >
+        0
+      </span>
+    </button>
 
     <!-- Show other ratings in order based on settings -->
     <template v-for="rating in kinkChoiceOrder" :key="rating">
       <button
         type="button"
-        class="w-4 h-4 rounded-full border focus:outline-none relative"
+        class="w-4 h-4 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
         :class="[
           value === rating ? activeColorClasses[rating] : subtleColorClasses[rating],
           !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
         ]"
         :data-rating="rating"
         @click.stop="handleClick(rating)"
-      />
+      >
+        <span
+          v-if="settings.showNumbersInChoices"
+          class="text-[8px] font-bold"
+          :class="value === rating
+            ? 'text-white'
+            : 'text-gray-700 dark:text-gray-300'"
+        >
+          {{ rating }}
+        </span>
+      </button>
     </template>
   </div>
 

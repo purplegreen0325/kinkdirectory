@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
-import type { KinkChoice as KinkChoiceType } from '../../../types';
-import { useSettings } from '../../../composables/useSettings';
-import { computed } from 'vue';
+import type { KinkChoice as KinkChoiceType } from '../../../types'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useSettings } from '../../../composables/useSettings'
 
 defineProps<{
   openQuizModal: () => void
 }>()
 
 const { t } = useI18n()
-const { kinkChoiceOrder } = useSettings()
+const { kinkChoiceOrder, settings } = useSettings()
 
 // Include "Not Entered" (0) first and then other choices from settings
 const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
@@ -35,13 +35,15 @@ const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
             class="flex items-center gap-1 group transition-all duration-200"
           >
             <div
-              class="w-3 h-3 rounded-full flex items-center justify-center transition-transform duration-200 group-hover:scale-110 bg-gray-300 dark:bg-gray-600 border border-gray-400 dark:border-gray-500"
-            />
+              class="w-3 h-3 rounded-full inline-flex items-center justify-center transition-transform duration-200 group-hover:scale-110 bg-gray-300 dark:bg-gray-600 border border-gray-400 dark:border-gray-500"
+            >
+              <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white dark:text-gray-900">0</span>
+            </div>
             <span class="text-xs text-gray-700 dark:text-gray-300">
               {{ t('choices.not_entered') }}
             </span>
           </div>
-          
+
           <!-- Then show other choices in order from settings -->
           <div
             v-for="choice in kinkChoiceOrder"
@@ -49,7 +51,7 @@ const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
             class="flex items-center gap-1 group transition-all duration-200"
           >
             <div
-              class="w-3 h-3 rounded-full flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
+              class="w-3 h-3 rounded-full inline-flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
               :class="{
                 'bg-blue-500 border border-blue-600': choice === 1,
                 'bg-green-500 border border-green-600': choice === 2,
@@ -57,7 +59,9 @@ const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
                 'bg-orange-500 border border-orange-600': choice === 4,
                 'bg-red-500 border border-red-600': choice === 5,
               }"
-            />
+            >
+              <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">{{ choice }}</span>
+            </div>
             <span class="text-xs text-gray-700 dark:text-gray-300">
               {{ t(`choices.${choice === 1 ? 'favorite' : choice === 2 ? 'like' : choice === 3 ? 'indifferent' : choice === 4 ? 'maybe' : 'limit'}`) }}
             </span>

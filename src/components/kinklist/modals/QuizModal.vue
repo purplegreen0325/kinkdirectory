@@ -19,7 +19,7 @@ const {
   newUnfilledPositionsCount,
   newKinksAvailable,
 } = useKinkListState()
-const { kinkChoiceOrder } = useSettings()
+const { kinkChoiceOrder, settings } = useSettings()
 
 // Quiz state variables
 const allKinks = ref<Array<{ categoryId: string, kink: KinkDefinition, positions: string[] }>>([])
@@ -419,13 +419,15 @@ const quizTitle = computed(() => {
               >
                 <div class="flex items-center flex-1 min-w-0 mr-2">
                   <span
-                    class="w-4 h-4 rounded-full inline-block mr-2 flex-shrink-0"
+                    class="w-4 h-4 rounded-full inline-flex items-center justify-center mr-2 flex-shrink-0"
                     :class="rating === 0 ? 'border-2 border-gray-300 dark:border-gray-600' : activeColorClasses[rating]"
                     :data-rating="rating"
-                  />
+                  >
+                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white" :class="{ 'dark:text-gray-900': rating === 0 }">{{ rating }}</span>
+                  </span>
                   <span class="text-sm break-words">{{ getRatingDescription(rating) }}</span>
                 </div>
-                <span class="text-lg font-bold flex-shrink-0">{{ rating === 0 ? '⊘' : rating }}</span>
+                <span class="text-lg font-bold flex-shrink-0">{{ settings.showNumbersInChoices && rating === 0 ? '0' : rating === 0 ? '⊘' : rating }}</span>
               </button>
             </div>
           </div>
