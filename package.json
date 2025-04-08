@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "typecheck": "vue-tsc --noEmit",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.app.json ",
     "preview": "vite preview",
     "translate": "npx json-autotranslate --source-language=nl --directory-structure=ngx-translate -i src/locales --config=402.json"
   },

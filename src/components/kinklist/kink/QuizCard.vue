@@ -3,7 +3,7 @@ import { useI18n } from 'vue-i18n';
 import { useKinkListState } from '../../../composables/useKinkList';
 import QuizModal from '../../kinklist/modals/QuizModal.vue';
 
-const props = defineProps<{
+defineProps<{
   compact: boolean
 }>()
 

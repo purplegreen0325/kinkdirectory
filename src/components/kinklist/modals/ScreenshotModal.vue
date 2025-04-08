@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { ref, onMounted } from 'vue'
-import { useKinkListState } from '../../../composables/useKinkList'
-import { useScreenshot } from '../../../composables/useScreenshot'
+import { onMounted, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useScreenshot } from '../../../composables/useScreenshot';
 
 const { t } = useI18n()
 const toast = useToast()
-const { activeList } = useKinkListState()
 const { takeScreenshot } = useScreenshot()
 
 const imgurUploading = ref(false)

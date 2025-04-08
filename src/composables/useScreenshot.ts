@@ -182,7 +182,7 @@ export function useScreenshot() {
           // Ignore any irrelevant elements
           return element.classList?.contains('ignore-screenshot') || false
         },
-        onclone: (document, element) => {
+        onclone: (_, element) => {
           // Force compute styles in the cloned document
           const allElements = element.querySelectorAll('*')
           allElements.forEach(el => {

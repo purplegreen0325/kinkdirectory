@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { onMounted } from 'vue'
 import KinkListView from './components/KinkListView.vue'
 import DebugModal from './components/debug/DebugModal.vue'
-import { onMounted } from 'vue'
 import { useKinkListState } from './composables/useKinkList'
 
 const { viewListFromUrl } = useKinkListState()

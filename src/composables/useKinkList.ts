@@ -1,8 +1,8 @@
 import { createGlobalState, useStorage } from '@vueuse/core'
 import { nanoid } from 'nanoid'
 import { computed, ref } from 'vue'
-import type { KinkChoice, KinkList, KinkCategory, KinkDefinition, UserRole } from '../types'
-import kinkData from '../data/kinks.json'
+import { kinkList } from '../data/kinks'
+import type { KinkChoice, KinkDefinition, KinkList, UserRole } from '../types'
 
 export const useKinkListState = createGlobalState(() => {
   const kinkLists = useStorage<KinkList[]>('kinklist-lists', [])
@@ -271,10 +271,9 @@ export const useKinkListState = createGlobalState(() => {
     const allKinks: Array<{categoryId: string, kink: KinkDefinition, positions: string[]}> = []
     
     // Get categories with type assertion to ensure TypeScript knows the structure
-    const categories = (kinkData.categories as KinkCategory[])
     
     // Loop through all categories and kinks to find visible ones
-    for (const category of categories) {
+    for (const category of kinkList) {
       for (const kink of category.kinks) {
         if (isKinkVisibleForRole(kink, activeList.value.role)) {
           const positions = getKinkPositions(kink, activeList.value.role)

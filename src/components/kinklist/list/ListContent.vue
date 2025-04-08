@@ -2,21 +2,18 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
-import kinkData from '../../../data/kinks.json'
-import type { KinkCategory } from '../../../types'
+import { kinkList } from '../../../data/kinks'
 import KinkSection from '../../kinklist/kink/KinkSection.vue'
-
 const { t } = useI18n()
 const { activeList, isKinkVisibleForRole, kinkModalState, closeKinkModal } = useKinkListState()
 
 // Get categories with type assertion to ensure TypeScript knows the structure
-const categories = (kinkData.categories as KinkCategory[])
 
 // Filter categories to only show those with visible kinks
 const visibleCategories = computed(() => {
   if (!activeList.value) return []
   
-  return categories.filter(category => {
+  return kinkList.filter(category => {
     // Check if any kink in this category is visible for the current role
     return category.kinks.some(kink => 
       isKinkVisibleForRole(kink, activeList.value!.role)

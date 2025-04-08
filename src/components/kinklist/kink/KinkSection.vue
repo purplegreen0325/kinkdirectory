@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import KinkRow from './KinkRow.vue'
-import KinkSectionHeader from './KinkSectionHeader.vue'
-import KinkSectionContainer from './KinkSectionContainer.vue'
-import { useKinkListState } from '../../../composables/useKinkList'
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useKinkListState } from '../../../composables/useKinkList'
 import type { KinkDefinition } from '../../../types'
+import KinkRow from './KinkRow.vue'
+import KinkSectionContainer from './KinkSectionContainer.vue'
+import KinkSectionHeader from './KinkSectionHeader.vue'
 
 const { t } = useI18n()
-const { activeList, isKinkVisibleForRole, getKinkPositions } = useKinkListState()
+const { activeList, isKinkVisibleForRole } = useKinkListState()
 
 const props = defineProps<{
-  categoryId: string
+  categoryId: string 
   kinks: KinkDefinition[]
 }>()
 

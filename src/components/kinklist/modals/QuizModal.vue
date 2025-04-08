@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { ref, computed, onMounted } from 'vue'
-import { useKinkListState } from '../../../composables/useKinkList'
-import type { KinkChoice as KinkChoiceType, KinkDefinition } from '../../../types'
+import { computed, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useKinkListState } from '../../../composables/useKinkList';
+import type { KinkChoice as KinkChoiceType, KinkDefinition } from '../../../types';
 
 const { t } = useI18n()
-const toast = useToast()
-
-const props = defineProps<{
+defineProps<{
   listId: string
 }>()
 
@@ -16,7 +14,6 @@ const emit = defineEmits<{
 }>()
 
 const { 
-  activeList, 
   getVisibleKinksForQuiz,
   setKinkChoice,
   getKinkChoice

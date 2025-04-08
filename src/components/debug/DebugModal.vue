@@ -3,9 +3,8 @@ import { ref, computed, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useMagicKeys } from '@vueuse/core'
 import { useKinkListState } from '../../composables/useKinkList'
-import kinkData from '../../data/kinks.json'
 import type { KinkChoice } from '../../types'
-
+import { kinkList } from '../../data/kinks'
 const { t } = useI18n()
 const { activeList } = useKinkListState()
 
@@ -49,8 +48,8 @@ const generalInfo = computed(() => {
     appVersion: '1.0.0',
     vueVersion: '3.5.13',
     nuxtUI: '3.0.2',
-    kinkCategories: (kinkData.categories || []).length,
-    totalKinks: (kinkData.categories || []).reduce(
+    kinkCategories: (kinkList || []).length,
+    totalKinks: (kinkList || []).reduce(
       (acc, cat) => acc + cat.kinks.length, 0
     ),
     activeListId: activeList.value?.id || 'none',
@@ -202,7 +201,7 @@ function formatPosition(position: string): string {
         <!-- Kinks JSON tab content -->
         <template #kinks>
           <div class="p-6">
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-auto max-h-[60vh] text-xs font-mono">{{ formatJson(kinkData) }}</pre>
+            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-auto max-h-[60vh] text-xs font-mono">{{ formatJson(kinkList) }}</pre>
           </div>
         </template>
         

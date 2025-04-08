@@ -1,47 +1,40 @@
-{
-  "categories": [
+import type { KinkCategory } from "src/types";
+
+export const kinkList:KinkCategory[] = [
     {
       "id": "bodies",
       "kinks": [
         {
           "id": "skinny",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "chubby",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "small_breasts",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "large_breasts",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "small_cocks",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "large_cocks",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "small_butts",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "big_butts",
           "format": "general",
-          "allowedPerspectives": []
         }
       ]
     },
@@ -51,42 +44,34 @@
         {
           "id": "clothed_sex",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "lingerie",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "stockings",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "heels",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "leather",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "latex",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "uniform_costume",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "cross_dressing",
           "format": "general",
-          "allowedPerspectives": []
         }
       ]
     },
@@ -718,47 +703,38 @@
         {
           "id": "incest",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "age_gap",
          "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "interracial",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "raceplay",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "bestiality",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "necrophilia",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "cheating",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "exhibitionism",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "voyeurism",
           "format": "general",
-          "allowedPerspectives": []
         }
       ]
     },
@@ -1363,37 +1339,30 @@
         {
           "id": "skype",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "whatsapp",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "kik",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "reddit",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "email",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "discord",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "other_medium",
           "format": "general",
-          "allowedPerspectives": []
         }
       ]
     },
@@ -1403,49 +1372,39 @@
         {
           "id": "short_term_scenes",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "medium_term_scenes",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "long_term_scenes",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "quick_replies",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "fast_replies",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "normal_replies",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "slow_replies",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "glacial_replies",
           "format": "general",
-          "allowedPerspectives": []
         },
         {
           "id": "occasional_replies",
           "format": "general",
-          "allowedPerspectives": []
         }
       ]
     }
   ]
-}
