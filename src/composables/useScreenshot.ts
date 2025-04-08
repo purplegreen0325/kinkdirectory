@@ -45,6 +45,86 @@ export function useScreenshot() {
         5: { bg: '#EF4444', border: '#DC2626' }, // Red-500
       }
 
+      // Add legend at the top
+      const legendContainer = document.createElement('div')
+      legendContainer.style.display = 'flex'
+      legendContainer.style.alignItems = 'center'
+      legendContainer.style.gap = '16px'
+      legendContainer.style.marginBottom = '16px'
+      legendContainer.style.padding = '8px 12px'
+      legendContainer.style.borderRadius = '8px'
+      legendContainer.style.backgroundColor = '#f9fafb'
+      legendContainer.style.border = '1px solid #e5e7eb'
+
+      // Legend title
+      const legendTitle = document.createElement('div')
+      legendTitle.style.display = 'flex'
+      legendTitle.style.alignItems = 'center'
+      legendTitle.style.gap = '4px'
+      legendTitle.style.marginRight = '8px'
+      legendTitle.style.fontSize = '13px'
+      legendTitle.style.fontWeight = '500'
+      legendTitle.style.color = '#111827'
+      legendTitle.textContent = `${t('app.legend')}:`
+
+      legendContainer.appendChild(legendTitle)
+
+      // Legend items container
+      const legendItems = document.createElement('div')
+      legendItems.style.display = 'flex'
+      legendItems.style.flexWrap = 'wrap'
+      legendItems.style.alignItems = 'center'
+      legendItems.style.gap = '12px'
+
+      // Create legend item for "Not Entered" (0) first
+      const notEnteredItem = createLegendItem(0, t('choices.not_entered'))
+      legendItems.appendChild(notEnteredItem)
+
+      // Create legend items for other ratings
+      const ratingLabels = {
+        1: t('choices.favorite'),
+        2: t('choices.like'),
+        3: t('choices.indifferent'),
+        4: t('choices.maybe'),
+        5: t('choices.limit'),
+      }
+
+      // Add the other ratings in order (1-5)
+      for (let i = 1; i <= 5; i++) {
+        const legendItem = createLegendItem(i, ratingLabels[i as keyof typeof ratingLabels])
+        legendItems.appendChild(legendItem)
+      }
+
+      legendContainer.appendChild(legendItems)
+      container.appendChild(legendContainer)
+
+      // Helper function to create a legend item
+      function createLegendItem(rating: number, label: string) {
+        const item = document.createElement('div')
+        item.style.display = 'flex'
+        item.style.alignItems = 'center'
+        item.style.gap = '4px'
+
+        // Create the colored circle
+        const circle = document.createElement('div')
+        circle.style.width = '10px'
+        circle.style.height = '10px'
+        circle.style.borderRadius = '50%'
+        circle.style.backgroundColor = ratingColors[rating as keyof typeof ratingColors].bg
+        circle.style.border = `1px solid ${ratingColors[rating as keyof typeof ratingColors].border}`
+
+        // Create the label
+        const textLabel = document.createElement('span')
+        textLabel.style.fontSize = '12px'
+        textLabel.style.color = '#374151'
+        textLabel.textContent = label
+
+        item.appendChild(circle)
+        item.appendChild(textLabel)
+
+        return item
+      }
+
       // Create a 6-column grid layout
       const gridContainer = document.createElement('div')
       gridContainer.style.display = 'grid'
@@ -165,13 +245,15 @@ export function useScreenshot() {
               if (kinkLabelElement) {
                 // Use only the text from the labeled element
                 labelCell.textContent = kinkLabelElement.textContent?.trim() || ''
-              } else {
+              }
+              else {
                 // Fallback to previous method if data-attribute not found
                 const labelText = label.textContent?.trim() || ''
                 const iconIndex = labelText.indexOf('?')
                 if (iconIndex !== -1) {
                   labelCell.textContent = labelText.substring(0, iconIndex).trim()
-                } else {
+                }
+                else {
                   labelCell.textContent = labelText
                 }
               }
@@ -184,8 +266,12 @@ export function useScreenshot() {
               if (element instanceof HTMLElement) {
                 const classList = Array.from(element.classList)
 
+                // Explicitly check for gray classes (rating 0)
+                if (classList.includes('bg-gray-300') || classList.includes('border-gray-400')) {
+                  return 0
+                }
                 // Check for active colors in both background and border
-                if (classList.includes('bg-blue-500') || classList.includes('border-blue-500')) {
+                else if (classList.includes('bg-blue-500') || classList.includes('border-blue-500')) {
                   return 1
                 }
                 else if (classList.includes('bg-green-500') || classList.includes('border-green-500')) {
@@ -233,19 +319,29 @@ export function useScreenshot() {
               const buttons = cell.querySelectorAll('button')
               buttons.forEach((button) => {
                 if (button instanceof HTMLElement) {
-                  // Check if this button is active/selected by looking for colored backgrounds
-                  const isSelected = Array.from(button.classList).some(cls =>
-                    (cls.includes('bg-') && !cls.includes('bg-gray') && !cls.includes('bg-transparent'))
-                    || (cls.includes('border-') && !cls.includes('border-gray') && !cls.includes('border-transparent')),
-                  )
+                  // First check data-rating attribute for any button
+                  const dataRating = button.getAttribute('data-rating')
+                  if (dataRating) {
+                    const rating = Number.parseInt(dataRating)
+                    // If this is the active button, use its rating
+                    const isSelected = Array.from(button.classList).some(cls =>
+                      (cls.includes('bg-') && !cls.includes('bg-transparent'))
+                      || (cls.includes('border-') && !cls.includes('border-transparent')),
+                    )
 
-                  if (isSelected) {
-                    // First check data-rating if available
-                    const dataRating = button.getAttribute('data-rating')
-                    if (dataRating) {
-                      selectedRating = Number.parseInt(dataRating)
+                    if (isSelected) {
+                      selectedRating = rating
+                      // Break the loop if we found the selected button
                     }
-                    else {
+                  }
+                  else {
+                    // Check if this button is active/selected by looking for colored backgrounds
+                    const isSelected = Array.from(button.classList).some(cls =>
+                      (cls.includes('bg-') && !cls.includes('bg-gray') && !cls.includes('bg-transparent'))
+                      || (cls.includes('border-') && !cls.includes('border-gray') && !cls.includes('border-transparent')),
+                    )
+
+                    if (isSelected) {
                       // Otherwise detect from classes
                       selectedRating = detectRatingFromClasses(button)
                     }
