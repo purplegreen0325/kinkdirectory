@@ -22,6 +22,7 @@ const imageLoading = ref(true)
 const screenshotLoading = ref(true)
 const screenshotData = ref('')
 const hasUploadedOnce = ref(false)
+const copyingLink = ref(false)
 
 onMounted(async () => {
   try {
@@ -50,7 +51,15 @@ function downloadImage() {
   const link = document.createElement('a')
   link.href = screenshotData.value
   link.download = `kinklist-${props.listName.replace(/\s+/g, '-').toLowerCase() || 'export'}.png`
+
+  // Safari fix: need to append the link to the document
+  document.body.appendChild(link)
   link.click()
+
+  // Remove the link after clicking
+  setTimeout(() => {
+    document.body.removeChild(link)
+  }, 100)
 
   toast.add({
     title: t('app.screenshot'),
@@ -67,7 +76,17 @@ function resolveWithDownload() {
 
 function copyImgurUrl() {
   if (imgurUrl.value) {
+    copyingLink.value = true
     navigator.clipboard.writeText(imgurUrl.value)
+    toast.add({
+      title: t('app.imgur_link'),
+      description: t('app.imgur_link_copied'),
+      icon: 'i-lucide-check',
+      color: 'success',
+      duration: 3000,
+    })
+
+    copyingLink.value = false
     emit('resolve', 'copied')
   }
 }
@@ -230,9 +249,10 @@ function handleCancel() {
           v-if="imgurUrl"
           icon="i-lucide-copy"
           color="primary"
+          :loading="copyingLink"
           @click="copyImgurUrl"
         >
-          {{ t('app.copy_link') }}
+          {{ copyingLink ? t('app.copied') : t('app.copy_link') }}
         </UButton>
       </div>
     </template>
