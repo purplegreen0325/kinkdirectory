@@ -1199,25 +1199,6 @@ export const kinkList: KinkCategory[] = [
       },
 
       {
-        id: 'orgasm_control',
-        format: 'role_specific',
-        allowedPerspectives: [
-
-          {
-            role: 'dom',
-            perspective: 'partner',
-          },
-
-          {
-            role: 'sub',
-            perspective: 'self',
-          },
-
-        ],
-        key: 51,
-      },
-
-      {
         id: 'orgasm_denial',
         format: 'role_specific',
         allowedPerspectives: [
@@ -2531,7 +2512,7 @@ export const kinkList: KinkCategory[] = [
 
       {
         id: 'knife_play',
-        addedAt: 1744129147, 
+        addedAt: 1744129147,
         format: 'role_specific',
         allowedPerspectives: [
 
@@ -2705,77 +2686,77 @@ export const kinkList: KinkCategory[] = [
   {
     id: 'role_play',
     kinks: [
-    
+
       {
         id: 'medical_scenes',
         addedAt: 1744129147,
         format: 'general',
         key: 169,
       },
-      
+
       {
         id: 'animal_roleplay',
         addedAt: 1744129147,
         format: 'general',
         key: 170,
       },
-      
+
       {
         id: 'age_play',
         addedAt: 1744129147,
         format: 'general',
         key: 171,
       },
-      
+
       {
         id: 'prison_scenes',
         addedAt: 1744129147,
         format: 'general',
         key: 172,
       },
-      
+
       {
         id: 'schoolroom_scenes',
         addedAt: 1744129147,
         format: 'general',
         key: 173,
       },
-      
+
       {
         id: 'prostitution_fantasy',
         addedAt: 1744129147,
         format: 'general',
         key: 174,
       },
-      
+
       {
         id: 'religious_scenes',
         addedAt: 1744129147,
         format: 'general',
         key: 175,
       },
-      
+
       {
         id: 'interrogations',
         addedAt: 1744129147,
         format: 'general',
         key: 176,
       },
-      
+
       {
         id: 'fear_play',
         addedAt: 1744129147,
         format: 'general',
         key: 177,
       },
-      
+
       {
         id: 'egyptian',
         addedAt: 1744129147,
         format: 'general',
         key: 178,
       },
-      
+
     ],
   },
 
