@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import type { KinkChoice as KinkChoiceType } from '../../../types';
+import { useSettings } from '../../../composables/useSettings';
+import { computed } from 'vue';
 
 defineProps<{
   openQuizModal: () => void
 }>()
 
 const { t } = useI18n()
+const { kinkChoiceOrder } = useSettings()
 
-// Include all choices including "Not Entered" (0)
-const choices: KinkChoiceType[] = [0, 1, 2, 3, 4, 5]
+// Include "Not Entered" (0) first and then other choices from settings
+const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
 
 // Remove the recentlyAddedKinks from here
 </script>
