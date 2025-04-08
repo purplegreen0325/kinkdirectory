@@ -10,10 +10,14 @@ export function useScreenshot() {
   const screenshotLoading = ref(false)
   const screenshotDataUrl = ref('')
 
-  // Simple screenshot function that only captures the DOM element directly
+  // Create a fixed-layout screenshot with 6 columns
   async function simpleScreenshot() {
     try {
       screenshotLoading.value = true
+
+      if (!activeList.value) {
+        throw new Error('No active list selected')
+      }
 
       // Find the element in the DOM
       const contentElement = document.getElementById('kink-list-content')
@@ -21,166 +25,245 @@ export function useScreenshot() {
         throw new Error('Could not find element with id "kink-list-content"')
       }
 
-      if (!activeList.value) {
-        throw new Error('No active list selected')
+      // Create a new fixed-width container for screenshot
+      const container = document.createElement('div')
+      container.style.position = 'absolute'
+      container.style.left = '-9999px'
+      container.style.top = '0'
+      container.style.width = '2400px' // Increased width for 6 columns
+      container.style.backgroundColor = 'white'
+      container.style.padding = '20px'
+      container.style.fontFamily = 'sans-serif'
+
+      // Define the rating colors
+      const ratingColors = {
+        0: { bg: '#D1D5DB', border: '#9CA3AF' }, // Gray-300
+        1: { bg: '#3B82F6', border: '#2563EB' }, // Blue-500
+        2: { bg: '#10B981', border: '#059669' }, // Green-500
+        3: { bg: '#FBBF24', border: '#D97706' }, // Yellow-500
+        4: { bg: '#F97316', border: '#EA580C' }, // Orange-500
+        5: { bg: '#EF4444', border: '#DC2626' }, // Red-500
       }
 
-      // Clone the content to make sure we don't miss any CSS
-      const clone = contentElement.cloneNode(true) as HTMLElement
-      clone.style.position = 'absolute'
-      clone.style.left = '-9999px'
-      clone.style.top = '0'
-      clone.style.width = `${contentElement.offsetWidth}px`
-      clone.style.height = 'auto'
-      clone.style.backgroundColor = 'white'
+      // Create a 6-column grid layout
+      const gridContainer = document.createElement('div')
+      gridContainer.style.display = 'grid'
+      gridContainer.style.gridTemplateColumns = 'repeat(6, 1fr)'
+      gridContainer.style.gap = '12px'
 
-      // Find all rating circles in the clone and replace Tailwind classes with direct styles
-      const applyDirectStyles = () => {
-        // Define direct color values matching Tailwind's color palette
-        const ratingColors = {
-          0: { bg: '#D1D5DB', border: '#9CA3AF' }, // Gray-300
-          1: { bg: '#3B82F6', border: '#2563EB' }, // Blue-500
-          2: { bg: '#10B981', border: '#059669' }, // Green-500
-          3: { bg: '#FBBF24', border: '#D97706' }, // Yellow-500
-          4: { bg: '#F97316', border: '#EA580C' }, // Orange-500
-          5: { bg: '#EF4444', border: '#DC2626' }, // Red-500
-        }
+      // Clone all categories from the original content
+      const categories = contentElement.querySelectorAll('.category-container')
 
-        // Add data-rating attributes to all rating buttons first
-        // Add this to original document so we can capture it in the clone
-        const originalKinkChoices = document.querySelectorAll('.w-4.h-4.rounded-full.border, .w-6.h-6.rounded.border')
-        originalKinkChoices.forEach((choice) => {
-          if (choice instanceof HTMLElement) {
-            let rating = 0
-            // Check all possible color class combinations for each rating level
-            const classList = Array.from(choice.classList)
+      categories.forEach((category) => {
+        // Create a new category container
+        const categoryContainer = document.createElement('div')
+        categoryContainer.style.breakInside = 'avoid'
+        categoryContainer.style.marginBottom = '12px'
+        categoryContainer.style.border = '1px solid #E5E7EB'
+        categoryContainer.style.borderRadius = '6px'
+        categoryContainer.style.overflow = 'hidden'
 
-            // Check for active colors
-            if ((classList.includes('bg-blue-500') || classList.includes('border-blue-500'))) {
-              rating = 1
-            }
-            else if ((classList.includes('bg-green-500') || classList.includes('border-green-500'))) {
-              rating = 2
-            }
-            else if ((classList.includes('bg-yellow-500') || classList.includes('border-yellow-500'))) {
-              rating = 3
-            }
-            else if ((classList.includes('bg-orange-500') || classList.includes('border-orange-500'))) {
-              rating = 4
-            }
-            else if ((classList.includes('bg-red-500') || classList.includes('border-red-500'))) {
-              rating = 5
-            }
-            else if ((classList.includes('bg-gray-300') || classList.includes('border-gray-400'))) {
-              rating = 0
-            }
+        // Create the category header - make smaller (same size as section headers)
+        const categoryHeader = document.createElement('div')
+        categoryHeader.style.borderBottom = '1px solid #E5E7EB'
+        categoryHeader.style.backgroundColor = '#F3F4F6'
+        categoryHeader.style.padding = '5px 8px'
+        categoryHeader.style.fontWeight = '600'
+        categoryHeader.style.fontSize = '11px'
 
-            choice.setAttribute('data-rating', String(rating))
+        // Get the category title
+        const categoryTitle = category.querySelector('h2')
+        categoryHeader.textContent = categoryTitle ? categoryTitle.textContent : ''
+
+        categoryContainer.appendChild(categoryHeader)
+
+        // Process each section container (general & role-specific)
+        const sections = category.querySelectorAll('.border.border-gray-200')
+
+        sections.forEach((section) => {
+          // Create a table for the kinks
+          const table = document.createElement('table')
+          table.style.width = '100%'
+          table.style.borderCollapse = 'collapse'
+
+          // Create the header row
+          const thead = document.createElement('thead')
+          thead.style.backgroundColor = '#F3F4F6'
+          thead.style.borderBottom = '1px solid #E5E7EB'
+
+          const headerRow = document.createElement('tr')
+
+          // Label column
+          const labelHeader = document.createElement('th')
+          labelHeader.style.textAlign = 'left'
+          labelHeader.style.padding = '5px 8px'
+          labelHeader.style.width = '70%'
+          labelHeader.style.fontSize = '11px'
+          headerRow.appendChild(labelHeader)
+
+          // Check if this is a general section or role-specific section
+          const isGeneral = !section.querySelector('th:nth-child(3)')
+
+          if (isGeneral) {
+            // General section has one column
+            const generalHeader = document.createElement('th')
+            generalHeader.style.textAlign = 'center'
+            generalHeader.style.padding = '5px 8px'
+            generalHeader.style.fontSize = '11px'
+            generalHeader.style.fontWeight = '500'
+
+            // Use the actual header text from the section instead of hardcoding "General"
+            const originalHeader = section.querySelector('thead th:not(:first-child)')
+            generalHeader.textContent = originalHeader ? originalHeader.textContent : t('app.general')
+
+            headerRow.appendChild(generalHeader)
           }
-        })
+          else {
+            // Role-specific section has two columns
+            // Get the column labels from the actual section headers
+            const columnHeaders = section.querySelectorAll('thead th:not(:first-child)')
+            columnHeaders.forEach((header) => {
+              const newHeader = document.createElement('th')
+              newHeader.style.textAlign = 'center'
+              newHeader.style.padding = '5px 8px'
+              newHeader.style.fontSize = '11px'
+              newHeader.style.fontWeight = '500'
+              newHeader.style.whiteSpace = 'nowrap'
+              newHeader.textContent = header.textContent
+              headerRow.appendChild(newHeader)
+            })
+          }
 
-        // Now process the clone with these data attributes
-        // Find groups of rating circles and hide all except selected one
-        const ratingContainers = clone.querySelectorAll('.hidden.lg\\:flex.space-x-1, .lg\\:flex.space-x-1')
+          thead.appendChild(headerRow)
+          table.appendChild(thead)
 
-        ratingContainers.forEach((container) => {
-          // Find all circles in this container
-          const circles = container.querySelectorAll('button')
+          // Create the table body
+          const tbody = document.createElement('tbody')
 
-          // Find the selected circle
-          let selectedRating = 0
+          // Process each kink row
+          const kinkRows = section.querySelectorAll('tbody tr')
+          kinkRows.forEach((row) => {
+            const newRow = document.createElement('tr')
+            newRow.style.borderBottom = '1px solid #E5E7EB'
 
-          circles.forEach((circle) => {
-            if (circle instanceof HTMLElement) {
-              // Use the data attribute to get the rating
-              const dataRating = circle.getAttribute('data-rating')
-              if (dataRating && Number.parseInt(dataRating) > 0) {
-                selectedRating = Number.parseInt(dataRating)
+            // Create label cell
+            const labelCell = document.createElement('td')
+            labelCell.style.padding = '6px 8px'
+            labelCell.style.textAlign = 'left'
+            labelCell.style.fontSize = '12px'
+
+            // Get label text
+            const label = row.querySelector('td')
+            if (label) {
+              labelCell.textContent = label.textContent?.trim() || ''
+            }
+
+            newRow.appendChild(labelCell)
+
+            // Helper function to detect rating from element classes
+            const detectRatingFromClasses = (element: Element): number => {
+              if (element instanceof HTMLElement) {
+                const classList = Array.from(element.classList)
+
+                // Check for active colors in both background and border
+                if (classList.includes('bg-blue-500') || classList.includes('border-blue-500')) {
+                  return 1
+                }
+                else if (classList.includes('bg-green-500') || classList.includes('border-green-500')) {
+                  return 2
+                }
+                else if (classList.includes('bg-yellow-500') || classList.includes('border-yellow-500')) {
+                  return 3
+                }
+                else if (classList.includes('bg-orange-500') || classList.includes('border-orange-500')) {
+                  return 4
+                }
+                else if (classList.includes('bg-red-500') || classList.includes('border-red-500')) {
+                  return 5
+                }
+                // Default/not selected
+                return 0
+              }
+              return 0
+            }
+
+            // Function to create a rating circle
+            const createRatingCircle = (rating: number) => {
+              const circle = document.createElement('div')
+              circle.style.display = 'inline-block'
+              circle.style.width = '14px'
+              circle.style.height = '14px'
+              circle.style.borderRadius = '50%'
+              circle.style.backgroundColor = ratingColors[rating as keyof typeof ratingColors].bg
+              circle.style.border = `1.5px solid ${ratingColors[rating as keyof typeof ratingColors].border}`
+              return circle
+            }
+
+            // Process each rating column
+            const ratingCells = row.querySelectorAll('td:not(:first-child)')
+
+            ratingCells.forEach((cell) => {
+              const newCell = document.createElement('td')
+              newCell.style.padding = '6px 8px'
+              newCell.style.textAlign = 'center'
+
+              // Find selected rating
+              let selectedRating = 0
+
+              // Look for selected button
+              const buttons = cell.querySelectorAll('button')
+              buttons.forEach((button) => {
+                if (button instanceof HTMLElement) {
+                  // Check if this button is active/selected by looking for colored backgrounds
+                  const isSelected = Array.from(button.classList).some(cls =>
+                    (cls.includes('bg-') && !cls.includes('bg-gray') && !cls.includes('bg-transparent'))
+                    || (cls.includes('border-') && !cls.includes('border-gray') && !cls.includes('border-transparent')),
+                  )
+
+                  if (isSelected) {
+                    // First check data-rating if available
+                    const dataRating = button.getAttribute('data-rating')
+                    if (dataRating) {
+                      selectedRating = Number.parseInt(dataRating)
+                    }
+                    else {
+                      // Otherwise detect from classes
+                      selectedRating = detectRatingFromClasses(button)
+                    }
+                  }
+                }
+              })
+
+              // If no buttons are found, try to find rating elements directly
+              if (selectedRating === 0 && cell.querySelector('div.rounded-full')) {
+                const ratingElement = cell.querySelector('div.rounded-full')
+                if (ratingElement) {
+                  selectedRating = detectRatingFromClasses(ratingElement)
+                }
               }
 
-              // Hide all circles initially
-              circle.style.display = 'none'
-            }
+              // Create rating circle
+              const circle = createRatingCircle(selectedRating)
+              newCell.appendChild(circle)
+
+              newRow.appendChild(newCell)
+            })
+
+            tbody.appendChild(newRow)
           })
 
-          // Create a new element to show only the selected rating
-          if (selectedRating >= 0) {
-            const ratingElement = document.createElement('div')
-            ratingElement.style.display = 'inline-block'
-            ratingElement.style.width = '16px'
-            ratingElement.style.height = '16px'
-            ratingElement.style.borderRadius = '50%'
-            ratingElement.style.backgroundColor = ratingColors[selectedRating as keyof typeof ratingColors].bg
-            ratingElement.style.borderColor = ratingColors[selectedRating as keyof typeof ratingColors].border
-            ratingElement.style.borderWidth = '1.5px'
-            ratingElement.style.borderStyle = 'solid'
-            ratingElement.style.margin = '4px 0'
-
-            // Replace the container's content with just this rating
-            container.innerHTML = ''
-            container.appendChild(ratingElement)
-          }
+          table.appendChild(tbody)
+          categoryContainer.appendChild(table)
         })
 
-        // Handle mobile view buttons (both in drawer and visible on screen)
-        const mobileButtons = clone.querySelectorAll('.lg\\:hidden button, .flex.justify-center button')
-        mobileButtons.forEach((button) => {
-          if (button instanceof HTMLElement) {
-            // Get rating from data attribute
-            const dataRating = button.getAttribute('data-rating')
-            let mobileRating = dataRating ? Number.parseInt(dataRating) : 0
+        gridContainer.appendChild(categoryContainer)
+      })
 
-            // If no data-rating, try to detect from classes as fallback
-            if (!dataRating) {
-              if (button.classList.contains('border-blue-500') || button.classList.contains('bg-blue-500'))
-                mobileRating = 1
-              else if (button.classList.contains('border-green-500') || button.classList.contains('bg-green-500'))
-                mobileRating = 2
-              else if (button.classList.contains('border-yellow-500') || button.classList.contains('bg-yellow-500'))
-                mobileRating = 3
-              else if (button.classList.contains('border-orange-500') || button.classList.contains('bg-orange-500'))
-                mobileRating = 4
-              else if (button.classList.contains('border-red-500') || button.classList.contains('bg-red-500'))
-                mobileRating = 5
-            }
-
-            // Apply direct styles
-            button.style.backgroundColor = ratingColors[mobileRating as keyof typeof ratingColors].bg
-            button.style.borderColor = ratingColors[mobileRating as keyof typeof ratingColors].border
-            button.style.width = '16px'
-            button.style.height = '16px'
-            button.style.borderRadius = '50%'
-            button.style.display = 'inline-block'
-            button.style.borderWidth = '1.5px'
-            button.style.borderStyle = 'solid'
-            button.style.margin = '4px 0'
-
-            // No text content - empty circle
-            button.textContent = ''
-
-            // Remove classes that might interfere
-            const classesToRemove: string[] = []
-            button.classList.forEach((cls) => {
-              if (cls.startsWith('bg-') || cls.startsWith('border-') || cls.startsWith('text-') || cls.startsWith('dark:')) {
-                classesToRemove.push(cls)
-              }
-            })
-
-            classesToRemove.forEach((cls) => {
-              button.classList.remove(cls)
-            })
-          }
-        })
-      }
-
-      // Ensure all styles are computed and rendered
-      document.body.appendChild(clone)
-
-      // Apply direct styles to rating elements
-      applyDirectStyles()
+      container.appendChild(gridContainer)
+      document.body.appendChild(container)
 
       // Use html2canvas-pro with optimized settings
-      const canvas = await html2canvas(clone, {
+      const canvas = await html2canvas(container, {
         backgroundColor: 'white',
         scale: 2,
         logging: false,
@@ -188,23 +271,10 @@ export function useScreenshot() {
         allowTaint: true,
         removeContainer: true,
         imageTimeout: 0,
-        ignoreElements: (element) => {
-          // Ignore any irrelevant elements
-          return element.classList?.contains('ignore-screenshot') || false
-        },
-        onclone: (_, element) => {
-          // Force compute styles in the cloned document
-          const allElements = element.querySelectorAll('*')
-          allElements.forEach((el) => {
-            if (el instanceof HTMLElement) {
-              window.getComputedStyle(el)
-            }
-          })
-        },
       })
 
-      // Clean up the clone
-      document.body.removeChild(clone)
+      // Clean up the container
+      document.body.removeChild(container)
 
       // Save the data URL for use in the modal
       const dataUrl = canvas.toDataURL('image/png')

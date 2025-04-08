@@ -29,7 +29,7 @@ const visibleCategories = computed(() => {
     <!-- List content for screenshot -->
     <div id="kink-list-content" class="max-w-full overflow-x-hidden p-0">
       <!-- Masonry-style layout for better space filling -->
-      <div class="columns-1 md:columns-2 xl:columns-3 gap-6 space-y-6">
+      <div class="columns-1 md:columns-2 xl:columns-3  gap-6 space-y-6">
         <div v-for="category in visibleCategories" :key="category.id" class="category-container inline-block w-full mb-2">
           <h2 class="text-base font-bold mb-1.5 pb-1.5 border-b-1 border-gray-200 dark:border-gray-700">
             {{ t(`categories.${category.id}`) }}
