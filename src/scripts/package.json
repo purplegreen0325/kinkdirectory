@@ -1,0 +1,6 @@
+{
+  "name": "klist-scripts",
+  "type": "module",
+  "private": true,
+  "description": "Helper scripts for the kink list app"
+} 

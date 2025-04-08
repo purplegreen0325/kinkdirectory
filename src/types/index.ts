@@ -22,6 +22,7 @@ export interface RolePerspective {
 // Kink definition with formats
 export interface KinkDefinition {
   id: string;
+  key: number;
   format: KinkFormat;
   // For role_specific kinks, defines allowed combinations of roles and perspectives
   // Example: 

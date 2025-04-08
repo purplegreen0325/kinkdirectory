@@ -1,1410 +1,1944 @@
 import type { KinkCategory } from "src/types";
 
-export const kinkList:KinkCategory[] = [
+export const kinkList: KinkCategory[] = [
+
     {
-      "id": "bodies",
-      "kinks": [
-        {
-          "id": "skinny",
-          "format": "general",
-        },
-        {
-          "id": "chubby",
-          "format": "general",
-        },
-        {
-          "id": "small_breasts",
-          "format": "general",
-        },
-        {
-          "id": "large_breasts",
-          "format": "general",
-        },
-        {
-          "id": "small_cocks",
-          "format": "general",
-        },
-        {
-          "id": "large_cocks",
-          "format": "general",
-        },
-        {
-          "id": "small_butts",
-          "format": "general",
-        },
-        {
-          "id": "big_butts",
-          "format": "general",
-        }
-      ]
+        id: "bodies",
+        kinks: [
+
+            {
+                id: "skinny",
+                format: "general",
+                key: 0
+            },
+
+            {
+                id: "chubby",
+                format: "general",
+                key: 1
+            },
+
+            {
+                id: "small_breasts",
+                format: "general",
+                key: 2
+            },
+
+            {
+                id: "large_breasts",
+                format: "general",
+                key: 3
+            },
+
+            {
+                id: "small_cocks",
+                format: "general",
+                key: 4
+            },
+
+            {
+                id: "large_cocks",
+                format: "general",
+                key: 5
+            },
+
+            {
+                id: "small_butts",
+                format: "general",
+                key: 6
+            },
+
+            {
+                id: "big_butts",
+                format: "general",
+                key: 7
+            }
+
+        ]
     },
+
     {
-      "id": "clothing",
-      "kinks": [
-        {
-          "id": "clothed_sex",
-          "format": "general",
-        },
-        {
-          "id": "lingerie",
-          "format": "general",
-        },
-        {
-          "id": "stockings",
-          "format": "general",
-        },
-        {
-          "id": "heels",
-          "format": "general",
-        },
-        {
-          "id": "leather",
-          "format": "general",
-        },
-        {
-          "id": "latex",
-          "format": "general",
-        },
-        {
-          "id": "uniform_costume",
-          "format": "general",
-        },
-        {
-          "id": "cross_dressing",
-          "format": "general",
-        }
-      ]
+        id: "clothing",
+        kinks: [
+
+            {
+                id: "clothed_sex",
+                format: "general",
+                key: 8
+            },
+
+            {
+                id: "lingerie",
+                format: "general",
+                key: 9
+            },
+
+            {
+                id: "stockings",
+                format: "general",
+                key: 10
+            },
+
+            {
+                id: "heels",
+                format: "general",
+                key: 11
+            },
+
+            {
+                id: "leather",
+                format: "general",
+                key: 12
+            },
+
+            {
+                id: "latex",
+                format: "general",
+                key: 13
+            },
+
+            {
+                id: "uniform_costume",
+                format: "general",
+                key: 14
+            },
+
+            {
+                id: "cross_dressing",
+                format: "general",
+                key: 15
+            }
+
+        ]
     },
+
     {
-      "id": "general",
-      "kinks": [
-        {
-          "id": "handjob_fingering",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "general",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "handjob_fingering",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 16
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "blowjob",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "blowjob",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 17
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "deep_throat",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "deep_throat",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 18
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "swallowing",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "swallowing",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 19
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "facials",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "facials",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 20
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "cunnilingus",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "cunnilingus",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 21
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "face_sitting",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "face_sitting",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 22
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "edging",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "edging",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 23
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "teasing",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "teasing",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 24
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "ruined",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 25
             }
-          ]
-        },
-        {
-          "id": "ruined",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "ass_play",
-      "kinks": [
-        {
-          "id": "anal_toys",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "ass_play",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "anal_toys",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 26
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "anal_sex_pegging",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "anal_sex_pegging",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 27
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "rimming",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "rimming",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 28
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "double_penetration",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "double_penetration",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 29
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "anal_fisting",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 30
             }
-          ]
-        },
-        {
-          "id": "anal_fisting",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "restrictive",
-      "kinks": [
-        {
-          "id": "gag",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "restrictive",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "gag",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 31
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "collar",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "collar",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 32
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "leash",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "leash",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 33
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "chastity",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "chastity",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 34
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "bondage_light",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "bondage_light",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 35
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "bondage_heavy",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "bondage_heavy",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 36
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "encasement",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "encasement",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 37
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "cag",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 38
             }
-          ]
-        },
-        {
-          "id": "cag",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "toys",
-      "kinks": [
-        {
-          "id": "dildos",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "toys",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "dildos",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 39
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "plugs",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "plugs",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 40
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "vibrators",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "vibrators",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 41
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "sounding",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 42
             }
-          ]
-        },
-        {
-          "id": "sounding",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "domination",
-      "kinks": [
-        {
-          "id": "domestic_servitude",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "domination",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "domestic_servitude",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 43
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "slavery",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "slavery",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 44
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "pet_play",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "pet_play",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 45
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "dd_lg_md_lb",
-          "format": "general"
-        },
-        {
-          "id": "discipline",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "dd_lg_md_lb",
+                format: "general",
+                key: 46
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "begging",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "discipline",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 47
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "forced_orgasm",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "begging",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 48
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "orgasm_control",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "forced_orgasm",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 49
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "orgasm_denial",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "orgasm_control",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 50
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "orgasm_denial",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 51
             }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "no_consent",
-      "kinks": [
-        {
-          "id": "dubious_consent",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "no_consent",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "dubious_consent",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 52
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "non_con_rape",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "non_con_rape",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 53
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "blackmail_coercion",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "blackmail_coercion",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 54
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "kidnapping",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "kidnapping",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 55
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "drugs",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "drugs",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 56
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "alcohol",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "alcohol",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 57
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "sleep_play",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 58
             }
-          ]
-        },
-        {
-          "id": "sleep_play",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "taboo",
-      "kinks": [
-        {
-          "id": "incest",
-          "format": "general",
-        },
-        {
-          "id": "age_gap",
-         "format": "general",
-        },
-        {
-          "id": "interracial",
-          "format": "general",
-        },
-        {
-          "id": "raceplay",
-          "format": "general",
-        },
-        {
-          "id": "bestiality",
-          "format": "general",
-        },
-        {
-          "id": "necrophilia",
-          "format": "general",
-        },
-        {
-          "id": "cheating",
-          "format": "general",
-        },
-        {
-          "id": "exhibitionism",
-          "format": "general",
-        },
-        {
-          "id": "voyeurism",
-          "format": "general",
-        }
-      ]
+        id: "taboo",
+        kinks: [
+
+            {
+                id: "incest",
+                format: "general",
+                key: 59
+            },
+
+            {
+                id: "age_gap",
+                format: "general",
+                key: 60
+            },
+
+            {
+                id: "interracial",
+                format: "general",
+                key: 61
+            },
+
+            {
+                id: "raceplay",
+                format: "general",
+                key: 62
+            },
+
+            {
+                id: "bestiality",
+                format: "general",
+                key: 63
+            },
+
+            {
+                id: "necrophilia",
+                format: "general",
+                key: 64
+            },
+
+            {
+                id: "cheating",
+                format: "general",
+                key: 65
+            },
+
+            {
+                id: "exhibitionism",
+                format: "general",
+                key: 66
+            },
+
+            {
+                id: "voyeurism",
+                format: "general",
+                key: 67
+            }
+
+        ]
     },
+
     {
-      "id": "surrealism",
-      "kinks": [
-        {
-          "id": "futanari_futa",
-          "format": "general"
-        },
-        {
-          "id": "furry",
-          "format": "general"
-        },
-        {
-          "id": "vore",
-          "format": "general"
-        },
-        {
-          "id": "transformation",
-  "format": "general"
-        },
-        {
-          "id": "tentacles",
-  "format": "general"
-        },
-        {
-          "id": "monster_or_alien",
-  "format": "general"
-        },
-        {
-          "id": "ghost",
-          "format": "general"
-        }
-      ]
+        id: "surrealism",
+        kinks: [
+
+            {
+                id: "futanari_futa",
+                format: "general",
+                key: 68
+            },
+
+            {
+                id: "furry",
+                format: "general",
+                key: 69
+            },
+
+            {
+                id: "vore",
+                format: "general",
+                key: 70
+            },
+
+            {
+                id: "transformation",
+                format: "general",
+                key: 71
+            },
+
+            {
+                id: "tentacles",
+                format: "general",
+                key: 72
+            },
+
+            {
+                id: "monster_or_alien",
+                format: "general",
+                key: 73
+            },
+
+            {
+                id: "ghost",
+                format: "general",
+                key: 74
+            }
+
+        ]
     },
+
     {
-      "id": "fluids",
-      "kinks": [
-        {
-          "id": "blood",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "fluids",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "blood",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 75
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "watersports",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "watersports",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 76
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "scat",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "scat",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 77
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "lactation",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "lactation",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 78
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "diapers",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "diapers",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 79
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "cum_play",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "cum_play",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 80
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "saliva_spit",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 81
             }
-          ]
-        },
-        {
-          "id": "saliva_spit",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "degradation",
-      "kinks": [
-        {
-          "id": "glory_hole",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "degradation",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "glory_hole",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 82
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "name_calling",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "name_calling",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 83
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "humiliation",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 84
             }
-          ]
-        },
-        {
-          "id": "humiliation",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "touch_stimulation",
-      "kinks": [
-        {
-          "id": "cock_pussy_worship",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "touch_stimulation",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "cock_pussy_worship",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 85
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "ass_worship",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "ass_worship",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 86
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "foot_play",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "foot_play",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 87
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "tickling",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "tickling",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 88
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "sensation_play",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "sensation_play",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 89
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "electro_stimulation",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 90
             }
-          ]
-        },
-        {
-          "id": "electro_stimulation",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "misc_fetish",
-      "kinks": [
-        {
-          "id": "fisting",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "misc_fetish",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "fisting",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 91
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "gangbang",
-          "format": "general"
-        
-        },
-        {
-          "id": "breath_play",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "gangbang",
+                format: "general",
+                key: 92
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "impregnation",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "breath_play",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 93
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "pregnancy",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "impregnation",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 94
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "feminization",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "pregnancy",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 95
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "cuckold_cuckquean",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "feminization",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 96
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "shaving",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "cuckold_cuckquean",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 97
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "shaving",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 98
             }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "pain",
-      "kinks": [
-        {
-          "id": "light_pain",
-          "format": "role_specific",
-          "allowedPerspectives": [
+        id: "pain",
+        kinks: [
+
             {
-              "role": "dom",
-              "perspective": "partner"
+                id: "light_pain",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 99
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "heavy_pain",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "heavy_pain",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 100
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "nipple_clamps",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "nipple_clamps",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 101
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "clothes_pins",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "clothes_pins",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 102
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "caning",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "caning",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 103
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "flogging",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "flogging",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 104
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "gagging_choking",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "gagging_choking",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 105
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "spanking",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "spanking",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 106
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "cock_pussy_slapping",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "cock_pussy_slapping",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 107
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "cock_pussy_torture",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "cock_pussy_torture",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 108
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "hot_wax",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "hot_wax",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 109
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "scratching",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "scratching",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 110
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "biting",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "biting",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 111
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        },
-        {
-          "id": "cutting",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
+                id: "cutting",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 112
             },
+
             {
-              "role": "sub",
-              "perspective": "self"
+                id: "snuff",
+                format: "role_specific",
+                allowedPerspectives: [
+
+                    {
+                        role: "dom",
+                        perspective: "partner"
+                    },
+
+                    {
+                        role: "sub",
+                        perspective: "self"
+                    }
+
+                ],
+                key: 113
             }
-          ]
-        },
-        {
-          "id": "snuff",
-          "format": "role_specific",
-          "allowedPerspectives": [
-            {
-              "role": "dom",
-              "perspective": "partner"
-            },
-            {
-              "role": "sub",
-              "perspective": "self"
-            }
-          ]
-        }
-      ]
+
+        ]
     },
+
     {
-      "id": "medium",
-      "kinks": [
-        {
-          "id": "skype",
-          "format": "general",
-        },
-        {
-          "id": "whatsapp",
-          "format": "general",
-        },
-        {
-          "id": "kik",
-          "format": "general",
-        },
-        {
-          "id": "reddit",
-          "format": "general",
-        },
-        {
-          "id": "email",
-          "format": "general",
-        },
-        {
-          "id": "discord",
-          "format": "general",
-        },
-        {
-          "id": "other_medium",
-          "format": "general",
-        }
-      ]
+        id: "medium",
+        kinks: [
+
+            {
+                id: "skype",
+                format: "general",
+                key: 114
+            },
+
+            {
+                id: "whatsapp",
+                format: "general",
+                key: 115
+            },
+
+            {
+                id: "kik",
+                format: "general",
+                key: 116
+            },
+
+            {
+                id: "reddit",
+                format: "general",
+                key: 117
+            },
+
+            {
+                id: "email",
+                format: "general",
+                key: 118
+            },
+
+            {
+                id: "discord",
+                format: "general",
+                key: 119
+            },
+
+            {
+                id: "other_medium",
+                format: "general",
+                key: 120
+            }
+
+        ]
     },
+
     {
-      "id": "time_scale",
-      "kinks": [
-        {
-          "id": "short_term_scenes",
-          "format": "general",
-        },
-        {
-          "id": "medium_term_scenes",
-          "format": "general",
-        },
-        {
-          "id": "long_term_scenes",
-          "format": "general",
-        },
-        {
-          "id": "quick_replies",
-          "format": "general",
-        },
-        {
-          "id": "fast_replies",
-          "format": "general",
-        },
-        {
-          "id": "normal_replies",
-          "format": "general",
-        },
-        {
-          "id": "slow_replies",
-          "format": "general",
-        },
-        {
-          "id": "glacial_replies",
-          "format": "general",
-        },
-        {
-          "id": "occasional_replies",
-          "format": "general",
-        }
-      ]
+        id: "time_scale",
+        kinks: [
+
+            {
+                id: "short_term_scenes",
+                format: "general",
+                key: 121
+            },
+
+            {
+                id: "medium_term_scenes",
+                format: "general",
+                key: 122
+            },
+
+            {
+                id: "long_term_scenes",
+                format: "general",
+                key: 123
+            },
+
+            {
+                id: "quick_replies",
+                format: "general",
+                key: 124
+            },
+
+            {
+                id: "fast_replies",
+                format: "general",
+                key: 125
+            },
+
+            {
+                id: "normal_replies",
+                format: "general",
+                key: 126
+            },
+
+            {
+                id: "slow_replies",
+                format: "general",
+                key: 127
+            },
+
+            {
+                id: "glacial_replies",
+                format: "general",
+                key: 128
+            },
+
+            {
+                id: "occasional_replies",
+                format: "general",
+                key: 129
+            }
+
+        ]
     }
-  ]
+
+];
