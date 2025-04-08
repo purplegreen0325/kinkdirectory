@@ -129,7 +129,15 @@
     "screenshot_short": "صورة",
     "import_error": "فشل الاستيراد",
     "import_error_old_format": "تستخدم هذه القائمة تنسيقًا قديمًا لم يعد مدعومًا. حاول استيراد قائمة أحدث.",
-    "back": "خلف"
+    "back": "خلف",
+    "settings": "المؤسسات",
+    "settings_intro": "قم بتخصيص تجربة KinkList الخاصة بك عن طريق ضبط هذه الإعدادات.",
+    "display_settings": "إعدادات العرض",
+    "kink_order": "تصنيف طلب كينك",
+    "reverse_kink_order": "عكس ترتيب التقييم",
+    "reverse_kink_order_desc": "تغيير ترتيب خيارات التقييم من \"المفضلة → الحد\" إلى \"الحد → المفضلة\"",
+    "reverse_kink_order_desc_short": "تغيير ترتيب عرض التقييمات",
+    "current_order": "الطلب الحالي:"
   },
   "roles": {
     "sub": "مطيع",

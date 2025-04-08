@@ -129,7 +129,15 @@
     "screenshot_short": "写真",
     "import_error": "インポートに失敗しました",
     "import_error_old_format": "このリストでは、サポートされなくなった古い形式が使用されています。新しいリストをインポートしてみてください。",
-    "back": "戻る"
+    "back": "戻る",
+    "settings": "機関",
+    "settings_intro": "これらの設定を調整して、KinkList エクスペリエンスをカスタマイズします。",
+    "display_settings": "表示設定",
+    "kink_order": "注文キンク評価",
+    "reverse_kink_order": "評価の順序を逆にする",
+    "reverse_kink_order_desc": "評価オプションの順序を「お気に入り → 制限」から「制限 → お気に入り」に変更します",
+    "reverse_kink_order_desc_short": "評価の表示順序を変更します",
+    "current_order": "現在の注文:"
   },
   "roles": {
     "sub": "従順な",

@@ -129,7 +129,15 @@
     "screenshot_short": "Photo",
     "import_error": "L'importation a échoué",
     "import_error_old_format": "Cette liste utilise un format obsolète qui n'est plus pris en charge. Essayez d’importer une liste plus récente.",
-    "back": "Dos"
+    "back": "Dos",
+    "settings": "Institutions",
+    "settings_intro": "Personnalisez votre expérience KinkList en ajustant ces paramètres.",
+    "display_settings": "Paramètres d'affichage",
+    "kink_order": "Évaluation des défauts de commande",
+    "reverse_kink_order": "Inverser l'ordre d'évaluation",
+    "reverse_kink_order_desc": "Modifie l'ordre des options de notation de « Favori → Limiter » à « Limite → Favori »",
+    "reverse_kink_order_desc_short": "Modifie l'ordre d'affichage des notes",
+    "current_order": "Commande actuelle :"
   },
   "roles": {
     "sub": "Soumis",

@@ -129,7 +129,15 @@
     "screenshot_short": "照片",
     "import_error": "导入失败",
     "import_error_old_format": "此列表使用了不再受支持的过时格式。尝试导入较新的列表。",
-    "back": "后退"
+    "back": "后退",
+    "settings": "机构",
+    "settings_intro": "通过调整这些设置来定制您的 KinkList 体验。",
+    "display_settings": "显示设置",
+    "kink_order": "订单纠结评级",
+    "reverse_kink_order": "反转估值顺序",
+    "reverse_kink_order_desc": "将评级选项的顺序从“收藏 → 限制”更改为“限制 → 收藏”",
+    "reverse_kink_order_desc_short": "更改评分的显示顺序",
+    "current_order": "当前订单："
   },
   "roles": {
     "sub": "顺从",

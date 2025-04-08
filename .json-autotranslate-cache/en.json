@@ -129,7 +129,15 @@
     "screenshot_short": "Photo",
     "import_error": "Import failed",
     "import_error_old_format": "This list uses an outdated format that is no longer supported. Try importing a newer list.",
-    "back": "Back"
+    "back": "Back",
+    "settings": "Institutions",
+    "settings_intro": "Customize your KinkList experience by adjusting these settings.",
+    "display_settings": "Display settings",
+    "kink_order": "Order Kink Rating",
+    "reverse_kink_order": "Reverse the order of valuation",
+    "reverse_kink_order_desc": "Changes the order of rating options from \"Favorite → Limit\" to \"Limit → Favorite\"",
+    "reverse_kink_order_desc_short": "Changes the display order of ratings",
+    "current_order": "Current Order:"
   },
   "roles": {
     "sub": "Submissive",

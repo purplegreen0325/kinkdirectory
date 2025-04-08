@@ -129,7 +129,15 @@
     "screenshot_short": "사진",
     "import_error": "가져오기 실패",
     "import_error_old_format": "이 목록은 더 이상 지원되지 않는 오래된 형식을 사용합니다. 최신 목록을 가져와 보세요.",
-    "back": "뒤쪽에"
+    "back": "뒤쪽에",
+    "settings": "기관",
+    "settings_intro": "이러한 설정을 조정하여 KinkList 경험을 사용자 지정하세요.",
+    "display_settings": "디스플레이 설정",
+    "kink_order": "주문 킹크 평가",
+    "reverse_kink_order": "평가 순서를 반대로 바꾸세요",
+    "reverse_kink_order_desc": "평가 옵션 순서를 \"즐겨찾기 → 제한\"에서 \"제한 → 즐겨찾기\"로 변경합니다.",
+    "reverse_kink_order_desc_short": "평가 표시 순서를 변경합니다",
+    "current_order": "현재 주문:"
   },
   "roles": {
     "sub": "복종적인",

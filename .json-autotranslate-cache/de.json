@@ -129,7 +129,15 @@
     "screenshot_short": "Foto",
     "import_error": "Import fehlgeschlagen",
     "import_error_old_format": "Diese Liste verwendet ein veraltetes Format, das nicht mehr unterstützt wird. Versuchen Sie, eine neuere Liste zu importieren.",
-    "back": "Zurück"
+    "back": "Zurück",
+    "settings": "Institutionen",
+    "settings_intro": "Passen Sie Ihr KinkList-Erlebnis an, indem Sie diese Einstellungen anpassen.",
+    "display_settings": "Anzeigeeinstellungen",
+    "kink_order": "Kink-Bewertung bestellen",
+    "reverse_kink_order": "Umkehren der Bewertungsreihenfolge",
+    "reverse_kink_order_desc": "Ändert die Reihenfolge der Bewertungsoptionen von „Favorit → Limit“ zu „Limit → Favorit“",
+    "reverse_kink_order_desc_short": "Ändert die Anzeigereihenfolge der Bewertungen",
+    "current_order": "Aktuelle Bestellung:"
   },
   "roles": {
     "sub": "Unterwürfig",

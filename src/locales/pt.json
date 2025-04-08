@@ -129,7 +129,15 @@
     "screenshot_short": "Foto",
     "import_error": "Falha na importação",
     "import_error_old_format": "Esta lista usa um formato desatualizado que não é mais suportado. Tente importar uma lista mais recente.",
-    "back": "Voltar"
+    "back": "Voltar",
+    "settings": "Instituições",
+    "settings_intro": "Personalize sua experiência no KinkList ajustando estas configurações.",
+    "display_settings": "Configurações de exibição",
+    "kink_order": "Ordem Kink Avaliação",
+    "reverse_kink_order": "Inverter a ordem de avaliação",
+    "reverse_kink_order_desc": "Altera a ordem das opções de classificação de \"Favorito → Limite\" para \"Limite → Favorito\"",
+    "reverse_kink_order_desc_short": "Altera a ordem de exibição das classificações",
+    "current_order": "Ordem atual:"
   },
   "roles": {
     "sub": "Submisso",
