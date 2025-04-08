@@ -1,6 +1,6 @@
 # 📋 Kink Directory
 
-A privacy-focused tool to explore, define, and share your preferences and boundaries.
+A secure, private platform for exploring BDSM dynamics, defining your kink preferences, and communicating boundaries with partners.
 
 ![Kink Directory Screenshot](./assets/screenshot.png)
 
