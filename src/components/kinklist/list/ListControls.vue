@@ -280,7 +280,7 @@ async function handleTakeScreenshot() {
       </div>
 
       <!-- Action Buttons - Horizontal on Mobile -->
-      <div class="flex gap-2">
+      <div class="flex gap-2 flex-wrap">
         <!-- Create New List Button -->
         <UButton
           icon="i-lucide-plus"

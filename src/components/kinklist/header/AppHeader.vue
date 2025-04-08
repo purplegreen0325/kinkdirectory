@@ -23,7 +23,7 @@ function handleTitleClick() {
         <span class="bg-gradient-to-r from-primary-500 to-primary-400 bg-clip-text text-transparent">{{ t('title') }}</span>
       </h1>
 
-      <div class="flex items-center gap-2 flex-wrap">
+      <div class="flex items-center gap-2 flex-wrap justify-center">
         <SettingsButton />
         <LanguageSwitcher />
         <DarkModeToggle />
