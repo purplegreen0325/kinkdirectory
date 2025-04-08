@@ -4,29 +4,29 @@
     "tagName": "v${version}",
     "tagAnnotation": "Release v${version}",
     "pushRepo": "origin",
-    "requireCleanWorkingDir": true
+    "requireCleanWorkingDir": true,
+    "commitsPath": ".",
+    "failOnFirstError": true
   },
   "github": {
     "release": true,
     "releaseName": "Release v${version}",
     "tokenRef": "GITHUB_TOKEN",
-    "assets": ["*.tar.gz", "*.zip"],
-    "releaseNotes": "cat CHANGELOG.md | grep -A 100 \"## \\[${version}\\]\" | grep -B 100 -m 2 \"## \\[\" | grep -v \"## \\[$\""
+    "assets": ["dist/**/*"]
   },
   "hooks": {
     "before:init": ["yarn lint"],
-    "after:bump": "npx auto-changelog -p"
+    "before:release": "yarn build"
   },
   "npm": {
     "publish": false
   },
-  "changelogFile": "CHANGELOG.md",
   "plugins": {
     "@release-it/conventional-changelog": {
+      "preset": "conventionalcommits",
       "infile": "CHANGELOG.md",
-      "preset": {
-        "name": "conventionalcommits"
-      }
+      "header": "# Changelog\n\nAll notable changes to this project will be documented in this file.\n"
     }
-  }
+  },
+  "ci": true
 }
