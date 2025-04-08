@@ -182,7 +182,8 @@
     "misc_fetish": "Vários Fetiches",
     "pain": "Dor",
     "medium": "Médio",
-    "time_scale": "Escala de tempo"
+    "time_scale": "Escala de tempo",
+    "role_play": "Jogo de papéis"
   },
   "subcategories": {
     "general": "Em geral"
@@ -403,6 +404,62 @@
     "sensory_deprivation": {
       "label": "Privação sensorial",
       "tooltip": "Limitar ou eliminar informações sensoriais, como visão, audição ou tato, para aprimorar outros sentidos e aprofundar o foco."
+    },
+    "armbinders": {
+      "label": "Braçadeiras",
+      "tooltip": "Tubos especiais que fixam os braços atrás das costas, causando imobilização completa dos braços."
+    },
+    "cages": {
+      "label": "Gaiolas",
+      "tooltip": "Estar trancado em uma gaiola ou cela como uma forma de escravidão e dinâmica de poder."
+    },
+    "chains": {
+      "label": "Correntes",
+      "tooltip": "Estar amarrado com correntes, o que dá uma sensação única de peso e frio em comparação com outros materiais de bondage."
+    },
+    "leather_cuffs": {
+      "label": "Algemas de couro",
+      "tooltip": "Algemas de couro para prender pulsos ou tornozelos."
+    },
+    "metal_cuffs": {
+      "label": "Algemas de metal",
+      "tooltip": "Algemas de metal tradicionais usadas para prender pulsos ou tornozelos."
+    },
+    "gag_ball": {
+      "label": "Balgag",
+      "tooltip": "Uma mordaça em forma de bola que é colocada na boca e presa atrás da cabeça."
+    },
+    "gag_ring": {
+      "label": "Mordaça de anel",
+      "tooltip": "Uma mordaça em forma de anel que mantém a boca aberta, permitindo o acesso à boca e impedindo a fala."
+    },
+    "gag_tape": {
+      "label": "Mordaça de fita",
+      "tooltip": "Fita usada para cobrir a boca e impedir a fala."
+    },
+    "hoods": {
+      "label": "Capuzes",
+      "tooltip": "Cobertura total da cabeça que pode criar uma sensação de anonimato, despersonalização ou privação sensorial."
+    },
+    "immobilisation": {
+      "label": "Imobilização",
+      "tooltip": "Restrição completa de movimento por meio de diversas técnicas de bondage."
+    },
+    "leather_restraints": {
+      "label": "Punhos de couro",
+      "tooltip": "Várias algemas feitas de couro, usadas para diferentes formas de bondage."
+    },
+    "stocks": {
+      "label": "pelourinho",
+      "tooltip": "Dispositivo de restrição medieval tradicional que segura a cabeça e as mãos."
+    },
+    "straight_jacket": {
+      "label": "Camisa de força",
+      "tooltip": "Uma vestimenta especial projetada para imobilizar os braços, prendendo-os ao corpo."
+    },
+    "sleep_sack": {
+      "label": "Saco de dormir",
+      "tooltip": "Um saco especial e apertado no qual todo o corpo é fechado, semelhante à mumificação."
     }
   },
   "toys": {
@@ -771,6 +828,34 @@
     "snuff": {
       "label": "Rapé",
       "tooltip": "Matar um personagem como parte do sexo."
+    },
+    "face_slapping": {
+      "label": "Tapa na cara",
+      "tooltip": "O ato de bater no rosto de alguém como forma de humilhação ou excitação."
+    },
+    "punching": {
+      "label": "Tocos",
+      "tooltip": "O uso de toques de punho como forma de estimulação sexual."
+    },
+    "clamps_labia_clit": {
+      "label": "Grampos (lábios/clitóris)",
+      "tooltip": "O uso de grampos nos lábios ou clitóris para estimulação da dor."
+    },
+    "fire_play": {
+      "label": "Jogo de fogo",
+      "tooltip": "O uso de fogo ou calor para estimulação sexual, geralmente envolvendo fluidos que queimam a pele por um curto período de tempo."
+    },
+    "knife_play": {
+      "label": "Jogo de facas",
+      "tooltip": "O uso de facas ou objetos afiados para causar medo, excitação ou dor leve, geralmente sem realmente romper a pele."
+    },
+    "needle_play": {
+      "label": "Jogo da agulha",
+      "tooltip": "O uso de agulhas inseridas através da pele para estimulação sexual."
+    },
+    "vampire_gloves": {
+      "label": "Luvas de vampiro",
+      "tooltip": "Luvas especiais com pequenas pontas de metal que furam a pele quando tocadas."
     }
   },
   "medium": {
@@ -839,6 +924,48 @@
     "occasional_replies": {
       "label": "Respostas Incidentais",
       "tooltip": "Respostas que chegam depois de mais de 24 horas."
+    }
+  },
+  "role_play": {
+    "medical_scenes": {
+      "label": "Cenas médicas",
+      "tooltip": "Jogo de RPG em que são simulados procedimentos médicos, exames e dinâmicas médico-paciente."
+    },
+    "animal_roleplay": {
+      "label": "Jogo de interpretação de animais",
+      "tooltip": "Jogo de interpretação de papéis em que uma pessoa imita o comportamento e os maneirismos de um animal."
+    },
+    "age_play": {
+      "label": "Jogo da idade",
+      "tooltip": "Jogo de interpretação de papéis em que os participantes fingem ter uma idade diferente da sua idade real (todos adultos)."
+    },
+    "prison_scenes": {
+      "label": "Cenas de prisão",
+      "tooltip": "Dramatização em um ambiente prisional, geralmente com dinâmicas entre guarda e prisioneiro."
+    },
+    "schoolroom_scenes": {
+      "label": "Cenas de sala de aula",
+      "tooltip": "Dramatização em ambiente escolar, geralmente com dinâmica professor-aluno."
+    },
+    "prostitution_fantasy": {
+      "label": "Fantasia de prostituição",
+      "tooltip": "Interpretação de papéis em que uma pessoa finge fazer sexo em troca de dinheiro ou favores."
+    },
+    "religious_scenes": {
+      "label": "Cenas religiosas",
+      "tooltip": "Interpretação de papéis com elementos ou cenários religiosos, como confissão ou pecado."
+    },
+    "interrogations": {
+      "label": "Interrogatórios",
+      "tooltip": "Interpretação de papéis em que uma pessoa é interrogada, geralmente envolvendo dinâmicas de poder e pressão."
+    },
+    "fear_play": {
+      "label": "Jogo do medo",
+      "tooltip": "Atividades que induzem deliberadamente o medo como parte da experiência sexual."
+    },
+    "egyptian": {
+      "label": "egípcio",
+      "tooltip": "Cenários de RPG com temas do antigo Egito, como faraós, Cleópatra, deuses e mitologia."
     }
   }
 }

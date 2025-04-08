@@ -182,7 +182,8 @@
     "misc_fetish": "다양한 페티시",
     "pain": "통증",
     "medium": "중간",
-    "time_scale": "시간 척도"
+    "time_scale": "시간 척도",
+    "role_play": "롤 플레이"
   },
   "subcategories": {
     "general": "일반적인"
@@ -403,6 +404,62 @@
     "sensory_deprivation": {
       "label": "감각 박탈",
       "tooltip": "시각, 청각, 촉각과 같은 감각적 입력을 제한하거나 제거하여 다른 감각을 강화하고 집중력을 더욱 높입니다."
+    },
+    "armbinders": {
+      "label": "팔 보호대",
+      "tooltip": "팔을 등 뒤로 고정하는 특수 튜브로 팔을 완전히 고정합니다."
+    },
+    "cages": {
+      "label": "케이지",
+      "tooltip": "속박과 권력 역학의 한 형태로서 우리나 감방에 갇히는 것."
+    },
+    "chains": {
+      "label": "쇠사슬",
+      "tooltip": "사슬로 묶여 있기 때문에 다른 속박 소재에 비해 독특하고 무겁고 차가운 느낌을 줍니다."
+    },
+    "leather_cuffs": {
+      "label": "가죽 수갑",
+      "tooltip": "손목이나 발목을 묶는 데 사용되는 가죽으로 만든 수갑."
+    },
+    "metal_cuffs": {
+      "label": "금속 수갑",
+      "tooltip": "손목이나 발목을 묶는 데 사용되는 전통적인 금속 수갑."
+    },
+    "gag_ball": {
+      "label": "발가그",
+      "tooltip": "입에 넣고 머리 뒤에 고정하는 공 모양의 개그."
+    },
+    "gag_ring": {
+      "label": "링 개그",
+      "tooltip": "입을 벌려 놓아 말을 못하게 하면서 입에 접근할 수 있게 해주는 고리 모양의 개그."
+    },
+    "gag_tape": {
+      "label": "테이프 개그",
+      "tooltip": "입을 가리고 말을 못하게 하는 데 쓰이는 테이프."
+    },
+    "hoods": {
+      "label": "후드",
+      "tooltip": "익명성, 비인격성 또는 감각 박탈감을 유발할 수 있는 머리 전체를 가리는 행위."
+    },
+    "immobilisation": {
+      "label": "고정화",
+      "tooltip": "다양한 속박 기술을 통해 움직임을 완전히 제한합니다."
+    },
+    "leather_restraints": {
+      "label": "가죽 커프스",
+      "tooltip": "가죽으로 만든 다양한 종류의 커프스는 다양한 형태의 속박에 사용됩니다."
+    },
+    "stocks": {
+      "label": "칼",
+      "tooltip": "머리와 손을 고정하는 전통적인 중세 구속 장치입니다."
+    },
+    "straight_jacket": {
+      "label": "구속복",
+      "tooltip": "팔을 몸에 묶어 고정하도록 고안된 특수 의류."
+    },
+    "sleep_sack": {
+      "label": "침낭",
+      "tooltip": "몸 전체를 미라처럼 둘러싼 특수하고 단단한 주머니."
     }
   },
   "toys": {
@@ -771,6 +828,34 @@
     "snuff": {
       "label": "코담배",
       "tooltip": "섹스의 일환으로 캐릭터를 죽이는 것."
+    },
+    "face_slapping": {
+      "label": "얼굴 때리기",
+      "tooltip": "굴욕이나 흥분을 표시하기 위해 누군가의 얼굴을 때리는 행위."
+    },
+    "punching": {
+      "label": "그루터기",
+      "tooltip": "성적 자극의 한 형태로 주먹 인사를 하는 것."
+    },
+    "clamps_labia_clit": {
+      "label": "클램프(음순/음핵)",
+      "tooltip": "음순이나 음핵에 클램프를 이용해 통증을 자극하는 방법."
+    },
+    "fire_play": {
+      "label": "불 게임",
+      "tooltip": "성적 자극을 위해 불이나 열을 사용하는 행위로, 종종 피부를 잠시 태우는 체액을 사용합니다."
+    },
+    "knife_play": {
+      "label": "칼 게임",
+      "tooltip": "일반적으로 피부를 실제로 찢지 않고 칼이나 날카로운 물건을 사용하여 두려움, 흥분 또는 가벼운 통증을 유발하는 행위입니다."
+    },
+    "needle_play": {
+      "label": "바늘놀이",
+      "tooltip": "성적 자극을 위해 피부를 통해 바늘을 삽입하는 방법."
+    },
+    "vampire_gloves": {
+      "label": "뱀파이어 장갑",
+      "tooltip": "만지면 피부를 찌르는 작은 금속 스파이크가 달린 특수 장갑입니다."
     }
   },
   "medium": {
@@ -839,6 +924,48 @@
     "occasional_replies": {
       "label": "부수적인 답변",
       "tooltip": "24시간 이상 후에 답변이 옵니다."
+    }
+  },
+  "role_play": {
+    "medical_scenes": {
+      "label": "의료 장면",
+      "tooltip": "의료 시술, 검사, 의사-환자 관계 등을 시뮬레이션한 롤플레잉 게임입니다."
+    },
+    "animal_roleplay": {
+      "label": "동물 롤 플레이",
+      "tooltip": "사람이 동물의 행동과 몸짓을 따라하는 롤플레잉 게임."
+    },
+    "age_play": {
+      "label": "연령 게임",
+      "tooltip": "참가자들이 실제 나이(모두 성인)가 아닌 다른 나이인 척하는 롤플레잉 게임입니다."
+    },
+    "prison_scenes": {
+      "label": "감옥 장면",
+      "tooltip": "감옥을 배경으로 한 롤플레잉으로, 종종 경비원과 수감자 간의 관계가 중요합니다."
+    },
+    "schoolroom_scenes": {
+      "label": "교실 풍경",
+      "tooltip": "교사와 학생 간의 상호작용이 이루어지는 학교 환경에서의 롤플레잉."
+    },
+    "prostitution_fantasy": {
+      "label": "매춘 환상",
+      "tooltip": "돈이나 호의를 얻기 위해 성관계를 갖는 척하는 롤플레잉."
+    },
+    "religious_scenes": {
+      "label": "종교적 장면",
+      "tooltip": "고백이나 죄와 같은 종교적 요소나 배경을 활용한 롤플레잉."
+    },
+    "interrogations": {
+      "label": "심문",
+      "tooltip": "권력 역학과 압력이 관련된 인물을 심문하는 롤플레잉입니다."
+    },
+    "fear_play": {
+      "label": "두려움 게임",
+      "tooltip": "성적 경험의 일부로 의도적으로 두려움을 유발하는 활동."
+    },
+    "egyptian": {
+      "label": "이집트 사람",
+      "tooltip": "파라오, 클레오파트라, 신, 신화 등 고대 이집트를 주제로 한 롤플레잉 시나리오입니다."
     }
   }
 }

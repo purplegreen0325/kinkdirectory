@@ -186,7 +186,7 @@
     "pain": "Pain",
     "medium": "Medium",
     "time_scale": "Time-Scale",
-    "role_play": "Role-Play"
+    "role_play": "Role play"
   },
   "subcategories": {
     "general": "General"
@@ -389,32 +389,32 @@
       "tooltip": "Limiting or eliminating sensory input, such as sight, hearing, or touch, to enhance other senses and deepen focus."
     },
     "armbinders": {
-      "label": "Armbinders",
-      "tooltip": "Special sleeves that fix the arms behind the back, causing complete immobilization of the arms."
+      "label": "Arm binders",
+      "tooltip": "Special tubes that fix the arms behind the back, causing complete immobilization of the arms."
     },
     "cages": {
       "label": "Cages",
-      "tooltip": "Being confined in a cage or cell as a form of bondage and power dynamic."
+      "tooltip": "Being locked in a cage or cell as a form of bondage and power dynamics."
     },
     "chains": {
       "label": "Chains",
-      "tooltip": "Being bound with chains, providing a unique heavy and cold sensation compared to other bondage materials."
+      "tooltip": "Being tied up with chains, which gives a unique heavy and cold sensation compared to other bondage materials."
     },
     "leather_cuffs": {
-      "label": "Leather cuffs",
-      "tooltip": "Handcuffs made of leather used for binding wrists or ankles."
+      "label": "Leather handcuffs",
+      "tooltip": "Handcuffs made of leather for binding wrists or ankles."
     },
     "metal_cuffs": {
-      "label": "Metal cuffs",
-      "tooltip": "Traditional metal handcuffs used for binding wrists or ankles."
+      "label": "Metal handcuffs",
+      "tooltip": "Traditional metal handcuffs used to bind wrists or ankles."
     },
     "gag_ball": {
-      "label": "Ball gag",
-      "tooltip": "A ball-shaped gag placed in the mouth and fastened behind the head."
+      "label": "Balgag",
+      "tooltip": "A ball-shaped gag that is placed in the mouth and secured behind the head."
     },
     "gag_ring": {
       "label": "Ring gag",
-      "tooltip": "A ring-shaped gag that keeps the mouth open, allowing access to the mouth while preventing speech."
+      "tooltip": "A ring-shaped gag that holds the mouth open, allowing access to the mouth while preventing speech."
     },
     "gag_tape": {
       "label": "Tape gag",
@@ -422,27 +422,27 @@
     },
     "hoods": {
       "label": "Hoods",
-      "tooltip": "Full head covering that can create a sense of anonymity, depersonalization, or sensory deprivation."
+      "tooltip": "Full head covering that can create a sense of anonymity, depersonalization or sensory deprivation."
     },
     "immobilisation": {
       "label": "Immobilization",
       "tooltip": "Complete restriction of movement through various bondage techniques."
     },
     "leather_restraints": {
-      "label": "Leather restraints",
-      "tooltip": "Various restraints made of leather, used for different forms of bondage."
+      "label": "Leather cuffs",
+      "tooltip": "Various cuffs made of leather, used for different forms of bondage."
     },
     "stocks": {
-      "label": "Stocks",
-      "tooltip": "Traditional medieval restraint device that holds the head and hands."
+      "label": "pillory",
+      "tooltip": "Traditional medieval restriction device that holds the head and hands."
     },
     "straight_jacket": {
-      "label": "Straight jacket",
-      "tooltip": "A special garment designed to immobilize the arms by binding them against the body."
+      "label": "Straitjacket",
+      "tooltip": "A special garment designed to immobilize the arms by binding them to the body."
     },
     "sleep_sack": {
-      "label": "Sleep sack",
-      "tooltip": "A special tight sack in which the entire body is confined, similar to mummification."
+      "label": "Sleeping bag",
+      "tooltip": "A special tight bag in which the entire body is enclosed, similar to mummification."
     },
     "dom_only_for_sub": {
       "label": "Dom-only for sub",
@@ -830,27 +830,27 @@
     },
     "face_slapping": {
       "label": "Face slapping",
-      "tooltip": "Slapping the face as a form of humiliation or arousal."
+      "tooltip": "The act of hitting someone in the face as a form of humiliation or excitement."
     },
     "punching": {
-      "label": "Punching",
-      "tooltip": "The use of fist strikes as a form of sexual stimulation."
+      "label": "Stumps",
+      "tooltip": "The use of fist bumps as a form of sexual stimulation."
     },
     "clamps_labia_clit": {
-      "label": "Clamps (labia/clit)",
-      "tooltip": "Using clamps on the labia or clitoris for pain-based stimulation."
+      "label": "Clamps (labia/clitoris)",
+      "tooltip": "The use of clamps on the labia or clitoris for pain stimulation."
     },
     "fire_play": {
-      "label": "Fire play",
-      "tooltip": "Use of fire or heat for sexual stimulation, often with fluids that burn briefly on skin."
+      "label": "Fire game",
+      "tooltip": "The use of fire or heat for sexual stimulation, often involving fluids that burn the skin for a short time."
     },
     "knife_play": {
-      "label": "Knife play",
-      "tooltip": "Using knives or sharp objects to create fear, arousal, or light pain, typically without actually breaking the skin."
+      "label": "Knife game",
+      "tooltip": "The use of knives or sharp objects to cause fear, excitement, or mild pain, usually without actually breaking the skin."
     },
     "needle_play": {
-      "label": "Needle play",
-      "tooltip": "Using needles inserted through the skin for sexual stimulation."
+      "label": "Needle game",
+      "tooltip": "The use of needles inserted through the skin for sexual stimulation."
     },
     "vampire_gloves": {
       "label": "Vampire gloves",
@@ -928,43 +928,43 @@
   "role_play": {
     "medical_scenes": {
       "label": "Medical scenes",
-      "tooltip": "Roleplaying involving medical procedures, examinations, and doctor-patient dynamics."
+      "tooltip": "Role-playing game in which medical procedures, examinations and doctor-patient dynamics are simulated."
     },
     "animal_roleplay": {
-      "label": "Animal roleplay",
-      "tooltip": "Roleplaying where a person mimics the behavior and mannerisms of an animal."
+      "label": "Animal role play",
+      "tooltip": "Role-playing game in which a person imitates the behavior and mannerisms of an animal."
     },
     "age_play": {
-      "label": "Age play",
-      "tooltip": "Roleplaying where participants pretend to be an age different from their actual age (all adults)."
+      "label": "Age game",
+      "tooltip": "Role-playing game in which participants pretend to be a different age than their actual age (all adults)."
     },
     "prison_scenes": {
       "label": "Prison scenes",
-      "tooltip": "Roleplaying around a prison setting, often with guard-prisoner dynamics."
+      "tooltip": "Role-playing around a prison setting, often with guard-prisoner dynamics."
     },
     "schoolroom_scenes": {
-      "label": "Schoolroom scenes",
-      "tooltip": "Roleplaying in a school environment, often with teacher-student dynamics."
+      "label": "Classroom scenes",
+      "tooltip": "Role-playing in a school environment, often with teacher-student dynamics."
     },
     "prostitution_fantasy": {
       "label": "Prostitution fantasy",
-      "tooltip": "Roleplaying where a person pretends to have sex in exchange for money or favors."
+      "tooltip": "Role-playing in which a person pretends to have sex in exchange for money or favors."
     },
     "religious_scenes": {
       "label": "Religious scenes",
-      "tooltip": "Roleplaying with religious elements or settings, such as confession or sin."
+      "tooltip": "Role-playing with religious elements or settings, such as confession or sin."
     },
     "interrogations": {
       "label": "Interrogations",
-      "tooltip": "Roleplaying where a person is interrogated, often with power dynamics and pressure."
+      "tooltip": "Role-playing in which a person is interrogated, often involving power dynamics and pressure."
     },
     "fear_play": {
-      "label": "Fear play",
-      "tooltip": "Activities that deliberately evoke fear as part of the sexual experience."
+      "label": "Fear game",
+      "tooltip": "Activities that deliberately induce fear as part of the sexual experience."
     },
     "egyptian": {
       "label": "Egyptian",
-      "tooltip": "Roleplaying scenarios with ancient Egyptian themes, such as pharaohs, Cleopatra, gods and mythology."
+      "tooltip": "Role-playing scenarios with ancient Egyptian themes, such as pharaohs, Cleopatra, gods and mythology."
     }
   }
 }

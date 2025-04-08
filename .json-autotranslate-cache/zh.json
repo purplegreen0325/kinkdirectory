@@ -182,7 +182,8 @@
     "misc_fetish": "各种恋物癖",
     "pain": "疼痛",
     "medium": "中等的",
-    "time_scale": "时间尺度"
+    "time_scale": "时间尺度",
+    "role_play": "角色扮演"
   },
   "subcategories": {
     "general": "一般的"
@@ -403,6 +404,62 @@
     "sensory_deprivation": {
       "label": "感觉剥夺",
       "tooltip": "限制或消除感官输入，例如视觉、听觉或触觉，以增强其他感官并加深注意力。"
+    },
+    "armbinders": {
+      "label": "臂部固定器",
+      "tooltip": "特殊的管子将手臂固定在背后，使手臂完全无法移动。"
+    },
+    "cages": {
+      "label": "笼子",
+      "tooltip": "被锁在笼子或牢房中，作为一种束缚和权力的形式。"
+    },
+    "chains": {
+      "label": "链条",
+      "tooltip": "被锁链捆绑，相比其他束缚物，具有独特的沉重、冰冷的感觉。"
+    },
+    "leather_cuffs": {
+      "label": "皮手铐",
+      "tooltip": "用皮革制成的用于束缚手腕或脚踝的手铐。"
+    },
+    "metal_cuffs": {
+      "label": "金属手铐",
+      "tooltip": "传统的金属手铐用于束缚手腕或脚踝。"
+    },
+    "gag_ball": {
+      "label": "巴尔加格",
+      "tooltip": "一个球形的口塞，放在嘴里并固定在头后。"
+    },
+    "gag_ring": {
+      "label": "口环",
+      "tooltip": "一种环形口塞，可将嘴巴撑开，使之能进入嘴巴但阻止说话。"
+    },
+    "gag_tape": {
+      "label": "胶带堵嘴",
+      "tooltip": "用来遮住嘴巴并阻止说话的胶带。"
+    },
+    "hoods": {
+      "label": "风帽",
+      "tooltip": "整个头部的覆盖可能会产生一种匿名感、非人性化感或感觉剥夺感。"
+    },
+    "immobilisation": {
+      "label": "固定",
+      "tooltip": "通过各种束缚技术完全限制行动。"
+    },
+    "leather_restraints": {
+      "label": "皮革袖口",
+      "tooltip": "由皮革制成的各种袖口，用于不同形式的束缚。"
+    },
+    "stocks": {
+      "label": "颈手枷",
+      "tooltip": "中世纪传统的限制装置，用于限制头部和手部。"
+    },
+    "straight_jacket": {
+      "label": "紧身衣",
+      "tooltip": "一种特殊的服装，旨在通过将手臂绑在身体上来固定手臂。"
+    },
+    "sleep_sack": {
+      "label": "睡袋",
+      "tooltip": "一种特殊的密封袋，将整个尸体包裹在其中，类似于木乃伊化。"
     }
   },
   "toys": {
@@ -771,6 +828,34 @@
     "snuff": {
       "label": "鼻烟",
       "tooltip": "杀死一个角色作为性行为的一部分。"
+    },
+    "face_slapping": {
+      "label": "打耳光",
+      "tooltip": "为表示羞辱或兴奋而打某人脸的行为。"
+    },
+    "punching": {
+      "label": "树桩",
+      "tooltip": "使用拳头碰撞作为性刺激的一种形式。"
+    },
+    "clamps_labia_clit": {
+      "label": "夹子（阴唇/阴蒂）",
+      "tooltip": "使用夹子夹住阴唇或阴蒂以产生疼痛刺激。"
+    },
+    "fire_play": {
+      "label": "火游戏",
+      "tooltip": "使用火或热进行性刺激，通常使用短时间灼伤皮肤的液体。"
+    },
+    "knife_play": {
+      "label": "刀子游戏",
+      "tooltip": "使用刀具或尖锐物体引起恐惧、刺激或轻微疼痛，通常不会真正破损皮肤。"
+    },
+    "needle_play": {
+      "label": "针游戏",
+      "tooltip": "使用针头插入皮肤进行性刺激。"
+    },
+    "vampire_gloves": {
+      "label": "吸血鬼手套",
+      "tooltip": "特殊的手套带有小金属钉，触摸时会刺破皮肤。"
     }
   },
   "medium": {
@@ -839,6 +924,48 @@
     "occasional_replies": {
       "label": "偶然的答案",
       "tooltip": "24 小时后才会给出答案。"
+    }
+  },
+  "role_play": {
+    "medical_scenes": {
+      "label": "医疗场景",
+      "tooltip": "角色扮演游戏，模拟医疗程序、检查和医患关系。"
+    },
+    "animal_roleplay": {
+      "label": "动物角色扮演",
+      "tooltip": "角色扮演游戏中，玩家模仿动物的行为和举止。"
+    },
+    "age_play": {
+      "label": "年龄游戏",
+      "tooltip": "角色扮演游戏，参与者假装年龄与实际年龄不同（全部为成年人）。"
+    },
+    "prison_scenes": {
+      "label": "监狱场景",
+      "tooltip": "围绕监狱环境进行角色扮演，通常涉及狱警与囚犯之间的动态。"
+    },
+    "schoolroom_scenes": {
+      "label": "课堂场景",
+      "tooltip": "在学校环境中进行角色扮演，通常涉及师生互动。"
+    },
+    "prostitution_fantasy": {
+      "label": "卖淫幻想",
+      "tooltip": "角色扮演，其中一个人假装发生性关系以换取金钱或好处。"
+    },
+    "religious_scenes": {
+      "label": "宗教场景",
+      "tooltip": "具有宗教元素或背景的角色扮演，例如忏悔或罪孽。"
+    },
+    "interrogations": {
+      "label": "审讯",
+      "tooltip": "角色扮演中对一个人进行审问，通常涉及权力动态和压力。"
+    },
+    "fear_play": {
+      "label": "恐惧游戏",
+      "tooltip": "在性体验中故意引发恐惧的活动。"
+    },
+    "egyptian": {
+      "label": "埃及人",
+      "tooltip": "具有古埃及主题的角色扮演场景，例如法老、埃及艳后、众神和神话。"
     }
   }
 }

@@ -182,7 +182,8 @@
     "misc_fetish": "Verschiedene Fetische",
     "pain": "Schmerz",
     "medium": "Medium",
-    "time_scale": "Zeitskala"
+    "time_scale": "Zeitskala",
+    "role_play": "Rollenspiel"
   },
   "subcategories": {
     "general": "Allgemein"
@@ -403,6 +404,62 @@
     "sensory_deprivation": {
       "label": "Sensorische Deprivation",
       "tooltip": "Begrenzung oder Eliminierung von Sinneseindrücken wie Sehen, Hören oder Tasten, um andere Sinne zu schärfen und die Konzentration zu vertiefen."
+    },
+    "armbinders": {
+      "label": "Armbinder",
+      "tooltip": "Spezielle Schläuche fixieren die Arme hinter dem Rücken und bewirken so eine vollständige Ruhigstellung der Arme."
+    },
+    "cages": {
+      "label": "Käfige",
+      "tooltip": "In einem Käfig oder einer Zelle eingesperrt zu sein, ist eine Form der Knechtschaft und Machtdynamik."
+    },
+    "chains": {
+      "label": "Ketten",
+      "tooltip": "Mit Ketten gefesselt zu sein, vermittelt im Vergleich zu anderen Bondage-Materialien ein einzigartiges schweres und kaltes Gefühl."
+    },
+    "leather_cuffs": {
+      "label": "Lederhandschellen",
+      "tooltip": "Handschellen aus Leder zum Fesseln von Handgelenken oder Knöcheln."
+    },
+    "metal_cuffs": {
+      "label": "Metallhandschellen",
+      "tooltip": "Traditionelle Handschellen aus Metall zum Fesseln von Handgelenken oder Knöcheln."
+    },
+    "gag_ball": {
+      "label": "Balgag",
+      "tooltip": "Ein kugelförmiger Knebel, der in den Mund eingeführt und hinter dem Kopf befestigt wird."
+    },
+    "gag_ring": {
+      "label": "Ringknebel",
+      "tooltip": "Ein ringförmiger Knebel, der den Mund offen hält und so den Zugang zum Mund ermöglicht, das Sprechen jedoch verhindert."
+    },
+    "gag_tape": {
+      "label": "Klebebandknebel",
+      "tooltip": "Klebeband, das den Mund bedeckt und das Sprechen verhindert."
+    },
+    "hoods": {
+      "label": "Hauben",
+      "tooltip": "Vollständige Kopfbedeckung, die ein Gefühl der Anonymität, Entpersonalisierung oder sensorischen Deprivation erzeugen kann."
+    },
+    "immobilisation": {
+      "label": "Immobilisierung",
+      "tooltip": "Vollständige Bewegungseinschränkung durch verschiedene Fesseltechniken."
+    },
+    "leather_restraints": {
+      "label": "Ledermanschetten",
+      "tooltip": "Verschiedene Fesseln aus Leder, die für unterschiedliche Formen der Fesselung verwendet werden."
+    },
+    "stocks": {
+      "label": "Pranger",
+      "tooltip": "Traditionelles mittelalterliches Fesselgerät, das Kopf und Hände festhält."
+    },
+    "straight_jacket": {
+      "label": "Zwangsjacke",
+      "tooltip": "Ein spezielles Kleidungsstück, das die Arme durch Festbinden am Körper ruhigstellt."
+    },
+    "sleep_sack": {
+      "label": "Schlafsack",
+      "tooltip": "Ein spezieller, enger Sack, in dem der gesamte Körper eingeschlossen ist, ähnlich einer Mumifizierung."
     }
   },
   "toys": {
@@ -771,6 +828,34 @@
     "snuff": {
       "label": "Schnupftabak",
       "tooltip": "Das Töten einer Figur als Teil von Sex."
+    },
+    "face_slapping": {
+      "label": "Ohrfeigen",
+      "tooltip": "Der Akt, jemandem als Form der Demütigung oder Erregung ins Gesicht zu schlagen."
+    },
+    "punching": {
+      "label": "Stümpfe",
+      "tooltip": "Die Verwendung von Fauststößen als Form der sexuellen Stimulation."
+    },
+    "clamps_labia_clit": {
+      "label": "Klammern (Schamlippen/Klitoris)",
+      "tooltip": "Die Verwendung von Klammern an den Schamlippen oder der Klitoris zur Schmerzstimulation."
+    },
+    "fire_play": {
+      "label": "Feuerspiel",
+      "tooltip": "Die Verwendung von Feuer oder Hitze zur sexuellen Stimulation, oft im Zusammenhang mit Flüssigkeiten, die die Haut für kurze Zeit verbrennen."
+    },
+    "knife_play": {
+      "label": "Messerspiel",
+      "tooltip": "Die Verwendung von Messern oder scharfen Gegenständen, um Angst, Aufregung oder leichte Schmerzen zu verursachen, normalerweise ohne die Haut tatsächlich zu verletzen."
+    },
+    "needle_play": {
+      "label": "Nadelspiel",
+      "tooltip": "Die Verwendung von Nadeln, die zur sexuellen Stimulation durch die Haut eingeführt werden."
+    },
+    "vampire_gloves": {
+      "label": "Vampirhandschuhe",
+      "tooltip": "Spezialhandschuhe mit kleinen Metallstacheln, die bei Berührung in die Haut stechen."
     }
   },
   "medium": {
@@ -839,6 +924,48 @@
     "occasional_replies": {
       "label": "Zufällige Antworten",
       "tooltip": "Antworten, die nach mehr als 24 Stunden kommen."
+    }
+  },
+  "role_play": {
+    "medical_scenes": {
+      "label": "Medizinische Szenen",
+      "tooltip": "Rollenspiel, in dem medizinische Eingriffe, Untersuchungen und Arzt-Patienten-Dynamik simuliert werden."
+    },
+    "animal_roleplay": {
+      "label": "Tierrollenspiel",
+      "tooltip": "Rollenspiel, bei dem eine Person das Verhalten und die Eigenarten eines Tieres nachahmt."
+    },
+    "age_play": {
+      "label": "Altersspiel",
+      "tooltip": "Rollenspiel, bei dem die Teilnehmer so tun, als wären sie in einem anderen Alter als ihrem tatsächlichen Alter (alles Erwachsene)."
+    },
+    "prison_scenes": {
+      "label": "Gefängnisszenen",
+      "tooltip": "Rollenspiele im Gefängnisumfeld, oft mit Dynamiken zwischen Wärtern und Gefangenen."
+    },
+    "schoolroom_scenes": {
+      "label": "Szenen im Klassenzimmer",
+      "tooltip": "Rollenspiele in einer Schulumgebung, oft mit Lehrer-Schüler-Dynamik."
+    },
+    "prostitution_fantasy": {
+      "label": "Prostitutionsfantasie",
+      "tooltip": "Rollenspiel, bei dem eine Person vorgibt, Sex zu haben und dafür Geld oder Gefälligkeiten erhält."
+    },
+    "religious_scenes": {
+      "label": "Religiöse Szenen",
+      "tooltip": "Rollenspiele mit religiösen Elementen oder Settings, wie etwa Beichte oder Sünde."
+    },
+    "interrogations": {
+      "label": "Verhöre",
+      "tooltip": "Rollenspiel, bei dem eine Person verhört wird, oft im Zusammenhang mit Machtdynamiken und Druck."
+    },
+    "fear_play": {
+      "label": "Angstspiel",
+      "tooltip": "Aktivitäten, die als Teil des sexuellen Erlebnisses absichtlich Angst erzeugen."
+    },
+    "egyptian": {
+      "label": "ägyptisch",
+      "tooltip": "Rollenspielszenarien mit altägyptischen Themen wie Pharaonen, Kleopatra, Götter und Mythologie."
     }
   }
 }

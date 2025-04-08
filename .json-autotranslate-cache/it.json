@@ -182,7 +182,8 @@
     "misc_fetish": "Vari feticci",
     "pain": "Dolore",
     "medium": "Medio",
-    "time_scale": "Scala temporale"
+    "time_scale": "Scala temporale",
+    "role_play": "Gioco di ruolo"
   },
   "subcategories": {
     "general": "Generale"
@@ -403,6 +404,62 @@
     "sensory_deprivation": {
       "label": "Deprivazione sensoriale",
       "tooltip": "Limitare o eliminare gli input sensoriali, come la vista, l'udito o il tatto, per potenziare gli altri sensi e aumentare la concentrazione."
+    },
+    "armbinders": {
+      "label": "Fasce per le braccia",
+      "tooltip": "Tubi speciali che fissano le braccia dietro la schiena, provocandone la completa immobilizzazione."
+    },
+    "cages": {
+      "label": "Gabbie",
+      "tooltip": "Essere rinchiusi in una gabbia o in una cella come forma di schiavitù e di dinamiche di potere."
+    },
+    "chains": {
+      "label": "Catene",
+      "tooltip": "Essere legati con catene, che danno una sensazione di pesantezza e freddo unica rispetto ad altri materiali di bondage."
+    },
+    "leather_cuffs": {
+      "label": "Manette in pelle",
+      "tooltip": "Manette in cuoio per legare i polsi o le caviglie."
+    },
+    "metal_cuffs": {
+      "label": "Manette di metallo",
+      "tooltip": "Tradizionali manette metalliche usate per legare i polsi o le caviglie."
+    },
+    "gag_ball": {
+      "label": "Balgag",
+      "tooltip": "Un bavaglio a forma di palla che viene inserito nella bocca e fissato dietro la testa."
+    },
+    "gag_ring": {
+      "label": "Bavaglio ad anello",
+      "tooltip": "Un bavaglio a forma di anello che tiene la bocca aperta, consentendo l'accesso alla bocca ma impedendo di parlare."
+    },
+    "gag_tape": {
+      "label": "Bavaglio con nastro adesivo",
+      "tooltip": "Nastro adesivo utilizzato per coprire la bocca e impedire di parlare."
+    },
+    "hoods": {
+      "label": "Cappe",
+      "tooltip": "Copricapo completo che può creare un senso di anonimato, depersonalizzazione o deprivazione sensoriale."
+    },
+    "immobilisation": {
+      "label": "Immobilizzazione",
+      "tooltip": "Limitazione totale dei movimenti attraverso varie tecniche di bondage."
+    },
+    "leather_restraints": {
+      "label": "Polsini in pelle",
+      "tooltip": "Varie manette in pelle, utilizzate per diverse forme di bondage."
+    },
+    "stocks": {
+      "label": "gogna",
+      "tooltip": "Dispositivo di restrizione tradizionale medievale che trattiene la testa e le mani."
+    },
+    "straight_jacket": {
+      "label": "Camicia di forza",
+      "tooltip": "Un indumento speciale studiato per immobilizzare le braccia legandole al corpo."
+    },
+    "sleep_sack": {
+      "label": "Sacco a pelo",
+      "tooltip": "Uno speciale sacco ermetico in cui è racchiuso l'intero corpo, simile alla mummificazione."
     }
   },
   "toys": {
@@ -771,6 +828,34 @@
     "snuff": {
       "label": "Tabacco da fiuto",
       "tooltip": "Uccidere un personaggio come parte di un rapporto sessuale."
+    },
+    "face_slapping": {
+      "label": "Schiaffi in faccia",
+      "tooltip": "L'atto di colpire qualcuno in faccia come forma di umiliazione o eccitazione."
+    },
+    "punching": {
+      "label": "Ceppi",
+      "tooltip": "L'uso del pugno chiuso come forma di stimolazione sessuale."
+    },
+    "clamps_labia_clit": {
+      "label": "Morsetti (labbra/clitoride)",
+      "tooltip": "L'uso di pinze sulle labbra o sul clitoride per stimolare il dolore."
+    },
+    "fire_play": {
+      "label": "Gioco del fuoco",
+      "tooltip": "L'uso del fuoco o del calore per la stimolazione sessuale, spesso tramite fluidi che bruciano la pelle per un breve periodo di tempo."
+    },
+    "knife_play": {
+      "label": "Gioco del coltello",
+      "tooltip": "L'uso di coltelli o oggetti affilati per provocare paura, eccitazione o lieve dolore, solitamente senza effettivamente rompere la pelle."
+    },
+    "needle_play": {
+      "label": "Gioco dell'ago",
+      "tooltip": "L'uso di aghi inseriti attraverso la pelle per la stimolazione sessuale."
+    },
+    "vampire_gloves": {
+      "label": "Guanti da vampiro",
+      "tooltip": "Guanti speciali dotati di piccole punte metalliche che pungono la pelle quando vengono toccate."
     }
   },
   "medium": {
@@ -839,6 +924,48 @@
     "occasional_replies": {
       "label": "Risposte incidentali",
       "tooltip": "Risposte che arrivano dopo 24+ ore."
+    }
+  },
+  "role_play": {
+    "medical_scenes": {
+      "label": "Scene mediche",
+      "tooltip": "Gioco di ruolo in cui vengono simulate procedure mediche, esami e dinamiche medico-paziente."
+    },
+    "animal_roleplay": {
+      "label": "Gioco di ruolo con gli animali",
+      "tooltip": "Gioco di ruolo in cui un personaggio imita il comportamento e i manierismi di un animale."
+    },
+    "age_play": {
+      "label": "Gioco dell'età",
+      "tooltip": "Gioco di ruolo in cui i partecipanti fingono di avere un'età diversa da quella reale (tutti adulti)."
+    },
+    "prison_scenes": {
+      "label": "Scene di prigione",
+      "tooltip": "Gioco di ruolo ambientato in una prigione, spesso con dinamiche guardia-prigioniero."
+    },
+    "schoolroom_scenes": {
+      "label": "Scene di classe",
+      "tooltip": "Gioco di ruolo in ambito scolastico, spesso con dinamiche insegnante-studente."
+    },
+    "prostitution_fantasy": {
+      "label": "Fantasia di prostituzione",
+      "tooltip": "Gioco di ruolo in cui una persona finge di fare sesso in cambio di denaro o favori."
+    },
+    "religious_scenes": {
+      "label": "Scene religiose",
+      "tooltip": "Giochi di ruolo con elementi o contesti religiosi, come la confessione o il peccato."
+    },
+    "interrogations": {
+      "label": "Interrogatori",
+      "tooltip": "Gioco di ruolo in cui una persona viene interrogata, spesso implicando dinamiche di potere e pressione."
+    },
+    "fear_play": {
+      "label": "Gioco della paura",
+      "tooltip": "Attività che inducono deliberatamente la paura come parte dell'esperienza sessuale."
+    },
+    "egyptian": {
+      "label": "egiziano",
+      "tooltip": "Scenari di gioco di ruolo con temi dell'antico Egitto, come faraoni, Cleopatra, dei e mitologia."
     }
   }
 }
