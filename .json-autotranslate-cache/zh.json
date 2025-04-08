@@ -145,7 +145,12 @@
     "only_new_items": "仅限新品",
     "showing_only_new_items": "仅显示新商品",
     "no_new_items_found": "使用当前过滤器未找到任何新项目",
-    "clear_filters": "清除筛选器"
+    "clear_filters": "清除筛选器",
+    "only_unfilled_items": "仅限未完成的项目",
+    "showing_only_unfilled_items": "仅显示未完成的项目",
+    "no_unfilled_items_found": "当前过滤器未找到未填充的项目",
+    "no_results_with_filters": "没有符合所有活动过滤器的项目",
+    "and": "和"
   },
   "roles": {
     "sub": "顺从",

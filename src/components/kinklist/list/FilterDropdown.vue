@@ -26,8 +26,8 @@ const checkboxUi = {
       <div class="flex items-center gap-1.5">
         <UIcon name="i-lucide-filter" class="text-gray-600 dark:text-gray-400 flex-shrink-0 text-sm" />
         <span class="text-sm font-medium">{{ t('app.filter') }}</span>
-        <UBadge v-if="filters.showOnlyNew" size="sm" color="primary" class="ml-1">
-          1
+        <UBadge v-if="filters.showOnlyNew || filters.showOnlyUnfilled" size="sm" color="primary" class="ml-1">
+          {{ (filters.showOnlyNew ? 1 : 0) + (filters.showOnlyUnfilled ? 1 : 0) }}
         </UBadge>
       </div>
     </button>
@@ -40,12 +40,19 @@ const checkboxUi = {
         </div>
         <div class="space-y-2">
           <div class="flex items-center !cursor-pointer">
-          <UCheckbox
-            v-model="filters.showOnlyNew"
-            :label="t('app.only_new_items')"
-            :ui="checkboxUi"
-          />
-        </div>
+            <UCheckbox
+              v-model="filters.showOnlyNew"
+              :label="t('app.only_new_items')"
+              :ui="checkboxUi"
+            />
+          </div>
+          <div class="flex items-center !cursor-pointer">
+            <UCheckbox
+              v-model="filters.showOnlyUnfilled"
+              :label="t('app.only_unfilled_items')"
+              :ui="checkboxUi"
+            />
+          </div>
         </div>
       </div>
     </template>

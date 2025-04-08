@@ -145,7 +145,12 @@
     "only_new_items": "Solo nuovi articoli",
     "showing_only_new_items": "Vengono visualizzati solo i nuovi elementi",
     "no_new_items_found": "Nessun nuovo elemento trovato con i filtri correnti",
-    "clear_filters": "Cancella filtri"
+    "clear_filters": "Cancella filtri",
+    "only_unfilled_items": "Solo elementi incompleti",
+    "showing_only_unfilled_items": "Vengono visualizzati solo gli elementi non completati",
+    "no_unfilled_items_found": "Nessun elemento non compilato trovato con i filtri correnti",
+    "no_results_with_filters": "Nessun elemento corrisponde a tutti i filtri attivi",
+    "and": "E"
   },
   "roles": {
     "sub": "Sottomesso",

@@ -143,9 +143,14 @@
     "filter": "Filter",
     "filter_options": "Filter opties",
     "only_new_items": "Alleen nieuwe items",
+    "only_unfilled_items": "Alleen niet-ingevulde items",
     "showing_only_new_items": "Alleen nieuwe items worden weergegeven",
+    "showing_only_unfilled_items": "Alleen niet-ingevulde items worden weergegeven",
     "no_new_items_found": "Geen nieuwe items gevonden met huidige filters",
-    "clear_filters": "Filters wissen"
+    "no_unfilled_items_found": "Geen niet-ingevulde items gevonden met huidige filters",
+    "no_results_with_filters": "Geen items voldoen aan alle actieve filters",
+    "clear_filters": "Filters wissen",
+    "and": "en"
   },
   "roles": {
     "sub": "Onderdanig",

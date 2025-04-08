@@ -145,7 +145,12 @@
     "only_new_items": "新着商品のみ",
     "showing_only_new_items": "新しいアイテムのみが表示されます",
     "no_new_items_found": "現在のフィルターでは新しいアイテムは見つかりません",
-    "clear_filters": "フィルターをクリア"
+    "clear_filters": "フィルターをクリア",
+    "only_unfilled_items": "未完了の項目のみ",
+    "showing_only_unfilled_items": "未完了の項目のみが表示されます",
+    "no_unfilled_items_found": "現在のフィルターでは未入力の項目は見つかりません",
+    "no_results_with_filters": "すべてのアクティブなフィルターに一致するアイテムはありません",
+    "and": "そして"
   },
   "roles": {
     "sub": "従順な",

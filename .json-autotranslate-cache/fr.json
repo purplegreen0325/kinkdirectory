@@ -145,7 +145,12 @@
     "only_new_items": "Nouveaux articles uniquement",
     "showing_only_new_items": "Seuls les nouveaux éléments sont affichés",
     "no_new_items_found": "Aucun nouvel élément trouvé avec les filtres actuels",
-    "clear_filters": "Effacer les filtres"
+    "clear_filters": "Effacer les filtres",
+    "only_unfilled_items": "Uniquement les éléments inachevés",
+    "showing_only_unfilled_items": "Seuls les éléments non terminés sont affichés",
+    "no_unfilled_items_found": "Aucun élément non rempli trouvé avec les filtres actuels",
+    "no_results_with_filters": "Aucun élément ne correspond à tous les filtres actifs",
+    "and": "et"
   },
   "roles": {
     "sub": "Soumis",

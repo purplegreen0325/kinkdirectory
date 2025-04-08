@@ -25,23 +25,28 @@ const visibleCategories = computed(() => {
 
 <template>
   <div>
-    <!-- Filter notice when filters are active -->
-    <div v-if="filters.showOnlyNew" class="mb-4 p-2 bg-yellow-50 dark:bg-yellow-950 border border-yellow-200 dark:border-yellow-800 rounded-md text-sm">
-      <div class="flex items-center">
-        <UIcon name="i-lucide-filter" class="text-yellow-500 mr-2" />
-        <span>{{ t('app.showing_only_new_items') }}</span>
-      </div>
-    </div>
+    <!-- Combined filter notice when any filters are active -->
 
     <!-- List content for screenshot -->
     <div id="kink-list-content" class="max-w-full overflow-x-hidden p-0">
       <!-- Empty state when filters return no results -->
-      <div v-if="visibleCategories.length === 0 && filters.showOnlyNew" class="text-center py-8">
+      <div v-if="visibleCategories.length === 0 && (filters.showOnlyNew || filters.showOnlyUnfilled)" class="text-center py-8">
         <UIcon name="i-lucide-filter-x" class="text-4xl text-gray-400 dark:text-gray-600 mx-auto mb-2" />
         <p class="text-gray-500 dark:text-gray-400">
-          {{ t('app.no_new_items_found') }}
+          <template v-if="filters.showOnlyNew && filters.showOnlyUnfilled">
+            {{ t('app.no_results_with_filters') }}
+          </template>
+          <template v-else-if="filters.showOnlyNew">
+            {{ t('app.no_new_items_found') }}
+          </template>
+          <template v-else-if="filters.showOnlyUnfilled">
+            {{ t('app.no_unfilled_items_found') }}
+          </template>
         </p>
-        <UButton size="sm" color="neutral" class="mt-4" @click="() => { filters.showOnlyNew = false }">
+        <UButton size="sm" color="neutral" class="mt-4" @click="() => { 
+          filters.showOnlyNew = false; 
+          filters.showOnlyUnfilled = false; 
+        }">
           {{ t('app.clear_filters') }}
         </UButton>
       </div>

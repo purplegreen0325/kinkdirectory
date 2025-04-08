@@ -143,9 +143,14 @@
     "filter": "Filter",
     "filter_options": "Filter options",
     "only_new_items": "New items only",
+    "only_unfilled_items": "Only uncompleted items",
     "showing_only_new_items": "Only new items are displayed",
+    "showing_only_unfilled_items": "Only uncompleted items are displayed",
     "no_new_items_found": "No new items found with current filters",
-    "clear_filters": "Clear Filters"
+    "no_unfilled_items_found": "No unfilled items found with current filters",
+    "no_results_with_filters": "No items match all active filters",
+    "clear_filters": "Clear Filters",
+    "and": "and"
   },
   "roles": {
     "sub": "Submissive",

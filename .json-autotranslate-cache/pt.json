@@ -145,7 +145,12 @@
     "only_new_items": "Somente itens novos",
     "showing_only_new_items": "Somente novos itens são exibidos",
     "no_new_items_found": "Nenhum item novo encontrado com os filtros atuais",
-    "clear_filters": "Limpar filtros"
+    "clear_filters": "Limpar filtros",
+    "only_unfilled_items": "Apenas itens incompletos",
+    "showing_only_unfilled_items": "Somente itens incompletos são exibidos",
+    "no_unfilled_items_found": "Nenhum item não preenchido encontrado com os filtros atuais",
+    "no_results_with_filters": "Nenhum item corresponde a todos os filtros ativos",
+    "and": "e"
   },
   "roles": {
     "sub": "Submisso",

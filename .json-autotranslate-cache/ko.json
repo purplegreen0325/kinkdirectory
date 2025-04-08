@@ -145,7 +145,12 @@
     "only_new_items": "새로운 아이템만",
     "showing_only_new_items": "새로운 항목만 표시됩니다",
     "no_new_items_found": "현재 필터로 새로운 항목을 찾을 수 없습니다.",
-    "clear_filters": "필터 지우기"
+    "clear_filters": "필터 지우기",
+    "only_unfilled_items": "완료되지 않은 항목만",
+    "showing_only_unfilled_items": "완료되지 않은 항목만 표시됩니다.",
+    "no_unfilled_items_found": "현재 필터로 채워지지 않은 항목을 찾을 수 없습니다.",
+    "no_results_with_filters": "모든 활성 필터와 일치하는 항목이 없습니다.",
+    "and": "그리고"
   },
   "roles": {
     "sub": "복종적인",

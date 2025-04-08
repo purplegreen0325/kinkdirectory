@@ -30,8 +30,9 @@ export const useKinkListState = createGlobalState(() => {
   const kinkLists = useStorage<KinkList[]>('kinklist-lists', [])
 
   // Filter settings storage
-  const filters = useStorage('kinklist-filters', {
+  const filters = useStorage('kinklist-filters-1.0.0', {
     showOnlyNew: false,
+    showOnlyUnfilled: false,
   })
 
   // Run migrations if needed
@@ -570,13 +571,32 @@ export const useKinkListState = createGlobalState(() => {
 
   // Check if a kink should be shown based on applied filters
   function shouldShowKink(kink: KinkDefinition): boolean {
-    // Apply "only new" filter if enabled
-    if (filters.value.showOnlyNew) {
-      return !!kink.addedAt && kink.addedAt > twoDaysAgo
+    // No active filters means show everything
+    if (!filters.value.showOnlyNew && !filters.value.showOnlyUnfilled) {
+      return true
     }
 
-    // No filters or doesn't match any filters
-    return true
+    let shouldShow = true;
+    
+    // Apply "only new" filter if enabled
+    if (filters.value.showOnlyNew) {
+      shouldShow = shouldShow && (!!kink.addedAt && kink.addedAt > twoDaysAgo)
+    }
+
+    // Apply "only unfilled" filter if enabled
+    if (filters.value.showOnlyUnfilled && activeList.value) {
+      // Get the positions for this kink
+      const positions = getKinkPositions(kink, activeList.value.role)
+      
+      // Check if any positions are unfilled (rating = 0)
+      const hasUnfilledPositions = positions.some(position => 
+        getKinkChoice(kink, position) === 0
+      )
+      
+      shouldShow = shouldShow && hasUnfilledPositions
+    }
+
+    return shouldShow
   }
 
   return {

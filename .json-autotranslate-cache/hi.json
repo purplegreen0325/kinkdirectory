@@ -145,7 +145,12 @@
     "only_new_items": "केवल नए आइटम",
     "showing_only_new_items": "केवल नए आइटम ही प्रदर्शित किए जाते हैं",
     "no_new_items_found": "वर्तमान फ़िल्टर से कोई नया आइटम नहीं मिला",
-    "clear_filters": "फ़िल्टर साफ़ करें"
+    "clear_filters": "फ़िल्टर साफ़ करें",
+    "only_unfilled_items": "केवल अधूरे आइटम",
+    "showing_only_unfilled_items": "केवल अधूरे आइटम ही प्रदर्शित किए जाते हैं",
+    "no_unfilled_items_found": "वर्तमान फ़िल्टर के साथ कोई खाली आइटम नहीं मिला",
+    "no_results_with_filters": "कोई भी आइटम सभी सक्रिय फ़िल्टर से मेल नहीं खाता",
+    "and": "और"
   },
   "roles": {
     "sub": "विनम्र",

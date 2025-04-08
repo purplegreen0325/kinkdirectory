@@ -145,7 +145,12 @@
     "only_new_items": "Nur Neuware",
     "showing_only_new_items": "Es werden nur neue Artikel angezeigt",
     "no_new_items_found": "Mit den aktuellen Filtern wurden keine neuen Artikel gefunden",
-    "clear_filters": "Filter löschen"
+    "clear_filters": "Filter löschen",
+    "only_unfilled_items": "Nur nicht abgeschlossene Elemente",
+    "showing_only_unfilled_items": "Es werden nur noch nicht abgeschlossene Aufgaben angezeigt",
+    "no_unfilled_items_found": "Mit den aktuellen Filtern wurden keine nicht ausgefüllten Artikel gefunden",
+    "no_results_with_filters": "Keine Elemente entsprechen allen aktiven Filtern",
+    "and": "Und"
   },
   "roles": {
     "sub": "Unterwürfig",

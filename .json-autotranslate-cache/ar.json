@@ -145,7 +145,12 @@
     "only_new_items": "العناصر الجديدة فقط",
     "showing_only_new_items": "يتم عرض العناصر الجديدة فقط",
     "no_new_items_found": "لم يتم العثور على عناصر جديدة باستخدام المرشحات الحالية",
-    "clear_filters": "مسح المرشحات"
+    "clear_filters": "مسح المرشحات",
+    "only_unfilled_items": "العناصر غير المكتملة فقط",
+    "showing_only_unfilled_items": "يتم عرض العناصر غير المكتملة فقط",
+    "no_unfilled_items_found": "لم يتم العثور على أي عناصر غير مكتملة باستخدام المرشحات الحالية",
+    "no_results_with_filters": "لا توجد عناصر تطابق جميع المرشحات النشطة",
+    "and": "و"
   },
   "roles": {
     "sub": "مطيع",
