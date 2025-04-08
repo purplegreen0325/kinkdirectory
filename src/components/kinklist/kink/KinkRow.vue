@@ -158,7 +158,11 @@ const showLeftColumn = computed(() => {
 <template>
   <KinkRowLayout :is-last-item="isLastItem">
     <template #label>
-      <KinkLabel :label="t(labelPath)" :tooltip="t(tooltipPath)" />
+      <KinkLabel
+        :label="t(labelPath)"
+        :tooltip="t(tooltipPath)"
+        :added-at="kink.addedAt"
+      />
     </template>
 
     <template #choices>
