@@ -1999,6 +1999,26 @@ export const kinkList: KinkCategory[] = [
       },
 
       {
+        id: 'double_penetration',
+        format: 'role_specific',
+        addedAt: 1744129147,
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 298,
+      },
+
+      {
         id: 'gangbang',
         format: 'general',
         key: 92,

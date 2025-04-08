@@ -765,6 +765,10 @@
     "shaving": {
       "label": "Rasur",
       "tooltip": "Die Entfernung von Körperhaaren im sexuellen Kontext."
+    },
+    "double_penetration": {
+      "label": "Doppelte Penetration",
+      "tooltip": "Penetration von 2 Dildos oder Penissen gleichzeitig."
     }
   },
   "pain": {

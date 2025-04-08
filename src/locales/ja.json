@@ -765,6 +765,10 @@
     "shaving": {
       "label": "剃る",
       "tooltip": "性的な状況で体毛を除去すること。"
+    },
+    "double_penetration": {
+      "label": "ダブル挿入",
+      "tooltip": "2 本のディルドまたはペニスを同時に挿入します。"
     }
   },
   "pain": {
