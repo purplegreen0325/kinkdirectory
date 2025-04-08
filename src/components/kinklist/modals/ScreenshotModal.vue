@@ -161,6 +161,7 @@ function uploadToImgur() {
 
 function handleCancel() {
   emit('resolve', false)
+  emit('close')
 }
 </script>
 
