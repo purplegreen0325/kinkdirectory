@@ -75,6 +75,5 @@ We're constantly working to improve Kink Directory. Here are some features we're
 
 - 🔍 **More kinks** - Expanding our list of kinks and preferences for a more comprehensive experience
 - 🔄 **Compare lists** - Ability to compare your preferences with a partner to quickly identify common interests and boundaries
-- ⏪ **Back button in quiz** - Navigate backwards in quiz mode to review and modify previous answers
 - 🔀 **Customizable checkbox order** - Option to change checkbox direction from left to right (favorite → limit) or right to left (limit → favorite)
 - 🏷️ **Category filtering** - Toggle kinks based on categories (e.g., IRL practicality, intensity levels, or activity types)
