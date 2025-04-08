@@ -7,16 +7,11 @@
   },
   "github": {
     "release": true,
-    "releaseName": "Release v${version}"
+    "releaseName": "Release v${version}",
+    "releaseNotes": null
   },
   "npm": {
     "publish": false
-  },
-  "plugins": {
-    "@release-it/conventional-changelog": {
-      "preset": "angular",
-      "infile": "CHANGELOG.md"
-    }
   },
   "hooks": {
     "after:bump": ["npm run build"]
