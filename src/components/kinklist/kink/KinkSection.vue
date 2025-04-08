@@ -43,7 +43,7 @@ const columnLabels = computed(() => {
 
   if (activeList.value.role === 'both') {
     return {
-      left: t('app.for_sub'), // dom partner perspective
+      left: t('app.as_dom'), // dom partner perspective
       right: t('app.as_sub'), // sub self perspective
     }
   }
