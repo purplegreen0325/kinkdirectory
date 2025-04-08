@@ -316,10 +316,10 @@ function getKinkLabel(): string {
           <div class="flex flex-col space-y-1 flex-grow">
             <div v-for="rating in allValues" :key="rating" class="w-full">
               <button
-                class="w-full py-2 px-4 text-left rounded-md flex items-center justify-between transition-colors duration-150 active:bg-gray-200 dark:active:bg-gray-700"
+                class="w-full py-2 px-4 text-left rounded-md flex items-center justify-between transition-colors duration-150 hover:bg-gray-100 dark:hover:bg-gray-800"
                 :class="[
                   currentValue === rating
-                    ? `bg-gray-100 dark:bg-gray-800 font-medium ${textColorClasses[rating]} outline outline-1 outline-current`
+                    ? `bg-gray-100 dark:bg-gray-800 font-medium ${textColorClasses[rating]} outline outline-2 outline-current`
                     : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
                 ]"
                 :data-rating="rating"
@@ -393,5 +393,10 @@ function getKinkLabel(): string {
 .fade-leave-to {
   opacity: 0;
   transform: translateY(-10px);
+}
+
+/* Prevent mobile zoom on quick taps */
+button {
+  touch-action: manipulation;
 }
 </style>
