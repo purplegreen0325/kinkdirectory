@@ -175,7 +175,7 @@ function formatDate(dateString: string | number) {
           <h2 class="text-xl font-bold text-primary-500">
             {{ t('app.your_lists') }}
           </h2>
-          
+
           <!-- New kinks badge - improved styling -->
           <span v-if="recentlyAddedKinksCount > 0" class="inline-flex items-center rounded-full text-xs font-medium bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 px-2 py-0.5">
             <UIcon name="i-lucide-star" class="mr-1 text-[0.65rem]" />
