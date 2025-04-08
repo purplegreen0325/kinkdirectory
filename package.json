@@ -1,7 +1,7 @@
 {
   "name": "klist",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "scripts": {
@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "translate": "npx json-autotranslate --source-language=nl --directory-structure=ngx-translate -i src/locales --config=402.json"
+    "translate": "npx json-autotranslate --source-language=nl --directory-structure=ngx-translate -i src/locales --config=402.json",
+    "release": "release-it"
   },
   "dependencies": {
     "@nuxt/ui": "^3.0.2",
@@ -27,9 +28,12 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.11.0",
+    "@release-it/conventional-changelog": "^10.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
+    "auto-changelog": "^2.5.0",
     "eslint": "^9.23.0",
+    "release-it": "^18.1.2",
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "vite-plugin-vue-devtools": "^7.7.2",
