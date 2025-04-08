@@ -1,14 +1,14 @@
 # 📋 Kink Directory
 
-A secure, private platform for exploring BDSM dynamics, defining your kink preferences, and communicating boundaries with partners.
+A secure, private platform for exploring your kinks, preferences, and communicating boundaries with partners.
 
 ![Kink Directory Screenshot](./assets/screenshot.png)
 
 ## ✨ About
 
-Kink Directory is a comprehensive BDSM-focused tool that helps you create personalized kink lists to explore your preferences and boundaries. Whether you're new to kink or experienced, this application makes it easy to communicate your interests with partners or keep track of your own journey.
+Kink Directory is a comprehensive tool that helps you create personalized kink lists to explore your preferences and boundaries. Whether you're new to exploring your sexuality or experienced, this application makes it easy to communicate your interests with partners or keep track of your own journey.
 
-The directory is designed with BDSM dynamics in mind, allowing you to specify your role as Dominant, submissive, or Switch. This role selection helps tailor your experience and ensures your kink list accurately reflects your position in power exchange dynamics.
+The directory allows you to specify your role preference, which helps tailor your experience and ensures your list accurately reflects your position and interests.
 
 ## 🚀 Features
 
@@ -16,6 +16,7 @@ The directory is designed with BDSM dynamics in mind, allowing you to specify yo
 - 🔒 **Complete privacy** - All data is stored only in your browser, nothing is sent to any server
 - 🔗 **Share with partners** - Generate shareable links to send to partners when you want them to see your preferences
 - 👤 **Role customization** - Choose your role perspective and customize your list with detailed preferences for each item
+- 🌟 **BDSM focus available** - For those interested in BDSM, the app includes specific dynamics allowing you to specify your role as Dominant, submissive, or Switch
 - 🎨 **User-friendly interface** - Simple, clean design with intuitive controls
 - 🌐 **Multi-language support** - Available in multiple languages to serve a global audience
 - 📝 **Quiz mode** - Quickly rate all kinks by going through them one by one in a guided interface
