@@ -25,8 +25,38 @@ const currentIndex = ref(0)
 const currentPositionIndex = ref(0)
 const quizCompleted = ref(false)
 const hasStarted = ref(false)
+// Track if we're only quizzing new kinks
+const isNewKinksOnly = ref(false)
 // Track quiz history for back button functionality
 const quizHistory = ref<Array<{ kinkIndex: number, positionIndex: number, value: KinkChoiceType }>>([])
+
+// Check for new kinks (added in the last 2 days)
+const twoDaysAgo = Math.floor(Date.now() / 1000) - (2 * 24 * 60 * 60)
+
+// Count of new unfilled positions (not just kinks)
+const newUnfilledPositionsCount = computed(() => {
+  const allAvailableKinks = getVisibleKinksForQuiz()
+
+  // Count all unfilled positions in new kinks
+  let totalUnfilled = 0
+
+  allAvailableKinks.forEach((item) => {
+    // Only count positions for new kinks
+    if (item.kink.addedAt && item.kink.addedAt > twoDaysAgo) {
+      // Count each unfilled position
+      item.positions.forEach((position) => {
+        const value = getKinkChoice(item.kink, position)
+        if (value === 0) {
+          totalUnfilled++
+        }
+      })
+    }
+  })
+
+  return totalUnfilled
+})
+
+const newKinksAvailable = computed(() => newUnfilledPositionsCount.value > 0)
 
 // Active color classes (selected)
 const activeColorClasses = {
@@ -67,22 +97,33 @@ const currentPosition = computed(() => {
   return currentKink.value.positions[currentPositionIndex.value]
 })
 
-// Calculate progress as a percentage
-const progress = computed(() => {
-  if (allKinks.value.length === 0)
-    return 0
+// Calculate total positions and current position for more accurate progress
+const totalPositions = computed(() => {
+  return allKinks.value.reduce((total, item) => total + item.positions.length, 0)
+})
 
-  // Calculate total positions across all kinks
-  const totalPositions = allKinks.value.reduce((total, item) => total + item.positions.length, 0)
+// Calculate the current position number across all kinks
+const currentPositionNumber = computed(() => {
+  if (currentIndex.value >= allKinks.value.length) {
+    return totalPositions.value
+  }
 
-  // Calculate completed positions
+  // Count positions from completed kinks
   let completedPositions = 0
   for (let i = 0; i < currentIndex.value; i++) {
     completedPositions += allKinks.value[i].positions.length
   }
-  completedPositions += currentPositionIndex.value
 
-  return Math.round((completedPositions / totalPositions) * 100)
+  // Add current position within current kink
+  return completedPositions + currentPositionIndex.value + 1
+})
+
+// Calculate progress as a percentage
+const progress = computed(() => {
+  if (totalPositions.value === 0)
+    return 0
+
+  return Math.round((currentPositionNumber.value - 1) / totalPositions.value * 100)
 })
 
 // Get description text for a rating value
@@ -192,11 +233,50 @@ function previousQuestion() {
 // Start the quiz
 function startQuiz() {
   hasStarted.value = true
+  isNewKinksOnly.value = false
   allKinks.value = getVisibleKinksForQuiz()
   currentIndex.value = 0
   currentPositionIndex.value = 0
   quizCompleted.value = false
   quizHistory.value = []
+}
+
+// Start quiz with only new kinks
+function startNewKinksQuiz() {
+  hasStarted.value = true
+  isNewKinksOnly.value = true
+  const allVisibleKinks = getVisibleKinksForQuiz()
+
+  // Filter to only include new kinks with unfilled positions
+  const filteredKinks = allVisibleKinks
+    .filter(item => item.kink.addedAt && item.kink.addedAt > twoDaysAgo)
+    .map((item) => {
+      // Create a copy of the item with only unfilled positions
+      const unfilled = {
+        ...item,
+        positions: item.positions.filter((position) => {
+          // Check if this position is unfilled
+          const value = getKinkChoice(item.kink, position)
+          return value === 0
+        }),
+      }
+      return unfilled
+    })
+    // Only include kinks that have at least one unfilled position after filtering
+    .filter(item => item.positions.length > 0)
+
+  allKinks.value = filteredKinks
+
+  // If no kinks with unfilled positions, mark as completed
+  if (filteredKinks.length === 0) {
+    quizCompleted.value = true
+  }
+  else {
+    currentIndex.value = 0
+    currentPositionIndex.value = 0
+    quizCompleted.value = false
+    quizHistory.value = []
+  }
 }
 
 // Handle cancel (close modal)
@@ -225,12 +305,31 @@ function getKinkLabel(): string {
 
   return t(`${categoryId}.${kinkId}.label`, kinkId)
 }
+
+// Get the appropriate title based on quiz state
+const quizTitle = computed(() => {
+  if (quizCompleted.value)
+    return t('app.quiz_completed')
+  return t('app.quiz')
+})
 </script>
 
 <template>
   <UModal
-    :title="quizCompleted ? t('app.quiz_completed') : t('app.quiz')"
+    :title="quizTitle"
   >
+    <template #title>
+      <div class="flex items-center gap-2">
+        {{ quizTitle }}
+        <UBadge v-if="hasStarted && !quizCompleted && isNewKinksOnly" size="sm" color="primary" variant="soft" class="font-normal">
+          <div class="flex items-center gap-1">
+            <UIcon name="i-lucide-star" class="text-xs" />
+            {{ t('app.new') }}
+          </div>
+        </UBadge>
+      </div>
+    </template>
+
     <template #body>
       <!-- Fixed height container to prevent modal jumps -->
       <div class="min-h-[500px] flex flex-col">
@@ -246,8 +345,8 @@ function getKinkLabel(): string {
             </div>
           </div>
 
-          <!-- Start button -->
-          <div class="flex justify-center">
+          <!-- Start buttons -->
+          <div class="flex flex-col gap-2 items-center">
             <UButton
               size="lg"
               icon="i-lucide-play"
@@ -255,6 +354,17 @@ function getKinkLabel(): string {
               @click="startQuiz"
             >
               {{ t('app.start_quiz') }}
+            </UButton>
+
+            <UButton
+              v-if="newKinksAvailable"
+              size="md"
+              icon="i-lucide-star"
+              color="primary"
+              variant="soft"
+              @click="startNewKinksQuiz"
+            >
+              {{ t('app.quiz_new_kinks_count', { count: newUnfilledPositionsCount }) }}
             </UButton>
           </div>
         </div>
@@ -377,7 +487,7 @@ function getKinkLabel(): string {
         </UButton>
 
         <div v-if="hasStarted && !quizCompleted" class="text-sm text-gray-500">
-          {{ currentIndex + 1 }} / {{ allKinks.length }}
+          {{ currentPositionNumber }} / {{ totalPositions }}
         </div>
       </div>
     </template>

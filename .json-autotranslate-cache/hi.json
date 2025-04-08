@@ -137,7 +137,9 @@
     "reverse_kink_order": "मूल्यांकन का क्रम उलट दें",
     "reverse_kink_order_desc": "रेटिंग विकल्पों का क्रम \"पसंदीदा → सीमा\" से बदलकर \"सीमा → पसंदीदा\" कर दिया गया है",
     "reverse_kink_order_desc_short": "रेटिंग के प्रदर्शन क्रम को बदलता है",
-    "current_order": "अभी का ऑर्डर:"
+    "current_order": "अभी का ऑर्डर:",
+    "quiz_new_kinks_only": "क्विज़ में केवल नए चयन",
+    "quiz_new_kinks_count": "क्विज़ {count} नए चयन"
   },
   "roles": {
     "sub": "विनम्र",

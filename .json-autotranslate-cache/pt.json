@@ -137,7 +137,9 @@
     "reverse_kink_order": "Inverter a ordem de avaliação",
     "reverse_kink_order_desc": "Altera a ordem das opções de classificação de \"Favorito → Limite\" para \"Limite → Favorito\"",
     "reverse_kink_order_desc_short": "Altera a ordem de exibição das classificações",
-    "current_order": "Ordem atual:"
+    "current_order": "Ordem atual:",
+    "quiz_new_kinks_only": "Questionário apenas novas seleções",
+    "quiz_new_kinks_count": "Questionário {count} novas seleções"
   },
   "roles": {
     "sub": "Submisso",

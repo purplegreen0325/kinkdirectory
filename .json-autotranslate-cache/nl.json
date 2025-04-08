@@ -122,6 +122,8 @@
     "quiz_completed": "Quiz Voltooid",
     "quiz_completed_message": "Gefeliciteerd! Je hebt de kink-quiz voltooid. Je hebt nu een volledig ingevulde lijst met je voorkeuren.",
     "start_quiz": "Start Quiz",
+    "quiz_new_kinks_only": "Quiz alleen nieuwe selecties",
+    "quiz_new_kinks_count": "Quiz {count} nieuwe selecties",
     "skip": "Overslaan",
     "done": "Klaar",
     "no_description_available": "Geen beschrijving beschikbaar",

@@ -137,7 +137,9 @@
     "reverse_kink_order": "Reverse the order of valuation",
     "reverse_kink_order_desc": "Changes the order of rating options from \"Favorite → Limit\" to \"Limit → Favorite\"",
     "reverse_kink_order_desc_short": "Changes the display order of ratings",
-    "current_order": "Current Order:"
+    "current_order": "Current Order:",
+    "quiz_new_kinks_only": "Quiz new selections only",
+    "quiz_new_kinks_count": "Quiz {count} new selections"
   },
   "roles": {
     "sub": "Submissive",

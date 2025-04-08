@@ -137,7 +137,9 @@
     "reverse_kink_order": "反转估值顺序",
     "reverse_kink_order_desc": "将评级选项的顺序从“收藏 → 限制”更改为“限制 → 收藏”",
     "reverse_kink_order_desc_short": "更改评分的显示顺序",
-    "current_order": "当前订单："
+    "current_order": "当前订单：",
+    "quiz_new_kinks_only": "仅测试新选择",
+    "quiz_new_kinks_count": "测验{count}新选择"
   },
   "roles": {
     "sub": "顺从",

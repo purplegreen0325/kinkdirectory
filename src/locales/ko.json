@@ -137,7 +137,9 @@
     "reverse_kink_order": "평가 순서를 반대로 바꾸세요",
     "reverse_kink_order_desc": "평가 옵션 순서를 \"즐겨찾기 → 제한\"에서 \"제한 → 즐겨찾기\"로 변경합니다.",
     "reverse_kink_order_desc_short": "평가 표시 순서를 변경합니다",
-    "current_order": "현재 주문:"
+    "current_order": "현재 주문:",
+    "quiz_new_kinks_only": "새로운 선택 항목만 퀴즈",
+    "quiz_new_kinks_count": "퀴즈 {count} 새로운 선택"
   },
   "roles": {
     "sub": "복종적인",

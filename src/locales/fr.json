@@ -137,7 +137,9 @@
     "reverse_kink_order": "Inverser l'ordre d'évaluation",
     "reverse_kink_order_desc": "Modifie l'ordre des options de notation de « Favori → Limiter » à « Limite → Favori »",
     "reverse_kink_order_desc_short": "Modifie l'ordre d'affichage des notes",
-    "current_order": "Commande actuelle :"
+    "current_order": "Commande actuelle :",
+    "quiz_new_kinks_only": "Quiz nouvelles sélections uniquement",
+    "quiz_new_kinks_count": "Quiz {count} nouvelles sélections"
   },
   "roles": {
     "sub": "Soumis",

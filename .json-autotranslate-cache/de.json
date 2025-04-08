@@ -137,7 +137,9 @@
     "reverse_kink_order": "Umkehren der Bewertungsreihenfolge",
     "reverse_kink_order_desc": "Ändert die Reihenfolge der Bewertungsoptionen von „Favorit → Limit“ zu „Limit → Favorit“",
     "reverse_kink_order_desc_short": "Ändert die Anzeigereihenfolge der Bewertungen",
-    "current_order": "Aktuelle Bestellung:"
+    "current_order": "Aktuelle Bestellung:",
+    "quiz_new_kinks_only": "Nur neue Auswahlen testen",
+    "quiz_new_kinks_count": "Quiz {count} neue Auswahlen"
   },
   "roles": {
     "sub": "Unterwürfig",
