@@ -69,7 +69,7 @@ const quizCardRef = useTemplateRef('quizCardRef')
                   <button
                     v-if="recentlyAddedKinks > 0"
                     class="h-full bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center justify-center flex-none md:flex md:items-center"
-                    @click="newKinksAvailable ? quizCardRef?.openQuizModal?.() : null"
+                    @click="(newKinksAvailable && !isViewMode) ? quizCardRef?.openQuizModal?.() : null"
                   >
                     <div class="flex items-center gap-1.5">
                       <UIcon name="i-lucide-star" class="text-pink-600 dark:text-pink-400 flex-shrink-0 text-sm" />
@@ -87,7 +87,7 @@ const quizCardRef = useTemplateRef('quizCardRef')
                   
                   <!-- Filter dropdown -->
                   <FilterDropdown
-                    v-if="!isViewMode && activeList"
+                    v-if="activeList"
                     class="flex-none md:flex md:items-center"
                   />
                 </div>
