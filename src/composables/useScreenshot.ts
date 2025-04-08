@@ -160,7 +160,21 @@ export function useScreenshot() {
             // Get label text
             const label = row.querySelector('td')
             if (label) {
-              labelCell.textContent = label.textContent?.trim() || ''
+              // Look for the element with data-kink-label attribute
+              const kinkLabelElement = label.querySelector('[data-kink-label]')
+              if (kinkLabelElement) {
+                // Use only the text from the labeled element
+                labelCell.textContent = kinkLabelElement.textContent?.trim() || ''
+              } else {
+                // Fallback to previous method if data-attribute not found
+                const labelText = label.textContent?.trim() || ''
+                const iconIndex = labelText.indexOf('?')
+                if (iconIndex !== -1) {
+                  labelCell.textContent = labelText.substring(0, iconIndex).trim()
+                } else {
+                  labelCell.textContent = labelText
+                }
+              }
             }
 
             newRow.appendChild(labelCell)
