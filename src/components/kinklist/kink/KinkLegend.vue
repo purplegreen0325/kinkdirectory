@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { KinkChoice as KinkChoiceType } from '../../../types'
-import { useI18n } from 'vue-i18n'
-import { useKinkListState } from '../../../composables/useKinkList'
+import { useI18n } from 'vue-i18n';
+import type { KinkChoice as KinkChoiceType } from '../../../types';
 
 defineProps<{
   openQuizModal: () => void
@@ -12,12 +11,12 @@ const { t } = useI18n()
 // Include all choices including "Not Entered" (0)
 const choices: KinkChoiceType[] = [0, 1, 2, 3, 4, 5]
 
-const { recentlyAddedKinks, newKinksAvailable } = useKinkListState()
+// Remove the recentlyAddedKinks from here
 </script>
 
 <template>
-  <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200">
-    <div class="flex flex-wrap items-center justify-between gap-2">
+  <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200 md:h-[42px] md:flex md:items-center">
+    <div class="flex flex-wrap items-center justify-between gap-2 w-full">
       <div class="flex flex-wrap items-center gap-2">
         <!-- Legend Title -->
         <div class="flex items-center gap-1 mr-1">
@@ -50,11 +49,7 @@ const { recentlyAddedKinks, newKinksAvailable } = useKinkListState()
         </div>
       </div>
 
-      <!-- Newly Added Kinks Counter -->
-      <div v-if="recentlyAddedKinks > 0" class="text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 px-2 py-1 rounded-full flex items-center gap-1" :class="{ 'cursor-pointer hover:bg-primary-200 dark:hover:bg-primary-800 transition-all duration-200': newKinksAvailable }" @click="newKinksAvailable ? openQuizModal() : null">
-        <UIcon name="i-lucide-star" class="text-xs" />
-        {{ recentlyAddedKinks }} new kinks added!
-      </div>
+      <!-- Remove the Newly Added Kinks Counter -->
     </div>
   </div>
 </template>

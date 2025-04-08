@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, useTemplateRef } from 'vue'
 import { useKinkListState } from '../composables/useKinkList'
+import { useI18n } from 'vue-i18n'
 
 import AppFooter from './kinklist/footer/AppFooter.vue'
 // Import the new modular components
@@ -13,8 +14,11 @@ import ListContent from './kinklist/list/ListContent.vue'
 import ListControls from './kinklist/list/ListControls.vue'
 import ViewOnlyBanner from './kinklist/view/ViewOnlyBanner.vue'
 
+// Get i18n
+const { t } = useI18n()
+
 // Only need the basic state variables here
-const { activeList, isViewMode } = useKinkListState()
+const { activeList, isViewMode, recentlyAddedKinks, newKinksAvailable } = useKinkListState()
 
 // Check if the current list has any selections (kinks already rated)
 const hasSelections = computed(() => {
@@ -55,24 +59,36 @@ const quizCardRef = useTemplateRef('quizCardRef')
           <div class="bg-white dark:bg-gray-900 rounded-lg shadow p-3">
             <!-- Legend and quiz section -->
             <div v-if="activeList" class="mb-3">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between flex-wrap gap-2">
+              <div class="flex flex-col md:flex-row md:items-stretch md:justify-between flex-wrap gap-2">
                 <!-- Legend inside the card, at the top -->
                 <KinkLegend class="flex-1" :open-quiz-modal="() => quizCardRef?.openQuizModal?.()" />
 
                 <!-- Controls group with Quiz and Filter buttons -->
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-2 md:self-stretch">
+                  <!-- New kinks button styled like QuizCard and FilterDropdown -->
+                  <button
+                    v-if="recentlyAddedKinks > 0"
+                    class="h-full bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 flex items-center justify-center flex-none md:flex md:items-center"
+                    @click="newKinksAvailable ? quizCardRef?.openQuizModal?.() : null"
+                  >
+                    <div class="flex items-center gap-1.5">
+                      <UIcon name="i-lucide-star" class="text-pink-600 dark:text-pink-400 flex-shrink-0 text-sm" />
+                      <span class="text-sm font-medium text-pink-600 dark:text-pink-400">{{ recentlyAddedKinks }} {{ t('app.new') }}</span>
+                    </div>
+                  </button>
+                  
                   <!-- Quiz button with matching styling to legend -->
                   <QuizCard
                     v-if="!isViewMode && hasSelections"
                     ref="quizCardRef"
                     :compact="true"
-                    class="flex-none md:h-[42px] md:flex md:items-center"
+                    class="flex-none md:flex md:items-center"
                   />
-
+                  
                   <!-- Filter dropdown -->
                   <FilterDropdown
                     v-if="!isViewMode && activeList"
-                    class="flex-none md:h-[42px] md:flex md:items-center"
+                    class="flex-none md:flex md:items-center"
                   />
                 </div>
               </div>
