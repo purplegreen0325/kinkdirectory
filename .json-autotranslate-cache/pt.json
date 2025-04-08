@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "Somente itens incompletos são exibidos",
     "no_unfilled_items_found": "Nenhum item não preenchido encontrado com os filtros atuais",
     "no_results_with_filters": "Nenhum item corresponde a todos os filtros ativos",
-    "and": "e"
+    "and": "e",
+    "show_numbers_in_choices": "Mostrar números em escolhas",
+    "show_numbers_in_choices_desc": "Mostra números de classificação em caixas de seleção",
+    "example": "Exemplo:"
   },
   "roles": {
     "sub": "Submisso",

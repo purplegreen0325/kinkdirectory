@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "Vengono visualizzati solo gli elementi non completati",
     "no_unfilled_items_found": "Nessun elemento non compilato trovato con i filtri correnti",
     "no_results_with_filters": "Nessun elemento corrisponde a tutti i filtri attivi",
-    "and": "E"
+    "and": "E",
+    "show_numbers_in_choices": "Mostra numeri nelle scelte",
+    "show_numbers_in_choices_desc": "Mostra i numeri di valutazione nelle caselle di controllo",
+    "example": "Esempio:"
   },
   "roles": {
     "sub": "Sottomesso",

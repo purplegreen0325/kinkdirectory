@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "仅显示未完成的项目",
     "no_unfilled_items_found": "当前过滤器未找到未填充的项目",
     "no_results_with_filters": "没有符合所有活动过滤器的项目",
-    "and": "和"
+    "and": "和",
+    "show_numbers_in_choices": "在选项中显示数字",
+    "show_numbers_in_choices_desc": "在复选框中显示评分数字",
+    "example": "例子："
   },
   "roles": {
     "sub": "顺从",

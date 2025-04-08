@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "Sólo se muestran los elementos no completados",
     "no_unfilled_items_found": "No se encontraron elementos sin completar con los filtros actuales",
     "no_results_with_filters": "No hay elementos que coincidan con todos los filtros activos",
-    "and": "y"
+    "and": "y",
+    "show_numbers_in_choices": "Mostrar números en las opciones",
+    "show_numbers_in_choices_desc": "Muestra números de calificación en casillas de verificación",
+    "example": "Ejemplo:"
   },
   "roles": {
     "sub": "Sumiso",

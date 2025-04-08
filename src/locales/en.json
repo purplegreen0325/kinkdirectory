@@ -155,7 +155,7 @@
     "clear_all_filters": "Clear All Filters",
     "and": "and",
     "show_numbers_in_choices": "Show Numbers in Choices",
-    "show_numbers_in_choices_desc": "Displays rating numbers inside choice boxes",
+    "show_numbers_in_choices_desc": "Shows rating numbers in checkboxes",
     "example": "Example:"
   },
   "roles": {

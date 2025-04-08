@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "Es werden nur noch nicht abgeschlossene Aufgaben angezeigt",
     "no_unfilled_items_found": "Mit den aktuellen Filtern wurden keine nicht ausgefüllten Artikel gefunden",
     "no_results_with_filters": "Keine Elemente entsprechen allen aktiven Filtern",
-    "and": "Und"
+    "and": "Und",
+    "show_numbers_in_choices": "Zahlen in Auswahlmöglichkeiten anzeigen",
+    "show_numbers_in_choices_desc": "Zeigt Bewertungszahlen in Kontrollkästchen an",
+    "example": "Beispiel:"
   },
   "roles": {
     "sub": "Unterwürfig",

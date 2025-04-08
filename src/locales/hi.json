@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "केवल अधूरे आइटम ही प्रदर्शित किए जाते हैं",
     "no_unfilled_items_found": "वर्तमान फ़िल्टर के साथ कोई खाली आइटम नहीं मिला",
     "no_results_with_filters": "कोई भी आइटम सभी सक्रिय फ़िल्टर से मेल नहीं खाता",
-    "and": "और"
+    "and": "और",
+    "show_numbers_in_choices": "विकल्पों में संख्याएँ दिखाएँ",
+    "show_numbers_in_choices_desc": "चेकबॉक्स में रेटिंग संख्याएँ दिखाता है",
+    "example": "उदाहरण:"
   },
   "roles": {
     "sub": "विनम्र",

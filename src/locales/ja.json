@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "未完了の項目のみが表示されます",
     "no_unfilled_items_found": "現在のフィルターでは未入力の項目は見つかりません",
     "no_results_with_filters": "すべてのアクティブなフィルターに一致するアイテムはありません",
-    "and": "そして"
+    "and": "そして",
+    "show_numbers_in_choices": "選択肢に数字を表示する",
+    "show_numbers_in_choices_desc": "チェックボックスに評価番号を表示します",
+    "example": "例："
   },
   "roles": {
     "sub": "従順な",

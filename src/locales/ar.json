@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "يتم عرض العناصر غير المكتملة فقط",
     "no_unfilled_items_found": "لم يتم العثور على أي عناصر غير مكتملة باستخدام المرشحات الحالية",
     "no_results_with_filters": "لا توجد عناصر تطابق جميع المرشحات النشطة",
-    "and": "و"
+    "and": "و",
+    "show_numbers_in_choices": "إظهار الأرقام في الخيارات",
+    "show_numbers_in_choices_desc": "إظهار أرقام التقييم في مربعات الاختيار",
+    "example": "مثال:"
   },
   "roles": {
     "sub": "مطيع",

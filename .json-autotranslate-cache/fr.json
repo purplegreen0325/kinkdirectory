@@ -150,7 +150,10 @@
     "showing_only_unfilled_items": "Seuls les éléments non terminés sont affichés",
     "no_unfilled_items_found": "Aucun élément non rempli trouvé avec les filtres actuels",
     "no_results_with_filters": "Aucun élément ne correspond à tous les filtres actifs",
-    "and": "et"
+    "and": "et",
+    "show_numbers_in_choices": "Afficher les nombres dans les choix",
+    "show_numbers_in_choices_desc": "Affiche les numéros de notation dans les cases à cocher",
+    "example": "Exemple:"
   },
   "roles": {
     "sub": "Soumis",
