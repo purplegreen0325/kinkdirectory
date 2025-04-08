@@ -258,7 +258,27 @@ export const useKinkListState = createGlobalState(() => {
   function decodeListFromUrl(encoded: string): KinkList | null {
     try {
       // First check if this is a binary format (v1+) or JSON format (legacy)
-      const isBinary = !encoded.includes('{') && !encoded.includes('=')
+      // Better detection: try to decode first byte to check version
+      let isBinary = false
+      try {
+        // Convert from URL-safe base64 back to binary to check first byte
+        const base64 = encoded.replace(/-/g, '+').replace(/_/g, '/')
+
+        // Add padding if needed
+        let padded = base64
+        const padding = 4 - (base64.length % 4)
+        if (padding < 4) {
+          padded += '='.repeat(padding)
+        }
+
+        // Decode just the first character to check version
+        const firstByte = atob(padded).charCodeAt(0)
+        isBinary = firstByte === CURRENT_VERSION
+      }
+      catch (e) {
+        // If we can't decode it as binary, it's definitely not binary
+        isBinary = false
+      }
 
       if (isBinary) {
         console.log('Detected binary format')
