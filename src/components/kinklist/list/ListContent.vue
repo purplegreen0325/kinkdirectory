@@ -6,9 +6,7 @@ import { kinkList } from '../../../data/kinks'
 import KinkSection from '../../kinklist/kink/KinkSection.vue'
 
 const { t } = useI18n()
-const { activeList, isKinkVisibleForRole, kinkModalState, closeKinkModal } = useKinkListState()
-
-// Get categories with type assertion to ensure TypeScript knows the structure
+const { activeList, isKinkVisibleForRole, kinkModalState, closeKinkModal, shouldShowKink, filters } = useKinkListState()
 
 // Filter categories to only show those with visible kinks
 const visibleCategories = computed(() => {
@@ -17,8 +15,9 @@ const visibleCategories = computed(() => {
 
   return kinkList.filter((category) => {
     // Check if any kink in this category is visible for the current role
+    // and passes the active filters
     return category.kinks.some(kink =>
-      isKinkVisibleForRole(kink, activeList.value!.role),
+      isKinkVisibleForRole(kink, activeList.value!.role) && shouldShowKink(kink),
     )
   })
 })
@@ -26,10 +25,29 @@ const visibleCategories = computed(() => {
 
 <template>
   <div>
+    <!-- Filter notice when filters are active -->
+    <div v-if="filters.showOnlyNew" class="mb-4 p-2 bg-yellow-50 dark:bg-yellow-950 border border-yellow-200 dark:border-yellow-800 rounded-md text-sm">
+      <div class="flex items-center">
+        <UIcon name="i-lucide-filter" class="text-yellow-500 mr-2" />
+        <span>{{ t('app.showing_only_new_items') }}</span>
+      </div>
+    </div>
+
     <!-- List content for screenshot -->
     <div id="kink-list-content" class="max-w-full overflow-x-hidden p-0">
+      <!-- Empty state when filters return no results -->
+      <div v-if="visibleCategories.length === 0 && filters.showOnlyNew" class="text-center py-8">
+        <UIcon name="i-lucide-filter-x" class="text-4xl text-gray-400 dark:text-gray-600 mx-auto mb-2" />
+        <p class="text-gray-500 dark:text-gray-400">
+          {{ t('app.no_new_items_found') }}
+        </p>
+        <UButton size="sm" color="neutral" class="mt-4" @click="() => { filters.showOnlyNew = false }">
+          {{ t('app.clear_filters') }}
+        </UButton>
+      </div>
+
       <!-- Masonry-style layout for better space filling -->
-      <div class="columns-1 md:columns-2 xl:columns-3  gap-6 space-y-6">
+      <div v-else class="columns-1 md:columns-2 xl:columns-3 gap-6 space-y-6">
         <div v-for="category in visibleCategories" :key="category.id" class="category-container inline-block w-full mb-2">
           <h2 class="text-base font-bold mb-1.5 pb-1.5 border-b-1 border-gray-200 dark:border-gray-700">
             {{ t(`categories.${category.id}`) }}
@@ -38,7 +56,7 @@ const visibleCategories = computed(() => {
           <!-- Kinks section -->
           <KinkSection
             :category-id="category.id"
-            :kinks="category.kinks"
+            :kinks="category.kinks.filter(kink => shouldShowKink(kink) && isKinkVisibleForRole(kink, activeList?.role || 'both'))"
           />
         </div>
       </div>

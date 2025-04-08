@@ -139,7 +139,13 @@
     "reverse_kink_order": "Waarderingsvolgorde omkeren",
     "reverse_kink_order_desc": "Wijzigt de volgorde van waarderingsopties van \"Favoriet → Limiet\" naar \"Limiet → Favoriet\"",
     "reverse_kink_order_desc_short": "Wijzigt de weergavevolgorde van waarderingen",
-    "current_order": "Huidige Volgorde:"
+    "current_order": "Huidige Volgorde:",
+    "filter": "Filter",
+    "filter_options": "Filter opties",
+    "only_new_items": "Alleen nieuwe items",
+    "showing_only_new_items": "Alleen nieuwe items worden weergegeven",
+    "no_new_items_found": "Geen nieuwe items gevonden met huidige filters",
+    "clear_filters": "Filters wissen"
   },
   "roles": {
     "sub": "Onderdanig",

@@ -8,6 +8,7 @@ import AppHeader from './kinklist/header/AppHeader.vue'
 import KinkLegend from './kinklist/kink/KinkLegend.vue'
 import QuizCard from './kinklist/kink/QuizCard.vue'
 import EmptyState from './kinklist/list/EmptyState.vue'
+import FilterDropdown from './kinklist/list/FilterDropdown.vue'
 import ListContent from './kinklist/list/ListContent.vue'
 import ListControls from './kinklist/list/ListControls.vue'
 import ViewOnlyBanner from './kinklist/view/ViewOnlyBanner.vue'
@@ -58,13 +59,22 @@ const quizCardRef = useTemplateRef('quizCardRef')
                 <!-- Legend inside the card, at the top -->
                 <KinkLegend class="flex-1" :open-quiz-modal="() => quizCardRef?.openQuizModal?.()" />
 
-                <!-- Quiz button with matching styling to legend -->
-                <QuizCard
-                  v-if="!isViewMode && hasSelections"
-                  ref="quizCardRef"
-                  :compact="true"
-                  class="flex-none md:h-[42px] md:flex md:items-center"
-                />
+                <!-- Controls group with Quiz and Filter buttons -->
+                <div class="flex items-center gap-2">
+                  <!-- Quiz button with matching styling to legend -->
+                  <QuizCard
+                    v-if="!isViewMode && hasSelections"
+                    ref="quizCardRef"
+                    :compact="true"
+                    class="flex-none md:h-[42px] md:flex md:items-center"
+                  />
+
+                  <!-- Filter dropdown -->
+                  <FilterDropdown
+                    v-if="!isViewMode && activeList"
+                    class="flex-none md:h-[42px] md:flex md:items-center"
+                  />
+                </div>
               </div>
             </div>
 

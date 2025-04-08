@@ -139,7 +139,13 @@
     "reverse_kink_order_desc_short": "تغيير ترتيب عرض التقييمات",
     "current_order": "الطلب الحالي:",
     "quiz_new_kinks_only": "اختبار الاختيارات الجديدة فقط",
-    "quiz_new_kinks_count": "اختبار {count} اختيارات جديدة"
+    "quiz_new_kinks_count": "اختبار {count} اختيارات جديدة",
+    "filter": "فلتر",
+    "filter_options": "خيارات التصفية",
+    "only_new_items": "العناصر الجديدة فقط",
+    "showing_only_new_items": "يتم عرض العناصر الجديدة فقط",
+    "no_new_items_found": "لم يتم العثور على عناصر جديدة باستخدام المرشحات الحالية",
+    "clear_filters": "مسح المرشحات"
   },
   "roles": {
     "sub": "مطيع",

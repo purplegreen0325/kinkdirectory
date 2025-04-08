@@ -139,7 +139,13 @@
     "reverse_kink_order_desc_short": "評価の表示順序を変更します",
     "current_order": "現在の注文:",
     "quiz_new_kinks_only": "クイズの新規選択のみ",
-    "quiz_new_kinks_count": "クイズ{count}新規選択"
+    "quiz_new_kinks_count": "クイズ{count}新規選択",
+    "filter": "フィルター",
+    "filter_options": "フィルターオプション",
+    "only_new_items": "新着商品のみ",
+    "showing_only_new_items": "新しいアイテムのみが表示されます",
+    "no_new_items_found": "現在のフィルターでは新しいアイテムは見つかりません",
+    "clear_filters": "フィルターをクリア"
   },
   "roles": {
     "sub": "従順な",

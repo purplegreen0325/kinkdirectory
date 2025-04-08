@@ -139,7 +139,13 @@
     "reverse_kink_order_desc_short": "Ändert die Anzeigereihenfolge der Bewertungen",
     "current_order": "Aktuelle Bestellung:",
     "quiz_new_kinks_only": "Nur neue Auswahlen testen",
-    "quiz_new_kinks_count": "Quiz {count} neue Auswahlen"
+    "quiz_new_kinks_count": "Quiz {count} neue Auswahlen",
+    "filter": "Filter",
+    "filter_options": "Filteroptionen",
+    "only_new_items": "Nur Neuware",
+    "showing_only_new_items": "Es werden nur neue Artikel angezeigt",
+    "no_new_items_found": "Mit den aktuellen Filtern wurden keine neuen Artikel gefunden",
+    "clear_filters": "Filter löschen"
   },
   "roles": {
     "sub": "Unterwürfig",

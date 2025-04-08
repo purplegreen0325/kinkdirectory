@@ -139,7 +139,13 @@
     "reverse_kink_order_desc_short": "평가 표시 순서를 변경합니다",
     "current_order": "현재 주문:",
     "quiz_new_kinks_only": "새로운 선택 항목만 퀴즈",
-    "quiz_new_kinks_count": "퀴즈 {count} 새로운 선택"
+    "quiz_new_kinks_count": "퀴즈 {count} 새로운 선택",
+    "filter": "필터",
+    "filter_options": "필터 옵션",
+    "only_new_items": "새로운 아이템만",
+    "showing_only_new_items": "새로운 항목만 표시됩니다",
+    "no_new_items_found": "현재 필터로 새로운 항목을 찾을 수 없습니다.",
+    "clear_filters": "필터 지우기"
   },
   "roles": {
     "sub": "복종적인",

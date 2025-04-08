@@ -29,6 +29,11 @@ export const useKinkListState = createGlobalState(() => {
   // User kink lists storage
   const kinkLists = useStorage<KinkList[]>('kinklist-lists', [])
 
+  // Filter settings storage
+  const filters = useStorage('kinklist-filters', {
+    showOnlyNew: false,
+  })
+
   // Run migrations if needed
   migrateStoredLists(kinkLists.value)
 
@@ -553,12 +558,34 @@ export const useKinkListState = createGlobalState(() => {
     return allKinks
   }
 
+  // Function to toggle a filter
+  function toggleFilter(filterName: keyof typeof filters.value, value?: boolean) {
+    if (value !== undefined) {
+      filters.value[filterName] = value
+    }
+    else {
+      filters.value[filterName] = !filters.value[filterName]
+    }
+  }
+
+  // Check if a kink should be shown based on applied filters
+  function shouldShowKink(kink: KinkDefinition): boolean {
+    // Apply "only new" filter if enabled
+    if (filters.value.showOnlyNew) {
+      return !!kink.addedAt && kink.addedAt > twoDaysAgo
+    }
+
+    // No filters or doesn't match any filters
+    return true
+  }
+
   return {
     kinkLists,
     activeListId,
     activeList,
     isViewMode,
     kinkModalState,
+    filters,
     isKinkVisibleForRole,
     getKinkPositions,
     createList,
@@ -577,5 +604,7 @@ export const useKinkListState = createGlobalState(() => {
     newKinksAvailable,
     closeKinkModal,
     getVisibleKinksForQuiz,
+    toggleFilter,
+    shouldShowKink,
   }
 })

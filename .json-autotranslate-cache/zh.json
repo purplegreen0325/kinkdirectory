@@ -139,7 +139,13 @@
     "reverse_kink_order_desc_short": "更改评分的显示顺序",
     "current_order": "当前订单：",
     "quiz_new_kinks_only": "仅测试新选择",
-    "quiz_new_kinks_count": "测验{count}新选择"
+    "quiz_new_kinks_count": "测验{count}新选择",
+    "filter": "筛选",
+    "filter_options": "筛选选项",
+    "only_new_items": "仅限新品",
+    "showing_only_new_items": "仅显示新商品",
+    "no_new_items_found": "使用当前过滤器未找到任何新项目",
+    "clear_filters": "清除筛选器"
   },
   "roles": {
     "sub": "顺从",

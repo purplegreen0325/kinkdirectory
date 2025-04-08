@@ -139,7 +139,13 @@
     "reverse_kink_order_desc_short": "Изменяет порядок отображения оценок",
     "current_order": "Текущий заказ:",
     "quiz_new_kinks_only": "Только новые выборки викторины",
-    "quiz_new_kinks_count": "Викторина {count} новых выборов"
+    "quiz_new_kinks_count": "Викторина {count} новых выборов",
+    "filter": "Фильтр",
+    "filter_options": "Параметры фильтра",
+    "only_new_items": "Только новые товары",
+    "showing_only_new_items": "Отображаются только новые элементы",
+    "no_new_items_found": "С текущими фильтрами новых элементов не найдено",
+    "clear_filters": "Очистить фильтры"
   },
   "roles": {
     "sub": "Покорный",

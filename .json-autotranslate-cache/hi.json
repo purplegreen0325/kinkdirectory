@@ -139,7 +139,13 @@
     "reverse_kink_order_desc_short": "रेटिंग के प्रदर्शन क्रम को बदलता है",
     "current_order": "अभी का ऑर्डर:",
     "quiz_new_kinks_only": "क्विज़ में केवल नए चयन",
-    "quiz_new_kinks_count": "क्विज़ {count} नए चयन"
+    "quiz_new_kinks_count": "क्विज़ {count} नए चयन",
+    "filter": "फ़िल्टर",
+    "filter_options": "फ़िल्टर विकल्प",
+    "only_new_items": "केवल नए आइटम",
+    "showing_only_new_items": "केवल नए आइटम ही प्रदर्शित किए जाते हैं",
+    "no_new_items_found": "वर्तमान फ़िल्टर से कोई नया आइटम नहीं मिला",
+    "clear_filters": "फ़िल्टर साफ़ करें"
   },
   "roles": {
     "sub": "विनम्र",
