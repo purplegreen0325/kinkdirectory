@@ -1161,25 +1161,6 @@ export const kinkList: KinkCategory[] = [
       },
 
       {
-        id: 'egyptian',
-        format: 'role_specific',
-        allowedPerspectives: [
-
-          {
-            role: 'dom',
-            perspective: 'partner',
-          },
-
-          {
-            role: 'sub',
-            perspective: 'self',
-          },
-
-        ],
-        key: 48,
-      },
-
-      {
         id: 'begging',
         format: 'role_specific',
         allowedPerspectives: [
