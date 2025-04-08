@@ -12,9 +12,9 @@ const currentYear = new Date().getFullYear()
         © {{ currentYear }} {{ t('title') }}
       </div>
       <div>
-        <a 
-          href="https://github.com/kdirectoryxo/kinkdirectory" 
-          target="_blank" 
+        <a
+          href="https://github.com/kdirectoryxo/kinkdirectory"
+          target="_blank"
           rel="noopener noreferrer"
           class="flex items-center hover:text-primary-500 transition-colors"
         >
@@ -24,4 +24,4 @@ const currentYear = new Date().getFullYear()
       </div>
     </div>
   </footer>
-</template> 
+</template>

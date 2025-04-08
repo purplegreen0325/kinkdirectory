@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { useMediaQuery } from '@vueuse/core'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useMediaQuery } from '@vueuse/core'
 import { useKinkListState } from '../../../composables/useKinkList'
 import { useScreenshot } from '../../../composables/useScreenshot'
 import ConfirmModal from '../../kinklist/modals/ConfirmModal.vue'
@@ -13,17 +13,17 @@ const { t } = useI18n()
 const toast = useToast()
 const overlay = useOverlay()
 
-const { 
-  activeList, 
-  kinkLists, 
-  activeListId, 
-  encodeListToUrl, 
+const {
+  activeList,
+  kinkLists,
+  activeListId,
+  encodeListToUrl,
   deleteList,
-  updateList
+  updateList,
 } = useKinkListState()
 
-const { 
-  screenshotLoading, 
+const {
+  screenshotLoading,
   downloadScreenshot,
 } = useScreenshot()
 
@@ -35,7 +35,8 @@ const isEditingTitle = ref(false)
 const editedTitle = ref('')
 
 function startEditingTitle() {
-  if (!activeList.value) return
+  if (!activeList.value)
+    return
   editedTitle.value = activeList.value.name
   isEditingTitle.value = true
 }
@@ -45,18 +46,18 @@ function saveEditedTitle() {
     isEditingTitle.value = false
     return
   }
-  
+
   updateList(activeListId.value, {
-    name: editedTitle.value.trim()
+    name: editedTitle.value.trim(),
   })
-  
+
   isEditingTitle.value = false
-  
+
   toast.add({
     title: t('app.list_updated'),
     description: editedTitle.value,
     color: 'success',
-    duration: 3000
+    duration: 3000,
   })
 }
 
@@ -67,71 +68,61 @@ function cancelEditingTitle() {
 // Compute a safe version of activeListId for v-model (string or undefined, not null)
 const safeActiveListId = computed({
   get: () => activeListId.value || undefined,
-  set: (value: string | undefined) => { activeListId.value = value || null }
+  set: (value: string | undefined) => { activeListId.value = value || null },
 })
 
 async function openCreateListModal() {
-  try {
-    const createFormModal = overlay.create(CreateListForm)
-    const id = await createFormModal.open()
-    
-    if (id) {
-      console.log('List created with ID:', id)
-    }
-  } catch (e) {
-    console.log('List creation cancelled')
-  }
+  const createFormModal = overlay.create(CreateListForm)
+  await createFormModal.open()
 }
 
 async function handleDeleteList() {
-  if (!activeListId.value) return
-  
+  if (!activeListId.value)
+    return
+
   // Create the confirm modal
   const confirmModal = overlay.create(ConfirmModal, {
     props: {
       title: t('app.delete_confirm_title'),
       message: t('app.delete_confirm_message'),
-      confirmColor: 'error'
-    }
+      confirmColor: 'error',
+    },
   })
-  
-  try {
-    // Open the modal and await user response
-    const confirmed = await confirmModal.open()
-    
-    if (confirmed) {
-      const deletedName = activeList.value?.name
-      deleteList(activeListId.value)
-      
-      // Show success toast
-      toast.add({
-        title: t('app.list_deleted'),
-        description: deletedName,
-        icon: 'i-lucide-trash',
-        color: 'success',
-        duration: 3000
-      })
-    }
-  } catch (e) {
-    console.error('Error in delete confirmation', e)
+
+  // Open the modal and await user response
+  const confirmed = await confirmModal.open()
+
+  if (confirmed) {
+    const deletedName = activeList.value?.name
+    deleteList(activeListId.value)
+
+    // Show success toast
+    toast.add({
+      title: t('app.list_deleted'),
+      description: deletedName,
+      icon: 'i-lucide-trash',
+      color: 'success',
+      duration: 3000,
+    })
   }
 }
 
 async function openShareModal() {
-  if (!activeListId.value) return
-  
+  if (!activeListId.value)
+    return
+
   const shareUrl = encodeListToUrl(activeListId.value)
-  
+
   // Create the modal instance with props
   const shareModal = overlay.create(ShareModal, {
     props: {
-      url: shareUrl
-    }
+      url: shareUrl,
+    },
   })
-  
+
   try {
     const copied = await shareModal.open()
-    
+
     if (copied) {
       // Show toast notification for successful copy
       toast.add({
@@ -139,10 +130,11 @@ async function openShareModal() {
         description: t('app.share_list_description'),
         icon: 'i-lucide-link',
         color: 'info',
-        duration: 3000
+        duration: 3000,
       })
     }
-  } catch (e) {
+  }
+  catch {
     // Modal was cancelled
     console.log('Share cancelled')
   }
@@ -150,38 +142,42 @@ async function openShareModal() {
 
 async function handleTakeScreenshot() {
   try {
-    if (!activeList.value) return
-    
+    if (!activeList.value)
+      return
+
     // Create the modal instance with props
     const screenshotModal = overlay.create(ScreenshotModal, {
       props: {
         listName: activeList.value.name || 'export',
         // Pass empty string initially, we'll take the screenshot after modal is opened
-        dataUrl: ''
-      }
+        dataUrl: '',
+      },
     })
-    
+
     // Open the modal first
     try {
       const result = await screenshotModal.open()
-      
+
       if (result === 'download') {
         downloadScreenshot()
-      } else if (result === 'copied') {
+      }
+      else if (result === 'copied') {
         // Show toast notification for successful copy
         toast.add({
           title: t('app.imgur_link'),
           description: t('app.imgur_link_copied'),
           icon: 'i-lucide-link',
           color: 'info',
-          duration: 3000
+          duration: 3000,
         })
       }
-    } catch (e) {
+    }
+    catch {
       // Modal was cancelled
       console.log('Screenshot modal cancelled')
     }
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Failed to take screenshot', error)
   }
 }
@@ -200,9 +196,9 @@ async function handleTakeScreenshot() {
             size="sm"
             class="flex-1"
             :placeholder="t('app.list_name')"
+            autofocus
             @keyup.enter="saveEditedTitle"
             @keyup.esc="cancelEditingTitle"
-            autofocus
           />
           <UButton
             icon="i-lucide-check"
@@ -224,11 +220,11 @@ async function handleTakeScreenshot() {
         <template v-else>
           <USelect
             v-model="safeActiveListId"
-            :items="kinkLists.map(list => ({ 
-              value: list.id, 
+            :items="kinkLists.map(list => ({
+              value: list.id,
               label: list.name,
               role: list.role,
-              created: list.created 
+              created: list.created,
             }))"
             :placeholder="t('app.select_list')"
             class="flex-1"
@@ -243,7 +239,7 @@ async function handleTakeScreenshot() {
               </div>
               <span v-else>{{ t('app.select_list') }}</span>
             </template>
-            
+
             <template #item-label="{ item }">
               <div class="flex flex-col py-1">
                 <div class="flex items-center gap-2">
@@ -258,7 +254,7 @@ async function handleTakeScreenshot() {
               </div>
             </template>
           </USelect>
-          
+
           <!-- Edit Button -->
           <UButton
             icon="i-lucide-pencil"
@@ -266,10 +262,10 @@ async function handleTakeScreenshot() {
             variant="ghost"
             size="xs"
             square
-            @click="startEditingTitle"
             aria-label="Edit list name"
+            @click="startEditingTitle"
           />
-          
+
           <!-- Delete Button -->
           <UButton
             icon="i-lucide-trash"
@@ -277,12 +273,12 @@ async function handleTakeScreenshot() {
             variant="ghost"
             size="xs"
             square
-            @click="handleDeleteList"
             aria-label="Delete list"
+            @click="handleDeleteList"
           />
         </template>
       </div>
-      
+
       <!-- Action Buttons - Horizontal on Mobile -->
       <div class="flex gap-2">
         <!-- Create New List Button -->
@@ -295,7 +291,7 @@ async function handleTakeScreenshot() {
         >
           {{ t('app.new') }}
         </UButton>
-        
+
         <!-- Share List Button -->
         <UButton
           icon="i-lucide-share"
@@ -306,7 +302,7 @@ async function handleTakeScreenshot() {
         >
           {{ t('app.share') }}
         </UButton>
-        
+
         <!-- Screenshot Button -->
         <UButton
           icon="i-lucide-camera"
@@ -320,7 +316,7 @@ async function handleTakeScreenshot() {
         </UButton>
       </div>
     </template>
-    
+
     <!-- Desktop Layout - Horizontal -->
     <template v-else>
       <div class="flex items-center">
@@ -332,9 +328,9 @@ async function handleTakeScreenshot() {
               size="sm"
               class="min-w-[150px]"
               :placeholder="t('app.list_name')"
+              autofocus
               @keyup.enter="saveEditedTitle"
               @keyup.esc="cancelEditingTitle"
-              autofocus
             />
             <UButton
               icon="i-lucide-check"
@@ -354,9 +350,11 @@ async function handleTakeScreenshot() {
             />
           </div>
           <div v-else-if="activeList" class="flex items-center gap-2 cursor-pointer" @click="startEditingTitle">
-            <h2 class="text-lg font-semibold">{{ activeList.name }}</h2>
-            <UIcon 
-              name="i-lucide-pencil" 
+            <h2 class="text-lg font-semibold">
+              {{ activeList.name }}
+            </h2>
+            <UIcon
+              name="i-lucide-pencil"
               class="w-4 h-4 text-gray-400"
             />
           </div>
@@ -364,17 +362,17 @@ async function handleTakeScreenshot() {
             {{ t(`roles.${activeList.role}`) }}
           </UBadge>
         </div>
-        
+
         <!-- Right aligned items: List Selector + Action Buttons -->
         <div class="flex items-center gap-2 flex-wrap justify-end">
           <!-- List Selector -->
           <USelect
             v-model="safeActiveListId"
-            :items="kinkLists.map(list => ({ 
-              value: list.id, 
+            :items="kinkLists.map(list => ({
+              value: list.id,
               label: list.name,
               role: list.role,
-              created: list.created 
+              created: list.created,
             }))"
             :placeholder="t('app.select_list')"
             class="w-56"
@@ -389,7 +387,7 @@ async function handleTakeScreenshot() {
               </div>
               <span v-else>{{ t('app.select_list') }}</span>
             </template>
-            
+
             <template #item-label="{ item }">
               <div class="flex flex-col py-1">
                 <div class="flex items-center gap-2">
@@ -404,7 +402,7 @@ async function handleTakeScreenshot() {
               </div>
             </template>
           </USelect>
-          
+
           <!-- Action Buttons -->
           <UButton
             icon="i-lucide-plus"
@@ -414,7 +412,7 @@ async function handleTakeScreenshot() {
           >
             {{ t('app.create_list') }}
           </UButton>
-          
+
           <UButton
             icon="i-lucide-share"
             color="info"
@@ -423,7 +421,7 @@ async function handleTakeScreenshot() {
           >
             {{ t('app.share_list') }}
           </UButton>
-          
+
           <UButton
             icon="i-lucide-camera"
             color="neutral"
@@ -433,18 +431,18 @@ async function handleTakeScreenshot() {
           >
             {{ t('app.screenshot') }}
           </UButton>
-          
+
           <UButton
             icon="i-lucide-trash"
             color="error"
             variant="ghost"
             size="sm"
             square
-            @click="handleDeleteList"
             aria-label="Delete list"
+            @click="handleDeleteList"
           />
         </div>
       </div>
     </template>
   </div>
-</template> 
+</template>

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
-
 // Props for the modal
 const props = defineProps<{
   title: string
@@ -12,13 +10,15 @@ const props = defineProps<{
   confirmColor?: 'primary' | 'success' | 'error' | 'warning' | 'info' | 'secondary' | 'neutral'
 }>()
 
+// Emit to close with result
+const emit = defineEmits(['close'])
+
+const { t } = useI18n()
+
 // Default values for optional props
 const confirmText = props.confirmText || t('app.confirm') || 'Confirm'
 const cancelText = props.cancelText || t('app.cancel') || 'Cancel'
 const confirmColor = props.confirmColor || 'primary'
-
-// Emit to close with result
-const emit = defineEmits(['close'])
 
 // Confirm action
 function confirm() {
@@ -40,20 +40,20 @@ function cancel() {
     <template #footer>
       <div class="flex justify-end gap-2">
         <UButton
-          @click="cancel"
           color="neutral"
           variant="soft"
+          @click="cancel"
         >
           {{ cancelText }}
         </UButton>
-        
+
         <UButton
-          @click="confirm"
           :color="confirmColor"
+          @click="confirm"
         >
           {{ confirmText }}
         </UButton>
       </div>
     </template>
   </UModal>
-</template> 
+</template>

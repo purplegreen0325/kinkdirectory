@@ -16,13 +16,13 @@ function handleClick() {
 <template>
   <div class="min-w-0 max-w-full">
     <div class="w-fit max-w-full">
-      <UTooltip 
+      <UTooltip
         :text="tooltip"
         :delay-duration="200"
-        :content="{ 
-          side: 'bottom', 
+        :content="{
+          side: 'bottom',
           align: 'center',
-          sideOffset: 4
+          sideOffset: 4,
         }"
         arrow
       >
@@ -34,4 +34,4 @@ function handleClick() {
       </UTooltip>
     </div>
   </div>
-</template> 
+</template>

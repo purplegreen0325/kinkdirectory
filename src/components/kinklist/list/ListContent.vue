@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
 import { kinkList } from '../../../data/kinks'
 import KinkSection from '../../kinklist/kink/KinkSection.vue'
+
 const { t } = useI18n()
 const { activeList, isKinkVisibleForRole, kinkModalState, closeKinkModal } = useKinkListState()
 
@@ -11,12 +12,13 @@ const { activeList, isKinkVisibleForRole, kinkModalState, closeKinkModal } = use
 
 // Filter categories to only show those with visible kinks
 const visibleCategories = computed(() => {
-  if (!activeList.value) return []
-  
-  return kinkList.filter(category => {
+  if (!activeList.value)
+    return []
+
+  return kinkList.filter((category) => {
     // Check if any kink in this category is visible for the current role
-    return category.kinks.some(kink => 
-      isKinkVisibleForRole(kink, activeList.value!.role)
+    return category.kinks.some(kink =>
+      isKinkVisibleForRole(kink, activeList.value!.role),
     )
   })
 })
@@ -32,25 +34,27 @@ const visibleCategories = computed(() => {
           <h2 class="text-base font-bold mb-1.5 pb-1.5 border-b-1 border-gray-200 dark:border-gray-700">
             {{ t(`categories.${category.id}`) }}
           </h2>
-          
+
           <!-- Kinks section -->
           <KinkSection
-            :categoryId="category.id"
+            :category-id="category.id"
             :kinks="category.kinks"
           />
         </div>
       </div>
     </div>
-    
+
     <!-- Kink Detail Modal -->
     <UModal v-model:open="kinkModalState.isOpen" :title="kinkModalState.title">
       <template #body>
         <p>{{ kinkModalState.description }}</p>
       </template>
-      
+
       <template #footer>
         <div class="flex justify-end">
-          <UButton @click="closeKinkModal" color="primary">Close</UButton>
+          <UButton color="primary" @click="closeKinkModal">
+            Close
+          </UButton>
         </div>
       </template>
     </UModal>
@@ -62,4 +66,4 @@ const visibleCategories = computed(() => {
   break-inside: avoid;
   page-break-inside: avoid;
 }
-</style> 
+</style>

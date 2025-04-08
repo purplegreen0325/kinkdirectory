@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import type { KinkChoice as KinkChoiceType } from '../../../types'
-
-const { t } = useI18n()
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const props = defineProps<{
   value: KinkChoiceType
@@ -13,6 +11,8 @@ const props = defineProps<{
   onClick: (value: KinkChoiceType) => void
 }>()
 
+const { t } = useI18n()
+
 // Active color classes (selected)
 const activeColorClasses = {
   0: 'border-gray-400 dark:border-gray-500 bg-gray-300 dark:bg-gray-600',
@@ -20,7 +20,7 @@ const activeColorClasses = {
   2: 'border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400',
   3: 'border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400',
   4: 'border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400',
-  5: 'border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400'
+  5: 'border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400',
 }
 
 // Text color classes
@@ -30,7 +30,7 @@ const textColorClasses = {
   2: 'text-green-500 dark:text-green-400',
   3: 'text-yellow-500 dark:text-yellow-400',
   4: 'text-orange-500 dark:text-orange-400',
-  5: 'text-red-500 dark:text-red-400'
+  5: 'text-red-500 dark:text-red-400',
 }
 
 // Include "Not Entered" (0) value along with ratings 1-5
@@ -38,7 +38,8 @@ const allValues = [1, 2, 3, 4, 5, 0] as const
 
 // Get selected value label
 const selectedValueLabel = computed(() => {
-  if (props.value === 0) return '⊘'
+  if (props.value === 0)
+    return '⊘'
   return props.value.toString()
 })
 
@@ -46,18 +47,24 @@ const selectedValueLabel = computed(() => {
 const isDrawerOpen = ref(false)
 
 // Get description text for a rating value
-const getRatingDescription = (rating: KinkChoiceType): string => {
-  if (rating === 0) return t('choices.not_entered')
-  if (rating === 5) return t('choices.limit')
-  if (rating === 4) return t('choices.maybe')
-  if (rating === 3) return t('choices.indifferent')
-  if (rating === 2) return t('choices.like')
-  if (rating === 1) return t('choices.favorite')
+function getRatingDescription(rating: KinkChoiceType): string {
+  if (rating === 0)
+    return t('choices.not_entered')
+  if (rating === 5)
+    return t('choices.limit')
+  if (rating === 4)
+    return t('choices.maybe')
+  if (rating === 3)
+    return t('choices.indifferent')
+  if (rating === 2)
+    return t('choices.like')
+  if (rating === 1)
+    return t('choices.favorite')
   return t('choices.favorite')
 }
 
 // Handle value selection in drawer
-const handleSelect = (rating: KinkChoiceType) => {
+function handleSelect(rating: KinkChoiceType) {
   if (!props.isViewMode) {
     props.onClick(rating)
     isDrawerOpen.value = false
@@ -72,7 +79,7 @@ const drawerTitle = computed(() => {
 
 <template>
   <div class="flex justify-center">
-    <UDrawer 
+    <UDrawer
       v-model:open="isDrawerOpen"
       :disabled="isViewMode"
       direction="bottom"
@@ -82,22 +89,22 @@ const drawerTitle = computed(() => {
       :ui="{
         content: 'fixed bg-(--ui-bg) ring ring-(--ui-border) flex focus:outline-none',
         handle: ['shrink-0 !bg-(--ui-bg-accented)'],
-        title: 'break-words pr-4'
+        title: 'break-words pr-4',
       }"
     >
-      <button 
+      <button
         type="button"
         class="w-6 h-6 rounded border flex items-center justify-center text-xs font-bold focus:outline-none mx-auto"
         :class="[
           value === 0 ? 'border-gray-300 dark:border-gray-600' : activeColorClasses[value],
           !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
-          textColorClasses[value]
+          textColorClasses[value],
         ]"
         :data-rating="value"
       >
         {{ selectedValueLabel }}
       </button>
-      
+
       <template #body>
         <div class="flex flex-col space-y-2">
           <button
@@ -105,17 +112,17 @@ const drawerTitle = computed(() => {
             :key="rating"
             class="py-3 px-4 text-left rounded-md flex items-center justify-between"
             :class="[
-              value === rating ? 'bg-gray-100 dark:bg-gray-800 font-medium ' + textColorClasses[rating] : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
+              value === rating ? `bg-gray-100 dark:bg-gray-800 font-medium ${textColorClasses[rating]}` : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
             ]"
             :data-rating="rating"
             @click="handleSelect(rating)"
           >
             <div class="flex items-center flex-1 min-w-0 mr-2">
-              <span 
+              <span
                 class="w-5 h-5 rounded-full inline-block mr-3 flex-shrink-0"
                 :class="rating === 0 ? 'border-2 border-gray-300 dark:border-gray-600' : activeColorClasses[rating]"
                 :data-rating="rating"
-              ></span>
+              />
               <span class="text-sm break-words">{{ getRatingDescription(rating) }}</span>
             </div>
             <span class="text-lg font-bold flex-shrink-0">{{ rating === 0 ? '⊘' : rating }}</span>
@@ -124,4 +131,4 @@ const drawerTitle = computed(() => {
       </template>
     </UDrawer>
   </div>
-</template> 
+</template>

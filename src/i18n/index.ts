@@ -1,17 +1,18 @@
+/* eslint-disable unused-imports/no-unused-vars */
 import { createI18n } from 'vue-i18n'
+import ar from '../locales/ar.json'
+import de from '../locales/de.json'
 import en from '../locales/en.json'
-import nl from '../locales/nl.json'
 import es from '../locales/es.json'
 import fr from '../locales/fr.json'
-import de from '../locales/de.json'
+import hi from '../locales/hi.json'
 import it from '../locales/it.json'
+import ja from '../locales/ja.json'
+import ko from '../locales/ko.json'
+import nl from '../locales/nl.json'
 import pt from '../locales/pt.json'
 import ru from '../locales/ru.json'
 import zh from '../locales/zh.json'
-import ja from '../locales/ja.json'
-import ko from '../locales/ko.json'
-import ar from '../locales/ar.json'
-import hi from '../locales/hi.json'
 
 export type MessageSchema = typeof en
 
@@ -29,11 +30,11 @@ const messages: Record<SupportedLocale, MessageSchema | Partial<MessageSchema>> 
   it,
   pt,
   ru,
-  zh, 
+  zh,
   ja,
   ko,
   ar,
-  hi
+  hi,
 }
 
 // Create i18n instance
@@ -42,7 +43,7 @@ const i18n = createI18n({
   locale: 'en',
   fallbackLocale: 'en',
   messages,
-  missingWarn: false  // Disable warnings for missing translations
+  missingWarn: false, // Disable warnings for missing translations
 })
 
-export default i18n 
+export default i18n

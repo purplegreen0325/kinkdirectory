@@ -3,14 +3,14 @@ import type { KinkChoice as KinkChoiceType } from '../../../types'
 import { useKinkListState } from '../../../composables/useKinkList'
 import KinkChoiceDrawer from './KinkChoiceDrawer.vue'
 
-const { isViewMode } = useKinkListState()
-
 const props = defineProps<{
   value: KinkChoiceType
   onClick?: (value: KinkChoiceType) => void
   kinkName?: string
   tooltip?: string
 }>()
+
+const { isViewMode } = useKinkListState()
 
 // Active color classes (selected)
 const activeColorClasses = {
@@ -19,7 +19,7 @@ const activeColorClasses = {
   2: 'border-green-500 dark:border-green-400 bg-green-500 dark:bg-green-400',
   3: 'border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400',
   4: 'border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400',
-  5: 'border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400'
+  5: 'border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400',
 }
 
 // Subtle color classes for inactive state (very light background)
@@ -29,7 +29,7 @@ const subtleColorClasses = {
   2: 'border-green-200 dark:border-green-700 bg-green-100/30 dark:bg-green-900/20',
   3: 'border-yellow-200 dark:border-yellow-700 bg-yellow-100/30 dark:bg-yellow-900/20',
   4: 'border-orange-200 dark:border-orange-700 bg-orange-100/30 dark:bg-orange-900/20',
-  5: 'border-red-200 dark:border-red-700 bg-red-100/30 dark:bg-red-900/20'
+  5: 'border-red-200 dark:border-red-700 bg-red-100/30 dark:bg-red-900/20',
 }
 
 // Include "Not Entered" (0) value along with ratings 1-5
@@ -47,27 +47,27 @@ function handleClick(rating: KinkChoiceType) {
   <!-- Desktop version - circles in a row -->
   <div class="hidden lg:flex space-x-1">
     <template v-for="rating in allValues" :key="rating">
-      <button 
+      <button
         type="button"
         class="w-4 h-4 rounded-full border focus:outline-none relative"
         :class="[
           value === rating ? activeColorClasses[rating] : subtleColorClasses[rating],
-          !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90'
+          !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
         ]"
         :data-rating="rating"
         @click.stop="handleClick(rating)"
       />
     </template>
   </div>
-  
+
   <!-- Mobile and Tablet version using the drawer component -->
   <div class="lg:hidden">
-    <KinkChoiceDrawer 
+    <KinkChoiceDrawer
       :value="value"
-      :kinkName="kinkName"
-      :isViewMode="isViewMode"
-      :onClick="(value) => props.onClick && props.onClick(value)"
+      :kink-name="kinkName"
+      :is-view-mode="isViewMode"
+      :on-click="(value) => props.onClick && props.onClick(value)"
       :tooltip="tooltip"
     />
   </div>
-</template> 
+</template>

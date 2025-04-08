@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import KinkListView from './components/KinkListView.vue'
 import DebugModal from './components/debug/DebugModal.vue'
+import KinkListView from './components/KinkListView.vue'
 import { useKinkListState } from './composables/useKinkList'
 
 const { viewListFromUrl } = useKinkListState()
@@ -11,11 +11,12 @@ onMounted(() => {
   // Get URL parameters directly from browser's URL API
   const urlParams = new URLSearchParams(window.location.search)
   const listParam = urlParams.get('list')
-  
+
   if (listParam) {
     try {
       viewListFromUrl(listParam)
-    } catch (e) {
+    }
+    catch (e) {
       console.error('Failed to view list from URL', e)
     }
   }

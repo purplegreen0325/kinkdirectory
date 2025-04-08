@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { useDark } from '@vueuse/core'
-import { useLocalStorage } from '@vueuse/core'
-import { computed, watch, onMounted } from 'vue'
+import { useDark, useLocalStorage } from '@vueuse/core'
+import { computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -9,36 +8,38 @@ const { t } = useI18n()
 // Use VueUse's useDark for handling the color mode
 const isDark = useDark()
 
-// Store the preference in localStorage 
+// Store the preference in localStorage
 const colorMode = useLocalStorage('color-scheme', 'auto')
 
 // Format options for the dropdown
 const items = computed(() => [
-  { 
+  {
     label: t('theme.light'),
     value: 'light',
-    icon: 'i-lucide-sun'
+    icon: 'i-lucide-sun',
   },
-  { 
+  {
     label: t('theme.dark'),
     value: 'dark',
-    icon: 'i-lucide-moon'
+    icon: 'i-lucide-moon',
   },
-  { 
+  {
     label: t('theme.auto'),
     value: 'auto',
-    icon: 'i-lucide-monitor'
-  }
+    icon: 'i-lucide-monitor',
+  },
 ])
 
 // Apply the color mode
-const applyColorMode = () => {
+function applyColorMode() {
   if (colorMode.value === 'auto') {
     // Let useDark handle it based on system preference
     // We don't need to do anything here
-  } else if (colorMode.value === 'dark') {
+  }
+  else if (colorMode.value === 'dark') {
     isDark.value = true
-  } else {
+  }
+  else {
     isDark.value = false
   }
 }
@@ -71,4 +72,4 @@ watch(colorMode, () => {
       </template>
     </USelectMenu>
   </div>
-</template> 
+</template>

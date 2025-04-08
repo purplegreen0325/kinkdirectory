@@ -14,14 +14,14 @@ async function handleImportViewedList() {
     props: {
       title: t('app.import_confirm_title'),
       message: t('app.import_confirm_message'),
-      confirmColor: 'primary'
-    }
+      confirmColor: 'primary',
+    },
   })
-  
+
   try {
     // Open the modal and await user response
     const confirmed = await confirmModal.open()
-    
+
     if (confirmed) {
       const importedId = importViewedList()
       if (importedId) {
@@ -31,11 +31,12 @@ async function handleImportViewedList() {
           description: t('app.imported_from_shared'),
           icon: 'i-lucide-clipboard-copy',
           color: 'success',
-          duration: 3000
+          duration: 3000,
         })
       }
     }
-  } catch (e) {
+  }
+  catch (e) {
     console.error('Error in import confirmation', e)
   }
 }
@@ -45,7 +46,9 @@ async function handleImportViewedList() {
   <div class="border border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-900/30 rounded-md p-3 mb-4 flex items-center justify-between flex-wrap gap-2">
     <div class="flex items-center">
       <UIcon name="i-lucide-eye" class="mr-2 text-blue-500" />
-      <p class="text-sm">{{ t('app.view_only_mode') }}</p>
+      <p class="text-sm">
+        {{ t('app.view_only_mode') }}
+      </p>
     </div>
     <div class="flex gap-2">
       <UButton
@@ -66,4 +69,4 @@ async function handleImportViewedList() {
       </UButton>
     </div>
   </div>
-</template> 
+</template>

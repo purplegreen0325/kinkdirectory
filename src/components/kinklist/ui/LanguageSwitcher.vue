@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import { useLocalStorage, usePreferredLanguages } from '@vueuse/core'
-import { computed, watch, onMounted } from 'vue'
+import { computed, onMounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const { t, locale, availableLocales } = useI18n()
 
@@ -12,7 +12,7 @@ const storedLocale = useLocalStorage('user-locale', 'auto')
 const preferredLanguages = usePreferredLanguages()
 
 // Get flag icon for each language
-const getLanguageIcon = (locale: string) => {
+function getLanguageIcon(locale: string) {
   switch (locale) {
     case 'en': return 'twemoji:flag-united-kingdom'
     case 'nl': return 'twemoji:flag-netherlands'
@@ -32,7 +32,7 @@ const getLanguageIcon = (locale: string) => {
 }
 
 // Get native name for each language
-const getNativeLanguageName = (locale: string) => {
+function getNativeLanguageName(locale: string) {
   switch (locale) {
     case 'en': return 'English'
     case 'nl': return 'Nederlands'
@@ -54,21 +54,21 @@ const getNativeLanguageName = (locale: string) => {
 // Format locale options for the dropdown
 const items = computed(() => {
   return [
-    { 
+    {
       label: t('language.auto'),
       value: 'auto',
-      icon: 'i-lucide-globe' 
+      icon: 'i-lucide-globe',
     },
-    ...availableLocales.map(loc => ({ 
-      label: getNativeLanguageName(loc), 
+    ...availableLocales.map(loc => ({
+      label: getNativeLanguageName(loc),
       value: loc,
-      icon: getLanguageIcon(loc)
-    }))
+      icon: getLanguageIcon(loc),
+    })),
   ]
 })
 
 // Get the system's preferred locale from the available ones
-const getSystemLocale = () => {
+function getSystemLocale() {
   for (const lang of preferredLanguages.value) {
     const shortLang = lang.split('-')[0]
     if (availableLocales.includes(shortLang)) {
@@ -79,12 +79,14 @@ const getSystemLocale = () => {
 }
 
 // Set the actual locale based on preference
-const updateActualLocale = () => {
+function updateActualLocale() {
   if (storedLocale.value === 'auto') {
     locale.value = getSystemLocale()
-  } else if (availableLocales.includes(storedLocale.value)) {
+  }
+  else if (availableLocales.includes(storedLocale.value)) {
     locale.value = storedLocale.value
-  } else {
+  }
+  else {
     // Fallback to system locale if the stored locale is not available
     console.warn(`Stored locale "${storedLocale.value}" is not available, falling back to system locale`)
     locale.value = getSystemLocale()
@@ -120,4 +122,4 @@ watch(storedLocale, () => {
       </template>
     </USelectMenu>
   </div>
-</template> 
+</template>

@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
-import type { KinkChoice as KinkChoiceType } from '../../../types';
+import type { KinkChoice as KinkChoiceType } from '../../../types'
+import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
 // Include all choices including "Not Entered" (0)
 const choices: KinkChoiceType[] = [0, 1, 2, 3, 4, 5]
-
 </script>
 
 <template>
@@ -17,15 +16,15 @@ const choices: KinkChoiceType[] = [0, 1, 2, 3, 4, 5]
         <UIcon name="i-lucide-info" class="text-primary-500 flex-shrink-0 text-sm" />
         <span class="text-sm font-medium">{{ t('app.legend') }}:</span>
       </div>
-      
+
       <!-- Legend Items -->
       <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-        <div 
-          v-for="choice in choices" 
-          :key="choice" 
+        <div
+          v-for="choice in choices"
+          :key="choice"
           class="flex items-center gap-1 group transition-all duration-200"
         >
-          <div 
+          <div
             class="w-3 h-3 rounded-full flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
             :class="{
               'bg-gray-300 dark:bg-gray-600 border border-gray-400 dark:border-gray-500': choice === 0,
@@ -33,9 +32,9 @@ const choices: KinkChoiceType[] = [0, 1, 2, 3, 4, 5]
               'bg-green-500 border border-green-600': choice === 2,
               'bg-yellow-500 border border-yellow-600': choice === 3,
               'bg-orange-500 border border-orange-600': choice === 4,
-              'bg-red-500 border border-red-600': choice === 5
+              'bg-red-500 border border-red-600': choice === 5,
             }"
-          ></div>
+          />
           <span class="text-xs text-gray-700 dark:text-gray-300">
             {{ t(`choices.${choice === 0 ? 'not_entered' : choice === 1 ? 'favorite' : choice === 2 ? 'like' : choice === 3 ? 'indifferent' : choice === 4 ? 'maybe' : 'limit'}`) }}
           </span>
@@ -43,4 +42,4 @@ const choices: KinkChoiceType[] = [0, 1, 2, 3, 4, 5]
       </div>
     </div>
   </div>
-</template> 
+</template>
