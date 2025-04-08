@@ -100,8 +100,7 @@ const currentValue = computed((): KinkChoiceType => {
   if (!currentKink.value || !currentPosition.value)
     return 0
   return getKinkChoice(
-    currentKink.value.categoryId,
-    currentKink.value.kink.id,
+    currentKink.value.kink,
     currentPosition.value,
   )
 })
@@ -118,13 +117,12 @@ function handleSelect(rating: KinkChoiceType) {
 
   // Save the selection
   setKinkChoice(
-    currentKink.value.categoryId,
-    currentKink.value.kink.id,
+    currentKink.value.kink,
     currentPosition.value,
     rating,
   )
 
-  // Move to next position or kink
+  // Move to next question
   nextQuestion()
 }
 

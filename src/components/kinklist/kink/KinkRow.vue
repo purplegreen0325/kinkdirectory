@@ -20,12 +20,12 @@ const { setKinkChoice, getKinkChoice, activeList, getKinkPositions } = useKinkLi
 
 function handleClick(position: string, selectedValue: KinkChoiceType) {
   // If user clicks the "Not Entered" (0) button or the currently selected value, set to 0
-  const currentValue = getKinkChoice(props.categoryId, props.kink.id, position)
+  const currentValue = getKinkChoice(props.kink, position)
 
   // If clicking the same value or explicitly clicking 0, set to 0
   // Otherwise set to the selected value
   const newValue = (currentValue === selectedValue || selectedValue === 0) ? 0 : selectedValue
-  setKinkChoice(props.categoryId, props.kink.id, position, newValue)
+  setKinkChoice(props.kink, position, newValue)
 }
 
 // Compute label and tooltip paths based on category and kink ID
@@ -167,7 +167,7 @@ const showLeftColumn = computed(() => {
         <td class="text-center py-2 px-0 sm:px-2 min-w-[40px] sm:min-w-[50px]">
           <div class="flex justify-center items-center">
             <KinkChoice
-              :value="getKinkChoice(categoryId, kink.id, 'general')"
+              :value="getKinkChoice(kink, 'general')"
               :on-click="(value) => handleClick('general', value)"
               :kink-name="t(labelPath)"
               :tooltip="t(tooltipPath)"
@@ -183,7 +183,7 @@ const showLeftColumn = computed(() => {
           v-if="showLeftColumn"
           :is-empty="!isPositionApplicable(leftColumnPosition)"
           :position="leftColumnPosition"
-          :value="getKinkChoice(categoryId, kink.id, leftColumnPosition)"
+          :value="getKinkChoice(kink, leftColumnPosition)"
           :kink-name="t(labelPath)"
           :position-label="getPositionLabel(leftColumnPosition)"
           :tooltip="t(tooltipPath)"
@@ -195,7 +195,7 @@ const showLeftColumn = computed(() => {
           v-if="needsRightColumn"
           :is-empty="!isPositionApplicable(rightColumnPosition)"
           :position="rightColumnPosition"
-          :value="getKinkChoice(categoryId, kink.id, rightColumnPosition)"
+          :value="getKinkChoice(kink, rightColumnPosition)"
           :kink-name="t(labelPath)"
           :position-label="getPositionLabel(rightColumnPosition)"
           :tooltip="t(tooltipPath)"

@@ -126,7 +126,9 @@
     "quick_rate_all_kinks": "Evalúa rápidamente todos tus problemas con una serie de preguntas",
     "new": "Nuevo",
     "share": "Para compartir",
-    "screenshot_short": "Foto"
+    "screenshot_short": "Foto",
+    "import_error": "Error en la importación",
+    "import_error_old_format": "Esta lista utiliza un formato obsoleto que ya no es compatible. Intente importar una lista más nueva."
   },
   "roles": {
     "sub": "Sumiso",

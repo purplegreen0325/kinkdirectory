@@ -126,7 +126,9 @@
     "quick_rate_all_kinks": "Quickly assess all your kinks in a series of questions",
     "new": "New",
     "share": "To share",
-    "screenshot_short": "Photo"
+    "screenshot_short": "Photo",
+    "import_error": "Import failed",
+    "import_error_old_format": "This list uses an outdated format that is no longer supported. Try importing a newer list."
   },
   "roles": {
     "sub": "Submissive",

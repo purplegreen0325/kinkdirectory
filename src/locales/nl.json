@@ -126,7 +126,9 @@
     "done": "Klaar",
     "no_description_available": "Geen beschrijving beschikbaar",
     "quiz_mode": "Quiz Modus",
-    "quick_rate_all_kinks": "Beoordeel snel al je kinks in een reeks vragen"
+    "quick_rate_all_kinks": "Beoordeel snel al je kinks in een reeks vragen",
+    "import_error": "Importeren mislukt",
+    "import_error_old_format": "Deze lijst gebruikt een verouderd formaat dat niet meer wordt ondersteund. Probeer een nieuwere lijst te importeren."
   },
   "roles": {
     "sub": "Onderdanig",

@@ -126,7 +126,9 @@
     "quick_rate_all_kinks": "Évaluez rapidement tous vos défauts dans une série de questions",
     "new": "Nouveau",
     "share": "À partager",
-    "screenshot_short": "Photo"
+    "screenshot_short": "Photo",
+    "import_error": "L'importation a échoué",
+    "import_error_old_format": "Cette liste utilise un format obsolète qui n'est plus pris en charge. Essayez d’importer une liste plus récente."
   },
   "roles": {
     "sub": "Soumis",

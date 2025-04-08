@@ -126,7 +126,9 @@
     "quick_rate_all_kinks": "一連の質問であなたの欠点を素早く評価します",
     "new": "新しい",
     "share": "共有する",
-    "screenshot_short": "写真"
+    "screenshot_short": "写真",
+    "import_error": "インポートに失敗しました",
+    "import_error_old_format": "このリストでは、サポートされなくなった古い形式が使用されています。新しいリストをインポートしてみてください。"
   },
   "roles": {
     "sub": "従順な",

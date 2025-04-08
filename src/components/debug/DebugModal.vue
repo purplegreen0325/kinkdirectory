@@ -124,7 +124,7 @@ const kinkStats = computed(() => {
     }
 
     // Increment position counter
-    const position = key.split('_')[2]
+    const position = key.split('%')[1]
     if (stats.byPosition[position as keyof typeof stats.byPosition] !== undefined) {
       stats.byPosition[position as keyof typeof stats.byPosition]++
     }
@@ -154,18 +154,23 @@ const ratingLabels = {
 
 // Display a humanized key
 function humanizeKey(key: string): string {
-  const [categoryId, kinkId, position] = key.split('_')
-  let category = t(`categories.${categoryId}`)
-  if (category === `categories.${categoryId}`) {
-    category = categoryId
+  const [kinkKey, position] = key.split('%')
+
+  const category = kinkList.find(k => k.kinks.some(k => k.key === Number(kinkKey)))
+  const categoryId = category?.id
+  const kinkDefinition = category?.kinks.find(k => k.key === Number(kinkKey))
+
+  let categoryName = t(`categories.${categoryId}`)
+  if (categoryName === `categories.${categoryId}`) {
+    categoryName = categoryId || 'Unknown'
   }
 
-  let label = t(`${categoryId}.${kinkId}.label`)
-  if (label === `${categoryId}.${kinkId}.label`) {
-    label = kinkId
+  let label = t(`${categoryId}.${kinkDefinition?.id}.label`)
+  if (label === `${categoryId}.${kinkDefinition?.id}.label`) {
+    label = kinkDefinition?.id || 'Unknown'
   }
 
-  return `${category}: ${label} (${position})`
+  return `${categoryName}: ${label} (${position})`
 }
 
 // Prettier position names

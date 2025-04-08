@@ -3,9 +3,34 @@ import { createGlobalState, useStorage } from '@vueuse/core'
 import { nanoid } from 'nanoid'
 import { computed, ref } from 'vue'
 import { kinkList } from '../data/kinks'
+import {
+  createKinkMappings,
+  CURRENT_VERSION,
+  migrateStoredLists,
+  migrateUrlEncodedList,
+  POSITION_MAP,
+} from './useKinkListMigration'
+
+// Role numeric mapping (single source of truth)
+const ROLE_MAP: Record<string, number> = {
+  both: 0,
+  dom: 1,
+  sub: 2,
+}
+
+// Role names in order (for decoding)
+const ROLE_NAMES = ['both', 'dom', 'sub']
 
 export const useKinkListState = createGlobalState(() => {
+  // Create kink mappings for old to new format
+  const kinkMappings = createKinkMappings()
+
+  // User kink lists storage
   const kinkLists = useStorage<KinkList[]>('kinklist-lists', [])
+
+  // Run migrations if needed
+  migrateStoredLists(kinkLists.value)
+
   const activeListId = ref<string | null>(null)
   const viewOnlyList = ref<KinkList | null>(null)
   const isViewMode = computed(() => viewOnlyList.value !== null)
@@ -106,6 +131,11 @@ export const useKinkListState = createGlobalState(() => {
           positions.push('for_dom')
       }
 
+      // Note: Added for debugging purposes
+      if (positions.length === 0) {
+        console.warn(`No positions found for kink ${kink.id} (key: ${kink.key}) with role ${userRole}`, kink.allowedPerspectives)
+      }
+
       return positions
     }
 
@@ -136,27 +166,27 @@ export const useKinkListState = createGlobalState(() => {
   }
 
   function setKinkChoice(
-    categoryId: string,
-    kinkId: string,
+    kinkDef: KinkDefinition,
     position: string,
     choice: KinkChoice,
   ) {
     if (!activeList.value)
       return
 
-    const key = `${categoryId}_${kinkId}_${position}`
+    // Store using key%position format
+    const key = `${kinkDef.key}%${position}`
     activeList.value.selections[key] = choice
   }
 
   function getKinkChoice(
-    categoryId: string,
-    kinkId: string,
+    kinkDef: KinkDefinition,
     position: string,
   ): KinkChoice {
     if (!activeList.value)
       return 0
 
-    const key = `${categoryId}_${kinkId}_${position}`
+    // Access using key%position format
+    const key = `${kinkDef.key}%${position}`
     return activeList.value.selections[key] || 0
   }
 
@@ -168,46 +198,66 @@ export const useKinkListState = createGlobalState(() => {
     if (!list)
       return ''
 
-    // Create a compressed representation of the selections
+    // Format as kinkKey,positionNumber,choice
     const selections = Object.entries(list.selections)
-      .filter(([_, value]) => value !== 0) // Only include non-zero values
-      .map(([key, value]) => `${key}=${value}`)
-      .join(',')
+      .filter(([_, choice]) => choice !== 0) // Only include non-zero values
+      .map(([key, choice]) => {
+        // Current format is kinkKey%position
+        const [kinkKey, position] = key.split('%')
+
+        // Get position number
+        const posNum = POSITION_MAP[position] !== undefined ? POSITION_MAP[position] : 0
+        return `${kinkKey},${posNum},${choice}`
+      })
+      .join(';')
+
+    // Create a minimal data structure
+    const compressedData = {
+      v: CURRENT_VERSION, // Current version of the data format
+      r: ROLE_MAP[list.role],
+      s: selections,
+    }
 
     // Base64 encode to make it URL safe
-    const encoded = btoa(JSON.stringify({
-      name: list.name,
-      role: list.role,
-      selections,
-    }))
+    const encoded = btoa(JSON.stringify(compressedData))
 
-    // Normalize the pathname to ensure it doesn't end with a slash before query parameters
-    const pathname = window.location.pathname.endsWith('/')
-      ? window.location.pathname.slice(0, -1)
-      : window.location.pathname
-
-    return `${window.location.origin}${pathname}?list=${encoded}`
+    return `${window.location.origin}${window.location.pathname}?list=${encoded}`
   }
 
   function decodeListFromUrl(encoded: string): KinkList | null {
     try {
       const decoded = JSON.parse(atob(encoded))
 
+      // Handle both old and new formats
+      // Old format had {name, role, selections}
+      // New format has {v, r, s} (version, role, selections)
+
+      // Determine role
+      let role: UserRole
+      if (decoded.r !== undefined) {
+        // New format - numeric role
+        role = ROLE_NAMES[decoded.r] as UserRole || 'both'
+      }
+      else if (decoded.role) {
+        // Old format - string role
+        role = decoded.role as UserRole
+      }
+      else {
+        // Default
+        role = 'both'
+      }
+
+      // Create list with appropriate role
       const list: KinkList = {
         id: nanoid(8),
-        name: decoded.name || 'Imported List',
-        role: decoded.role || 'both',
+        name: decoded.name || 'Shared List',
+        role,
         created: Date.now(),
         selections: {},
       }
 
-      // Parse the selections
-      if (decoded.selections) {
-        decoded.selections.split(',').forEach((item: string) => {
-          const [key, value] = item.split('=')
-          list.selections[key] = Number.parseInt(value) as KinkChoice
-        })
-      }
+      // Use the migration function to handle both old and new formats
+      list.selections = migrateUrlEncodedList(decoded, kinkMappings)
 
       return list
     }

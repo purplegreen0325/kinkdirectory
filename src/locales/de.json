@@ -126,7 +126,9 @@
     "quick_rate_all_kinks": "Bewerten Sie schnell alle Ihre Macken in einer Reihe von Fragen",
     "new": "Neu",
     "share": "Teilen",
-    "screenshot_short": "Foto"
+    "screenshot_short": "Foto",
+    "import_error": "Import fehlgeschlagen",
+    "import_error_old_format": "Diese Liste verwendet ein veraltetes Format, das nicht mehr unterstützt wird. Versuchen Sie, eine neuere Liste zu importieren."
   },
   "roles": {
     "sub": "Unterwürfig",

@@ -126,7 +126,9 @@
     "quick_rate_all_kinks": "Valuta rapidamente tutti i tuoi problemi con una serie di domande",
     "new": "Nuovo",
     "share": "Per condividere",
-    "screenshot_short": "Foto"
+    "screenshot_short": "Foto",
+    "import_error": "Importazione non riuscita",
+    "import_error_old_format": "Questo elenco utilizza un formato obsoleto che non è più supportato. Prova a importare un elenco più recente."
   },
   "roles": {
     "sub": "Sottomesso",
