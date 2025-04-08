@@ -9,7 +9,9 @@
   "github": {
     "release": true,
     "releaseName": "Release v${version}",
-    "tokenRef": "GITHUB_TOKEN"
+    "tokenRef": "GITHUB_TOKEN",
+    "assets": ["*.tar.gz", "*.zip"],
+    "releaseNotes": "cat CHANGELOG.md | grep -A 100 \"## \\[${version}\\]\" | grep -B 100 -m 2 \"## \\[\" | grep -v \"## \\[$\""
   },
   "hooks": {
     "before:init": ["yarn lint"],
@@ -18,6 +20,7 @@
   "npm": {
     "publish": false
   },
+  "changelogFile": "CHANGELOG.md",
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
