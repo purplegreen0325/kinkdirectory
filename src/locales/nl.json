@@ -182,7 +182,8 @@
     "misc_fetish": "Diverse Fetishes",
     "pain": "Pijn",
     "medium": "Medium",
-    "time_scale": "Tijdschaal"
+    "time_scale": "Tijdschaal",
+    "role_play": "Rollenspel"
   },
   "subcategories": {
     "general": "Algemeen"
@@ -324,10 +325,6 @@
     }
   },
   "restrictive": {
-    "gag": {
-      "label": "Gag",
-      "tooltip": "Het plaatsen en vastzetten van een voorwerp in de mond van een ander personage om hem of haar te dwingen door de neus te ademen, evenals het creëren van het onvermogen om te spreken, of het ontvangen van dergelijke handelingen."
-    },
     "collar": {
       "label": "Halsband",
       "tooltip": "Het dragen van een halsband om de nek."
@@ -387,6 +384,62 @@
     "sensory_deprivation": {
       "label": "Zintuiglijke deprivatie",
       "tooltip": "Het beperken of wegnemen van zintuiglijke prikkels, zoals zicht, gehoor of tast, om andere zintuigen te versterken en de focus te verdiepen."
+    },
+    "armbinders": {
+      "label": "Armbinders",
+      "tooltip": "Speciale kokers die de armen achter de rug fixeren, wat volledige immobilisatie van de armen veroorzaakt."
+    },
+    "cages": {
+      "label": "Kooien",
+      "tooltip": "Opgesloten worden in een kooi of cel als vorm van bondage en machtsdynamiek."
+    },
+    "chains": {
+      "label": "Kettingen",
+      "tooltip": "Vastgebonden worden met kettingen, wat een unieke zware en koude sensatie geeft in vergelijking met andere bondagematerialen."
+    },
+    "leather_cuffs": {
+      "label": "Leren handboeien",
+      "tooltip": "Handboeien gemaakt van leer voor het vastbinden van polsen of enkels."
+    },
+    "metal_cuffs": {
+      "label": "Metalen handboeien",
+      "tooltip": "Traditionele metalen handboeien gebruikt voor het vastbinden van polsen of enkels."
+    },
+    "gag_ball": {
+      "label": "Balgag",
+      "tooltip": "Een bolvormige gag die in de mond wordt geplaatst en achter het hoofd wordt vastgemaakt."
+    },
+    "gag_ring": {
+      "label": "Ringgag",
+      "tooltip": "Een ringvormige gag die de mond open houdt, wat toegang tot de mond mogelijk maakt terwijl praten wordt verhinderd."
+    },
+    "gag_tape": {
+      "label": "Tape gag",
+      "tooltip": "Tape gebruikt om de mond te bedekken en spraak te verhinderen."
+    },
+    "hoods": {
+      "label": "Kappen",
+      "tooltip": "Volledige hoofdbedekking die een gevoel van anonimiteit, depersonalisatie of zintuiglijke deprivatie kan creëren."
+    },
+    "immobilisation": {
+      "label": "Immobilisatie",
+      "tooltip": "Complete beperking van beweging door diverse bondagetechnieken."
+    },
+    "leather_restraints": {
+      "label": "Leren boeien",
+      "tooltip": "Diverse boeien gemaakt van leer, gebruikt voor verschillende vormen van bondage."
+    },
+    "stocks": {
+      "label": "Schandblok",
+      "tooltip": "Traditioneel middeleeuws restrictieapparaat dat hoofd en handen vasthoudt."
+    },
+    "straight_jacket": {
+      "label": "Dwangbuis",
+      "tooltip": "Een speciaal kledingstuk ontworpen om de armen te immobiliseren door ze tegen het lichaam te binden."
+    },
+    "sleep_sack": {
+      "label": "Slaapzak",
+      "tooltip": "Een speciale strakke zak waarin het hele lichaam wordt opgesloten, vergelijkbaar met mummificatie."
     },
     "dom_only_for_sub": {
       "label": "Dom alleen voor sub",
@@ -771,6 +824,34 @@
     "snuff": {
       "label": "Snuff",
       "tooltip": "Het vermoorden van een personage als onderdeel van seks."
+    },
+    "face_slapping": {
+      "label": "Gezicht slaan",
+      "tooltip": "Het slaan in het gezicht als vorm van vernedering of opwinding."
+    },
+    "punching": {
+      "label": "Stompen",
+      "tooltip": "Het gebruik van vuiststoten als vorm van seksuele stimulatie."
+    },
+    "clamps_labia_clit": {
+      "label": "Klemmen (labia/clitoris)",
+      "tooltip": "Het gebruik van klemmen op de labia of clitoris voor stimulatie door pijn."
+    },
+    "fire_play": {
+      "label": "Vuurspel",
+      "tooltip": "Het gebruik van vuur of hitte voor seksuele stimulatie, vaak met vloeistoffen die korte tijd branden op de huid."
+    },
+    "knife_play": {
+      "label": "Messpel",
+      "tooltip": "Het gebruik van messen of scherpe voorwerpen om angst, opwinding of lichte pijn te veroorzaken, meestal zonder daadwerkelijk de huid te doorbreken."
+    },
+    "needle_play": {
+      "label": "Naaldspel",
+      "tooltip": "Het gebruik van naalden die door de huid worden gestoken voor seksuele stimulatie."
+    },
+    "vampire_gloves": {
+      "label": "Vampier handschoenen",
+      "tooltip": "Speciale handschoenen met kleine metalen punten die de huid prikken bij aanraking."
     }
   },
   "medium": {
@@ -839,6 +920,48 @@
     "occasional_replies": {
       "label": "Incidentele Antwoorden",
       "tooltip": "Antwoorden die na 24+ uur komen."
+    }
+  },
+  "role_play": {
+    "medical_scenes": {
+      "label": "Medische scènes",
+      "tooltip": "Rollenspel waarin medische procedures, onderzoeken en de arts-patiënt dynamiek worden nagespeeld."
+    },
+    "animal_roleplay": {
+      "label": "Dierenrollenspel",
+      "tooltip": "Rollenspel waarbij een persoon het gedrag en de manieren van een dier nabootst."
+    },
+    "age_play": {
+      "label": "Leeftijdsspel",
+      "tooltip": "Rollenspel waarbij deelnemers doen alsof ze een andere leeftijd hebben dan hun daadwerkelijke leeftijd (allen volwassenen)."
+    },
+    "prison_scenes": {
+      "label": "Gevangenisscènes",
+      "tooltip": "Rollenspel rondom een gevangenis-setting, vaak met bewaker-gevangene dynamiek."
+    },
+    "schoolroom_scenes": {
+      "label": "Klaslokaalscènes",
+      "tooltip": "Rollenspel in een schoolomgeving, vaak met leraar-leerling dynamiek."
+    },
+    "prostitution_fantasy": {
+      "label": "Prostitutiefantasie",
+      "tooltip": "Rollenspel waarbij een persoon doet alsof ze seks hebben in ruil voor geld of gunsten."
+    },
+    "religious_scenes": {
+      "label": "Religieuze scènes",
+      "tooltip": "Rollenspel met religieuze elementen of settings, zoals biecht of zonde."
+    },
+    "interrogations": {
+      "label": "Ondervragingen",
+      "tooltip": "Rollenspel waarbij een persoon wordt ondervraagd, vaak met machtsdynamiek en druk."
+    },
+    "fear_play": {
+      "label": "Angstspel",
+      "tooltip": "Activiteiten die bewust angst opwekken als onderdeel van de seksuele ervaring."
+    },
+    "egyptian": {
+      "label": "Egyptisch",
+      "tooltip": "Rollenspel scenario's met oude Egyptische thema's, zoals farao's, Cleopatra, goden en mythologie."
     }
   }
 }

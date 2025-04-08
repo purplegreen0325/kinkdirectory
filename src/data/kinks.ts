@@ -416,25 +416,6 @@ export const kinkList: KinkCategory[] = [
     kinks: [
 
       {
-        id: 'gag',
-        format: 'role_specific',
-        allowedPerspectives: [
-
-          {
-            role: 'dom',
-            perspective: 'partner',
-          },
-
-          {
-            role: 'sub',
-            perspective: 'self',
-          },
-
-        ],
-        key: 31,
-      },
-
-      {
         id: 'collar',
         format: 'role_specific',
         allowedPerspectives: [
@@ -727,6 +708,286 @@ export const kinkList: KinkCategory[] = [
         key: 137,
       },
 
+      {
+        id: 'armbinders',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 147,
+      },
+
+      {
+        id: 'cages',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 148,
+      },
+
+      {
+        id: 'chains',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 149,
+      },
+
+      {
+        id: 'leather_cuffs',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 150,
+      },
+
+      {
+        id: 'metal_cuffs',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 151,
+      },
+
+      {
+        id: 'gag_ball',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 152,
+      },
+
+      {
+        id: 'gag_ring',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 153,
+      },
+
+      {
+        id: 'gag_tape',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 154,
+      },
+
+      {
+        id: 'hoods',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 155,
+      },
+
+      {
+        id: 'immobilisation',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 156,
+      },
+
+      {
+        id: 'leather_restraints',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 157,
+      },
+
+      {
+        id: 'stocks',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 158,
+      },
+
+      {
+        id: 'straight_jacket',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 159,
+      },
+
+      {
+        id: 'sleep_sack',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 160,
+      },
+
     ],
   },
 
@@ -900,7 +1161,7 @@ export const kinkList: KinkCategory[] = [
       },
 
       {
-        id: 'begging',
+        id: 'egyptian',
         format: 'role_specific',
         allowedPerspectives: [
 
@@ -919,7 +1180,7 @@ export const kinkList: KinkCategory[] = [
       },
 
       {
-        id: 'forced_orgasm',
+        id: 'begging',
         format: 'role_specific',
         allowedPerspectives: [
 
@@ -938,7 +1199,7 @@ export const kinkList: KinkCategory[] = [
       },
 
       {
-        id: 'orgasm_control',
+        id: 'forced_orgasm',
         format: 'role_specific',
         allowedPerspectives: [
 
@@ -954,6 +1215,25 @@ export const kinkList: KinkCategory[] = [
 
         ],
         key: 50,
+      },
+
+      {
+        id: 'orgasm_control',
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 51,
       },
 
       {
@@ -2168,6 +2448,166 @@ export const kinkList: KinkCategory[] = [
         key: 113,
       },
 
+      {
+        id: 'beating',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 161,
+      },
+
+      {
+        id: 'face_slapping',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 162,
+      },
+
+      {
+        id: 'punching',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 163,
+      },
+
+      {
+        id: 'clamps_labia_clit',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 164,
+      },
+
+      {
+        id: 'fire_play',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 165,
+      },
+
+      {
+        id: 'knife_play',
+        addedAt: 1744129147, 
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 166,
+      },
+
+      {
+        id: 'needle_play',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 167,
+      },
+
+      {
+        id: 'vampire_gloves',
+        addedAt: 1744129147,
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 168,
+      },
+
     ],
   },
 
@@ -2278,6 +2718,83 @@ export const kinkList: KinkCategory[] = [
         key: 129,
       },
 
+    ],
+  },
+
+  {
+    id: 'role_play',
+    kinks: [
+    
+      {
+        id: 'medical_scenes',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 169,
+      },
+      
+      {
+        id: 'animal_roleplay',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 170,
+      },
+      
+      {
+        id: 'age_play',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 171,
+      },
+      
+      {
+        id: 'prison_scenes',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 172,
+      },
+      
+      {
+        id: 'schoolroom_scenes',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 173,
+      },
+      
+      {
+        id: 'prostitution_fantasy',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 174,
+      },
+      
+      {
+        id: 'religious_scenes',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 175,
+      },
+      
+      {
+        id: 'interrogations',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 176,
+      },
+      
+      {
+        id: 'fear_play',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 177,
+      },
+      
+      {
+        id: 'egyptian',
+        addedAt: 1744129147,
+        format: 'general',
+        key: 178,
+      },
+      
     ],
   },
 
