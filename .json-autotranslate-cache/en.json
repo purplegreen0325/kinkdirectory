@@ -128,7 +128,8 @@
     "share": "To share",
     "screenshot_short": "Photo",
     "import_error": "Import failed",
-    "import_error_old_format": "This list uses an outdated format that is no longer supported. Try importing a newer list."
+    "import_error_old_format": "This list uses an outdated format that is no longer supported. Try importing a newer list.",
+    "back": "Back"
   },
   "roles": {
     "sub": "Submissive",

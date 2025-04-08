@@ -128,7 +128,8 @@
     "share": "Teilen",
     "screenshot_short": "Foto",
     "import_error": "Import fehlgeschlagen",
-    "import_error_old_format": "Diese Liste verwendet ein veraltetes Format, das nicht mehr unterstützt wird. Versuchen Sie, eine neuere Liste zu importieren."
+    "import_error_old_format": "Diese Liste verwendet ein veraltetes Format, das nicht mehr unterstützt wird. Versuchen Sie, eine neuere Liste zu importieren.",
+    "back": "Zurück"
   },
   "roles": {
     "sub": "Unterwürfig",

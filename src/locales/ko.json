@@ -128,7 +128,8 @@
     "share": "공유하기",
     "screenshot_short": "사진",
     "import_error": "가져오기 실패",
-    "import_error_old_format": "이 목록은 더 이상 지원되지 않는 오래된 형식을 사용합니다. 최신 목록을 가져와 보세요."
+    "import_error_old_format": "이 목록은 더 이상 지원되지 않는 오래된 형식을 사용합니다. 최신 목록을 가져와 보세요.",
+    "back": "뒤쪽에"
   },
   "roles": {
     "sub": "복종적인",

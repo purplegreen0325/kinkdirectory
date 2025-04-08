@@ -128,7 +128,8 @@
     "share": "分享",
     "screenshot_short": "照片",
     "import_error": "导入失败",
-    "import_error_old_format": "此列表使用了不再受支持的过时格式。尝试导入较新的列表。"
+    "import_error_old_format": "此列表使用了不再受支持的过时格式。尝试导入较新的列表。",
+    "back": "后退"
   },
   "roles": {
     "sub": "顺从",

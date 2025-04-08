@@ -128,7 +128,8 @@
     "share": "Para compartir",
     "screenshot_short": "Foto",
     "import_error": "Error en la importación",
-    "import_error_old_format": "Esta lista utiliza un formato obsoleto que ya no es compatible. Intente importar una lista más nueva."
+    "import_error_old_format": "Esta lista utiliza un formato obsoleto que ya no es compatible. Intente importar una lista más nueva.",
+    "back": "Atrás"
   },
   "roles": {
     "sub": "Sumiso",

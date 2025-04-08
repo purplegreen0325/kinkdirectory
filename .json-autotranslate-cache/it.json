@@ -128,7 +128,8 @@
     "share": "Per condividere",
     "screenshot_short": "Foto",
     "import_error": "Importazione non riuscita",
-    "import_error_old_format": "Questo elenco utilizza un formato obsoleto che non è più supportato. Prova a importare un elenco più recente."
+    "import_error_old_format": "Questo elenco utilizza un formato obsoleto che non è più supportato. Prova a importare un elenco più recente.",
+    "back": "Indietro"
   },
   "roles": {
     "sub": "Sottomesso",

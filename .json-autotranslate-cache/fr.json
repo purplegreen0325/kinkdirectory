@@ -128,7 +128,8 @@
     "share": "À partager",
     "screenshot_short": "Photo",
     "import_error": "L'importation a échoué",
-    "import_error_old_format": "Cette liste utilise un format obsolète qui n'est plus pris en charge. Essayez d’importer une liste plus récente."
+    "import_error_old_format": "Cette liste utilise un format obsolète qui n'est plus pris en charge. Essayez d’importer une liste plus récente.",
+    "back": "Dos"
   },
   "roles": {
     "sub": "Soumis",

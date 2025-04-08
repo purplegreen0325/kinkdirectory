@@ -23,6 +23,8 @@ const currentIndex = ref(0)
 const currentPositionIndex = ref(0)
 const quizCompleted = ref(false)
 const hasStarted = ref(false)
+// Track quiz history for back button functionality
+const quizHistory = ref<Array<{ kinkIndex: number, positionIndex: number, value: KinkChoiceType }>>([])
 
 // Active color classes (selected)
 const activeColorClasses = {
@@ -110,10 +112,27 @@ function getPositionLabel(position: string): string {
   return t(`app.${position}`)
 }
 
+// Provide haptic feedback on mobile devices
+function triggerHapticFeedback() {
+  if (window.navigator && window.navigator.vibrate) {
+    window.navigator.vibrate(50) // Short 50ms vibration
+  }
+}
+
 // Handle user selecting a rating
 function handleSelect(rating: KinkChoiceType) {
   if (!currentKink.value || !currentPosition.value)
     return
+
+  // Save current position to history before moving on
+  quizHistory.value.push({
+    kinkIndex: currentIndex.value,
+    positionIndex: currentPositionIndex.value,
+    value: currentValue.value,
+  })
+
+  // Provide haptic feedback on mobile
+  triggerHapticFeedback()
 
   // Save the selection
   setKinkChoice(
@@ -122,7 +141,7 @@ function handleSelect(rating: KinkChoiceType) {
     rating,
   )
 
-  // Move to next question
+  // Move to next question immediately
   nextQuestion()
 }
 
@@ -148,6 +167,23 @@ function nextQuestion() {
   }
 }
 
+// Go back to the previous question
+function previousQuestion() {
+  if (quizHistory.value.length === 0)
+    return
+
+  const previousState = quizHistory.value.pop()
+  if (previousState) {
+    currentIndex.value = previousState.kinkIndex
+    currentPositionIndex.value = previousState.positionIndex
+
+    // If we went back from completed state, ensure it's not marked completed
+    if (quizCompleted.value) {
+      quizCompleted.value = false
+    }
+  }
+}
+
 // Start the quiz
 function startQuiz() {
   hasStarted.value = true
@@ -155,6 +191,7 @@ function startQuiz() {
   currentIndex.value = 0
   currentPositionIndex.value = 0
   quizCompleted.value = false
+  quizHistory.value = []
 }
 
 // Handle cancel (close modal)
@@ -244,8 +281,8 @@ function getKinkLabel(): string {
         <!-- Quiz question -->
         <div v-else-if="currentKink && currentPosition" class="flex-grow flex flex-col">
           <!-- Progress bar -->
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
-            <div class="bg-primary-500 h-2 rounded-full" :style="{ width: `${progress}%` }" />
+          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4 overflow-hidden">
+            <div class="bg-primary-500 h-2 rounded-full transition-all duration-500 ease-out" :style="{ width: `${progress}%` }" />
           </div>
 
           <!-- Category and Kink Info -->
@@ -279,9 +316,11 @@ function getKinkLabel(): string {
           <div class="flex flex-col space-y-1 flex-grow">
             <div v-for="rating in allValues" :key="rating" class="w-full">
               <button
-                class="w-full py-2 px-4 text-left rounded-md flex items-center justify-between transition-colors"
+                class="w-full py-2 px-4 text-left rounded-md flex items-center justify-between transition-colors duration-150 active:bg-gray-200 dark:active:bg-gray-700"
                 :class="[
-                  currentValue === rating ? `bg-gray-100 dark:bg-gray-800 font-medium ${textColorClasses[rating]}` : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
+                  currentValue === rating
+                    ? `bg-gray-100 dark:bg-gray-800 font-medium ${textColorClasses[rating]} outline outline-1 outline-current`
+                    : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
                 ]"
                 :data-rating="rating"
                 @click="handleSelect(rating)"
@@ -299,8 +338,18 @@ function getKinkLabel(): string {
             </div>
           </div>
 
-          <!-- Skip button -->
-          <div class="flex justify-center mt-1">
+          <!-- Navigation buttons -->
+          <div class="flex justify-between mt-3">
+            <UButton
+              v-if="quizHistory.length > 0"
+              variant="ghost"
+              icon="i-lucide-arrow-left"
+              @click="previousQuestion"
+            >
+              {{ t('app.back') }}
+            </UButton>
+            <div v-else /> <!-- Empty div to maintain layout with flexbox justify-between -->
+
             <UButton
               variant="ghost"
               @click="nextQuestion"
@@ -329,3 +378,20 @@ function getKinkLabel(): string {
     </template>
   </UModal>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+</style>
