@@ -73,5 +73,4 @@ Simply click "Create new list" to begin exploring your preferences! 🎉
 
 We're constantly working to improve Kink Directory. Here are some features we're planning to implement:
 
-- 📸 **Enhanced screenshots** - Better screenshot functionality with more options
 - 🔍 **More kinks** - Expanding our list of kinks and preferences for a more comprehensive experience
