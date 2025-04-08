@@ -70,6 +70,7 @@ export function useScreenshot() {
         categoryHeader.style.padding = '5px 8px'
         categoryHeader.style.fontWeight = '600'
         categoryHeader.style.fontSize = '11px'
+        categoryHeader.style.color = 'black'
 
         // Get the category title
         const categoryTitle = category.querySelector('h2')
@@ -99,6 +100,7 @@ export function useScreenshot() {
           labelHeader.style.padding = '5px 8px'
           labelHeader.style.width = '70%'
           labelHeader.style.fontSize = '11px'
+          labelHeader.style.color = 'black'
           headerRow.appendChild(labelHeader)
 
           // Check if this is a general section or role-specific section
@@ -111,6 +113,7 @@ export function useScreenshot() {
             generalHeader.style.padding = '5px 8px'
             generalHeader.style.fontSize = '11px'
             generalHeader.style.fontWeight = '500'
+            generalHeader.style.color = 'black'
 
             // Use the actual header text from the section instead of hardcoding "General"
             const originalHeader = section.querySelector('thead th:not(:first-child)')
@@ -129,6 +132,7 @@ export function useScreenshot() {
               newHeader.style.fontSize = '11px'
               newHeader.style.fontWeight = '500'
               newHeader.style.whiteSpace = 'nowrap'
+              newHeader.style.color = 'black'
               newHeader.textContent = header.textContent
               headerRow.appendChild(newHeader)
             })
@@ -151,6 +155,7 @@ export function useScreenshot() {
             labelCell.style.padding = '6px 8px'
             labelCell.style.textAlign = 'left'
             labelCell.style.fontSize = '12px'
+            labelCell.style.color = 'black'
 
             // Get label text
             const label = row.querySelector('td')
