@@ -17,6 +17,7 @@ Kink Directory helps you create personalized kink lists to explore your preferen
 - 🎨 **User-friendly interface** - Simple, clean design with intuitive controls
 - 🌐 **Multi-language support** - Available in multiple languages to serve a global audience
 - 📝 **Quiz mode** - Quickly rate all kinks by going through them one by one in a guided interface
+- 🔍 **Advanced filtering** - Filter by new items, unfilled items, or specific choice ratings for easy exploration
 
 ## 🌍 Supported Languages
 
@@ -54,6 +55,17 @@ Your privacy is our top priority:
 ## 🏁 Getting Started
 
 Simply click "Create new list" to begin exploring your preferences! 🎉
+
+## 📌 Filtering Options
+
+The Kink Directory offers powerful filtering tools to help you navigate your preferences:
+
+- 🆕 **New Items Filter** - Focus on recently added kinks to keep your list up-to-date
+- ❓ **Unfilled Items Filter** - Quickly identify kinks you haven't rated yet
+- 🌈 **Choice Filters** - Filter by specific ratings (Favorite, Like, Indifferent, Maybe, Limit) to review similar preferences together
+- 🔄 **Combined Filters** - Use multiple filters together for more precise navigation
+
+These filtering options make it easy to manage large lists and focus on specific aspects of your preferences.
 
 ## 📱 Screenshots
 
