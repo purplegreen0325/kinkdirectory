@@ -144,11 +144,11 @@ export function useScreenshot() {
         return item
       }
 
-      // Create a 6-column grid layout
+      // Replace with masonry-style layout using columns
       const gridContainer = document.createElement('div')
-      gridContainer.style.display = 'grid'
-      gridContainer.style.gridTemplateColumns = 'repeat(6, 1fr)'
-      gridContainer.style.gap = '12px'
+      gridContainer.style.columnCount = '6'
+      gridContainer.style.columnGap = '12px'
+      gridContainer.style.width = '100%'
 
       // Clone all categories from the original content
       const categories = contentElement.querySelectorAll('.category-container')
@@ -157,6 +157,9 @@ export function useScreenshot() {
         // Create a new category container
         const categoryContainer = document.createElement('div')
         categoryContainer.style.breakInside = 'avoid'
+        categoryContainer.style.pageBreakInside = 'avoid'
+        categoryContainer.style.display = 'inline-block'
+        categoryContainer.style.width = '100%'
         categoryContainer.style.marginBottom = '12px'
         categoryContainer.style.border = '1px solid #E5E7EB'
         categoryContainer.style.borderRadius = '6px'
@@ -314,7 +317,6 @@ export function useScreenshot() {
             // Function to create a rating circle
             const createRatingCircle = (rating: number) => {
               const circle = document.createElement('div')
-              circle.style.display = 'inline-flex'
               circle.style.width = '14px'
               circle.style.height = '14px'
               circle.style.borderRadius = '50%'
@@ -349,6 +351,7 @@ export function useScreenshot() {
               const newCell = document.createElement('td')
               newCell.style.padding = '6px 8px'
               newCell.style.textAlign = 'center'
+              newCell.style.verticalAlign = 'middle'
 
               // Find selected rating
               let selectedRating = 0
@@ -395,9 +398,19 @@ export function useScreenshot() {
                 }
               }
 
+              // Wrap circle in a properly centered container
+              const wrapper = document.createElement('div')
+              wrapper.style.display = 'flex'
+              wrapper.style.justifyContent = 'center'
+              wrapper.style.alignItems = 'center'
+              wrapper.style.width = '100%'
+              wrapper.style.height = '100%'
+
               // Create rating circle
               const circle = createRatingCircle(selectedRating)
-              newCell.appendChild(circle)
+              wrapper.appendChild(circle)
+
+              newCell.appendChild(wrapper)
 
               newRow.appendChild(newCell)
             })
