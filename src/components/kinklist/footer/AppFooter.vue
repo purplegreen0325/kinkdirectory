@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { version } from '../../../../package.json'
 
 const { t } = useI18n()
 const currentYear = new Date().getFullYear()
@@ -9,7 +10,7 @@ const currentYear = new Date().getFullYear()
   <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-3 px-3 sm:px-4 mt-auto">
     <div class="w-full flex justify-between items-center flex-wrap gap-2 text-sm text-gray-600 dark:text-gray-400">
       <div>
-        © {{ currentYear }} {{ t('title') }}
+        © {{ currentYear }} {{ t('title') }} - v{{ version }}
       </div>
       <div>
         <a
