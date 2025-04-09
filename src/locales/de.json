@@ -243,7 +243,7 @@
       "tooltip": "Interesse an der Verwendung von High Heels im sexuellen Kontext eines Rollenspiels oder Interesse daran, dass die Charaktere sie tragen."
     },
     "leather": {
-      "label": "Lernen",
+      "label": "Leder",
       "tooltip": "Interessiert an der Verwendung von Lederkleidung im sexuellen Kontext eines Rollenspiels oder daran, dass Charaktere diese Kleidung tragen."
     },
     "latex": {
@@ -265,11 +265,11 @@
       "tooltip": "Zeigen oder Ausdrücken von Liebe oder starker Zuneigung, Leidenschaft, sowohl beim Liebesspiel als auch in normalen Szenen."
     },
     "handjob_fingering": {
-      "label": "Handarbeit / Fingern",
+      "label": "Handjob / Fingern",
       "tooltip": "Sexuelle Stimulation durch direkten, körperlichen Kontakt der Hände oder Finger mit den Genitalien."
     },
     "blowjob": {
-      "label": "Rohre",
+      "label": "Blasen",
       "tooltip": "Sexuelle Stimulation durch direkten, körperlichen Kontakt des Mundes oder der Zunge mit männlichen Geschlechtsorganen."
     },
     "deep_throat": {
@@ -281,27 +281,27 @@
       "tooltip": "Die orale Einnahme von Sperma, direkt oder indirekt aus einem Penis."
     },
     "facials": {
-      "label": "Gesichtsbehandlungen",
+      "label": "Gesichtsbesamung",
       "tooltip": "Der Akt des Kommens/Spritzens (Ejakulierens) direkt auf das Gesicht einer Person."
     },
     "cunnilingus": {
-      "label": "Blasen",
+      "label": "Lecken",
       "tooltip": "Sexuelle Stimulation durch direkten, körperlichen Kontakt des Mundes oder der Zunge mit den weiblichen Geschlechtsorganen."
     },
     "face_sitting": {
       "label": "Facesitting",
-      "tooltip": "Eine sexuelle Praxis, bei der jemand mit seinem Gesäß oder seinen Genitalien auf dem Gesicht einer anderen Figur sitzt und die Person erstickt, manchmal bis zum Ersticken; Dies geschieht oft als eine Form der Erzwingung oraler Befriedigung."
+      "tooltip": "Eine sexuelle Praxis, bei der jemand mit seinem Gesäß oder seinen Genitalien auf dem Gesicht einer anderen Figur sitzt und die Person erstickt, manchmal bis kurz vor dem Ersticken. Dies geschieht oft als eine Form der Erzwingung oraler Befriedigung."
     },
     "edging": {
-      "label": "Kanten",
+      "label": "Edging",
       "tooltip": "Am Rande des Höhepunkts bleiben, ohne einen Orgasmus zu haben."
     },
     "teasing": {
-      "label": "Plagen",
+      "label": "Reizen",
       "tooltip": "Bezieht sich auf ausgedehnte Vorspielszenen vor dem expliziten Geschlechtsverkehr, die körperlich und/oder verbal sein können und normalerweise dazu dienen, den Partner bis zur sexuellen Frustration oder Verzweiflung zu erregen."
     },
     "ruined": {
-      "label": "Ruiniert",
+      "label": "Ruinieren",
       "tooltip": "Der Vorgang, einer Person einen Orgasmus zu ermöglichen, die Stimulation jedoch kurz vor dem Höhepunkt zu stoppen, was zu einem unvollständigen oder unbefriedigenden Orgasmus führt. Dies kann sowohl bei männlichen als auch bei weiblichen Partnern auftreten."
     }
   },
@@ -333,11 +333,11 @@
       "tooltip": "Das Platzieren und Festhalten eines Gegenstands im Mund einer anderen Figur, um diese zu zwingen, durch die Nase zu atmen, sowie das Erzeugen einer Sprachunfähigkeit oder das Empfangen solcher Aktionen."
     },
     "collar": {
-      "label": "Kragen",
-      "tooltip": "Tragen eines Kragens um den Hals."
+      "label": "Halsband",
+      "tooltip": "Tragen eines Halsbandes um den Hals."
     },
     "leash": {
-      "label": "Gürtel",
+      "label": "Leine",
       "tooltip": "An der Leine herumgeführt werden."
     },
     "chastity": {
@@ -353,7 +353,7 @@
       "tooltip": "Der Einsatz extremer Fesseln, sei es hinsichtlich der Position der gefesselten Figur, der Dauer der Fesselung, des durch die Fesselung verursachten Unbehagens oder des Ausmaßes der Bewegungslosigkeit, die durch die Fesselung eintritt."
     },
     "encasement": {
-      "label": "Entbindung",
+      "label": "Totaleinschluss",
       "tooltip": "Der gesamte Körper wird zur sexuellen Befriedigung wie eine Mumie in einen Latexanzug, einen Schlafsack oder eine andere Fetischausrüstung gehüllt."
     },
     "cag": {
@@ -361,11 +361,11 @@
       "tooltip": "Ein Gerät, das den Zugang zu den Genitalien verhindert."
     },
     "dom_only_for_sub": {
-      "label": "Blöd nur für Sub",
+      "label": "Dom nur für Sub",
       "tooltip": "Beispiel: Dominante Personen können nur für ihre Untergebenen reagieren, nicht für sich selbst."
     },
     "sub_self_only": {
-      "label": "Sub nur dich selbst",
+      "label": "Sub nur sich selbst",
       "tooltip": "Beispiel: Unterwürfige können nur für sich selbst antworten, nicht für ihren Dominanten."
     },
     "dom_answer_for_both": {
@@ -373,7 +373,7 @@
       "tooltip": "Beispiel: Der Dominante antwortet sowohl für sich selbst als auch für seinen Untergebenen."
     },
     "sub_only_for_dom": {
-      "label": "Sub nur für Dumme",
+      "label": "Sub nur für Dom",
       "tooltip": "Beispiel: Unterwürfige können nur für ihren Dominanten reagieren, nicht für sich selbst."
     },
     "blindfold": {
@@ -397,7 +397,7 @@
       "tooltip": "Gitterstäbe dienen dazu, Gliedmaßen auseinanderzuhalten, den Zugang zu erleichtern und die Verletzlichkeit zu erhöhen."
     },
     "suspension": {
-      "label": "Suspension",
+      "label": "Suspension / Hänge-Bondage",
       "tooltip": "Bondage-Techniken, bei denen der Körper teilweise oder vollständig vom Boden abgehoben wird, wodurch ein einzigartiges Gefühl der Schwerelosigkeit und völligen Hingabe entsteht."
     },
     "mummification": {
@@ -429,7 +429,7 @@
       "tooltip": "Traditionelle Handschellen aus Metall zum Fesseln von Handgelenken oder Knöcheln."
     },
     "gag_ball": {
-      "label": "Balgag",
+      "label": "Ballgag",
       "tooltip": "Ein kugelförmiger Knebel, der in den Mund eingeführt und hinter dem Kopf befestigt wird."
     },
     "gag_ring": {
@@ -471,7 +471,7 @@
       "tooltip": "Ein Objekt in Form eines erigierten Penis, das zur sexuellen Stimulation verwendet wird."
     },
     "plugs": {
-      "label": "Stecker",
+      "label": "Plugs",
       "tooltip": "Ein Sexspielzeug, das zum Einführen in den Enddarm bestimmt ist."
     },
     "vibrators": {
@@ -479,7 +479,7 @@
       "tooltip": "Ein vibrierendes Gerät zur sexuellen Stimulation."
     },
     "sounding": {
-      "label": "Klingend",
+      "label": "Sounding",
       "tooltip": "Das Einführen von Metallstäben in die Harnröhre eines Mannes oder einer Frau oder das Empfangen solcher Handlungen; technisch gesehen bedeutet dies, dass Stäbe als Reaktion auf eine Form der Stimulation mitschwingen und/oder vibrieren, aber das muss nicht zwangsläufig so sein."
     }
   },
@@ -497,12 +497,12 @@
       "tooltip": "Dem Befehl des Dominanten als Sklave zu dienen oder solche Dienste ohne Wahl anzunehmen."
     },
     "pet_play": {
-      "label": "Haustierspiel",
+      "label": "Haustier / Petplay",
       "tooltip": "Beim Petplay handelt es sich um eine Rolle, bei der der Fokus darauf liegt, dass der Unterwürfige einen anderen Geisteszustand annimmt, oft den eines Hundes, einer Katze oder eines Pferdes."
     },
     "dd_lg_md_lb": {
-      "label": "DD/groß, MD/lb",
-      "tooltip": "Daddy oder Mommy Dom/ Kleines Mädchen oder Junge. Der Papa/die Mama ist die dominantere Hälfte der Beziehung, der Kleine ist die unterwürfigere."
+      "label": "DD/lg, MD/lb",
+      "tooltip": "Daddy oder Mommy Dom / Kleines Mädchen oder Junge. Der Papa/die Mama ist die dominantere Hälfte der Beziehung, der/die Kleine ist der/die Unterwürfigere."
     },
     "discipline": {
       "label": "Disziplin",
@@ -525,7 +525,7 @@
       "tooltip": "Bezieht sich auf die Verweigerung eines Orgasmus durch den Dominanten gegenüber dem Unterwürfigen."
     },
     "power_exchange": {
-      "label": "Stromaustausch",
+      "label": "Kontrolltausch / Power Exchange",
       "tooltip": "Eine Beziehung, in deren Mittelpunkt der Service steht."
     },
     "multiple_orgasms": {
@@ -581,7 +581,7 @@
       "tooltip": "Szenen, die auf Interaktionen zwischen den Rassen basieren, ohne auf rassistischen Stereotypen zurückzugreifen."
     },
     "raceplay": {
-      "label": "Rennspiel",
+      "label": "Rassenspiel",
       "tooltip": "Szenen, die auf rassistischen Stereotypen oder Rassismus basieren, einschließlich Szenen, die in einem rassistischen Umfeld spielen."
     },
     "bestiality": {
@@ -593,7 +593,7 @@
       "tooltip": "Der Akt des Geschlechtsverkehrs mit einer toten oder anderweitig bewusstlosen oder unbelebten Person, die einmal am Leben war, oder theoretisch das Empfangen solcher Handlungen."
     },
     "cheating": {
-      "label": "Schummeln",
+      "label": "Betrügen",
       "tooltip": "Wenn einer oder beide Partner ihren Partnern untreu sind."
     },
     "exhibitionism": {
@@ -615,7 +615,7 @@
       "tooltip": "Anthropomorphe Tierfiguren."
     },
     "vore": {
-      "label": "Furche",
+      "label": "Vore",
       "tooltip": "Der Akt des physischen Konsumierens einer anderen Figur."
     },
     "transformation": {
@@ -683,7 +683,7 @@
       "tooltip": "Bedienen oder Bedientwerden durch einen Partner mit einer physischen Barriere zwischen den Teilnehmern."
     },
     "name_calling": {
-      "label": "Fluch",
+      "label": "Beschimpfung",
       "tooltip": "Teilnahme an einem Rollenspiel, bei dem eine Figur verbal missbraucht wird, entweder um eine Reaktion sexueller Befriedigung aufgrund der mit der Demütigung verbundenen Emotionen hervorzurufen oder einfach als eine Form psychologischer Dominanz oder Bestrafung."
     },
     "humiliation": {
@@ -709,8 +709,8 @@
       "tooltip": "Der Akt des Kitzelns und/oder Kitzelns im sexuellen Kontext eines RP; oder dadurch sexuelle Stimulation zu erfahren."
     },
     "sensation_play": {
-      "label": "Sensationsspiel",
-      "tooltip": "Sensation Play beschreibt eine große Bandbreite an Aktivitäten, sowohl im klassischen als auch im ausgefallenen Stil, bei denen die Sinne des Körpers genutzt werden, um einen Partner zu erregen und zu stimulieren. Obwohl beim Sensationsspiel oft Hautempfindungen im Vordergrund stehen, muss dies nicht so eingeschränkt sein. Auch Sehen, Schmecken und Hören können in das Sensationsspiel einbezogen werden."
+      "label": "Sinnesspiel",
+      "tooltip": "Sinnesspiel beschreibt eine große Bandbreite an Aktivitäten, sowohl im klassischen als auch im ausgefallenen Stil, bei denen die Sinne des Körpers genutzt werden, um einen Partner zu erregen und zu stimulieren. Obwohl beim Sensationsspiel oft Hautempfindungen im Vordergrund stehen, muss dies nicht so eingeschränkt sein. Auch Sehen, Schmecken und Hören können in das Sensationsspiel einbezogen werden."
     },
     "electro_stimulation": {
       "label": "Elektrostimulation",
@@ -729,7 +729,7 @@
       "tooltip": "Die Verwendung von Federn für leichte, sanfte Berührungen, die kitzeln oder ein sinnliches Gefühl vermitteln können."
     },
     "pinwheel": {
-      "label": "Windrad",
+      "label": "Nadelrad",
       "tooltip": "Ein scharfes, radähnliches Instrument (Wartenberg-Rad), das über die Haut rollt und ein stechendes Gefühl verursacht, ohne die Haut zu verletzen."
     }
   },
@@ -747,7 +747,7 @@
       "tooltip": "Eine Situation, in der mindestens eine Figur die Atemgewohnheiten einer anderen Figur physisch kontrolliert, oft entweder durch zeitweise Strangulation und/oder durch Penetration in die Kehle."
     },
     "impregnation": {
-      "label": "Düngung",
+      "label": "Schwängern",
       "tooltip": "Einen Charakter schwängern."
     },
     "pregnancy": {
@@ -793,7 +793,7 @@
       "tooltip": "Caning ist eine im BDSM verwendete Technik, bei der der Dominante den Unterwürfigen wiederholt mit einem langen, flexiblen Stock schlägt, normalerweise auf das Gesäß."
     },
     "flogging": {
-      "label": "Geißeln",
+      "label": "Flogger",
       "tooltip": "Die Verwendung von Spielzeugen, die normalerweise mit BDSM und Dominanz/Unterwerfung in Verbindung gebracht werden, gegen einen Unterwürfigen oder Bottom, insbesondere im Zusammenhang mit Kontaktspielen mit Peitschen aller Art, Reitgerten, Paddeln oder Peitschen."
     },
     "gagging_choking": {
@@ -817,7 +817,7 @@
       "tooltip": "Teilnahme an einem Rollenspiel, bei dem die Genitalien mindestens einer Figur negativ dargestellt werden, mit der Absicht, körperliche Schmerzen zu verursachen."
     },
     "hot_wax": {
-      "label": "Heiß war",
+      "label": "Wachs",
       "tooltip": "Die Verwendung von Wachs, normalerweise heißem Kerzenwachs, als Form der sexuellen Stimulation und/oder Folter oder das Empfangen solcher Handlungen."
     },
     "scratching": {
@@ -833,7 +833,7 @@
       "tooltip": "Einem Partner Schnitte zuzufügen, um ihm im sexuellen Kontext Schmerzen zuzufügen."
     },
     "snuff": {
-      "label": "Schnupftabak",
+      "label": "Töten / Snuff",
       "tooltip": "Das Töten einer Figur als Teil von Sex."
     },
     "face_slapping": {
@@ -841,7 +841,7 @@
       "tooltip": "Der Akt, jemandem als Form der Demütigung oder Erregung ins Gesicht zu schlagen."
     },
     "punching": {
-      "label": "Stümpfe",
+      "label": "Schlagen",
       "tooltip": "Die Verwendung von Fauststößen als Form der sexuellen Stimulation."
     },
     "clamps_labia_clit": {
@@ -887,17 +887,17 @@
       "tooltip": "E-Mail als Plattform für Rollenspiele verwenden."
     },
     "discord": {
-      "label": "Zwietracht",
+      "label": "Discord",
       "tooltip": "Discord als Plattform für Rollenspiele verwenden."
     },
     "other_medium": {
-      "label": "Ansonsten",
+      "label": "Anderes",
       "tooltip": "Verwenden einer anderen Plattform für Rollenspiele."
     }
   },
   "time_scale": {
     "short_term_scenes": {
-      "label": "Kurzzeitszenen",
+      "label": "Kurze Szenen",
       "tooltip": "Rollenspielszenen, die nur einen kurzen Zeitraum dauern, normalerweise eine einzelne Sitzung."
     },
     "medium_term_scenes": {
@@ -909,7 +909,7 @@
       "tooltip": "Rollenspielszenen, die über einen längeren Zeitraum andauern, normalerweise mehrere Sitzungen oder eine fortlaufende Kampagne."
     },
     "quick_replies": {
-      "label": "Schnelle Antworten",
+      "label": "Sehr schnelle Antworten",
       "tooltip": "Antworten, die innerhalb von 0–10 Minuten kommen."
     },
     "fast_replies": {
@@ -929,7 +929,7 @@
       "tooltip": "Antworten kommen innerhalb von 8–24 Stunden."
     },
     "occasional_replies": {
-      "label": "Zufällige Antworten",
+      "label": "Unregelmäßige Antworten",
       "tooltip": "Antworten, die nach mehr als 24 Stunden kommen."
     }
   },
@@ -971,7 +971,7 @@
       "tooltip": "Aktivitäten, die als Teil des sexuellen Erlebnisses absichtlich Angst erzeugen."
     },
     "egyptian": {
-      "label": "ägyptisch",
+      "label": "Ägyptisch",
       "tooltip": "Rollenspielszenarien mit altägyptischen Themen wie Pharaonen, Kleopatra, Götter und Mythologie."
     }
   }
