@@ -4,6 +4,11 @@ import { fileURLToPath } from 'url'
 import csv from 'csv-parser'
 import { kinkList } from '../data/kinks'
 
+interface Translation {
+  label: string
+  tooltip?: string
+}
+
 interface LocaleData {
   [key: string]: any
 }
@@ -29,9 +34,20 @@ kinkList.forEach(category => {
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-async function importTranslations(locale: string, csvFile: string) {
-  // Read the locale file
+async function importTranslations(locale: string) {
+  // Setup paths
   const localeFile = path.join(__dirname, '..', 'locales', `${locale}.json`)
+  const csvDir = path.join(__dirname, '..', 'locales-csv')
+  const csvFile = path.join(csvDir, `kink-translations-${locale}.csv`)
+
+  // Check if CSV file exists
+  if (!fs.existsSync(csvFile)) {
+    console.error(`CSV file not found: ${csvFile}`)
+    console.error('Make sure you have exported the translations first using the export script.')
+    process.exit(1)
+  }
+
+  // Read the locale file
   const localeData: LocaleData = JSON.parse(fs.readFileSync(localeFile, 'utf8'))
 
   const records: CsvRecord[] = []
@@ -92,12 +108,13 @@ async function importTranslations(locale: string, csvFile: string) {
   }
 }
 
-// Get arguments from command line
-const [locale, csvFile] = process.argv.slice(2)
-if (!locale || !csvFile) {
-  console.error('Please provide locale code and CSV file path as arguments')
-  console.error('Example: npm run import-translations -- en kink-translations-en.csv')
+// Get locale from command line argument
+const locale = process.argv[2]
+if (!locale) {
+  console.error('Please provide a locale code as argument')
+  console.error('Example: npm run import-translations -- en')
+  console.error('\nThis will import from src/locales-csv/kink-translations-en.csv')
   process.exit(1)
 }
 
-importTranslations(locale, csvFile).catch(console.error) 
+importTranslations(locale).catch(console.error) 
