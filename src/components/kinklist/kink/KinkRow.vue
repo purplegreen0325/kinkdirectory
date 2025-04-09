@@ -43,14 +43,24 @@ const applicablePositions = computed(() => {
 function getPositionLabel(position: string): string {
   if (position === 'general')
     return t('app.general')
-  if (position === 'as_dom')
-    return t('app.as_dom')
-  if (position === 'as_sub')
-    return t('app.as_sub')
-  if (position === 'for_dom')
-    return t('app.for_dom')
-  if (position === 'for_sub')
-    return t('app.for_sub')
+  if (activeList.value?.role === 'both') {
+    if (position === 'as_sub')
+      return t('app.receiving')
+    if (position === 'for_sub')
+      return t('app.giving')
+  }
+  if (activeList.value?.role === 'dom') {
+    if (position === 'for_sub')
+      return t('app.giving')
+    if (position === 'as_dom')
+      return t('app.receiving')
+  }
+  if (activeList.value?.role === 'sub') {
+    if (position === 'as_sub')
+      return t('app.receiving')
+    if (position === 'for_dom')
+      return t('app.giving')
+  }
   return ''
 }
 
@@ -63,7 +73,7 @@ const leftColumnPosition = computed(() => {
     return 'for_sub' // dom partner perspective (dom giving to sub)
   }
   else if (activeList.value?.role === 'dom') {
-    return 'as_dom'
+    return 'for_sub' // Changed from 'as_dom' to 'for_sub'
   }
   else { // sub
     return 'as_sub'
@@ -79,7 +89,7 @@ const rightColumnPosition = computed(() => {
     return 'as_sub' // sub self perspective
   }
   else if (activeList.value?.role === 'dom') {
-    return 'for_sub'
+    return 'as_dom' // Changed from 'for_sub' to 'as_dom'
   }
   else { // sub
     return 'for_dom'
@@ -93,13 +103,13 @@ function isPositionApplicable(position: string) {
     if (position === 'for_sub') {
       // Check if this kink has a dom partner perspective
       return props.kink.allowedPerspectives?.some(
-        rp => rp.role === 'dom' && rp.perspective === 'partner',
+        rp => (rp.role === 'dom' && rp.perspective === 'partner') || (rp.role === 'sub' && rp.perspective === 'partner'),
       ) ?? false
     }
     else if (position === 'as_sub') {
       // Check if this kink has a sub self perspective
       return props.kink.allowedPerspectives?.some(
-        rp => rp.role === 'sub' && rp.perspective === 'self',
+        rp => (rp.role === 'sub' && rp.perspective === 'self') || (rp.role === 'dom' && rp.perspective === 'self'),
       ) ?? false
     }
 
@@ -110,13 +120,13 @@ function isPositionApplicable(position: string) {
     if (position === 'as_dom') {
       // Check if this kink has a dom self perspective
       return props.kink.allowedPerspectives?.some(
-        rp => (rp.role === 'dom' || rp.role === 'both') && rp.perspective === 'self',
+        rp => (rp.role === 'dom' && rp.perspective === 'self'),
       ) ?? false
     }
     else if (position === 'for_sub') {
       // Check if this kink has a dom partner perspective
       return props.kink.allowedPerspectives?.some(
-        rp => (rp.role === 'dom' || rp.role === 'both') && rp.perspective === 'partner',
+        rp => (rp.role === 'dom' && rp.perspective === 'partner'),
       ) ?? false
     }
   }
@@ -125,13 +135,13 @@ function isPositionApplicable(position: string) {
     if (position === 'as_sub') {
       // Check if this kink has a sub self perspective
       return props.kink.allowedPerspectives?.some(
-        rp => (rp.role === 'sub' || rp.role === 'both') && rp.perspective === 'self',
+        rp => (rp.role === 'sub' && rp.perspective === 'self'),
       ) ?? false
     }
     else if (position === 'for_dom') {
       // Check if this kink has a sub partner perspective
       return props.kink.allowedPerspectives?.some(
-        rp => (rp.role === 'sub' || rp.role === 'both') && rp.perspective === 'partner',
+        rp => (rp.role === 'sub' && rp.perspective === 'partner'),
       ) ?? false
     }
   }
@@ -139,23 +149,10 @@ function isPositionApplicable(position: string) {
   // For any other case, use applicablePositions
   return applicablePositions.value.includes(position)
 }
-
-// Show left column based on role and if the kink is applicable for that position
-const showLeftColumn = computed(() => {
-  if (!activeList.value)
-    return true
-
-  if (activeList.value.role === 'both') {
-    // In both mode, only show left column if needsLeftColumn is true
-    return props.needsLeftColumn !== false
-  }
-
-  // For dom/sub roles, check if this specific kink has the applicable perspective
-  return isPositionApplicable(leftColumnPosition.value)
-})
 </script>
 
 <template>
+  <!-- leftColumnPosition: {{ leftColumnPosition }} - rightColumnPosition: {{ rightColumnPosition }} -->
   <KinkRowLayout :is-last-item="isLastItem">
     <template #label>
       <KinkLabel
@@ -184,7 +181,7 @@ const showLeftColumn = computed(() => {
       <template v-else-if="kink.format === 'role_specific'">
         <!-- First Column (You) - only if needed -->
         <KinkColumn
-          v-if="showLeftColumn"
+          v-if="needsLeftColumn"
           :is-empty="!isPositionApplicable(leftColumnPosition)"
           :position="leftColumnPosition"
           :value="getKinkChoice(kink, leftColumnPosition)"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, useTemplateRef } from 'vue'
-import { useKinkListState } from '../composables/useKinkList'
 import { useI18n } from 'vue-i18n'
+import { useKinkListState } from '../composables/useKinkList'
 
 import AppFooter from './kinklist/footer/AppFooter.vue'
 // Import the new modular components
@@ -76,7 +76,7 @@ const quizCardRef = useTemplateRef('quizCardRef')
                       <span class="text-sm font-medium text-pink-600 dark:text-pink-400">{{ recentlyAddedKinks }} {{ t('app.new') }}</span>
                     </div>
                   </button>
-                  
+
                   <!-- Quiz button with matching styling to legend -->
                   <QuizCard
                     v-if="!isViewMode && hasSelections"
@@ -84,7 +84,7 @@ const quizCardRef = useTemplateRef('quizCardRef')
                     :compact="true"
                     class="flex-none md:flex md:items-center"
                   />
-                  
+
                   <!-- Filter dropdown -->
                   <FilterDropdown
                     v-if="activeList"

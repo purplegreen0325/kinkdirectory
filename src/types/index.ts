@@ -15,7 +15,7 @@ export type KinkPosition = 'as_dom' | 'as_sub' | 'for_dom' | 'for_sub' | 'genera
 
 // Combination of role and perspective
 export interface RolePerspective {
-  role: UserRole // Which user role this applies to
+  role: Omit<UserRole, 'both'> // Which user role this applies to
   perspective: KinkPerspective // Whether this is for self or partner
 }
 

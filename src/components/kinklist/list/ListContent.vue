@@ -6,15 +6,15 @@ import { kinkList } from '../../../data/kinks'
 import KinkSection from '../../kinklist/kink/KinkSection.vue'
 
 const { t } = useI18n()
-const { 
-  activeList, 
-  isKinkVisibleForRole, 
-  kinkModalState, 
-  closeKinkModal, 
-  shouldShowKink, 
-  filters, 
+const {
+  activeList,
+  isKinkVisibleForRole,
+  kinkModalState,
+  closeKinkModal,
+  shouldShowKink,
+  filters,
   hasActiveFilters,
-  clearAllFilters 
+  clearAllFilters,
 } = useKinkListState()
 
 // Filter categories to only show those with visible kinks

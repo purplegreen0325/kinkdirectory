@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import type { KinkChoice } from '../../../types'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
-import type { KinkChoice } from '../../../types'
-import { useSettings } from '../../../composables/useSettings';
+import { useSettings } from '../../../composables/useSettings'
 
 const { t } = useI18n()
 const { filters, hasActiveFilters, activeFilterCount, clearChoiceFilters, clearAllFilters } = useKinkListState()
@@ -26,7 +26,8 @@ function toggleChoiceFilter(choice: KinkChoice) {
   if (index === -1) {
     // Add the choice
     filters.value.choiceFilters.push(choice)
-  } else {
+  }
+  else {
     // Remove the choice
     filters.value.choiceFilters.splice(index, 1)
   }
@@ -72,7 +73,7 @@ const choiceColorClasses = {
         <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
           {{ t('app.filter_options') }}
         </div>
-        
+
         <!-- Basic filters -->
         <div class="space-y-2">
           <div class="flex items-center !cursor-pointer">
@@ -97,27 +98,27 @@ const choiceColorClasses = {
             <div class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {{ t('app.filter_by_choice') }}
             </div>
-            <button 
+            <button
               v-if="filters.choiceFilters.length > 0"
-              @click="clearChoiceFilters"
               class="text-xs text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300"
+              @click="clearChoiceFilters"
             >
               {{ t('app.clear') }}
             </button>
           </div>
-          
+
           <div class="flex flex-wrap gap-2">
             <button
               v-for="choice in allChoices"
               :key="choice"
-              @click="toggleChoiceFilter(choice)"
               class="p-1 rounded hover:bg-primary-200 dark:hover:bg-primary-700 transition-all duration-200"
               :class="{ 'bg-primary-100 dark:bg-primary-800': filters.choiceFilters.includes(choice) }"
+              @click="toggleChoiceFilter(choice)"
             >
               <div
                 class="w-5 h-5 rounded-full border flex items-center justify-center"
                 :class="[choiceColorClasses[choice], filters.choiceFilters.includes(choice) ? 'opacity-100' : 'opacity-25']"
-              ></div>
+              />
             </button>
           </div>
         </div>
@@ -125,8 +126,8 @@ const choiceColorClasses = {
         <!-- Clear all button -->
         <div v-if="hasActiveFilters" class="pt-2 border-t border-gray-200 dark:border-gray-700">
           <button
-            @click="handleClearAll"
             class="w-full py-1.5 px-3 text-sm bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-all duration-200 text-gray-700 dark:text-gray-300"
+            @click="handleClearAll"
           >
             {{ t('app.clear_all_filters') }}
           </button>

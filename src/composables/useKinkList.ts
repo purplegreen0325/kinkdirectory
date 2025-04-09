@@ -31,9 +31,9 @@ export const useKinkListState = createGlobalState(() => {
 
   // Filter settings storage
   const filters = useStorage<{
-    showOnlyNew: boolean;
-    showOnlyUnfilled: boolean;
-    choiceFilters: KinkChoice[];
+    showOnlyNew: boolean
+    showOnlyUnfilled: boolean
+    choiceFilters: KinkChoice[]
   }>('kinklist-filters-1.0.1', {
     showOnlyNew: false,
     showOnlyUnfilled: false,
@@ -564,7 +564,6 @@ export const useKinkListState = createGlobalState(() => {
     return allKinks
   }
 
-
   // Check if a kink should be shown based on applied filters
   function shouldShowKink(kink: KinkDefinition): boolean {
     // No active filters means show everything
@@ -572,8 +571,8 @@ export const useKinkListState = createGlobalState(() => {
       return true
     }
 
-    let shouldShow = true;
-    
+    let shouldShow = true
+
     // Apply "only new" filter if enabled
     if (filters.value.showOnlyNew) {
       shouldShow = shouldShow && (!!kink.addedAt && kink.addedAt > twoDaysAgo)
@@ -583,25 +582,25 @@ export const useKinkListState = createGlobalState(() => {
     if (filters.value.showOnlyUnfilled && activeList.value) {
       // Get the positions for this kink
       const positions = getKinkPositions(kink, activeList.value.role)
-      
+
       // Check if any positions are unfilled (rating = 0)
-      const hasUnfilledPositions = positions.some(position => 
-        getKinkChoice(kink, position) === 0
+      const hasUnfilledPositions = positions.some(position =>
+        getKinkChoice(kink, position) === 0,
       )
-      
+
       shouldShow = shouldShow && hasUnfilledPositions
     }
-    
+
     // Apply choice filters if any are selected
     if (filters.value.choiceFilters.length > 0 && activeList.value) {
       const positions = getKinkPositions(kink, activeList.value.role)
-      
+
       // Check if any position has a choice that matches the filters
-      const hasMatchingChoice = positions.some(position => {
+      const hasMatchingChoice = positions.some((position) => {
         const choice = getKinkChoice(kink, position)
         return filters.value.choiceFilters.includes(choice)
       })
-      
+
       shouldShow = shouldShow && hasMatchingChoice
     }
 
@@ -609,18 +608,21 @@ export const useKinkListState = createGlobalState(() => {
   }
 
   // Check if any filters are active
-  const hasActiveFilters = computed(() => 
-    filters.value.showOnlyNew || 
-    filters.value.showOnlyUnfilled || 
-    filters.value.choiceFilters.length > 0
+  const hasActiveFilters = computed(() =>
+    filters.value.showOnlyNew
+    || filters.value.showOnlyUnfilled
+    || filters.value.choiceFilters.length > 0,
   )
 
   // Count active filters
   const activeFilterCount = computed(() => {
     let count = 0
-    if (filters.value.showOnlyNew) count++
-    if (filters.value.showOnlyUnfilled) count++
-    if (filters.value.choiceFilters.length > 0) count++
+    if (filters.value.showOnlyNew)
+      count++
+    if (filters.value.showOnlyUnfilled)
+      count++
+    if (filters.value.choiceFilters.length > 0)
+      count++
     return count
   })
 

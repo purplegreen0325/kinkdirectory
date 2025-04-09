@@ -18,6 +18,7 @@ const {
   getKinkChoice,
   newUnfilledPositionsCount,
   newKinksAvailable,
+  activeList,
 } = useKinkListState()
 const { kinkChoiceOrder, settings } = useSettings()
 
@@ -131,8 +132,71 @@ const currentValue = computed((): KinkChoiceType => {
 })
 
 // Helper function to get position label
-function getPositionLabel(position: string): string {
-  return t(`app.${position}`)
+function getPositionLabel(position: string): {
+  icon: string
+  label: string
+  color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral' | undefined
+} {
+  if (position === 'general') {
+    return {
+      icon: 'i-lucide-list-checks',
+      label: t('app.general'),
+      color: 'info',
+    }
+  }
+  if (activeList.value?.role === 'both') {
+    if (position === 'as_sub') {
+      return {
+        icon: 'tdesign:user-arrow-left',
+        label: t('app.receiving'),
+        color: 'primary',
+      }
+    }
+    if (position === 'for_sub') {
+      return {
+        icon: 'tdesign:user-arrow-right',
+        label: t('app.giving'),
+        color: 'secondary',
+      }
+    }
+  }
+  if (activeList.value?.role === 'dom') {
+    if (position === 'for_sub') {
+      return {
+        icon: 'tdesign:user-arrow-right',
+        label: t('app.giving'),
+        color: 'secondary',
+      }
+    }
+    if (position === 'as_dom') {
+      return {
+        icon: 'tdesign:user-arrow-left',
+        label: t('app.receiving'),
+        color: 'primary',
+      }
+    }
+  }
+  if (activeList.value?.role === 'sub') {
+    if (position === 'as_sub') {
+      return {
+        icon: 'tdesign:user-arrow-left',
+        label: t('app.receiving'),
+        color: 'primary',
+      }
+    }
+    if (position === 'for_dom') {
+      return {
+        icon: 'tdesign:user-arrow-right',
+        label: t('app.giving'),
+        color: 'secondary',
+      }
+    }
+  }
+  return {
+    icon: '',
+    label: '',
+    color: 'neutral',
+  }
 }
 
 // Provide haptic feedback on mobile devices
@@ -387,6 +451,7 @@ const quizTitle = computed(() => {
           <!-- Category and Kink Info -->
           <div class="text-center space-y-1 mb-1">
             <UBadge size="sm" color="neutral" class="mb-0.5">
+              <UIcon name="iconamoon:category-fill" class="text-xs" />
               {{ t(`categories.${currentKink.categoryId}`) }}
             </UBadge>
 
@@ -395,8 +460,9 @@ const quizTitle = computed(() => {
             </h3>
 
             <div class="flex justify-center">
-              <UBadge size="md" color="primary" class="mb-0.5">
-                {{ getPositionLabel(currentPosition) }}
+              <UBadge size="md" :color="getPositionLabel(currentPosition).color" class="mb-0.5">
+                <UIcon :name="getPositionLabel(currentPosition).icon" class="text-xs" />
+                {{ getPositionLabel(currentPosition).label }}
               </UBadge>
             </div>
 

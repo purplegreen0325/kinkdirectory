@@ -4,6 +4,8 @@ import { useI18n } from 'vue-i18n'
 import { useKinkListState } from './useKinkList'
 import { useSettings } from './useSettings'
 
+type Rating = number | 'empty'
+
 export function useScreenshot() {
   const { t } = useI18n()
   const toast = useToast()
@@ -38,13 +40,14 @@ export function useScreenshot() {
       container.style.fontFamily = 'sans-serif'
 
       // Define the rating colors
-      const ratingColors = {
-        0: { bg: '#9CA3AF', border: '#6B7280' }, // Darker gray for better contrast (Gray-400/500)
-        1: { bg: '#3B82F6', border: '#2563EB' }, // Blue-500
-        2: { bg: '#10B981', border: '#059669' }, // Green-500
-        3: { bg: '#FBBF24', border: '#D97706' }, // Yellow-500
-        4: { bg: '#F97316', border: '#EA580C' }, // Orange-500
-        5: { bg: '#EF4444', border: '#DC2626' }, // Red-500
+      const ratingColors: Record<Rating | number, { bg: string, border: string }> = {
+        empty: { bg: 'transparent', border: '#E5E7EB' },
+        0: { bg: '#9CA3AF', border: '#6B7280' }, // Gray-400/500
+        1: { bg: '#3B82F6', border: '#2563EB' }, // Blue-500/600
+        2: { bg: '#10B981', border: '#059669' }, // Green-500/600
+        3: { bg: '#FBBF24', border: '#D97706' }, // Yellow-500/600
+        4: { bg: '#F97316', border: '#EA580C' }, // Orange-500/600
+        5: { bg: '#EF4444', border: '#DC2626' }, // Red-500/600
       }
 
       // Add legend at the top
@@ -283,62 +286,26 @@ export function useScreenshot() {
 
             newRow.appendChild(labelCell)
 
-            // Helper function to detect rating from element classes
-            const detectRatingFromClasses = (element: Element): number => {
-              if (element instanceof HTMLElement) {
-                const classList = Array.from(element.classList)
-
-                // Explicitly check for gray classes (rating 0)
-                if (classList.includes('bg-gray-300') || classList.includes('border-gray-400')) {
-                  return 0
-                }
-                // Check for active colors in both background and border
-                else if (classList.includes('bg-blue-500') || classList.includes('border-blue-500')) {
-                  return 1
-                }
-                else if (classList.includes('bg-green-500') || classList.includes('border-green-500')) {
-                  return 2
-                }
-                else if (classList.includes('bg-yellow-500') || classList.includes('border-yellow-500')) {
-                  return 3
-                }
-                else if (classList.includes('bg-orange-500') || classList.includes('border-orange-500')) {
-                  return 4
-                }
-                else if (classList.includes('bg-red-500') || classList.includes('border-red-500')) {
-                  return 5
-                }
-                // Default/not selected
-                return 0
-              }
-              return 0
-            }
-
             // Function to create a rating circle
-            const createRatingCircle = (rating: number) => {
+            const createRatingCircle = (rating: Rating) => {
               const circle = document.createElement('div')
               circle.style.width = '14px'
               circle.style.height = '14px'
               circle.style.borderRadius = '50%'
-              circle.style.backgroundColor = ratingColors[rating as keyof typeof ratingColors].bg
-              circle.style.border = `1.5px solid ${ratingColors[rating as keyof typeof ratingColors].border}`
+              circle.style.border = '2px solid'
 
-              // Add numbers inside if setting is enabled
-              if (settings.value.showNumbersInChoices) {
+              const colors = ratingColors[rating]
+              circle.style.backgroundColor = colors.bg
+              circle.style.borderColor = colors.border
+
+              // Only add the rating text for numeric ratings
+              if (typeof rating === 'number' && rating > 0) {
+                circle.textContent = rating.toString()
+                circle.style.color = 'white'
+                circle.style.fontSize = '10px'
                 circle.style.display = 'flex'
                 circle.style.alignItems = 'center'
                 circle.style.justifyContent = 'center'
-
-                const number = document.createElement('span')
-                number.textContent = rating.toString()
-                number.style.fontSize = '7px'
-                number.style.fontWeight = 'bold'
-                number.style.color = 'white' // Always white for all ratings in screenshots
-                number.style.lineHeight = '1'
-                number.style.display = 'flex'
-                number.style.alignItems = 'center'
-                number.style.justifyContent = 'center'
-                circle.appendChild(number)
               }
 
               return circle
@@ -346,71 +313,39 @@ export function useScreenshot() {
 
             // Process each rating column
             const ratingCells = row.querySelectorAll('td:not(:first-child)')
-
             ratingCells.forEach((cell) => {
               const newCell = document.createElement('td')
               newCell.style.padding = '6px 8px'
               newCell.style.textAlign = 'center'
               newCell.style.verticalAlign = 'middle'
 
-              // Find selected rating
-              let selectedRating = 0
-
-              // Look for selected button
-              const buttons = cell.querySelectorAll('button')
-              buttons.forEach((button) => {
-                if (button instanceof HTMLElement) {
-                  // First check data-rating attribute for any button
-                  const dataRating = button.getAttribute('data-rating')
+              // First check if this is a cell with rating buttons
+              const ratingGroup = cell.querySelector('[data-rating-group]')
+              
+              if (ratingGroup) {
+                // Find the active rating button (one with data-rating-active="true")
+                const activeButton = ratingGroup.querySelector('[data-rating-active="true"]')
+                
+                if (activeButton) {
+                  const dataRating = activeButton.getAttribute('data-rating')
                   if (dataRating) {
-                    const rating = Number.parseInt(dataRating)
-                    // If this is the active button, use its rating
-                    const isSelected = Array.from(button.classList).some(cls =>
-                      (cls.includes('bg-') && !cls.includes('bg-transparent'))
-                      || (cls.includes('border-') && !cls.includes('border-transparent')),
-                    )
+                    const selectedRating = Number.parseInt(dataRating, 10)
+                    
+                    // Create wrapper and circle only if we found a valid rating
+                    const wrapper = document.createElement('div')
+                    wrapper.style.display = 'flex'
+                    wrapper.style.justifyContent = 'center'
+                    wrapper.style.alignItems = 'center'
+                    wrapper.style.width = '100%'
+                    wrapper.style.height = '100%'
 
-                    if (isSelected) {
-                      selectedRating = rating
-                      // Break the loop if we found the selected button
-                    }
+                    const circle = createRatingCircle(selectedRating)
+                    wrapper.appendChild(circle)
+                    newCell.appendChild(wrapper)
                   }
-                  else {
-                    // Check if this button is active/selected by looking for colored backgrounds
-                    const isSelected = Array.from(button.classList).some(cls =>
-                      (cls.includes('bg-') && !cls.includes('bg-gray') && !cls.includes('bg-transparent'))
-                      || (cls.includes('border-') && !cls.includes('border-gray') && !cls.includes('border-transparent')),
-                    )
-
-                    if (isSelected) {
-                      // Otherwise detect from classes
-                      selectedRating = detectRatingFromClasses(button)
-                    }
-                  }
-                }
-              })
-
-              // If no buttons are found, try to find rating elements directly
-              if (selectedRating === 0 && cell.querySelector('div.rounded-full')) {
-                const ratingElement = cell.querySelector('div.rounded-full')
-                if (ratingElement) {
-                  selectedRating = detectRatingFromClasses(ratingElement)
                 }
               }
-
-              // Wrap circle in a properly centered container
-              const wrapper = document.createElement('div')
-              wrapper.style.display = 'flex'
-              wrapper.style.justifyContent = 'center'
-              wrapper.style.alignItems = 'center'
-              wrapper.style.width = '100%'
-              wrapper.style.height = '100%'
-
-              // Create rating circle
-              const circle = createRatingCircle(selectedRating)
-              wrapper.appendChild(circle)
-
-              newCell.appendChild(wrapper)
+              // If no rating group is found, the cell will remain empty
 
               newRow.appendChild(newCell)
             })
@@ -427,6 +362,7 @@ export function useScreenshot() {
 
       container.appendChild(gridContainer)
       document.body.appendChild(container)
+
 
       // Use html2canvas-pro with optimized settings
       const canvas = await html2canvas(container, {
