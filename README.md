@@ -21,6 +21,7 @@ The directory allows you to specify your role preference, which helps tailor you
 - 🌐 **Multi-language support** - Available in multiple languages to serve a global audience
 - 📝 **Quiz mode** - Quickly rate all kinks by going through them one by one in a guided interface
 - 🔍 **Advanced filtering** - Filter by new items, unfilled items, or specific choice ratings for easy exploration
+- 📊 **Progress tracking** - Visual indicators showing your quiz completion progress
 
 ## 🌍 Supported Languages
 
@@ -78,8 +79,6 @@ We're constantly working to improve Kink Directory. Here are some features we're
 - 🔄 **Compare lists** - Ability to compare your preferences with a partner to quickly identify common interests and boundaries
 - 🏷️ **Category filtering** - Toggle kinks based on categories (e.g., IRL practicality, intensity levels, or activity types)
 - 🛈 **Better tooltips based on mode** - Enhanced contextual tooltips that adapt to your selected role and preferences (Still need to improve this more)
-- 🤔 **Curious/Interested option** - A new option to say if ur interest or curious, instead of leaving blank
-- 📊 **Progress tracking** - Visual indicators showing how much of your list you've completed and preferences breakdown
 
 ## 📱 Screenshots
 
