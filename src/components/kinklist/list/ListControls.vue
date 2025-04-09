@@ -4,6 +4,7 @@ import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
 import { useScreenshot } from '../../../composables/useScreenshot'
+import CompareModal from '../../kinklist/modals/CompareModal.vue'
 import ConfirmModal from '../../kinklist/modals/ConfirmModal.vue'
 import CreateListForm from '../../kinklist/modals/CreateListForm.vue'
 import ScreenshotModal from '../../kinklist/modals/ScreenshotModal.vue'
@@ -181,6 +182,12 @@ async function handleTakeScreenshot() {
     console.error('Failed to take screenshot', error)
   }
 }
+
+async function handleCompareList() {
+  // Create the compare modal
+  const compareModal = overlay.create(CompareModal)
+  await compareModal.open()
+}
 </script>
 
 <template>
@@ -314,6 +321,17 @@ async function handleTakeScreenshot() {
         >
           {{ t('app.screenshot_short') }}
         </UButton>
+
+        <!-- Compare List Button -->
+        <UButton
+          icon="material-symbols:compare-arrows-rounded"
+          color="neutral"
+          size="sm"
+          class="flex-1"
+          @click="handleCompareList"
+        >
+          {{ t('app.compare') }}
+        </UButton>
       </div>
     </template>
 
@@ -430,6 +448,15 @@ async function handleTakeScreenshot() {
             @click="handleTakeScreenshot"
           >
             {{ t('app.screenshot') }}
+          </UButton>
+
+          <UButton
+            icon="material-symbols:compare-arrows-rounded"
+            color="neutral"
+            size="sm"
+            @click="handleCompareList"
+          >
+            {{ t('app.compare') }}
           </UButton>
 
           <UButton

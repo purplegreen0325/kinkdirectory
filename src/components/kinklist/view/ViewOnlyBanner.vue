@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useKinkListState } from '../../../composables/useKinkList'
+import CompareModal from '../../kinklist/modals/CompareModal.vue'
 import ConfirmModal from '../../kinklist/modals/ConfirmModal.vue'
 
 const { t } = useI18n()
@@ -41,6 +42,12 @@ async function handleImportViewedList() {
     console.error('Error in import confirmation', e)
   }
 }
+
+async function handleCompare() {
+  // Create the compare modal
+  const compareModal = overlay.create(CompareModal)
+  await compareModal.open()
+}
 </script>
 
 <template>
@@ -67,6 +74,14 @@ async function handleImportViewedList() {
         @click="handleImportViewedList"
       >
         {{ t('app.import_list') }}
+      </UButton>
+      <UButton
+        icon="material-symbols:compare-arrows-rounded"
+        size="sm"
+        color="primary"
+        @click="handleCompare"
+      >
+        {{ t('app.compare') }}
       </UButton>
     </div>
   </div>
