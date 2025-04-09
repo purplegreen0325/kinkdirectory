@@ -75,15 +75,8 @@
     "recent": "Recent",
     "motivational_text": "Explore your desires and boundaries with confidence and openness",
     "selections": "selections",
-    "as_dom": "Giving",
-    "as_sub": "Receiving",
-    "you": "You",
-    "you_dom": "Receiving",
-    "you_sub": "Receiving",
-    "your_dom": "Giving",
-    "your_sub": "Receiving",
-    "for_dom": "Receiving",
-    "for_sub": "Giving",
+    "giving": "To give",
+    "receiving": "Received",
     "general": "General",
     "general_questions": "General questions",
     "create_new_list": "Create new list",
@@ -271,9 +264,9 @@
       "label": "Handjob / Fingering",
       "tooltip": "Sexual stimulation by direct, physical contact of the hands or fingers to the genitals."
     },
-    "blowjob": {
-      "label": "Blowjob",
-      "tooltip": "Sexual stimulation by direct, physical contact of the mouth or tongue to male genitals."
+    "oral": {
+      "label": "Oral",
+      "tooltip": "Sexual stimulation through direct, physical contact of the mouth or tongue with genitals."
     },
     "deep_throat": {
       "label": "Deep throat",
@@ -286,10 +279,6 @@
     "facials": {
       "label": "Facials",
       "tooltip": "The act of cumming/squirting (ejaculating) directly onto one's face."
-    },
-    "cunnilingus": {
-      "label": "Cunnilingus",
-      "tooltip": "Sexual stimulation by direct, physical contact of the mouth or tongue to female genitals."
     },
     "face_sitting": {
       "label": "Face-sitting",
@@ -716,15 +705,15 @@
       "tooltip": "The use of sex toys that carry an electrical current; sometimes painful."
     },
     "ice_play": {
-      "label": "Ice game",
+      "label": "Ice play",
       "tooltip": "The use of ice on the body for temperature contrasts and sensory stimulation."
     },
     "temperature_play": {
-      "label": "Temperature game",
+      "label": "Temperature play",
       "tooltip": "The use of different temperatures (hot and cold) on the body for sensory stimulation and contrast."
     },
     "feather_play": {
-      "label": "Feather game",
+      "label": "Feather play",
       "tooltip": "The use of feathers for light, soft touches that can tickle or provide a sensual sensation."
     },
     "pinwheel": {
@@ -848,15 +837,15 @@
       "tooltip": "The use of clamps on the labia or clitoris for pain stimulation."
     },
     "fire_play": {
-      "label": "Fire game",
+      "label": "Fire play",
       "tooltip": "The use of fire or heat for sexual stimulation, often involving fluids that burn the skin for a short time."
     },
     "knife_play": {
-      "label": "Knife game",
+      "label": "Knife play",
       "tooltip": "The use of knives or sharp objects to cause fear, excitement, or mild pain, usually without actually breaking the skin."
     },
     "needle_play": {
-      "label": "Needle game",
+      "label": "Needle play",
       "tooltip": "The use of needles inserted through the skin for sexual stimulation."
     },
     "vampire_gloves": {
@@ -942,7 +931,7 @@
       "tooltip": "Role-playing game in which a person imitates the behavior and mannerisms of an animal."
     },
     "age_play": {
-      "label": "Age game",
+      "label": "Age play",
       "tooltip": "Role-playing game in which participants pretend to be a different age than their actual age (all adults)."
     },
     "prison_scenes": {
@@ -966,7 +955,7 @@
       "tooltip": "Role-playing in which a person is interrogated, often involving power dynamics and pressure."
     },
     "fear_play": {
-      "label": "Fear game",
+      "label": "Fear play",
       "tooltip": "Activities that deliberately induce fear as part of the sexual experience."
     },
     "egyptian": {

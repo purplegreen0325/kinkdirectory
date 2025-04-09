@@ -153,7 +153,9 @@
     "and": "e",
     "show_numbers_in_choices": "Mostrar números em escolhas",
     "show_numbers_in_choices_desc": "Mostra números de classificação em caixas de seleção",
-    "example": "Exemplo:"
+    "example": "Exemplo:",
+    "giving": "Para dar",
+    "receiving": "Recebido"
   },
   "roles": {
     "sub": "Submisso",
@@ -303,6 +305,10 @@
     "ruined": {
       "label": "Arruinado",
       "tooltip": "O ato de permitir que uma pessoa tenha um orgasmo, mas interromper a estimulação pouco antes do clímax, resultando em um orgasmo incompleto ou insatisfatório. Isso pode ocorrer tanto com parceiros homens quanto mulheres."
+    },
+    "oral": {
+      "label": "Oral",
+      "tooltip": "Estimulação sexual por meio de contato físico direto da boca ou da língua com os genitais."
     }
   },
   "ass_play": {

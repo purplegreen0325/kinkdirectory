@@ -153,7 +153,9 @@
     "and": "E",
     "show_numbers_in_choices": "Mostra numeri nelle scelte",
     "show_numbers_in_choices_desc": "Mostra i numeri di valutazione nelle caselle di controllo",
-    "example": "Esempio:"
+    "example": "Esempio:",
+    "giving": "Dare",
+    "receiving": "Ricevuto"
   },
   "roles": {
     "sub": "Sottomesso",
@@ -303,6 +305,10 @@
     "ruined": {
       "label": "Rovinato",
       "tooltip": "L'atto di consentire a una persona di raggiungere l'orgasmo, interrompendo però la stimolazione appena prima del culmine, con conseguente orgasmo incompleto o insoddisfacente. Ciò può verificarsi sia con i partner maschili che femminili."
+    },
+    "oral": {
+      "label": "Orale",
+      "tooltip": "Stimolazione sessuale attraverso il contatto fisico diretto della bocca o della lingua con i genitali."
     }
   },
   "ass_play": {

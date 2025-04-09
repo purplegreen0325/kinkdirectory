@@ -153,7 +153,9 @@
     "and": "和",
     "show_numbers_in_choices": "在选项中显示数字",
     "show_numbers_in_choices_desc": "在复选框中显示评分数字",
-    "example": "例子："
+    "example": "例子：",
+    "giving": "给予",
+    "receiving": "已收到"
   },
   "roles": {
     "sub": "顺从",
@@ -303,6 +305,10 @@
     "ruined": {
       "label": "毁了",
       "tooltip": "使人达到性高潮，但在高潮前停止刺激，导致性高潮不完整或不令人满意的行为。这种情况可能发生在男性和女性伴侣身上。"
+    },
+    "oral": {
+      "label": "口服",
+      "tooltip": "通过嘴或舌头与生殖器的直接身体接触来获得性刺激。"
     }
   },
   "ass_play": {
