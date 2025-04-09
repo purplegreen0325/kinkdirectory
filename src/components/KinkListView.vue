@@ -73,7 +73,7 @@ const quizCardRef = useTemplateRef('quizCardRef')
                   >
                     <div class="flex items-center gap-1.5">
                       <UIcon name="i-lucide-star" class="text-pink-600 dark:text-pink-400 flex-shrink-0 text-sm" />
-                      <span class="text-sm font-medium text-pink-600 dark:text-pink-400">{{ recentlyAddedKinks }} {{ t('app.new') }}</span>
+                      <span class="text-xs font-medium text-pink-600 dark:text-pink-400">{{ recentlyAddedKinks }} {{ t('app.new') }}</span>
                     </div>
                   </button>
 

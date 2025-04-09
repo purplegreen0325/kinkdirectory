@@ -61,7 +61,7 @@ defineExpose({
   >
     <div class="flex items-center gap-1">
       <UIcon name="i-lucide-list-checks" class="text-success-500 flex-shrink-0 text-sm" />
-      <span class="text-sm font-medium">{{ t('app.quiz') }}</span>
+      <span class="text-xs font-medium">{{ t('app.quiz') }}</span>
     </div>
   </div>
 </template>

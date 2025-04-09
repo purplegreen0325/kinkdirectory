@@ -61,7 +61,7 @@ const choiceColorClasses = {
     >
       <div class="flex items-center gap-1.5">
         <UIcon name="i-lucide-filter" class="text-gray-600 dark:text-gray-400 flex-shrink-0 text-sm" />
-        <span class="text-sm font-medium">{{ t('app.filter') }}</span>
+        <span class="text-xs font-medium">{{ t('app.filter') }}</span>
         <UBadge v-if="hasActiveFilters" size="sm" color="primary" class="ml-1">
           {{ activeFilterCount }}
         </UBadge>
