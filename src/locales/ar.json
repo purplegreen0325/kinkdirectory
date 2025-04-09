@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "إظهار أرقام التقييم في مربعات الاختيار",
     "example": "مثال:",
     "giving": "لإعطاء",
-    "receiving": "تلقى"
+    "receiving": "تلقى",
+    "progress": "تقدم",
+    "completed": "مكتمل",
+    "remaining": "متبقي",
+    "show_unfilled": "إظهار غير مملوء",
+    "hide_unfilled": "إخفاء غير مملوء"
   },
   "roles": {
     "sub": "مطيع",
@@ -168,7 +173,8 @@
     "like": "لطيف - جيد",
     "indifferent": "غير مبال",
     "maybe": "ربما",
-    "limit": "حد"
+    "limit": "حد",
+    "curious": "فضولي"
   },
   "categories": {
     "bodies": "أجسام",

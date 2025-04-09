@@ -149,7 +149,12 @@
     "and": "and",
     "show_numbers_in_choices": "Show Numbers in Choices",
     "show_numbers_in_choices_desc": "Shows rating numbers in checkboxes",
-    "example": "Example:"
+    "example": "Example:",
+    "progress": "Progress",
+    "completed": "Completed",
+    "remaining": "Remaining",
+    "show_unfilled": "Show unfilled",
+    "hide_unfilled": "Hide unfilled"
   },
   "roles": {
     "sub": "Submissive",
@@ -162,7 +167,8 @@
     "like": "Like",
     "indifferent": "Indifferent",
     "maybe": "Maybe",
-    "limit": "Limit"
+    "limit": "Limit",
+    "curious": "Curious"
   },
   "categories": {
     "bodies": "Bodies",

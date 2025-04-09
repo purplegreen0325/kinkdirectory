@@ -20,7 +20,7 @@ export const useSettings = createGlobalState(() => {
 
   // Basic kink choice order (without zero)
   const kinkChoiceOrder = computed((): KinkChoice[] => {
-    return settings.value.reverseKinkOrder ? [1, 2, 3, 4, 5] : [5, 4, 3, 2, 1]
+    return settings.value.reverseKinkOrder ? [6, 1, 2, 3, 4, 5] : [6, 5, 4, 3, 2, 1]
   })
 
   return {

@@ -2,6 +2,7 @@
 import type { KinkChoice as KinkChoiceType, KinkDefinition } from '../../../types'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getDisplayValue } from '../../../composables/kink.helpers'
 import { useKinkListState } from '../../../composables/useKinkList'
 import { useSettings } from '../../../composables/useSettings'
 
@@ -44,6 +45,7 @@ const activeColorClasses = {
   3: 'border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400',
   4: 'border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400',
   5: 'border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400',
+  6: 'border-purple-500 dark:border-purple-400 bg-purple-500 dark:bg-purple-400',
 }
 
 // Text color classes
@@ -54,6 +56,7 @@ const textColorClasses = {
   3: 'text-yellow-500 dark:text-yellow-400',
   4: 'text-orange-500 dark:text-orange-400',
   5: 'text-red-500 dark:text-red-400',
+  6: 'text-purple-500 dark:text-purple-400',
 }
 
 // Combined values with 0 at the end for the quiz modal
@@ -108,6 +111,8 @@ const progress = computed(() => {
 function getRatingDescription(rating: KinkChoiceType): string {
   if (rating === 0)
     return t('choices.not_entered')
+  if (rating === 6)
+    return t('choices.curious')
   if (rating === 5)
     return t('choices.limit')
   if (rating === 4)
@@ -479,7 +484,7 @@ const quizTitle = computed(() => {
 
           <!-- Rating options -->
           <div class="flex flex-col space-y-1 flex-grow">
-            <div v-for="rating in quizValues" :key="rating" class="w-full">
+            <div v-for="(rating, index) in quizValues" :key="rating" class="w-full">
               <button
                 class="w-full py-2 px-4 text-left rounded-md flex items-center justify-between transition-colors duration-150 hover:bg-gray-100 dark:hover:bg-gray-800"
                 :class="[
@@ -492,16 +497,25 @@ const quizTitle = computed(() => {
               >
                 <div class="flex items-center flex-1 min-w-0 mr-2">
                   <span
-                    class="w-4 h-4 rounded-full inline-flex items-center justify-center mr-2 flex-shrink-0"
+                    class="w-5.5 h-5.5 rounded-full inline-flex items-center justify-center mr-2 flex-shrink-0"
                     :class="rating === 0 ? 'border-2 border-gray-300 dark:border-gray-600' : activeColorClasses[rating]"
                     :data-rating="rating"
                   >
-                    <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white" :class="{ 'dark:text-gray-900': rating === 0 }">{{ rating }}</span>
+                    <span
+                      v-if="settings.showNumbersInChoices"
+                      class="text-[13px] font-bold text-white flex items-center justify-center w-full h-full leading-none"
+                      :class="{ 'dark:text-gray-900': rating === 0 }"
+                    >
+                      {{ getDisplayValue(rating) }}
+                    </span>
                   </span>
                   <span class="text-sm break-words">{{ getRatingDescription(rating) }}</span>
                 </div>
-                <span class="text-lg font-bold flex-shrink-0">{{ settings.showNumbersInChoices && rating === 0 ? '0' : rating === 0 ? '⊘' : rating }}</span>
               </button>
+              <div
+                v-if="index !== quizValues.length - 1"
+                class="h-px mt-1 bg-gray-200 dark:bg-gray-700"
+              />
             </div>
           </div>
 

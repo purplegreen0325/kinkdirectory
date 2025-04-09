@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "체크박스에 평가 번호를 표시합니다",
     "example": "예:",
     "giving": "주다",
-    "receiving": "받았다"
+    "receiving": "받았다",
+    "progress": "진전",
+    "completed": "완전한",
+    "remaining": "남은",
+    "show_unfilled": "채워지지 않은 항목 표시",
+    "hide_unfilled": "채워지지 않은 항목 숨기기"
   },
   "roles": {
     "sub": "복종적인",
@@ -168,7 +173,8 @@
     "like": "멋진",
     "indifferent": "무관심한",
     "maybe": "아마도",
-    "limit": "한계"
+    "limit": "한계",
+    "curious": "궁금한"
   },
   "categories": {
     "bodies": "신체",

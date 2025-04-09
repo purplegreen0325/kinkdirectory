@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "Показывает рейтинговые числа в флажках",
     "example": "Пример:",
     "giving": "Дать",
-    "receiving": "Полученный"
+    "receiving": "Полученный",
+    "progress": "Прогресс",
+    "completed": "Завершенный",
+    "remaining": "Оставшийся",
+    "show_unfilled": "Показать незаполненные",
+    "hide_unfilled": "Скрыть незаполненные"
   },
   "roles": {
     "sub": "Покорный",
@@ -168,7 +173,8 @@
     "like": "Хороший",
     "indifferent": "Безразличный",
     "maybe": "Может быть",
-    "limit": "Предел"
+    "limit": "Предел",
+    "curious": "Любопытный"
   },
   "categories": {
     "bodies": "Тела",

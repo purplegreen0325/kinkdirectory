@@ -14,7 +14,7 @@ import pt from '../locales/pt.json'
 import ru from '../locales/ru.json'
 import zh from '../locales/zh.json'
 
-export type MessageSchema = typeof en
+export type MessageSchema = typeof nl
 
 // Define our supported locales
 const SUPPORTED_LOCALES = ['en', 'nl', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'zh', 'ja', 'ko', 'ar', 'hi'] as const

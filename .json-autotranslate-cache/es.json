@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "Muestra números de calificación en casillas de verificación",
     "example": "Ejemplo:",
     "giving": "Dar",
-    "receiving": "Recibió"
+    "receiving": "Recibió",
+    "progress": "Progreso",
+    "completed": "Terminado",
+    "remaining": "Restante",
+    "show_unfilled": "Mostrar sin rellenar",
+    "hide_unfilled": "Ocultar sin rellenar"
   },
   "roles": {
     "sub": "Sumiso",
@@ -168,7 +173,8 @@
     "like": "Lindo",
     "indifferent": "Indiferente",
     "maybe": "Tal vez",
-    "limit": "Límite"
+    "limit": "Límite",
+    "curious": "Curioso"
   },
   "categories": {
     "bodies": "Cuerpos",

@@ -2,6 +2,7 @@
 import type { KinkChoice as KinkChoiceType } from '../../../types'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getDisplayValue } from '../../../composables/kink.helpers'
 import { useSettings } from '../../../composables/useSettings'
 
 const props = defineProps<{
@@ -23,6 +24,7 @@ const activeColorClasses = {
   3: 'border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400',
   4: 'border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400',
   5: 'border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400',
+  6: 'border-purple-500 dark:border-purple-400 bg-purple-500 dark:bg-purple-400',
 }
 
 // Text color classes
@@ -33,6 +35,7 @@ const textColorClasses = {
   3: 'text-yellow-500 dark:text-yellow-400',
   4: 'text-orange-500 dark:text-orange-400',
   5: 'text-red-500 dark:text-red-400',
+  6: 'text-purple-500 dark:text-purple-400',
 }
 
 // Combined values with 0 first for the drawer
@@ -56,6 +59,8 @@ const isDrawerOpen = ref(false)
 function getRatingDescription(rating: KinkChoiceType): string {
   if (rating === 0)
     return t('choices.not_entered')
+  if (rating === 6)
+    return t('choices.curious')
   if (rating === 5)
     return t('choices.limit')
   if (rating === 4)
@@ -115,7 +120,7 @@ const drawerTitle = computed(() => {
           class="text-xs font-bold"
           :class="value === 0 ? 'text-gray-600 dark:text-gray-300' : 'text-white'"
         >
-          {{ value }}
+          {{ getDisplayValue(value) }}
         </span>
         <span v-else>
           {{ selectedValueLabel }}
@@ -140,11 +145,10 @@ const drawerTitle = computed(() => {
                 class="w-5 h-5 rounded-full inline-flex items-center justify-center mr-3 flex-shrink-0"
                 :class="rating === 0 ? 'border-2 border-gray-300 dark:border-gray-600' : activeColorClasses[rating]"
               >
-                <span v-if="settings.showNumbersInChoices" class="text-xs font-bold text-white" :class="{ 'dark:text-gray-900': rating === 0 }">{{ rating }}</span>
+                <span v-if="settings.showNumbersInChoices" class="text-xs font-bold text-white" :class="{ 'dark:text-gray-900': rating === 0 }">{{ getDisplayValue(rating) }}</span>
               </span>
               <span class="text-sm break-words">{{ getRatingDescription(rating) }}</span>
             </div>
-            <span class="text-lg font-bold flex-shrink-0">{{ settings.showNumbersInChoices && rating === 0 ? '0' : rating === 0 ? '⊘' : rating }}</span>
           </button>
         </div>
       </template>

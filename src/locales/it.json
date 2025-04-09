@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "Mostra i numeri di valutazione nelle caselle di controllo",
     "example": "Esempio:",
     "giving": "Dare",
-    "receiving": "Ricevuto"
+    "receiving": "Ricevuto",
+    "progress": "Progressi",
+    "completed": "Completato",
+    "remaining": "Rimanente",
+    "show_unfilled": "Mostra non riempito",
+    "hide_unfilled": "Nascondi non compilato"
   },
   "roles": {
     "sub": "Sottomesso",
@@ -168,7 +173,8 @@
     "like": "Carino",
     "indifferent": "Indifferente",
     "maybe": "Forse",
-    "limit": "Limite"
+    "limit": "Limite",
+    "curious": "Curioso"
   },
   "categories": {
     "bodies": "Corpi",

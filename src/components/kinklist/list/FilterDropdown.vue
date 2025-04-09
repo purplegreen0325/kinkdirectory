@@ -47,6 +47,7 @@ const choiceColorClasses = {
   3: 'bg-yellow-500 border-yellow-600',
   4: 'bg-orange-500 border-orange-600',
   5: 'bg-red-500 border-red-600',
+  6: 'bg-purple-500 border-purple-600',
 }
 </script>
 

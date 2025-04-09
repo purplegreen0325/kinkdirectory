@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "चेकबॉक्स में रेटिंग संख्याएँ दिखाता है",
     "example": "उदाहरण:",
     "giving": "दे देना",
-    "receiving": "प्राप्त"
+    "receiving": "प्राप्त",
+    "progress": "प्रगति",
+    "completed": "पुरा होना।",
+    "remaining": "शेष",
+    "show_unfilled": "रिक्त दिखाएँ",
+    "hide_unfilled": "रिक्त स्थान छिपाएँ"
   },
   "roles": {
     "sub": "विनम्र",
@@ -168,7 +173,8 @@
     "like": "अच्छा",
     "indifferent": "उदासीन",
     "maybe": "शायद",
-    "limit": "आप LIMIT"
+    "limit": "आप LIMIT",
+    "curious": "जिज्ञासु"
   },
   "categories": {
     "bodies": "निकायों",

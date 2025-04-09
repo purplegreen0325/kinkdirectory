@@ -1,6 +1,8 @@
+import type { KinkChoice } from 'src/types'
 import html2canvas from 'html2canvas-pro'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getDisplayValue } from './kink.helpers'
 import { useKinkListState } from './useKinkList'
 import { useSettings } from './useSettings'
 
@@ -42,12 +44,13 @@ export function useScreenshot() {
       // Define the rating colors
       const ratingColors: Record<Rating | number, { bg: string, border: string }> = {
         empty: { bg: 'transparent', border: '#E5E7EB' },
-        0: { bg: '#9CA3AF', border: '#6B7280' }, // Gray-400/500
-        1: { bg: '#3B82F6', border: '#2563EB' }, // Blue-500/600
-        2: { bg: '#10B981', border: '#059669' }, // Green-500/600
-        3: { bg: '#FBBF24', border: '#D97706' }, // Yellow-500/600
-        4: { bg: '#F97316', border: '#EA580C' }, // Orange-500/600
-        5: { bg: '#EF4444', border: '#DC2626' }, // Red-500/600
+        0: { bg: '#9CA3AF', border: '#9CA3AF' }, // Gray-400/500
+        1: { bg: '#3B82F6', border: '#3B82F6' }, // Blue-500/600
+        2: { bg: '#10B981', border: '#10B981' }, // Green-500/600
+        3: { bg: '#FBBF24', border: '#FBBF24' }, // Yellow-500/600
+        4: { bg: '#F97316', border: '#F97316' }, // Orange-500/600
+        5: { bg: '#EF4444', border: '#EF4444' }, // Red-500/600
+        6: { bg: '#9333EA', border: '#9333EA' }, // Purple-500/600
       }
 
       // Add legend at the top
@@ -299,8 +302,8 @@ export function useScreenshot() {
               circle.style.borderColor = colors.border
 
               // Only add the rating text for numeric ratings
-              if (typeof rating === 'number' && rating > 0) {
-                circle.textContent = rating.toString()
+              if (typeof rating === 'number' && rating > 0 && settings.value.showNumbersInChoices) {
+                circle.textContent = getDisplayValue(rating as KinkChoice).toString()
                 circle.style.color = 'white'
                 circle.style.fontSize = '10px'
                 circle.style.display = 'flex'
@@ -321,16 +324,16 @@ export function useScreenshot() {
 
               // First check if this is a cell with rating buttons
               const ratingGroup = cell.querySelector('[data-rating-group]')
-              
+
               if (ratingGroup) {
                 // Find the active rating button (one with data-rating-active="true")
                 const activeButton = ratingGroup.querySelector('[data-rating-active="true"]')
-                
+
                 if (activeButton) {
                   const dataRating = activeButton.getAttribute('data-rating')
                   if (dataRating) {
                     const selectedRating = Number.parseInt(dataRating, 10)
-                    
+
                     // Create wrapper and circle only if we found a valid rating
                     const wrapper = document.createElement('div')
                     wrapper.style.display = 'flex'
@@ -362,7 +365,6 @@ export function useScreenshot() {
 
       container.appendChild(gridContainer)
       document.body.appendChild(container)
-
 
       // Use html2canvas-pro with optimized settings
       const canvas = await html2canvas(container, {

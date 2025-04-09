@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "Zeigt Bewertungszahlen in Kontrollkästchen an",
     "example": "Beispiel:",
     "giving": "Geben",
-    "receiving": "Erhalten"
+    "receiving": "Erhalten",
+    "progress": "Fortschritt",
+    "completed": "Vollendet",
+    "remaining": "Übrig",
+    "show_unfilled": "Nicht ausgefüllt anzeigen",
+    "hide_unfilled": "Nicht ausgefülltes verbergen"
   },
   "roles": {
     "sub": "Unterwürfig",
@@ -168,7 +173,8 @@
     "like": "Vorliebe",
     "indifferent": "Gleichgültig",
     "maybe": "Vielleicht",
-    "limit": "Limit"
+    "limit": "Limit",
+    "curious": "Neugierig"
   },
   "categories": {
     "bodies": "Körper",

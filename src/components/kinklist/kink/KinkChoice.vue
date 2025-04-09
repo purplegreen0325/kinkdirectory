@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { KinkChoice as KinkChoiceType } from '../../../types'
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { getDisplayValue } from '../../../composables/kink.helpers'
 import { useKinkListState } from '../../../composables/useKinkList'
 import { useSettings } from '../../../composables/useSettings'
 import KinkChoiceDrawer from './KinkChoiceDrawer.vue'
@@ -23,6 +24,7 @@ const activeColorClasses = {
   3: 'border-yellow-500 dark:border-yellow-400 bg-yellow-500 dark:bg-yellow-400',
   4: 'border-orange-500 dark:border-orange-400 bg-orange-500 dark:bg-orange-400',
   5: 'border-red-500 dark:border-red-400 bg-red-500 dark:bg-red-400',
+  6: 'border-purple-500 dark:border-purple-400 bg-purple-500 dark:bg-purple-400',
 }
 
 // Subtle color classes for inactive state (very light background)
@@ -33,6 +35,7 @@ const subtleColorClasses = {
   3: 'border-yellow-200 dark:border-yellow-700 bg-yellow-100/30 dark:bg-yellow-900/20',
   4: 'border-orange-200 dark:border-orange-700 bg-orange-100/30 dark:bg-orange-900/20',
   5: 'border-red-200 dark:border-red-700 bg-red-100/30 dark:bg-red-900/20',
+  6: 'border-purple-200 dark:border-purple-700 bg-purple-100/30 dark:bg-purple-900/20',
 }
 
 // Handle click for desktop version
@@ -52,14 +55,14 @@ const lgAndLarger = breakpoints.greater('lg')
     <!-- Always show "Not Entered" (0) first -->
     <button
       type="button"
-      class="w-5 h-5 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
+      class="w-4.5 h-4.5 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
       :class="[
         value === 0 ? activeColorClasses[0] : subtleColorClasses[0],
         !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
       ]"
       data-rating="0"
-      @click.stop="handleClick(0)"
       :data-rating-active="value === 0"
+      @click.stop="handleClick(0)"
     >
       <span
         v-if="settings.showNumbersInChoices"
@@ -76,7 +79,7 @@ const lgAndLarger = breakpoints.greater('lg')
     <template v-for="rating in kinkChoiceOrder" :key="rating">
       <button
         type="button"
-        class="w-5 h-5 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
+        class="w-4.5 h-4.5 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
         :class="[
           value === rating ? activeColorClasses[rating] : subtleColorClasses[rating],
           !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
@@ -92,7 +95,7 @@ const lgAndLarger = breakpoints.greater('lg')
             ? 'text-white'
             : 'text-gray-700 dark:text-gray-300'"
         >
-          {{ rating }}
+          {{ getDisplayValue(rating) }}
         </span>
       </button>
     </template>

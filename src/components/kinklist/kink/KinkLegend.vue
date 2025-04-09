@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { KinkChoice as KinkChoiceType } from '../../../types'
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getDisplayValue } from '../../../composables/kink.helpers'
 import { useSettings } from '../../../composables/useSettings'
 
 defineProps<{
@@ -11,14 +10,11 @@ defineProps<{
 const { t } = useI18n()
 const { kinkChoiceOrder, settings } = useSettings()
 
-// Include "Not Entered" (0) first and then other choices from settings
-const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
-
 // Remove the recentlyAddedKinks from here
 </script>
 
 <template>
-  <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200 md:h-[42px] md:flex md:items-center">
+  <div class="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 p-2 transition-all duration-200 md:h-full md:flex md:items-center">
     <div class="flex flex-wrap items-center justify-between gap-2 w-full">
       <div class="flex flex-wrap items-center gap-2">
         <!-- Legend Title -->
@@ -58,12 +54,13 @@ const choices = computed<KinkChoiceType[]>(() => [0, ...kinkChoiceOrder.value])
                 'bg-yellow-500 border border-yellow-600': choice === 3,
                 'bg-orange-500 border border-orange-600': choice === 4,
                 'bg-red-500 border border-red-600': choice === 5,
+                'bg-purple-500 border border-purple-600': choice === 6,
               }"
             >
-              <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">{{ choice }}</span>
+              <span v-if="settings.showNumbersInChoices" class="text-[8px] font-bold text-white">{{ getDisplayValue(choice) }}</span>
             </div>
             <span class="text-xs text-gray-700 dark:text-gray-300">
-              {{ t(`choices.${choice === 1 ? 'favorite' : choice === 2 ? 'like' : choice === 3 ? 'indifferent' : choice === 4 ? 'maybe' : 'limit'}`) }}
+              {{ t(`choices.${choice === 1 ? 'favorite' : choice === 2 ? 'like' : choice === 3 ? 'indifferent' : choice === 4 ? 'maybe' : choice === 5 ? 'limit' : 'curious'}`) }}
             </span>
           </div>
         </div>

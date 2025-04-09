@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "チェックボックスに評価番号を表示します",
     "example": "例：",
     "giving": "与える",
-    "receiving": "受け取った"
+    "receiving": "受け取った",
+    "progress": "進捗",
+    "completed": "完了",
+    "remaining": "残り",
+    "show_unfilled": "未記入部分を表示",
+    "hide_unfilled": "未記入部分を非表示"
   },
   "roles": {
     "sub": "従順な",
@@ -168,7 +173,8 @@
     "like": "ニース",
     "indifferent": "無関心",
     "maybe": "多分",
-    "limit": "制限"
+    "limit": "制限",
+    "curious": "好奇心旺盛"
   },
   "categories": {
     "bodies": "ボディ",

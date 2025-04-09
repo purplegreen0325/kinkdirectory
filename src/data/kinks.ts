@@ -1103,7 +1103,6 @@ export const kinkList: KinkCategory[] = [
         key: 46,
       },
 
-     
       {
         id: 'domestic_servitude',
         format: 'role_specific',
@@ -1160,8 +1159,6 @@ export const kinkList: KinkCategory[] = [
         ],
         key: 45,
       },
-
-  
 
       {
         id: 'begging',

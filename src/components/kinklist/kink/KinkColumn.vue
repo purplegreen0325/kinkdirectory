@@ -16,7 +16,7 @@ defineProps<{
 
 <template>
   <td
-    class="text-center whitespace-nowrap py-2 px-0 sm:px-2 min-w-[40px] sm:min-w-[50px]" :class="[
+    class="text-center whitespace-nowrap py-2 px-0 sm:px-1 min-w-[40px] sm:min-w-[50px]" :class="[
       isGeneral ? 'text-center' : '',
     ]"
   >

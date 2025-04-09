@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "Affiche les numéros de notation dans les cases à cocher",
     "example": "Exemple:",
     "giving": "Donner",
-    "receiving": "Reçu"
+    "receiving": "Reçu",
+    "progress": "Progrès",
+    "completed": "Complété",
+    "remaining": "Restant",
+    "show_unfilled": "Afficher les éléments non remplis",
+    "hide_unfilled": "Masquer les éléments non remplis"
   },
   "roles": {
     "sub": "Soumis",
@@ -168,7 +173,8 @@
     "like": "Bon",
     "indifferent": "Indifférent",
     "maybe": "Peut être",
-    "limit": "Limite"
+    "limit": "Limite",
+    "curious": "Curieux"
   },
   "categories": {
     "bodies": "Corps",

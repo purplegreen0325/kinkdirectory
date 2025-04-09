@@ -146,7 +146,12 @@
     "no_unfilled_items_found": "Geen niet-ingevulde items gevonden met huidige filters",
     "no_results_with_filters": "Geen items voldoen aan alle actieve filters",
     "clear_filters": "Filters wissen",
-    "and": "en"
+    "and": "en",
+    "progress": "Voortgang",
+    "completed": "Voltooid",
+    "remaining": "Resterend",
+    "show_unfilled": "Toon niet-ingevulde",
+    "hide_unfilled": "Verberg niet-ingevulde"
   },
   "roles": {
     "sub": "Onderdanig",
@@ -159,7 +164,8 @@
     "like": "Leuk",
     "indifferent": "Onverschillig",
     "maybe": "Misschien",
-    "limit": "Limiet"
+    "limit": "Limiet",
+    "curious": "Nieuwsgierig"
   },
   "categories": {
     "bodies": "Lichamen",

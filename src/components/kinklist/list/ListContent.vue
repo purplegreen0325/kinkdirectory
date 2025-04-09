@@ -15,6 +15,8 @@ const {
   filters,
   hasActiveFilters,
   clearAllFilters,
+  getVisibleKinksForQuiz,
+  getKinkChoice,
 } = useKinkListState()
 
 // Filter categories to only show those with visible kinks
@@ -30,10 +32,69 @@ const visibleCategories = computed(() => {
     )
   })
 })
+
+// Calculate progress
+const progress = computed(() => {
+  if (!activeList.value)
+    return { completed: 0, total: 0, percentage: 0 }
+
+  const allKinks = getVisibleKinksForQuiz()
+  let completed = 0
+  let total = 0
+
+  allKinks.forEach((item) => {
+    item.positions.forEach((position) => {
+      total++
+      if (getKinkChoice(item.kink, position) !== 0)
+        completed++
+    })
+  })
+
+  return {
+    completed,
+    total,
+    percentage: total > 0 ? Math.round((completed / total) * 100) : 0,
+  }
+})
 </script>
 
 <template>
   <div>
+    <!-- Progress bar -->
+    <div v-if="activeList" class="mb-3">
+      <div class="flex items-center justify-between mb-1">
+        <div class="flex items-center gap-1">
+          <span class="text-xs font-medium text-gray-500 dark:text-gray-400">{{ t('app.progress') }}:</span>
+          <span class="text-xs opacity-80" :class="progress.percentage === 100 ? 'text-green-500 dark:text-green-400 font-medium' : 'text-gray-500 dark:text-gray-400'">
+            {{ progress.completed }}/{{ progress.total }} ({{ progress.percentage }}%)
+          </span>
+          <UIcon
+            v-if="progress.percentage === 100"
+            name="i-lucide-check-circle"
+            class="text-green-500 dark:text-green-400 text-sm opacity-80"
+          />
+        </div>
+        <UButton
+          v-if="progress.total > progress.completed"
+          size="xs"
+          color="neutral"
+          variant="ghost"
+          :icon="filters.showOnlyUnfilled ? 'i-lucide-eye-off' : 'i-lucide-eye'"
+          @click="filters.showOnlyUnfilled = !filters.showOnlyUnfilled"
+        >
+          {{ t(filters.showOnlyUnfilled ? 'app.hide_unfilled' : 'app.show_unfilled') }}
+          <span class="ml-1 text-xs text-gray-500">({{ progress.total - progress.completed }})</span>
+        </UButton>
+      </div>
+      <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-1.5">
+        <div
+          class="h-1.5 rounded-full transition-all duration-500 ease-out"
+          :class="progress.percentage === 100 ? 'bg-green-500 dark:bg-green-400' : 'bg-primary-500'"
+          :style="{ width: `${progress.percentage}%` }"
+        />
+      </div>
+    </div>
+
     <!-- Combined filter notice when any filters are active -->
 
     <!-- List content for screenshot -->

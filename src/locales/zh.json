@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "在复选框中显示评分数字",
     "example": "例子：",
     "giving": "给予",
-    "receiving": "已收到"
+    "receiving": "已收到",
+    "progress": "进步",
+    "completed": "完全的",
+    "remaining": "其余的",
+    "show_unfilled": "显示未填充",
+    "hide_unfilled": "隐藏未填充"
   },
   "roles": {
     "sub": "顺从",
@@ -168,7 +173,8 @@
     "like": "好的",
     "indifferent": "冷漠",
     "maybe": "或许",
-    "limit": "限制"
+    "limit": "限制",
+    "curious": "好奇的"
   },
   "categories": {
     "bodies": "机构",

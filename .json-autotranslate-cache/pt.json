@@ -155,7 +155,12 @@
     "show_numbers_in_choices_desc": "Mostra números de classificação em caixas de seleção",
     "example": "Exemplo:",
     "giving": "Para dar",
-    "receiving": "Recebido"
+    "receiving": "Recebido",
+    "progress": "Progresso",
+    "completed": "Concluído",
+    "remaining": "Restante",
+    "show_unfilled": "Mostrar não preenchido",
+    "hide_unfilled": "Ocultar não preenchido"
   },
   "roles": {
     "sub": "Submisso",
@@ -168,7 +173,8 @@
     "like": "Legal",
     "indifferent": "Indiferente",
     "maybe": "Talvez",
-    "limit": "Limite"
+    "limit": "Limite",
+    "curious": "Curioso"
   },
   "categories": {
     "bodies": "Corpos",
