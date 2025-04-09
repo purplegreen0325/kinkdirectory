@@ -1276,6 +1276,46 @@ export const kinkList: KinkCategory[] = [
         key: 142,
       },
 
+      {
+        id: 'verbal_praise',
+        format: 'role_specific',
+        addedAt: 1744129147,
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 300,
+      },
+
+      {
+        id: 'physical_praise',
+        format: 'role_specific',
+        addedAt: 1744129147,
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'partner',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'self',
+          },
+
+        ],
+        key: 301,
+      },
+
     ],
   },
 

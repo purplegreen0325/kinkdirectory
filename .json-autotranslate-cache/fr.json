@@ -547,6 +547,14 @@
     "orgasm_training": {
       "label": "Entraînement à l'orgasme",
       "tooltip": "Entraîner un soumis à venir sur commande, ou à venir uniquement avec la permission du dominant."
+    },
+    "verbal_praise": {
+      "label": "Éloges verbaux",
+      "tooltip": "Faire des compliments verbaux, des encouragements et de la reconnaissance à un soumis pour son comportement, ses efforts ou ses réalisations."
+    },
+    "physical_praise": {
+      "label": "Éloges physiques",
+      "tooltip": "L'utilisation de touchers, de câlins, de caresses ou d'autres gestes physiques pour montrer son appréciation et son approbation à un soumis."
     }
   },
   "no_consent": {

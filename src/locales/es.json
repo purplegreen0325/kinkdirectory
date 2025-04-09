@@ -547,6 +547,14 @@
     "orgasm_training": {
       "label": "Entrenamiento del orgasmo",
       "tooltip": "Entrenar a un sumiso para que venga cuando se le ordene, o para que venga sólo con el permiso del dominante."
+    },
+    "verbal_praise": {
+      "label": "Elogio verbal",
+      "tooltip": "Dar elogios verbales, aliento y reconocimiento a un sumiso por su comportamiento, esfuerzos o logros."
+    },
+    "physical_praise": {
+      "label": "Elogio físico",
+      "tooltip": "El uso de tocar, abrazos, caricias u otros gestos físicos para mostrar aprecio y aprobación a un sumiso."
     }
   },
   "no_consent": {

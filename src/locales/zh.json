@@ -547,6 +547,14 @@
     "orgasm_training": {
       "label": "性高潮训练",
       "tooltip": "训练顺从者听从命令，或只在支配者的允许下达到高潮。"
+    },
+    "verbal_praise": {
+      "label": "口头表扬",
+      "tooltip": "对顺从者的行为、努力或成就给予口头赞扬、鼓励和认可。"
+    },
+    "physical_praise": {
+      "label": "身体赞美",
+      "tooltip": "使用触摸、拥抱、爱抚或其他身体姿势来向顺从者表示欣赏和认可。"
     }
   },
   "no_consent": {

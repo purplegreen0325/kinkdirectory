@@ -529,6 +529,14 @@
     "power_exchange": {
       "label": "Power exchange",
       "tooltip": "A relationship with service at the core."
+    },
+    "verbal_praise": {
+      "label": "Verbal praise",
+      "tooltip": "Giving verbal compliments, encouragement, and recognition to a submissive for their behavior, efforts, or achievements."
+    },
+    "physical_praise": {
+      "label": "Physical praise",
+      "tooltip": "The use of touching, hugging, caressing, or other physical gestures to show appreciation and approval to a submissive."
     }
   },
   "no_consent": {

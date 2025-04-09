@@ -547,6 +547,14 @@
     "orgasm_training": {
       "label": "Allenamento all'orgasmo",
       "tooltip": "Addestrare un sottomesso a venire a comando o solo con il permesso del dominante."
+    },
+    "verbal_praise": {
+      "label": "Lode verbale",
+      "tooltip": "Fare complimenti verbali, incoraggiare e riconoscere un comportamento, un impegno o un risultato a una persona sottomessa."
+    },
+    "physical_praise": {
+      "label": "Lode fisica",
+      "tooltip": "L'uso di toccamenti, abbracci, carezze o altri gesti fisici per mostrare apprezzamento e approvazione a una persona sottomessa."
     }
   },
   "no_consent": {

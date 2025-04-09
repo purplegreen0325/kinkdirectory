@@ -547,6 +547,14 @@
     "orgasm_training": {
       "label": "Orgasmustraining",
       "tooltip": "Einem Unterwürfigen beibringen, auf Befehl zu kommen oder nur mit der Erlaubnis des Dominanten."
+    },
+    "verbal_praise": {
+      "label": "Verbales Lob",
+      "tooltip": "Einem Untergebenen verbale Komplimente, Ermutigung und Anerkennung für sein Verhalten, seine Bemühungen oder seine Leistungen geben."
+    },
+    "physical_praise": {
+      "label": "Körperliches Lob",
+      "tooltip": "Durch Berühren, Umarmen, Streicheln oder andere körperliche Gesten wird einem Unterwürfigen Wertschätzung und Anerkennung gezeigt."
     }
   },
   "no_consent": {
