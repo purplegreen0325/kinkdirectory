@@ -169,11 +169,11 @@ function formatDate(dateString: string | number) {
       </div>
 
       <!-- List Grid - Using fixed widths and flex to prevent stretching -->
-      <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex flex-wrap justify-center gap-4 items-start">
         <div
           v-for="list in kinkLists"
           :key="list.id"
-          class="relative cursor-pointer group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-1.5 w-[220px]"
+          class="relative cursor-pointer group bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-200 ease-in-out border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-700 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-1.5 w-full md:w-[220px] flex flex-col"
           :class="getRoleColor(list.role)"
           @click="handleListSelection(list.id)"
         >
@@ -219,18 +219,15 @@ function formatDate(dateString: string | number) {
 
         <!-- Add new list card -->
         <div
-          class="cursor-pointer bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-dashed border-gray-300 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-700 hover:bg-gray-100 dark:hover:bg-gray-800 flex flex-col items-center justify-center py-6 px-4 transition-all duration-200 ease-in-out w-[220px]"
+          class="cursor-pointer bg-white dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-200 dark:border-gray-700 hover:border-primary-400 dark:hover:border-primary-600 hover:bg-primary-50/50 dark:hover:bg-primary-900/10 flex flex-col items-center justify-center py-4 px-4 transition-all duration-200 ease-in-out w-full md:w-[220px] self-stretch group"
           @click="openCreateListModal"
         >
-          <div class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-3">
-            <UIcon name="i-lucide-plus" class="text-gray-500 dark:text-gray-400 text-xl" />
+          <div class="w-10 h-10 rounded-full bg-primary-50 dark:bg-primary-900/20 flex items-center justify-center mb-2 transition-colors group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30">
+            <UIcon name="i-lucide-plus" class="text-primary-600 dark:text-primary-400 text-lg transition-transform group-hover:scale-110 group-hover:rotate-90" />
           </div>
-          <h3 class="text-base font-medium text-gray-900 dark:text-white mb-1">
+          <h3 class="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
             {{ t('app.create_new_list') }}
           </h3>
-          <p class="text-xs text-gray-500 dark:text-gray-400 text-center">
-            {{ t('app.create_list_prompt') }}
-          </p>
         </div>
       </div>
 
