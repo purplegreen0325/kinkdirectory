@@ -43,20 +43,20 @@ const columnLabels = computed(() => {
 
   if (activeList.value.role === 'both') {
     return {
-      left: t('app.as_dom'), // dom partner perspective
-      right: t('app.as_sub'), // sub self perspective
+      left: t('app.giving'), // dom partner perspective
+      right: t('app.receiving'), // sub self perspective
     }
   }
   else if (activeList.value.role === 'dom') {
     return {
-      left: t('app.you_dom'),
-      right: t('app.for_sub'),
+      left: t('app.giving'),
+      right: t('app.receiving'),
     }
   }
   else { // 'sub'
     return {
-      left: t('app.you_sub'),
-      right: t('app.for_dom'),
+      left: t('app.receiving'),
+      right: t('app.giving'),
     }
   }
 })
@@ -85,7 +85,7 @@ const needsLeftColumn = computed(() => {
         return false
 
       return kink.allowedPerspectives.some(
-        rp => (rp.role === 'dom' || rp.role === 'both') && rp.perspective === 'self',
+        rp => (rp.role === 'dom' && rp.perspective === 'partner'),
       )
     })
   }
@@ -96,7 +96,7 @@ const needsLeftColumn = computed(() => {
         return false
 
       return kink.allowedPerspectives.some(
-        rp => (rp.role === 'sub' || rp.role === 'both') && rp.perspective === 'self',
+        rp => rp.role === 'sub' && rp.perspective === 'self',
       )
     })
   }
@@ -127,7 +127,7 @@ const needsRightColumn = computed(() => {
 
       // Check if kink has dom partner perspective
       return kink.allowedPerspectives.some(
-        rp => (rp.role === 'dom' || rp.role === 'both') && rp.perspective === 'partner',
+        rp => (rp.role === 'dom' && rp.perspective === 'self'),
       )
     })
   }
@@ -139,7 +139,7 @@ const needsRightColumn = computed(() => {
 
       // Check if kink has sub partner perspective
       return kink.allowedPerspectives.some(
-        rp => (rp.role === 'sub' || rp.role === 'both') && rp.perspective === 'partner',
+        rp => rp.role === 'sub' && rp.perspective === 'partner',
       )
     })
   }

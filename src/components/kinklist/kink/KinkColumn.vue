@@ -21,6 +21,7 @@ defineProps<{
     ]"
   >
     <div class="flex justify-center items-center">
+      <slot />
       <KinkChoice
         v-if="!isEmpty"
         :value="value"

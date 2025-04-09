@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { KinkChoice as KinkChoiceType } from '../../../types'
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { useKinkListState } from '../../../composables/useKinkList'
 import { useSettings } from '../../../composables/useSettings'
 import KinkChoiceDrawer from './KinkChoiceDrawer.vue'
@@ -40,21 +41,25 @@ function handleClick(rating: KinkChoiceType) {
     props.onClick(rating)
   }
 }
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const lgAndLarger = breakpoints.greater('lg')
 </script>
 
 <template>
   <!-- Desktop version - circles in a row -->
-  <div class="hidden lg:flex space-x-1">
+  <div v-if="lgAndLarger" class="flex space-x-1" data-rating-group>
     <!-- Always show "Not Entered" (0) first -->
     <button
       type="button"
-      class="w-4 h-4 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
+      class="w-5 h-5 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
       :class="[
         value === 0 ? activeColorClasses[0] : subtleColorClasses[0],
         !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
       ]"
       data-rating="0"
       @click.stop="handleClick(0)"
+      :data-rating-active="value === 0"
     >
       <span
         v-if="settings.showNumbersInChoices"
@@ -71,12 +76,13 @@ function handleClick(rating: KinkChoiceType) {
     <template v-for="rating in kinkChoiceOrder" :key="rating">
       <button
         type="button"
-        class="w-4 h-4 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
+        class="w-5 h-5 rounded-full border focus:outline-none relative inline-flex items-center justify-center"
         :class="[
           value === rating ? activeColorClasses[rating] : subtleColorClasses[rating],
           !isViewMode ? 'cursor-pointer' : 'cursor-not-allowed opacity-90',
         ]"
         :data-rating="rating"
+        :data-rating-active="value === rating"
         @click.stop="handleClick(rating)"
       >
         <span
@@ -93,7 +99,7 @@ function handleClick(rating: KinkChoiceType) {
   </div>
 
   <!-- Mobile and Tablet version using the drawer component -->
-  <div class="lg:hidden">
+  <div v-else class="flex" data-rating-group>
     <KinkChoiceDrawer
       :value="value"
       :kink-name="kinkName"

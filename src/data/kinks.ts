@@ -131,12 +131,22 @@ export const kinkList: KinkCategory[] = [
             perspective: 'self',
           },
 
+          {
+            role: 'dom',
+            perspective: 'self',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'partner',
+          },
+
         ],
         key: 16,
       },
 
       {
-        id: 'blowjob',
+        id: 'oral',
         format: 'role_specific',
         allowedPerspectives: [
 
@@ -150,8 +160,18 @@ export const kinkList: KinkCategory[] = [
             perspective: 'self',
           },
 
+          {
+            role: 'dom',
+            perspective: 'self',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'partner',
+          },
+
         ],
-        key: 17,
+        key: 299,
       },
 
       {
@@ -167,6 +187,16 @@ export const kinkList: KinkCategory[] = [
           {
             role: 'sub',
             perspective: 'self',
+          },
+
+          {
+            role: 'dom',
+            perspective: 'self',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'partner',
           },
 
         ],
@@ -210,26 +240,6 @@ export const kinkList: KinkCategory[] = [
         ],
         key: 20,
       },
-
-      {
-        id: 'cunnilingus',
-        format: 'role_specific',
-        allowedPerspectives: [
-
-          {
-            role: 'dom',
-            perspective: 'partner',
-          },
-
-          {
-            role: 'sub',
-            perspective: 'self',
-          },
-
-        ],
-        key: 21,
-      },
-
       {
         id: 'face_sitting',
         format: 'role_specific',
@@ -364,6 +374,16 @@ export const kinkList: KinkCategory[] = [
           {
             role: 'sub',
             perspective: 'self',
+          },
+
+          {
+            role: 'dom',
+            perspective: 'self',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'partner',
           },
 
         ],
@@ -1077,7 +1097,13 @@ export const kinkList: KinkCategory[] = [
   {
     id: 'domination',
     kinks: [
+      {
+        id: 'dd_lg_md_lb',
+        format: 'general',
+        key: 46,
+      },
 
+     
       {
         id: 'domestic_servitude',
         format: 'role_specific',
@@ -1085,12 +1111,12 @@ export const kinkList: KinkCategory[] = [
 
           {
             role: 'dom',
-            perspective: 'partner',
+            perspective: 'self',
           },
 
           {
             role: 'sub',
-            perspective: 'self',
+            perspective: 'partner',
           },
 
         ],
@@ -1104,12 +1130,12 @@ export const kinkList: KinkCategory[] = [
 
           {
             role: 'dom',
-            perspective: 'partner',
+            perspective: 'self',
           },
 
           {
             role: 'sub',
-            perspective: 'self',
+            perspective: 'partner',
           },
 
         ],
@@ -1123,22 +1149,37 @@ export const kinkList: KinkCategory[] = [
 
           {
             role: 'dom',
-            perspective: 'partner',
+            perspective: 'self',
           },
 
           {
             role: 'sub',
-            perspective: 'self',
+            perspective: 'partner',
           },
 
         ],
         key: 45,
       },
 
+  
+
       {
-        id: 'dd_lg_md_lb',
-        format: 'general',
-        key: 46,
+        id: 'begging',
+        format: 'role_specific',
+        allowedPerspectives: [
+
+          {
+            role: 'dom',
+            perspective: 'self',
+          },
+
+          {
+            role: 'sub',
+            perspective: 'partner',
+          },
+
+        ],
+        key: 49,
       },
 
       {
@@ -1158,25 +1199,6 @@ export const kinkList: KinkCategory[] = [
 
         ],
         key: 47,
-      },
-
-      {
-        id: 'begging',
-        format: 'role_specific',
-        allowedPerspectives: [
-
-          {
-            role: 'dom',
-            perspective: 'partner',
-          },
-
-          {
-            role: 'sub',
-            perspective: 'self',
-          },
-
-        ],
-        key: 49,
       },
 
       {
@@ -1785,12 +1807,12 @@ export const kinkList: KinkCategory[] = [
 
           {
             role: 'dom',
-            perspective: 'partner',
+            perspective: 'self',
           },
 
           {
             role: 'sub',
-            perspective: 'self',
+            perspective: 'partner',
           },
 
         ],
@@ -1804,14 +1826,13 @@ export const kinkList: KinkCategory[] = [
 
           {
             role: 'dom',
-            perspective: 'partner',
+            perspective: 'self',
           },
 
           {
             role: 'sub',
-            perspective: 'self',
+            perspective: 'partner',
           },
-
         ],
         key: 86,
       },

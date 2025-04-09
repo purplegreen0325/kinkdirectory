@@ -93,7 +93,7 @@ const drawerTitle = computed(() => {
       :title="drawerTitle"
       :description="tooltip"
       :ui="{
-        content: 'fixed bg-(--ui-bg) ring ring-(--ui-border) flex focus:outline-none',
+        content: 'fixed bg-(--ui-bg) ring ring-(--ui-border) flex focus:outline-none ',
         handle: ['shrink-0 !bg-(--ui-bg-accented)'],
         title: 'break-words pr-4',
       }"
@@ -108,6 +108,7 @@ const drawerTitle = computed(() => {
           !settings.showNumbersInChoices && textColorClasses[value],
         ]"
         :data-rating="value"
+        :data-rating-active="true"
       >
         <span
           v-if="settings.showNumbersInChoices"
@@ -131,13 +132,13 @@ const drawerTitle = computed(() => {
               value === rating ? `bg-gray-100 dark:bg-gray-800 font-medium ${textColorClasses[rating]}` : 'hover:bg-gray-50 dark:hover:bg-gray-800/50',
             ]"
             :data-rating="rating"
+            :data-rating-active="value === rating"
             @click="handleSelect(rating)"
           >
             <div class="flex items-center flex-1 min-w-0 mr-2">
               <span
                 class="w-5 h-5 rounded-full inline-flex items-center justify-center mr-3 flex-shrink-0"
                 :class="rating === 0 ? 'border-2 border-gray-300 dark:border-gray-600' : activeColorClasses[rating]"
-                :data-rating="rating"
               >
                 <span v-if="settings.showNumbersInChoices" class="text-xs font-bold text-white" :class="{ 'dark:text-gray-900': rating === 0 }">{{ rating }}</span>
               </span>

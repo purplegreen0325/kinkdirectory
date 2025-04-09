@@ -153,7 +153,9 @@
     "and": "Und",
     "show_numbers_in_choices": "Zahlen in Auswahlmöglichkeiten anzeigen",
     "show_numbers_in_choices_desc": "Zeigt Bewertungszahlen in Kontrollkästchen an",
-    "example": "Beispiel:"
+    "example": "Beispiel:",
+    "giving": "Geben",
+    "receiving": "Erhalten"
   },
   "roles": {
     "sub": "Unterwürfig",
@@ -278,7 +280,7 @@
     },
     "swallowing": {
       "label": "Schlucken",
-      "tooltip": "Die orale Einnahme von Sperma, direkt oder indirekt aus einem Penis."
+      "tooltip": "Die orale Aufnahme von Sperma oder das Squirten, direkt oder indirekt aus einem Geschlechtsorgan."
     },
     "facials": {
       "label": "Gesichtsbesamung",
@@ -303,6 +305,10 @@
     "ruined": {
       "label": "Ruinieren",
       "tooltip": "Der Vorgang, einer Person einen Orgasmus zu ermöglichen, die Stimulation jedoch kurz vor dem Höhepunkt zu stoppen, was zu einem unvollständigen oder unbefriedigenden Orgasmus führt. Dies kann sowohl bei männlichen als auch bei weiblichen Partnern auftreten."
+    },
+    "oral": {
+      "label": "Oral",
+      "tooltip": "Sexuelle Stimulation durch direkten, physischen Kontakt des Mundes oder der Zunge mit den Genitalien."
     }
   },
   "ass_play": {
