@@ -5,10 +5,17 @@
   "description": "Helper scripts for the kink list app",
   "scripts": {
     "add-keys": "tsx add-kink-keys.ts",
-    "get-highest-key": "tsx get-highest-key.ts"
+    "get-highest-key": "tsx get-highest-key.ts",
+    "export-translations": "tsx export-translations.ts",
+    "import-translations": "tsx import-translations.ts"
   },
   "devDependencies": {
     "tsx": "^4.7.1",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@types/node": "^22.14.0",
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0"
   }
 }
