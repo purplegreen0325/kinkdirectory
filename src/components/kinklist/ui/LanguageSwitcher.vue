@@ -27,6 +27,7 @@ function getLanguageIcon(locale: string) {
     case 'ko': return 'twemoji:flag-south-korea'
     case 'ar': return 'twemoji:flag-saudi-arabia'
     case 'hi': return 'twemoji:flag-india'
+    case 'hu': return 'twemoji:flag-hungary'
     default: return 'i-lucide-globe'
   }
 }
@@ -47,6 +48,7 @@ function getNativeLanguageName(locale: string) {
     case 'ko': return '한국어'
     case 'ar': return 'العربية'
     case 'hi': return 'हिन्दी'
+    case 'hu': return 'Magyar'
     default: return locale
   }
 }

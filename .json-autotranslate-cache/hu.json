@@ -1,0 +1,978 @@
+{
+  "title": "Kink Directory",
+  "language": {
+    "switch": "Váltson {0} -ra",
+    "en": "angol",
+    "nl": "holland",
+    "es": "spanyol",
+    "fr": "francia",
+    "de": "német",
+    "it": "olasz",
+    "pt": "portugál",
+    "ru": "orosz",
+    "zh": "kínai",
+    "ja": "japán",
+    "ko": "koreai",
+    "ar": "arab",
+    "hi": "hindi",
+    "hu": "magyar",
+    "auto": "Automatikus (rendszer)"
+  },
+  "theme": {
+    "light": "Fény",
+    "dark": "Sötét",
+    "auto": "Rendszer"
+  },
+  "welcome": "Üdvözöljük a Kink Directoryban",
+  "app": {
+    "list_name_placeholder": "Adjon nevet a listának",
+    "create_list": "Új lista létrehozása",
+    "import_list": "Importálási lista",
+    "export_list": "Lista exportálása",
+    "share_list": "Tőzsdei árfolyam",
+    "new": "Új",
+    "share": "Megosztani",
+    "screenshot_short": "Fénykép",
+    "share_link": "Megosztható link",
+    "view_only": "Csak megtekintés",
+    "share_info_text": "Ossza meg listáját másokkal ennek az egyedi linknek a küldésével. A link birtokában bárki megtekintheti a listát írásvédett módban.",
+    "share_privacy_note": "Csak a pontos linkkel rendelkező személyek férhetnek hozzá a listához. A megosztott listák megtekintéséhez nincs szükség bejelentkezésre.",
+    "copy_success": "Link a vágólapra másolva",
+    "copied": "Másolva!",
+    "copy_and_close": "Másolás és bezárás",
+    "close": "Közeli",
+    "screenshot": "Készítsen képernyőképet",
+    "screenshot_options": "Képernyőkép opciók",
+    "screenshot_downloaded": "A képernyőkép sikeresen mentve",
+    "screenshot_error": "Hiba történt a képernyőkép készítésekor",
+    "taking_screenshot": "Készítsen képernyőképet...",
+    "download": "Letöltés",
+    "upload_to_imgur": "Feltöltés az Imgurba",
+    "imgur_link": "Imgur Link",
+    "imgur_link_copied": "Imgur link a vágólapra másolva",
+    "imgur_upload_success": "Feltöltés sikeres",
+    "imgur_upload_success_description": "A kép sikeresen feltöltve az Imgurba",
+    "imgur_upload_error": "A feltöltés sikertelen",
+    "shorten_url": "Link rövidítése",
+    "url_shortened": "Link rövidítve",
+    "shortened_link": "Rövid link",
+    "url_shortened_success": "A link sikeresen lerövidítve",
+    "url_shortened_error": "Hiba a link rövidítésekor",
+    "show_original": "Eredeti megjelenítése",
+    "show_shortened": "A műsor rövidítve",
+    "select_list": "Válassza ki a listát",
+    "delete_list": "Lista törlése",
+    "no_lists": "Nem találhatók listák. A kezdéshez hozzon létre egy újat.",
+    "select_a_list": "Válassza ki a megtekinteni vagy szerkeszteni kívánt listát",
+    "welcome_title": "Üdvözöljük a Kink Directoryban",
+    "welcome_description": "Hozzon létre személyre szabott csalási listákat, hogy felfedezze preferenciáit és határait. Ossza meg őket partnereivel, vagy tartsa privátban – Ön irányít.",
+    "welcome_privacy": "Minden adat csak az Ön böngészőjében tárolódik – semmi sem kerül elküldésre a szerverre, így biztosítva a teljes adatvédelmet.",
+    "welcome_sharing": "Hozzon létre megosztható linkeket, amelyeket elküldhet a partnereknek, amikor azt szeretné, hogy lássák az Ön beállításait.",
+    "welcome_customization": "Adja meg szerepét, és személyre szabja a listát az egyes elemek részletes preferenciáival. A BDSM iránt érdeklődők választhatnak a domináns, alázatos vagy mindkettő közül.",
+    "welcome_desktop_placeholder": "Asztali mintakép",
+    "welcome_mobile_placeholder": "Mobil nézet",
+    "your_lists": "Az Ön listái",
+    "create_list_prompt": "Adjon hozzá egy új listát egyéni beállításokkal",
+    "today": "Ma",
+    "yesterday": "Tegnap",
+    "days_ago": "{count} napja",
+    "recent": "Legutóbbi",
+    "motivational_text": "Fedezze fel vágyait és határait magabiztosan és nyitottan",
+    "selections": "válogatások",
+    "giving": "Adni",
+    "receiving": "Megkapta",
+    "general": "Általános",
+    "general_questions": "Általános kérdések",
+    "create_new_list": "Új lista létrehozása",
+    "list_name": "Lista neve",
+    "role": "Szerep",
+    "cancel": "Mégsem",
+    "create": "elkészíteni",
+    "confirm": "A megerősítéshez",
+    "legend": "Legenda",
+    "copy_link": "Link másolása",
+    "confirm_delete": "Biztosan törli ezt a listát?",
+    "create_list_description": "Hozzon létre egy személyre szabott listát preferenciáinak felfedezéséhez",
+    "create_list_intro": "A lista adatait csak a böngészője tárolja, és soha nem küldi el szerverre. Az adatok megosztásának egyetlen módja a másokkal való megosztásra választott hivatkozások.",
+    "role_explanation": "A szereppreferenciája határozza meg, hogyan jelenjenek meg a listaelemek, és hogyan értelmezzék a választásokat. Ha nem érdekli a BDSM, valószínűleg a „Mindkettő” opció a legalkalmasabb.",
+    "role_sub_explanation": "Submissive (sub): Inkább útbaigazítást kap, feladja az irányítást, és BDSM-környezetben fogad tevékenységeket. Az alapján jelöli meg az elemeket, hogy mit szeretne megtapasztalni egy domináns partnertől.",
+    "role_dom_explanation": "Domináns (dom): Jobban szereti átvenni az irányítást, útmutatást adni és tevékenységeket végezni BDSM-környezetben. Az alapján jelöli meg az elemeket, hogy mit szeret csinálni egy alázatos partnerrel.",
+    "role_both_explanation": "Mindkettő (Switch): A kontextustól függően élvezi az alázatos és a domináns szerepeket a BDSM-interakciókban. Mindkét szempontból megjelöli a preferenciákat – mit szeretne adni és mit szeretne kapni. Ez a legmegfelelőbb lehetőség akkor is, ha nem érdekli a BDSM.",
+    "share_list_description": "Ossza meg csaláslistáját másokkal egyedi URL-címen keresztül",
+    "view_only_mode": "Ön egy megosztott listát néz meg írásvédett módban.",
+    "exit_view_mode": "Nyissa meg a szerkesztési módot",
+    "delete_confirm_title": "Lista törlése",
+    "delete_confirm_message": "Biztosan törli ezt a listát? Ez a művelet nem vonható vissza.",
+    "list_deleted": "A lista sikeresen törölve",
+    "list_imported": "A lista sikeresen importálva",
+    "imported_from_shared": "A lista importálása megosztott hivatkozáson keresztül történik",
+    "import_confirm_title": "Importálási lista",
+    "import_confirm_message": "Szeretné importálni ezt a megosztott listát a gyűjteményébe?",
+    "role_specific_items": "Szerepspecifikus elemek",
+    "role_specific_questions": "Szerepspecifikus kérdések",
+    "list_updated": "A lista sikeresen frissítve",
+    "quiz": "Kvíz",
+    "quiz_intro": "Ez a kvíz mód segít gyorsan kitölteni a csavarodási preferenciáit azáltal, hogy egyenként végignézi az összes törést. Válassza ki az egyes töréseket, vagy nyomja meg a „Kihagyás” gombot a folytatáshoz.",
+    "quiz_completed": "Kvíz befejezve",
+    "quiz_completed_message": "Gratulálok! Elvégezted a csalás kvízt. Most megvan a preferenciáinak teljes listája.",
+    "start_quiz": "Indítsa el a kvízt",
+    "quiz_new_kinks_only": "Kvíz csak az új választékkal",
+    "quiz_new_kinks_count": "Kvíz {count} új választás",
+    "skip": "Kihagyás",
+    "done": "Befejezett",
+    "no_description_available": "Nem áll rendelkezésre leírás",
+    "quiz_mode": "Kvíz mód",
+    "quick_rate_all_kinks": "Gyorsan felmérheti minden hibáját egy sor kérdéssel",
+    "import_error": "Az importálás sikertelen",
+    "import_error_old_format": "Ez a lista egy elavult formátumot használ, amely már nem támogatott. Próbáljon meg egy újabb listát importálni.",
+    "back": "Vissza",
+    "settings": "Intézmények",
+    "settings_intro": "Szabja testre a KinkList élményt ezen beállítások módosításával.",
+    "display_settings": "Megjelenítési beállítások",
+    "kink_order": "Rendelés Kink Rating",
+    "reverse_kink_order": "Fordítsa meg az értékelés sorrendjét",
+    "reverse_kink_order_desc": "Módosítja az értékelési opciók sorrendjét „Kedvencek → Korlátozás”-ról „Korlát → Kedvenc”-re.",
+    "reverse_kink_order_desc_short": "Módosítja az értékelések megjelenítési sorrendjét",
+    "current_order": "Jelenlegi rendelés:",
+    "show_numbers_in_choices": "Számok megjelenítése a választási lehetőségekben",
+    "show_numbers_in_choices_desc": "Megjeleníti az értékelési számokat a jelölőnégyzetekben",
+    "example": "Példa:",
+    "filter": "Szűrő",
+    "filter_options": "Szűrési lehetőségek",
+    "only_new_items": "Csak új tételek",
+    "only_unfilled_items": "Csak a befejezetlen tételek",
+    "showing_only_new_items": "Csak az új elemek jelennek meg",
+    "showing_only_unfilled_items": "Csak a befejezetlen tételek jelennek meg",
+    "no_new_items_found": "Nem található új elem a jelenlegi szűrőkkel",
+    "no_unfilled_items_found": "Nem található kitöltetlen tétel a jelenlegi szűrőkkel",
+    "no_results_with_filters": "Egyetlen elem sem felel meg az összes aktív szűrőnek",
+    "clear_filters": "Szűrők törlése",
+    "and": "és",
+    "progress": "Előrehalad",
+    "completed": "Befejezve",
+    "remaining": "Többi",
+    "show_unfilled": "Kitöltés nélküli megjelenítés",
+    "hide_unfilled": "Kitöltés nélkül elrejteni"
+  },
+  "roles": {
+    "sub": "Alázatos",
+    "dom": "Uralkodó",
+    "both": "Mindkét"
+  },
+  "choices": {
+    "not_entered": "Nincs kitöltve",
+    "favorite": "Kedvenc",
+    "like": "Szép",
+    "indifferent": "Közömbös",
+    "maybe": "Talán",
+    "limit": "Határ",
+    "curious": "Kíváncsi"
+  },
+  "categories": {
+    "bodies": "Testek",
+    "clothing": "Ruházat",
+    "restrictive": "Korlátozó",
+    "general": "Általános",
+    "ass_play": "Anális játék",
+    "toys": "Játékok",
+    "domination": "Dominancia",
+    "no_consent": "Nincs hozzájárulás",
+    "taboo": "Tabu",
+    "surrealism": "Szürrealizmus",
+    "fluids": "Folyadékok",
+    "degradation": "Megalázás",
+    "touch_stimulation": "Érintés és stimuláció",
+    "misc_fetish": "Különféle fétisek",
+    "pain": "Fájdalom",
+    "medium": "Közepes",
+    "time_scale": "Időskála",
+    "role_play": "Szerepjáték"
+  },
+  "subcategories": {
+    "general": "Általános"
+  },
+  "bodies": {
+    "skinny": {
+      "label": "Sovány",
+      "tooltip": "Érdekelnek a karcsú, vékony vagy karcsú karakterek."
+    },
+    "chubby": {
+      "label": "Pufók",
+      "tooltip": "Érdekelnek a kerekebb, testesebb és telt karakterek."
+    },
+    "small_breasts": {
+      "label": "Kis mellek",
+      "tooltip": "Érdekelnek a kivételesen kicsi mellek, olykor olyan mértékben, hogy szinte hiányoznak."
+    },
+    "large_breasts": {
+      "label": "Nagy mellek",
+      "tooltip": "Érdekelnek a kivételesen nagy mellek."
+    },
+    "small_cocks": {
+      "label": "Kis farkuk",
+      "tooltip": "Érdekelnek az átlagosnál kisebb péniszek."
+    },
+    "large_cocks": {
+      "label": "Nagy farkuk",
+      "tooltip": "Érdekelnek az átlagosnál nagyobb farkuk."
+    },
+    "small_butts": {
+      "label": "Kis fenék",
+      "tooltip": "Érdekelnek a különösen kicsi fenék."
+    },
+    "big_butts": {
+      "label": "Nagy fenék",
+      "tooltip": "Érdekelnek a különösen nagy fenék."
+    }
+  },
+  "clothing": {
+    "clothed_sex": {
+      "label": "Szex ruhában",
+      "tooltip": "Olyan RP-n való részvétel, ahol Ön és/vagy partnere nem vetkőztet le a szexuális kapcsolat során."
+    },
+    "lingerie": {
+      "label": "Fehérnemű",
+      "tooltip": "Érdeklődés a fehérnemű használata iránt egy RP szexuális kontextusában, vagy az azt viselő karakterek iránti érdeklődés."
+    },
+    "stockings": {
+      "label": "Harisnya",
+      "tooltip": "Érdeklődés a harisnyák használata iránt egy RP szexuális kontextusában, vagy az azt viselő karakterek iránti érdeklődés."
+    },
+    "heels": {
+      "label": "Sarok",
+      "tooltip": "Érdeklődés a magassarkúk használata iránt egy RP szexuális kontextusában, vagy az azt viselő karakterek iránti érdeklődés."
+    },
+    "leather": {
+      "label": "Tanul",
+      "tooltip": "Érdekel a bőrruházat RP szexuális kontextusában való használata, vagy érdeklődik az azt viselő karakterek iránt."
+    },
+    "latex": {
+      "label": "Latex",
+      "tooltip": "Ruhaként viselt latex és/vagy gumi anyag használata."
+    },
+    "uniform_costume": {
+      "label": "Egyenruha / jelmez",
+      "tooltip": "Érdeklődés az egyenruhák vagy jelmezek használata iránt egy RP szexuális kontextusában, vagy az ezeket viselő karakterek iránti érdeklődés."
+    },
+    "cross_dressing": {
+      "label": "Keresztöltözés",
+      "tooltip": "Részvétel egy RP-n, ahol egy vagy több szereplő az ellenkező nem ruházatába öltözik."
+    }
+  },
+  "general": {
+    "romance_affection": {
+      "label": "Romantika / szerelem",
+      "tooltip": "Szerelem vagy erős vonzalom, szenvedély kimutatása vagy kifejezése mind a szerelmeskedés közben, mind a normál jelenetek során."
+    },
+    "handjob_fingering": {
+      "label": "Kézimunka / Ujjozás",
+      "tooltip": "Szexuális stimuláció a kéznek vagy az ujjaknak a nemi szervekkel való közvetlen, fizikai érintkezésével."
+    },
+    "oral": {
+      "label": "Orális",
+      "tooltip": "Szexuális stimuláció a szájnak vagy a nyelvnek a nemi szervekkel való közvetlen, fizikai érintkezésével."
+    },
+    "deep_throat": {
+      "label": "Mély torok",
+      "tooltip": "Egy másik szereplő szájába való behatolás addig a mélységig, ahol a pénisz vagy a behelyezett tárgy behatol a szájüreg hátsó részébe és/vagy a torokba, néha öklezőreflexet okozva, vagy ilyen cselekményeket hajt végre."
+    },
+    "swallowing": {
+      "label": "Nyelés",
+      "tooltip": "A sperma szájon át történő fogyasztása vagy kifröccsenése közvetlenül vagy közvetve a nemi szervből."
+    },
+    "facials": {
+      "label": "Arckezelések",
+      "tooltip": "A magömlés/permetezés közvetlenül valaki arcára."
+    },
+    "face_sitting": {
+      "label": "Arc-ülés",
+      "tooltip": "Olyan szexuális gyakorlat, amelyben valaki fenekével vagy nemi szervével egy másik szereplő arcára ül, és megfojtja a személyt, néha egészen a fulladásig; gyakran a szóbeli kielégülés kikényszerítésének egy formájaként történik."
+    },
+    "edging": {
+      "label": "Szegélyezés",
+      "tooltip": "Maradni a csúcspont szélén orgazmus nélkül."
+    },
+    "teasing": {
+      "label": "Járványok",
+      "tooltip": "Az explicit, szexuális érintkezés előtti előjáték hosszabb jeleneteire utal, amelyek lehetnek fizikai és/vagy verbálisak is, általában a partner szexuális frusztrációjának vagy elkeseredettségének a felkeltésére."
+    },
+    "ruined": {
+      "label": "Romos",
+      "tooltip": "Az a cselekmény, amely lehetővé teszi egy személynek, hogy orgazmust éljen át, de a stimulációt közvetlenül a csúcspont előtt leállítjuk, ami hiányos vagy nem kielégítő orgazmust eredményez. Ez férfi és női partnereknél egyaránt előfordulhat."
+    }
+  },
+  "ass_play": {
+    "anal_toys": {
+      "label": "Anális játékok",
+      "tooltip": "A szexjátékokkal való anális behatolást jelenti, beleértve, de nem kizárólagosan, vibrátorokat, vibrátorokat, anális tojásokat, anális gyöngyöket stb."
+    },
+    "anal_sex_pegging": {
+      "label": "Anális szex / kötözés",
+      "tooltip": "Ha behatol egy partner, pénisz vagy szíj segítségével."
+    },
+    "rimming": {
+      "label": "Felni",
+      "tooltip": "A partner végbélnyílásának orális stimulálása nyalással és/vagy nyelvvel a recipiens végbélnyílásába való behatolással."
+    },
+    "double_penetration": {
+      "label": "Dupla behatolás",
+      "tooltip": "Egyetlen szereplő végbélnyílásába való behatolás vagy annak befogadása két tárggyal, beleértve, de nem kizárólagosan a pénisz, szexjátékok, ököl stb."
+    },
+    "anal_fisting": {
+      "label": "Anális öklözés",
+      "tooltip": "Kéz(ek) és/vagy kar(ok) behelyezése partnere végbélnyílásába, vagy ilyen cselekmények fogadása."
+    }
+  },
+  "restrictive": {
+    "collar": {
+      "label": "Gallér",
+      "tooltip": "Nyakban nyakörv viselése."
+    },
+    "leash": {
+      "label": "Öv",
+      "tooltip": "Pórázon vezetve."
+    },
+    "chastity": {
+      "label": "Tisztaság",
+      "tooltip": "Szexuális absztinencia, önkéntes vagy kényszerű; Ez azzal járhat, hogy valaki egyszerűen tartózkodik a szexuális tevékenységtől, vagy olyan eszközt visel, amely megakadályozza azt."
+    },
+    "bondage_light": {
+      "label": "Kötözés (világos)",
+      "tooltip": "Enyhe vagy mérsékelt kötöttség alkalmazása abban a helyzetben, amelybe a megkötött karaktert helyezi, ameddig a karakter rabságban lesz, a kötöttség által okozott kényelmetlenség szintjében vagy a kötöttség következtében fellépő immobilizáció mértékében."
+    },
+    "bondage_heavy": {
+      "label": "Kötözés (nehéz)",
+      "tooltip": "A rabság használata, amely szélsőséges abban a helyzetben, amelybe a kötött karaktert helyezi, az időtartamban, ameddig a karakter rabságban lesz, a kötöttség által okozott kényelmetlenség szintjében vagy a kötöttség következtében fellépő immobilizáció mértékében."
+    },
+    "encasement": {
+      "label": "Elzártság",
+      "tooltip": "Az egész testet, mint egy múmia, latex öltönybe, hálózsákba vagy más fétisfelszerelésbe burkolják a szexuális kielégülés érdekében."
+    },
+    "cag": {
+      "label": "Szűzség/ketrec",
+      "tooltip": "Olyan eszköz, amely megakadályozza a nemi szervekhez való hozzáférést."
+    },
+    "blindfold": {
+      "label": "Vakon",
+      "tooltip": "A szem eltakarása a látás akadályozása érdekében, ami fokozhatja a többi érzékszervet és fokozhatja a sebezhetőség érzését."
+    },
+    "breast_bondage": {
+      "label": "Mellrabság",
+      "tooltip": "Speciális kötözési technikák, amelyek magukban foglalják a mellek megkötését, ami növelheti az érzékenységet és vizuálisan stimuláló lehet."
+    },
+    "rope_simple": {
+      "label": "Kötélkötés (egyszerű)",
+      "tooltip": "Alapvető kötélkötési technikák a végtagok megfékezésére vagy a mozgás korlátozására."
+    },
+    "rope_shibari": {
+      "label": "Kötél rabság (Shibari)",
+      "tooltip": "Komplex, esztétikus japán kötélkötés, amely egyesíti a funkcionális korlátokat és a művészi kifejezésmódot."
+    },
+    "spreader_bars": {
+      "label": "Terítőrudak",
+      "tooltip": "A rudak a végtagokat egymástól távol tartották, megkönnyítve a hozzáférést és növelve a sebezhetőséget."
+    },
+    "suspension": {
+      "label": "Felfüggesztés",
+      "tooltip": "Kötözési technikák, ahol a testet részben vagy teljesen felemelik a talajról, ami a súlytalanság és a teljes önátadás egyedülálló érzetét kelti."
+    },
+    "mummification": {
+      "label": "Mumifikálás",
+      "tooltip": "A test teljes becsomagolása olyan anyagokba, mint a műanyag fólia, szalag vagy latex, ami majdnem teljes rögzítést eredményez."
+    },
+    "sensory_deprivation": {
+      "label": "Érzékszervi depriváció",
+      "tooltip": "Az érzékszervi bemenet korlátozása vagy megszüntetése, mint például a látás, hallás vagy tapintás, más érzékszervek javítása és a fókusz elmélyítése érdekében."
+    },
+    "armbinders": {
+      "label": "Karkötők",
+      "tooltip": "Speciális csövek, amelyek a karokat a hát mögött rögzítik, ami a karok teljes immobilizálását okozza."
+    },
+    "cages": {
+      "label": "Ketrecek",
+      "tooltip": "Egy ketrecbe vagy cellába zárva lenni a kötöttség és az erődinamika egy formájaként."
+    },
+    "chains": {
+      "label": "Láncok",
+      "tooltip": "Láncokkal megkötve, ami egyedülálló nehéz és hideg érzetet ad a többi kötözőanyaghoz képest."
+    },
+    "leather_cuffs": {
+      "label": "Bőr bilincsek",
+      "tooltip": "Bőrből készült bilincs a csukló vagy a boka rögzítéséhez."
+    },
+    "metal_cuffs": {
+      "label": "Fém bilincsek",
+      "tooltip": "Hagyományos fém bilincsek a csukló vagy a boka rögzítésére."
+    },
+    "gag_ball": {
+      "label": "Balgag",
+      "tooltip": "Golyó alakú geg, amelyet a szájba helyeznek és a fej mögött rögzítenek."
+    },
+    "gag_ring": {
+      "label": "Ring gag",
+      "tooltip": "Gyűrű alakú geg, amely nyitva tartja a szájat, így hozzáférést biztosít a szájhoz, miközben megakadályozza a beszédet."
+    },
+    "gag_tape": {
+      "label": "Szalagos öklendezés",
+      "tooltip": "Szalag a száj lefedésére és a beszéd megakadályozására."
+    },
+    "hoods": {
+      "label": "Motorháztetők",
+      "tooltip": "Teljes fejfedő, amely az anonimitás, a deperszonalizáció vagy az érzékszervi megfosztottság érzését keltheti."
+    },
+    "immobilisation": {
+      "label": "Immobilizáció",
+      "tooltip": "A mozgás teljes korlátozása különféle kötési technikákkal."
+    },
+    "leather_restraints": {
+      "label": "Bőr mandzsetta",
+      "tooltip": "Különböző bőrből készült mandzsetták, a kötözés különböző formáihoz."
+    },
+    "stocks": {
+      "label": "pellengér",
+      "tooltip": "Hagyományos középkori korlátozó eszköz, amely a fejet és a kezeket tartja."
+    },
+    "straight_jacket": {
+      "label": "kényszerzubbony",
+      "tooltip": "Speciális ruhadarab, amely a karokat a testhez kötve rögzíti."
+    },
+    "sleep_sack": {
+      "label": "Hálózsák",
+      "tooltip": "Speciális szűk táska, melybe a mumifikációhoz hasonlóan az egész testet bezárják."
+    },
+    "dom_only_for_sub": {
+      "label": "Hülye csak a subnak",
+      "tooltip": "Példa: A domináns csak az engedelmességéért tud válaszolni, önmagáért nem."
+    },
+    "sub_self_only": {
+      "label": "Sub csak magad",
+      "tooltip": "Példa: Az engedelmesek csak magukért válaszolhatnak, dominánsaikra nem."
+    },
+    "dom_answer_for_both": {
+      "label": "Dom mindkettőre válaszol",
+      "tooltip": "Példa: A domináns önmaguknak és alázatosainak egyaránt válaszol."
+    },
+    "sub_only_for_dom": {
+      "label": "Sub csak hülyéknek",
+      "tooltip": "Példa: Az alázatosak csak a dominánsukért tudnak válaszolni, önmagukért nem."
+    }
+  },
+  "toys": {
+    "dildos": {
+      "label": "Műpénisz",
+      "tooltip": "Erekciós pénisz alakú tárgy, amelyet szexuális stimulációra használnak."
+    },
+    "plugs": {
+      "label": "Dugók",
+      "tooltip": "A végbélbe helyezhető szexjáték."
+    },
+    "vibrators": {
+      "label": "Vibrátorok",
+      "tooltip": "Szexuális stimulációra használt vibrációs eszköz."
+    },
+    "sounding": {
+      "label": "Hangzó",
+      "tooltip": "Fémrudak behelyezése férfi vagy nő húgycsövébe, vagy ilyen cselekmények fogadása; technikailag olyan rudakat jelent, amelyek rezonálnak és/vagy rezegnek valamilyen ingerlés hatására, de nem feltétlenül jelenti azt."
+    }
+  },
+  "domination": {
+    "general_dom_sub": {
+      "label": "General Dom / General Sub",
+      "tooltip": "A Domináns/Alávetett tevékenységek gyűjtőneve."
+    },
+    "domestic_servitude": {
+      "label": "Belföldi szolgáltatás",
+      "tooltip": "Komornyik, pincérnő, sofőr, szobalány vagy házvezetőnő által kiszolgálni, vagy ilyen minőségben szolgálni."
+    },
+    "slavery": {
+      "label": "Rabszolgaság",
+      "tooltip": "Rabszolgaként szolgálni a domináns parancsára, vagy ilyen szolgálatban részesülni, választás nélkül."
+    },
+    "pet_play": {
+      "label": "Kisállat játék",
+      "tooltip": "A kisállatokkal való játék egy olyan szerep, ahol a hangsúly az alázatos felveszi az alternatív lelkiállapotot, gyakran egy kutyát, macskát vagy lóét."
+    },
+    "dd_lg_md_lb": {
+      "label": "DD/lg, MD/lb",
+      "tooltip": "Apu vagy anyu Dom/ Kislány vagy Fiú. Az apu/mami a kapcsolat dominánsabb fele, a kicsi az alázatosabb."
+    },
+    "discipline": {
+      "label": "Fegyelem",
+      "tooltip": "Erősítés (jutalmak és/vagy büntetés) alkalmazása arra, hogy egy alázatost arra tanítsanak, hogy engedelmeskedjen a mester különféle parancsainak."
+    },
+    "begging": {
+      "label": "Könyörögni",
+      "tooltip": "A koldulás önlealacsonyító aktusa, mint a behódolás egyik formája, amely beépül az RP-be."
+    },
+    "forced_orgasm": {
+      "label": "Kényszer orgazmus",
+      "tooltip": "A kényszerű orgazmus egy konszenzusos BDSM vagy perverz szexuális játék, amelyben egy személy beleegyezik abba, hogy rajtuk kívülálló módon kényszerítsék orgazmusra."
+    },
+    "orgasm_control": {
+      "label": "Orgazmus kontroll",
+      "tooltip": "Arra utal, hogy a domináns irányítja, hogy az alávetett mikor éri el az orgazmust, akár fizikai eszközökkel, akár parancs útján; általában dominanciával és/vagy túlzott kötekedéssel és szegélyezéssel jár; az orgazmus teljesen megtagadható."
+    },
+    "orgasm_denial": {
+      "label": "Orgazmus-absztinencia",
+      "tooltip": "Arra utal, hogy a domináns megtagadja az alázatos orgazmust."
+    },
+    "multiple_orgasms": {
+      "label": "Több orgazmus",
+      "tooltip": "Több egymás utáni orgazmus kikényszerítése vagy átélése, néha a túlzott stimuláció vagy a kimerültség szintjéig."
+    },
+    "orgasm_training": {
+      "label": "Orgazmus tréning",
+      "tooltip": "Egy alázatos kiképzése arra, hogy parancsra jöjjön, vagy csak a domináns engedélyével jöjjön."
+    },
+    "verbal_praise": {
+      "label": "Szóbeli dicséret",
+      "tooltip": "Szóbeli bókok, bátorítások és elismerések az alávetetteknek viselkedésükért, erőfeszítéseikért vagy eredményeikért."
+    },
+    "physical_praise": {
+      "label": "Fizikai dicséret",
+      "tooltip": "Érintéssel, öleléssel, simogatással vagy más fizikai gesztusokkal, amellyel kifejezhető az alázatos személy elismerése és jóváhagyása."
+    },
+    "power_exchange": {
+      "label": "Áramcsere",
+      "tooltip": "A szolgáltatással való kapcsolat a középpontjában."
+    }
+  },
+  "no_consent": {
+    "dubious_consent": {
+      "label": "Megkérdőjelezhető beleegyezés",
+      "tooltip": "Olyan helyzetek, amikor megkérdőjelezik a partner beleegyezését, bár ez nem egyenesen nemi erőszak."
+    },
+    "non_con_rape": {
+      "label": "Nem megtévesztés/erőszak",
+      "tooltip": "Akaratán kívüli elvétel/elvétel, gyakran erőszakkal."
+    },
+    "blackmail_coercion": {
+      "label": "Zsarolás / kényszerítés",
+      "tooltip": "Kényszer és/vagy zsarolás alkalmazására utal egy RP történetének kontextusában, gyakran félig konszenzusos eszköz formájában a partnertől való szex megszerzésére."
+    },
+    "kidnapping": {
+      "label": "Emberrablás",
+      "tooltip": "Egy RP szereplőjének elrablása bántalmazás céljából, gyakran szexuálisan, vagy ilyen okokból elrabolják; gyakran határozatlan idejű szabadságvesztést jelent."
+    },
+    "drugs": {
+      "label": "Kábítószer",
+      "tooltip": "Illegális kábítószerek használata RP-vel összefüggésben, általában a szereplők megzavarására vagy más szellemi cselekvőképtelenné tételére, vagy a szex érzésének fokozására."
+    },
+    "alcohol": {
+      "label": "Alkohol",
+      "tooltip": "Alkoholfogyasztás RP-vel összefüggésben, rendszerint egy karakter megzavarására vagy más szellemi cselekvőképtelenné tételére, vagy a szex érzésének fokozására."
+    },
+    "sleep_play": {
+      "label": "Alvás játék",
+      "tooltip": "Öntudatlan/alvó partnerrel folytatott szexuális aktus."
+    }
+  },
+  "taboo": {
+    "incest": {
+      "label": "Vérfertőzés",
+      "tooltip": "Vegyen részt egy olyan RP-ben, ahol legalább két karakter kapcsolódik egymáshoz."
+    },
+    "age_gap": {
+      "label": "Korkülönbség",
+      "tooltip": "Olyan jelenetekre utal, amelyekben jelentős különbségek vannak a szereplők életkora között."
+    },
+    "interracial": {
+      "label": "Interracial",
+      "tooltip": "A fajok közötti interakciókon alapuló jelenetek faji sztereotípiák nélkül."
+    },
+    "raceplay": {
+      "label": "Verseny játék",
+      "tooltip": "Faji sztereotípiákon vagy rasszizmuson alapuló jelenetek, beleértve a rasszista környezetben játszódó jeleneteket is."
+    },
+    "bestiality": {
+      "label": "Állatiasság",
+      "tooltip": "Egy érző karakterre utal, aki szexuális aktust hajt végre egy nem érző állaton, vagy egy nem érző állatot játszik el egy RP-ben, és egy érző szereplő megkeresi."
+    },
+    "necrophilia": {
+      "label": "Nekrofília",
+      "tooltip": "Az a cselekmény, amikor szexuális kapcsolatot létesít egy halott vagy más módon öntudatlan vagy élettelen szereplővel, aki egykor élt, vagy elméletileg ilyen cselekményekben részesül."
+    },
+    "cheating": {
+      "label": "Csalás",
+      "tooltip": "Ahol az egyik vagy mindkét partner hűtlen a partneréhez."
+    },
+    "exhibitionism": {
+      "label": "Exhibicionizmus",
+      "tooltip": "Részvétel olyan RP-ben, ahol a helyszín nyilvános; általában exhibicionizmussal és/vagy megalázással kombinálva használják."
+    },
+    "voyeurism": {
+      "label": "Kukkolás",
+      "tooltip": "Arra utal, hogy szexuális stimulációt kapunk egy személy (vagy emberek) megfigyeléséből, általában titokban, amikor felfedik magukat, vagy valami mást explicit módon tesznek, vagy azzal a aktussal, hogy felfedjük magát és/vagy valami mást kifejezetten azzal a szándékkal, hogy megfigyeljenek."
+    }
+  },
+  "surrealism": {
+    "futanari_futa": {
+      "label": "Futanari/Futa",
+      "tooltip": "Olyan szereplők, akiknek általában női testük van, de női és férfi nemi szervük is van (bár a herék nem mindig vannak jelen)."
+    },
+    "furry": {
+      "label": "Szőrös",
+      "tooltip": "Antropomorf állatfigurák."
+    },
+    "vore": {
+      "label": "Barázda",
+      "tooltip": "Egy másik karakter fizikai elfogyasztása."
+    },
+    "transformation": {
+      "label": "Átalakítás",
+      "tooltip": "Az a cselekmény, amely mágikus vagy kémiai eszközökkel drámai módon megváltoztatja az RP résztvevőjének fizikai jellemzőit, beleértve saját magát is; számos különböző típusú átalakulásra utalhat, és magából az átalakulás aktusából származó szexuális élvezetet jelzi."
+    },
+    "tentacles": {
+      "label": "Csápok",
+      "tooltip": "Olyan RP-ben való részvétel, amelyben öntudatos csápok vagy csápszerű függelékek hatolnak be egy karakterbe; gyakran többszörös behatolást foglal magában."
+    },
+    "monster_or_alien": {
+      "label": "Szörny vagy idegen",
+      "tooltip": "Különböző típusú szörnyek, idegenek és esztétikailag kihívást jelentő karakterek."
+    },
+    "ghost": {
+      "label": "Szellem",
+      "tooltip": "Korábban él, de jelenleg nincs teste."
+    }
+  },
+  "fluids": {
+    "blood": {
+      "label": "Vér",
+      "tooltip": "Vérvétel vagy vérvétel bármilyen formában szexuális összefüggésben, vagy olyan cselekmények végrehajtása, amelyek vérvételt eredményeznek."
+    },
+    "watersports": {
+      "label": "Vízi sportok",
+      "tooltip": "A vizelet felvételére vagy a vizelet kiürítésére utal, bármilyen formában, RP szexuális összefüggésében."
+    },
+    "scat": {
+      "label": "Földadó",
+      "tooltip": "Az RP szexuális összefüggésében a széklet lenyelésére vagy a széklet bármilyen formában történő kilökésére utal."
+    },
+    "lactation": {
+      "label": "Szoptatás",
+      "tooltip": "Tejtermelés a mellből, vagy szexuális kapcsolat olyan szereplővel, aki tejet termel a mellből, általában szexuális stimuláció hatására, és bármilyen játék, amely ebből ered."
+    },
+    "diapers": {
+      "label": "Pelenkák",
+      "tooltip": "Olyan helyzet, amelyben legalább egy karakter pelenkát visel; általában azt jelenti, hogy a pelenka vizelettel és/vagy ürülékkel szennyezett lesz, rendszerint időskori játszadozással vagy infantilizmussal, de néha megalázással kombinálva."
+    },
+    "cum_play": {
+      "label": "Sperma játék",
+      "tooltip": "Bármilyen számú szituáció, amelyben cum play van."
+    },
+    "saliva_spit": {
+      "label": "Nyál/köpés",
+      "tooltip": "Szexuális játék nyállal vagy köpéssel."
+    },
+    "creampie": {
+      "label": "Creampie",
+      "tooltip": "Hogy ejakuláljon egy partnerbe, és hagyja, hogy a sperma kifolyjon vagy kifolyjon."
+    },
+    "cum_on_body": {
+      "label": "Cum a testen",
+      "tooltip": "Magömlés a partner testén, mint a szexuális játék egy formája."
+    },
+    "cum_on_face": {
+      "label": "Cum az arcon",
+      "tooltip": "Az a cselekmény, hogy a partner arcán magömlés történik, néha a dominancia vagy a megaláztatás egy formájaként."
+    }
+  },
+  "degradation": {
+    "glory_hole": {
+      "label": "Glory hole",
+      "tooltip": "Olyan partner szolgálja ki vagy szolgálja ki, akinek fizikai akadálya van a résztvevők között."
+    },
+    "name_calling": {
+      "label": "Átok",
+      "tooltip": "Olyan RP-ben való részvétel, amelyben egy karaktert verbálisan bántalmaznak, vagy megpróbálják kiváltani a szexuális kielégülést a megaláztatással összefüggő érzelmekből, vagy pusztán a pszichológiai dominancia vagy büntetés egy formájaként."
+    },
+    "humiliation": {
+      "label": "Megalázás",
+      "tooltip": "Olyan RP-ben való részvétel, amelyben egy szereplő általában rendkívül és/vagy gyakran zavarba jön, és megpróbálja kiváltani a szexuális kielégülést a megaláztatással összefüggő érzelmekből, vagy pusztán a pszichológiai dominancia vagy büntetés egy formájaként; általában a degradáció intenzívebb formája."
+    }
+  },
+  "touch_stimulation": {
+    "cock_pussy_worship": {
+      "label": "Pénisz/vagina istentisztelet",
+      "tooltip": "Partnere nemi szervének túlzott felismerése szóban és/vagy fizikailag, vagy ilyen cselekmények fogadása; általában orális stimulációval jár."
+    },
+    "ass_worship": {
+      "label": "Fenékimádat",
+      "tooltip": "Partnere fenekének túlzott felismerése szóban és/vagy fizikailag, vagy ilyen cselekmények fogadása; általában orális stimulációval jár."
+    },
+    "foot_play": {
+      "label": "Lábjáték",
+      "tooltip": "Lábak használata RP szexuális kontextusában, beleértve, de nem kizárólagosan a lábimádást, a lábak látványából vagy szagából származó szexuális kielégülést és/vagy lábpúpolást, néha az orgazmusig."
+    },
+    "tickling": {
+      "label": "Csiklandozás",
+      "tooltip": "A csiklandozás és/vagy a csiklandozás egy RP szexuális kontextusában; vagy szexuális stimulációt kap tőle."
+    },
+    "sensation_play": {
+      "label": "Szenzációs játék",
+      "tooltip": "A szenzációs játék olyan tevékenységek széles skáláját írja le, mind a vaníliás, mind a perverz tevékenységeket, amelyek a test érzékszerveit használják fel a partner felkeltésére és stimulálására. Bár az érzésjáték gyakran összefügg a bőrérzetekkel, nem kell annyira korlátozni. A látás, az ízlelés és a hallás is beépíthető az érzetjátékba."
+    },
+    "electro_stimulation": {
+      "label": "Elektromos stimuláció",
+      "tooltip": "Elektromos áramot szállító szexjátékok használata; néha fájdalmas."
+    },
+    "ice_play": {
+      "label": "Jégjáték",
+      "tooltip": "Jég használata a testen hőmérsékleti kontrasztok és érzékszervi stimuláció céljából."
+    },
+    "temperature_play": {
+      "label": "Hőmérséklet játék",
+      "tooltip": "Különböző hőmérsékletek (meleg és hideg) alkalmazása a testen érzékszervi stimuláció és kontraszt létrehozására."
+    },
+    "feather_play": {
+      "label": "Tolljáték",
+      "tooltip": "Tollak használata a könnyű, lágy érintésekhez, amelyek csiklandozhatnak vagy érzéki érzetet biztosítanak."
+    },
+    "pinwheel": {
+      "label": "Csavarkerék",
+      "tooltip": "Éles, kerékszerű műszer (Wartenberg kerék), amely a bőrön gördül, szúró érzést okozva anélkül, hogy eltörné a bőrt."
+    }
+  },
+  "misc_fetish": {
+    "fisting": {
+      "label": "Öklözés",
+      "tooltip": "Kéz(ek) és/vagy kar(ok) hüvelybe helyezése, vagy ilyen cselekmények fogadása."
+    },
+    "double_penetration": {
+      "label": "Dupla behatolás",
+      "tooltip": "2 vibrátor vagy pénisz behatolása egyszerre."
+    },
+    "gangbang": {
+      "label": "Gangbang",
+      "tooltip": "Ha több partner, általában 3 vagy több, egyetlen hajlandó partnerrel folytat szexuális kapcsolatot."
+    },
+    "breath_play": {
+      "label": "Légzős játék",
+      "tooltip": "Olyan helyzet, amelyben legalább az egyik szereplő fizikailag uralja egy másik szereplő légzési szokásait, gyakran időszakos fojtogatás és/vagy torokbehatolás révén."
+    },
+    "impregnation": {
+      "label": "Megtermékenyítés",
+      "tooltip": "Egy karakter impregnálása."
+    },
+    "pregnancy": {
+      "label": "Terhesség",
+      "tooltip": "Terhes karakter fetisizálása."
+    },
+    "feminization": {
+      "label": "Elnőiesedés",
+      "tooltip": "A feminizáció a szerepjátékok egyik fajtája, amelyben hagyományosan nőies vonásokat kényszerítenek rá egy alázatos férfi partnerre. Ez magában foglalhatja a hagyományos női viselkedés és modor feltételezését is."
+    },
+    "cuckold_cuckquean": {
+      "label": "Cuckold / Cuckquean",
+      "tooltip": "Egy olyan szereplő cselekedetére utal, aki az RP világának keretein belül kapcsolatban áll, és nem azzal a szereplővel folytat szexuális interakciót, aki nem a kapcsolatra van kijelölve, az RP összefüggésében."
+    },
+    "shaving": {
+      "label": "Borotválkozás",
+      "tooltip": "A testszőrzet eltávolítása szexuális összefüggésben."
+    }
+  },
+  "pain": {
+    "light_pain": {
+      "label": "Enyhe fájdalom",
+      "tooltip": "Enyhe fizikai fájdalom hozzáadására utal közvetlenül szexuális cselekmények révén."
+    },
+    "heavy_pain": {
+      "label": "Súlyos fájdalom",
+      "tooltip": "Súlyos fizikai fájdalom hozzáadására utal közvetlenül szexuális cselekmények révén; általában durva vagy túlzott behatolások. Ez valószínűleg nyomot hagy."
+    },
+    "nipple_clamps": {
+      "label": "Mellbimbó bilincsek",
+      "tooltip": "Nyomókészülék a mellbimbókra, hogy örömet okozó fájdalmat okozzon."
+    },
+    "clothes_pins": {
+      "label": "ruhafogók",
+      "tooltip": "Csípje meg a bőrt a ruhacsipesz villái közé."
+    },
+    "caning": {
+      "label": "Botok",
+      "tooltip": "A botozás a BDSM-ben használt technika, amelyben a domináns ismételten megüti az engedelmeskedőt egy hosszú, rugalmas bottal, általában a fenekén."
+    },
+    "flogging": {
+      "label": "Megostorozni",
+      "tooltip": "Az általában a BDSM-hez és a dominanciához/behódoláshoz kapcsolódó játékok használata, amelyeket alázatos vagy fenékkel szemben használnak, különösen bármilyen típusú ostorral, lovaglónövényekkel, evezőkkel vagy ostorokkal való érintkezési játékra utalva."
+    },
+    "gagging_choking": {
+      "label": "Ökögés / fulladás",
+      "tooltip": "Nyakadást vagy fulladást okozhat, akár a szájba szúrt tárgyak, akár a kezek/tárgyak a nyak körül."
+    },
+    "beating": {
+      "label": "Megütni",
+      "tooltip": "Öklöléssel vagy más tárggyal való ütés."
+    },
+    "spanking": {
+      "label": "verés",
+      "tooltip": "Más szereplő fenekének megütése, vagy ilyen cselekmények fogadója; gyakran erotikus előjátékként vagy büntetésként BDSM környezetben."
+    },
+    "cock_pussy_slapping": {
+      "label": "Dick/Vagina verés",
+      "tooltip": "Társa nemi szervének megütése vagy ilyen ütések fogadása."
+    },
+    "cock_pussy_torture": {
+      "label": "Kakas/hüvelykínzás",
+      "tooltip": "Olyan RP-ben való részvétel, amelyben legalább egy karakter nemi szerve negatív figyelmet kap, azzal a szándékkal, hogy fizikai fájdalmat okozzon."
+    },
+    "hot_wax": {
+      "label": "Hot Was",
+      "tooltip": "Viasz, általában forró gyertyaviasz használata szexuális stimuláció és/vagy kínzás egy formájaként, vagy ilyen cselekmények fogadása."
+    },
+    "scratching": {
+      "label": "vakarni",
+      "tooltip": "Az egyik karakter karmolja a másikat körmeivel vagy karmaival, néha nyomokat hagyva; néha, de nem feltétlenül fájdalmas."
+    },
+    "biting": {
+      "label": "Harapás",
+      "tooltip": "Harapás vagy harapás; néha fájdalmas, néha játékos."
+    },
+    "cutting": {
+      "label": "Vágás",
+      "tooltip": "Egy partner megvágása, hogy fájdalmat okozzon szexuális összefüggésben."
+    },
+    "snuff": {
+      "label": "tubák",
+      "tooltip": "Egy karakter megölése a szex részeként."
+    },
+    "face_slapping": {
+      "label": "Arccsapás",
+      "tooltip": "Az a cselekmény, amikor valakit arcon ütnek megalázás vagy izgalom formájában."
+    },
+    "punching": {
+      "label": "Csonkok",
+      "tooltip": "Az ökölütések használata a szexuális stimuláció egyik formájaként."
+    },
+    "clamps_labia_clit": {
+      "label": "bilincsek (labia/klitorisz)",
+      "tooltip": "Bilincsek használata a szeméremajkakon vagy a csiklón a fájdalom serkentésére."
+    },
+    "fire_play": {
+      "label": "Tűz játék",
+      "tooltip": "Tűz vagy hő használata szexuális stimulációra, gyakran olyan folyadékokkal, amelyek rövid ideig égetik a bőrt."
+    },
+    "knife_play": {
+      "label": "Kés játék",
+      "tooltip": "Kések vagy éles tárgyak használata félelem, izgalom vagy enyhe fájdalom keltésére, általában a bőr tényleges megsértése nélkül."
+    },
+    "needle_play": {
+      "label": "Tűs játék",
+      "tooltip": "A bőrön keresztül szúrt tűk használata szexuális stimuláció céljából."
+    },
+    "vampire_gloves": {
+      "label": "Vámpír kesztyű",
+      "tooltip": "Speciális kesztyű kis fém tüskékkel, amelyek érintésre szúrják a bőrt."
+    }
+  },
+  "medium": {
+    "skype": {
+      "label": "Skype",
+      "tooltip": "A Skype használata szerepjáték platformként."
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "tooltip": "A WhatsApp használata szerepjáték platformként."
+    },
+    "kik": {
+      "label": "Kik",
+      "tooltip": "Kik használata platformként a szerepjátékokhoz."
+    },
+    "reddit": {
+      "label": "Reddit",
+      "tooltip": "A Reddit használata szerepjáték platformként."
+    },
+    "email": {
+      "label": "Email",
+      "tooltip": "Az e-mail használata szerepjáték platformként."
+    },
+    "discord": {
+      "label": "Viszály",
+      "tooltip": "A Discord használata szerepjáték platformként."
+    },
+    "other_medium": {
+      "label": "Egyébként",
+      "tooltip": "Másik platform használata szerepjátékhoz."
+    }
+  },
+  "time_scale": {
+    "short_term_scenes": {
+      "label": "Rövid távú jelenetek",
+      "tooltip": "Szerepjátékos jelenetek, amelyek rövid ideig tartanak, általában egyetlen alkalom."
+    },
+    "medium_term_scenes": {
+      "label": "Középtávú jelenetek",
+      "tooltip": "Szerepjátékos jelenetek, amelyek közepes ideig tartanak, általában néhány alkalomból."
+    },
+    "long_term_scenes": {
+      "label": "Hosszú távú jelenetek",
+      "tooltip": "Szerepjátékos jelenetek, amelyek hosszabb ideig tartanak, általában több alkalom vagy egy folyamatban lévő kampány."
+    },
+    "quick_replies": {
+      "label": "Gyors válaszok",
+      "tooltip": "0-10 percen belül érkező válaszok."
+    },
+    "fast_replies": {
+      "label": "Gyors válaszok",
+      "tooltip": "A válaszok 10-30 percen belül megérkeznek."
+    },
+    "normal_replies": {
+      "label": "Normális válaszok",
+      "tooltip": "A válaszok 30 perc és 2 óra között érkeznek."
+    },
+    "slow_replies": {
+      "label": "Lassú válaszok",
+      "tooltip": "A válaszok 2-8 órán belül megérkeznek."
+    },
+    "glacial_replies": {
+      "label": "Nagyon lassú válaszok",
+      "tooltip": "A válaszok 8-24 órán belül megérkeznek."
+    },
+    "occasional_replies": {
+      "label": "Mellékes válaszok",
+      "tooltip": "24+ óra elteltével érkező válaszok."
+    }
+  },
+  "role_play": {
+    "medical_scenes": {
+      "label": "Orvosi jelenetek",
+      "tooltip": "Szerepjáték, amelyben orvosi eljárásokat, vizsgálatokat és orvos-beteg dinamikát szimulálnak."
+    },
+    "animal_roleplay": {
+      "label": "Állati szerepjáték",
+      "tooltip": "Szerepjáték, amelyben egy személy egy állat viselkedését és modorát utánozza."
+    },
+    "age_play": {
+      "label": "Kor játék",
+      "tooltip": "Szerepjáték, amelyben a résztvevők a valós életkoruktól eltérő korúnak adják ki magukat (minden felnőtt)."
+    },
+    "prison_scenes": {
+      "label": "Börtönjelenetek",
+      "tooltip": "Szerepjáték börtönkörülmények között, gyakran őr-fogoly dinamikával."
+    },
+    "schoolroom_scenes": {
+      "label": "Tantermi jelenetek",
+      "tooltip": "Szerepjáték iskolai környezetben, gyakran tanár-diák dinamikával."
+    },
+    "prostitution_fantasy": {
+      "label": "Prostitúciós fantázia",
+      "tooltip": "Szerepjáték, amelyben egy személy pénzért vagy szívességért cserébe úgy tesz, mintha szexelne."
+    },
+    "religious_scenes": {
+      "label": "Vallási jelenetek",
+      "tooltip": "Szerepjáték vallási elemekkel vagy helyzetekkel, például gyónással vagy bűnnel."
+    },
+    "interrogations": {
+      "label": "Kihallgatások",
+      "tooltip": "Szerepjáték, amelyben egy személyt kihallgatnak, gyakran hatalmi dinamikával és nyomással."
+    },
+    "fear_play": {
+      "label": "Félelem játék",
+      "tooltip": "Olyan tevékenységek, amelyek a szexuális élmény részeként szándékosan félelmet keltenek."
+    },
+    "egyptian": {
+      "label": "egyiptomi",
+      "tooltip": "Szerepjátékos forgatókönyvek ókori egyiptomi témákkal, mint például a fáraók, Kleopátra, istenek és mitológia."
+    }
+  }
+}
