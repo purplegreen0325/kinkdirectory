@@ -95,6 +95,7 @@ export function useScreenshot() {
         3: t('choices.indifferent'),
         4: t('choices.maybe'),
         5: t('choices.limit'),
+        6: t('choices.curious'),
       }
 
       // Add the other ratings in order (1-5)
