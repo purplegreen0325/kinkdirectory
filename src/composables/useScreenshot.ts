@@ -88,6 +88,9 @@ export function useScreenshot() {
       const notEnteredItem = createLegendItem(0, t('choices.not_entered'))
       legendItems.appendChild(notEnteredItem)
 
+      const curiousItem = createLegendItem(6, t('choices.curious'))
+      legendItems.appendChild(curiousItem)
+
       // Create legend items for other ratings
       const ratingLabels = {
         1: t('choices.favorite'),
@@ -95,7 +98,6 @@ export function useScreenshot() {
         3: t('choices.indifferent'),
         4: t('choices.maybe'),
         5: t('choices.limit'),
-        6: t('choices.curious'),
       }
 
       // Add the other ratings in order (1-5)
